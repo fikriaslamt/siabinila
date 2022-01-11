@@ -35,7 +35,7 @@ if ($jam > 3 and $jam <=9){
 
     <div class="col-md-3">
       <div class="card-counter info">
-       <i style="" class="fa fa-book-open"></i>
+       <i class="fa fa-book-open"></i>
         <span class="count-numbers">2</span>
         <span class="count-name">Jadwal</span>
       </div>

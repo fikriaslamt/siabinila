@@ -1,31 +1,28 @@
 
+
 <div class="container-top" style="min-height: 10px!important; text-align: right; box-shadow:none">
-    <button style="background-color: #eb211a"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout &rarr;</a></button><br/>
-</div>
-<H2><a >DATA REQUEST PEMBUATAN AKUN</H2>
-<div class="clas mx-auto">
-<table>
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">user</th>
-                <th scope="col">password</th>
-                <th scope="col">AKSI</th>
-                
-            </tr>
-        </thead>
-            
-            <?php foreach ($data as $data) : ?>
-        <tbody>
-            <tr>
-                
-                <td><?= $data['user']; ?></td>
-                <td><?= $data['password']; ?></td>
-                <td><a href=""><button>TERIMA</button></a></td>
-                
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+    <button style="background-color: #eb211a"><a style="background-color: #eb211a" href="<?= base_url('LoginAdmin/logout')?>">Logout &rarr;</a></button><br/>
 </div>
 
-</div>
+<div class="row">
+<a  href="<?= base_url('Admin/request_akun')?>"
+    <div class="col-md-3">
+      <div class="card-counter success">
+        <i class="fa fa-database"></i>
+        <span class="count-name">DATA REQUEST AKUN</span>
+      </div>
+    </div>
+</a>
+   
+<a href="<?= base_url('Admin/data_akun')?>">
+    <div class="col-md-3">
+      <div class="card-counter info">
+       <i  class="fa fa-book-open"></i>
+        <span class="count-name">DATA AKUN</span>
+      </div>
+    </div>
+</a>
+    
+
+   
+    </div>

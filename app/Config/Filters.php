@@ -19,6 +19,9 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
+        'filterAdmin' => \App\Filters\Filter_admin::class,
+        'filterDosen' => \App\Filters\Filter_dosen::class,
+        'filterMahasiswa' => \App\Filters\Filter_mahasiswa::class,
     ];
 
     /**
