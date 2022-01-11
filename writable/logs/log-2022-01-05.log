@@ -1,0 +1,94 @@
+CRITICAL - 2022-01-05 01:35:48 --> Invalid file: v_about.php
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_about.php')
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Common.php(1097): CodeIgniter\View\View->render('v_about', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\app\Controllers\Home.php(14): view('v_about')
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Home->index()
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#8 {main}
+CRITICAL - 2022-01-05 01:39:30 --> Class 'App\Models\ModelAdmin' not found
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-05 01:54:12 --> Class 'App\Models\M_akun' not found
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-05 01:54:47 --> Class 'App\Models\M_akun' not found
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-05 01:57:48 --> Class 'App\Models\M_akun' not found
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+ERROR - 2022-01-05 02:01:13 --> Unknown column 'admin_username' in 'where clause'
+CRITICAL - 2022-01-05 02:01:13 --> Unknown column 'admin_username' in 'where clause'
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#7 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#8 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#12 {main}
+ERROR - 2022-01-05 02:06:57 --> Unknown column 'admin_username' in 'where clause'
+CRITICAL - 2022-01-05 02:06:57 --> Unknown column 'admin_username' in 'where clause'
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#7 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#8 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#12 {main}
+CRITICAL - 2022-01-05 02:07:32 --> Undefined index: admin_id
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\app\Controllers\Login.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ACER\\O...', 31, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-05 02:07:42 --> Undefined index: admin_id
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\app\Controllers\Login.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ACER\\O...', 31, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-05 07:52:39 --> Invalid file: r_mahasiwa/v_mahasiswa.php
+#0 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_mahasiwa/v_ma...')
+#1 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiwa/v_ma...', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\app\Controllers\Mahasiswa.php(13): view('r_mahasiwa/v_ma...')
+#3 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#4 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#5 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\ACER\OneDrive\Dokumen\A_WebProgramming\SIAKAD Admin Bisnis\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#8 {main}
