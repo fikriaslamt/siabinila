@@ -56,12 +56,37 @@ class Admin extends BaseController
         echo view('r_admin/v_request_akun',$data);
         echo view('layouts/footer');
     }
+    public function form_add_akun_dosen()
+    {
+        $data = [
+            'title' => 'Tambah Akun Dosen'
+        ];
+        echo view('layouts/header', $data);
+        echo view('r_admin/form_tambah_akun_dosen');
+        echo view('layouts/footer');
+    }
+    public function add_akun_dosen()
+    {
+        $data =[
+            'user' => $this->request->getVar('user'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+            'role' => "dosen"
+          
+
+        ];
+        $this->M_akun->insert($data);
+    
+    return redirect()->to(base_url('Admin'));
+    }
 
 
     public function tambah_akun($user)
     {
         
-        $akun = $this->M_register->find($user);
+        $akun = 
+            $this->M_register->find($user);
+            
+       
         
         
         $this->M_akun->insert($akun);
@@ -69,6 +94,8 @@ class Admin extends BaseController
         
         return redirect()->to(base_url('Admin'));
     }
+
+  
 
     public function delete_akun($user)
     {

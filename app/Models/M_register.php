@@ -9,7 +9,7 @@ class M_register extends Model
     
     protected $table                = 'data_register';
     protected $primaryKey           = 'user';
-    protected $allowedFields        = ['user','password'];
+    protected $allowedFields        = ['user','password','nama','role'];
     
 
     // Dates

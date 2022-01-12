@@ -22,6 +22,16 @@ class Mahasiswa extends BaseController
         echo view('r_mahasiswa/v_mahasiswa');
         echo view('layouts/footer');
     }
+    public function form()
+    {
+        $data = [
+            'title' => "form"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/form');
+        echo view('layouts/footer');
+    }
     public function form_pengajuan_judul()
     {
         $data = [

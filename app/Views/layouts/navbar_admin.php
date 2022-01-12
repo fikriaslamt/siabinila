@@ -20,9 +20,9 @@
        
         
         <ul class="navlinks">
+          <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>">HOME</a></li>
           <li><a href="" class="<?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>">DATA</a></li>
           <li><a href="" class="<?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>">AKUN</a></li>
-          <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'admin' ? 'active' : '' ?>"><?= !session()->get('admin_id') ? 'Login ' : 'Admin' ?></a></li>
         </ul>
       </nav>
 </header>

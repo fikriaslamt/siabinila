@@ -8,5 +8,7 @@ if (!session()->get('user')) {
 } else if (session()->get('role') == 'dosen') {
     header('Location: /Dosen');
     exit();
-} else { echo 'Gagal';}
+} else { 
+    
+    echo 'Gagal';}
 ?>

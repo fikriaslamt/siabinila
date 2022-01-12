@@ -19,6 +19,18 @@ class Dosen extends BaseController
 
     public function index()
     {
+
+        $data = [
+            'title' => "Dosen",
+            
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen');
+        echo view('r_dosen/v_dosen', $data);
+        echo view('layouts/footer');
+    }
+    public function data_pengajuan_judul()
+    {
         $data1 = $this->M_data_pengajuan_judul->findAll();
 
         $data = [
@@ -27,9 +39,26 @@ class Dosen extends BaseController
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen');
-        echo view('r_dosen/v_dosen', $data);
+        echo view('r_dosen/request_judul', $data);
         echo view('layouts/footer');
     }
+
+
+    public function data_skripsi()
+    {
+        $data1 = $this->M_data_skripsi->findAll();
+
+        $data = [
+            'title' => "Data Skripsi",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen');
+        echo view('r_dosen/data_skripsi', $data);
+        echo view('layouts/footer');
+    }
+
+
 
     public function terima($npm)
     {   

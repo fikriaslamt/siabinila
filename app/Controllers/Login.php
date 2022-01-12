@@ -29,10 +29,11 @@ class Login extends BaseController
                 if ($dataAdmin == '') {
                     $err = "Username salah";
                 }
-                else {
-                    if ($dataAdmin['password'] != md5($password)) {
-                    $err = "Password salah"; }
-                } 
+                // else {
+                //     $hashed_one = $this->request->getPost('password');
+                //     if ($dataAdmin['password'] != $hashed_one) {
+                //     $err = "Password salah"; }
+                // } 
             }
             if (empty($err)) {
                 $dataSesi = [
@@ -74,10 +75,19 @@ class Login extends BaseController
         echo view('v_register');
         echo view('layouts/footer');
     }
-
+    
     public function add_register()
-    {
-        $this->M_register->insert($this->request->getPost());
+    {   
+        $data =[
+            'user' => $this->request->getVar('user'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+            'role' => "mahasiswa"
+          
+
+        ];
+        $this->M_register->insert($data);
+        
+        // password_hash($this->request->getVar('admin_password'), PASSWORD_BCRYPT)
 
         
         return redirect()->to(base_url('Admin'));
