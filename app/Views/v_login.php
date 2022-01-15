@@ -1,9 +1,24 @@
 <br/><br/>
+<style>
+.container, .container-top {
+  position: relative;
+  min-height:50vmin !important;
+  margin: 0 auto;
+  margin-top: 20px; margin-bottom: 20px;
+  text-align: left;
+  box-shadow: none;
+  border-radius: 0px;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0)
+}
+
+</style>
+
 <div class="container">
 <h1 class="tulisan_form">
-        Sistem Skripsi
+        Sistem Informasi Admin Bisnis
 </h1>
-<br/><br/>
+
 
 <div class="kotak_form">
     <h2 class="tulisan_form">
@@ -20,12 +35,12 @@
             
             
             <label for="inputUsername">
-                    Username
+            <i class="fa fa-user">&nbsp;</i>Username
             </label>
             <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username"/>
             
             <label for="inputPassword">
-                    Password
+            <i class="fa fa-key">&nbsp;</i>Password
             </label>
             <input type="password" name="password" class="form_text" id="inputPassword" placeholder="Masukan Password">
             
@@ -33,8 +48,8 @@
             <input type="submit" name="login" class="tombol_submit" value="LOGIN" />
 
            
-        </form>
-        <a href="<?= base_url('Login/register')?>"><button>Register</button></a>
+        </form><br/>
+        Belum punya akun? <a href="<?= base_url('Login/register')?>">Register</a>
     </div>
 </div>
 </div>

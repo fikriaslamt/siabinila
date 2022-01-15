@@ -12,43 +12,88 @@ if ($jam > 3 and $jam <=9){
 } else { $waktu = "Malam"; }
 ?>
 
-<div class="container-top" style="min-height: 10px!important; text-align: right; box-shadow:none">
-    <button style="background-color: #eb211a"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout &rarr;</a></button><br/>
-</div>
+<div class="container-top" style="min-height: 10px!important; box-shadow:none">
+  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout &rarr;</a></button><br/>
 
-<div class="container">
-    <br/>
-    
-    <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
-    <br/>
-    
+  <div class="row">
 
-    <div class="row">
-
-    <div class="col-md-3">
+    <div class="atur-kolom">
       <div class="card-counter success">
-        <i class="fa fa-database"></i>
-        <span class="count-numbers">85%</span>
-        <span class="count-name">Progress</span>
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">2019</span>
+        <span class="count-name">Ankatan</span>
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="atur-kolom">
+      <div class="card-counter primary">
+      <i class="fa fa-database"></i>
+        <span class="count-numbers">6</span>
+        <span class="count-name">Semester</span>
+      </div>
+    </div>
+
+
+    <div class="atur-kolom">
       <div class="card-counter info">
-       <i class="fa fa-book-open"></i>
+      <i class="fa fa-book-open"></i>
         <span class="count-numbers">2</span>
         <span class="count-name">Jadwal</span>
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="atur-kolom">
       <div class="card-counter primary">
         <i class="fa fa-users"></i>
         <span class="count-numbers">1</span>
         <span class="count-name">Bimbingan</span>
       </div>
     </div>
-    </div>
 
+  </div>
+
+</div>
+
+<div class="container">
+
+  <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
+  
+
+</div>
+<div class="container">
+  <h3>Formulir Akademik</h3>
+  <div class="row">
+
+      <div class="atur-kolom-ka">
+        <div class="card-counter success">Hallo
+        </div>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <div class="card-counter primary">
+        <i class="fa fa-database"></i>
+          <span class="count-numbers">6</span>
+          <span class="count-name">Semester</span>
+        </div>
+      </div>
+
+
+      <div class="atur-kolom-ka">
+        <div class="card-counter info">
+        <i class="fa fa-book-open"></i>
+          <span class="count-numbers">2</span>
+          <span class="count-name">Jadwal</span>
+        </div>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <div class="card-counter primary">
+          <i class="fa fa-users"></i>
+          <span class="count-numbers">1</span>
+          <span class="count-name">Bimbingan</span>
+        </div>
+      </div>
+
+    </div>
 
 </div>

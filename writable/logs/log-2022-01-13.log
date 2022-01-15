@@ -1,0 +1,138 @@
+CRITICAL - 2022-01-13 20:54:53 --> Undefined variable: _SESSION
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 20:55:29 --> Call to undefined function App\Controllers\get_instance()
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-13 21:01:43 --> Undefined variable: _SESSION
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:05:29 --> Undefined property: App\Controllers\Login::$load
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:09:55 --> Call to undefined method CodeIgniter\Session\Session::unset()
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-13 21:13:11 --> Undefined property: App\Controllers\Login::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:13:55 --> Undefined property: App\Controllers\Login::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:14:11 --> Undefined property: App\Controllers\Login::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:14:13 --> Undefined property: App\Controllers\Login::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:14:38 --> Undefined property: App\Controllers\Login::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:15:31 --> Undefined property: App\Controllers\Login::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 65, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:15:58 --> Call to undefined method CodeIgniter\Session\Session::sess_destroy()
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-13 21:41:17 --> Undefined property: App\Controllers\Admin::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 17, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->index()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:41:37 --> Undefined property: App\Controllers\Admin::$session
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 17, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->index()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 21:41:37 --> Cannot call constructor
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\LoginAdmin->__construct()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-13 21:41:45 --> Cannot call constructor
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\LoginAdmin->__construct()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-13 22:04:53 --> Undefined property: App\Controllers\Login::$output
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Login.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 64, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-01-13 22:05:16 --> Call to undefined function App\Controllers\output()
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Login->logout()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}

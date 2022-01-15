@@ -4,11 +4,12 @@ Reset css
 Layout
 Menu Navigasi
 Layout card
+Table
 Keyframes Animasi
 Responsive Media Screen
 ----------------------------------*/
 
-/* Reset css */ 
+/* Reset css ----------------------------------------------------------------------*/
 * {
   margin:0; padding:0; box-sizing: border-box; 
   scrollbar-width: thin; scrollbar-color: rgb(0, 0, 0)   rgba(0, 0, 0, 0.192);
@@ -20,10 +21,7 @@ button, button a{ margin: 5px; padding: 10px 5px; border-radius: 5px; color: whi
 
 /* Layout ----------------------------------------------------------------------*/
 body {
-  background-color: #B5FFEE;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='1000' preserveAspectRatio='none' viewBox='0 0 1440 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1099%26quot%3b)' fill='none'%3e%3crect width='1440' height='1000' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M73 1000L1073 0L1874 0L874 1000z' fill='url(%23SvgjsLinearGradient1100)'%3e%3c/path%3e%3cpath d='M1305 1000L305 0L-968.5 0L31.5 1000z' fill='url(%23SvgjsLinearGradient1101)'%3e%3c/path%3e%3cpath d='M581.8654391879086 1000L1440 141.86543918790858L1440 1000z' fill='url(%23SvgjsLinearGradient1100)'%3e%3c/path%3e%3cpath d='M0 1000L858.1345608120914 1000L 0 141.86543918790858z' fill='url(%23SvgjsLinearGradient1101)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1099'%3e%3crect width='1440' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1100'%3e%3cstop stop-color='rgba(6%2c 81%2c 237%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(6%2c 81%2c 237%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1101'%3e%3cstop stop-color='rgba(6%2c 81%2c 237%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(6%2c 81%2c 237%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: #f1f1f1;
   font-family: 'Outfit', sans-serif;
   color:#000;
 }
@@ -37,31 +35,31 @@ body {
   text-align: left;
   border-radius:3px;
   box-shadow: 0px 0px 0px #aaa;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(245, 245, 245);
   overflow: hidden
 }
 .container, .container-top {
   position: relative;
-  width: 75% !important;
+  width: 75%;
   min-height:50vmin !important;
   margin: 0 auto;
   margin-top: 20px; margin-bottom: 20px;
   float: center!important;
   text-align: left;
-  
-  /* box-shadow: 0px 0px 3px #aaa; */
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 3px #aaa;
+  border-radius: 5px;
   overflow: hidden;
 }
-.container-top { background-color: rgba(255, 255, 255, 0.0); }
+
+.container-top { background-color: rgba(255, 255, 255, 0.0); border-radius:0px;}
 footer {
-  font-weight: bold;
   position: relative;
   width: 80%;
   margin: 10px auto;
   bottom: 0;
   float: center!important;
-  text-align: center;
+  font-weight: bold; text-align: center;
   background-color: rgba(255, 255, 255, 0);
   padding:10px;
   margin-top: 5px; margin-bottom: 10px;
@@ -72,16 +70,16 @@ footer a{color: black;}
 
 .kotak_form {
   width: 90%;
-  background-color: #E3EDFF;
+  background-color: #ffffff;
   background-attachment: fixed;
   box-shadow: 0px 0px 5px #aaa;
   border-radius: 3px;
-  margin: 50px auto;/*meletakkan form ke tengah*/
+  margin: 50px auto; /*meletakkan form ke tengah*/
   padding: 30px 20px;
 }
 .tulisan_form {
   text-align: center;
-  text-transform: uppercase;/*membuat semua huruf menjadi kapital*/
+  text-transform: uppercase; /*membuat semua huruf menjadi kapital*/
 }
 .pesan_error {
   width: 100% !important;
@@ -91,11 +89,11 @@ footer a{color: black;}
   background-color: rgb(255, 254, 169);
 }
 input {
-  border: 1px solid #111; border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219); border-radius: 3px;
 }
 input:focus {
-  background-color: #f9f9df;
-  border-color: #000;
+  background-color: #ffffff;
+  border: 1px solid rgb(184, 247, 255); 
 }
 label {
   font-size: 11pt;
@@ -109,15 +107,16 @@ font-size: 11pt;
 margin-bottom: 20px;
 }
 .tombol_submit {
-  background: dodgerBlue;
+  background: rgb(0, 126, 252);
   color: white;
   font-size: 11pt;
+  font-weight: 500;
   width: 100%;
   border: none;
   border-radius: 3px;
   padding: 10px 20px;
 }
-.tombol_login:hover{ background: #0066cc}
+.tombol_submit:hover{ background: rgb(0, 93, 187)}
 
 .brand {
   position: relative;
@@ -127,16 +126,19 @@ margin-bottom: 20px;
   border-radius: 3px;
   word-wrap: normal;
   white-space: nowrap;
-  word-break: normal;
+  word-break: normal; 
   overflow: auto;
 }
 
-.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:10px;margin-left:10px;}
-.col-md-3{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}
-.col-md-3,.col-md-4,.col-md-5{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}
+.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap; width: 100%;}
+.atur-kolom, .atur-kolom-ka{position:relative;width:100%;min-height:1px;padding:5px;}
+.atur-kolom{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%;}
+.atur-kolom-ka{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%; }
+.atur-kolom:nth-child(1){padding-left: 0px;}
+.atur-kolom:nth-child(4){padding-right: 0px;}
 .card-counter{
   box-shadow: 2px 2px 10px #DADADA;
-  margin: 5px;
+  margin: 0px;
   padding: 20px 10px;
   background-color: #fff;
   height: 100px;
@@ -254,24 +256,27 @@ margin-bottom: 20px;
 /* Menu Navigasi -------------------------------------------------------------------------- */
 header {background-color: #141b2500;}
 .main-nav {
-  height: 90px;
-  padding-left: 10%;
-  padding-right: 10%;
+  height: 70px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='140' preserveAspectRatio='none' viewBox='0 0 1440 140'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1021%26quot%3b)' fill='none'%3e%3crect width='1440' height='140' x='0' y='0' fill='rgba(0%2c 65%2c 133%2c 1)'%3e%3c/rect%3e%3cpath d='M65.63 -49.78L130.58 -12.28L130.58 62.72L65.63 100.22L0.68 62.72L0.68 -12.28zM130.58 62.72L195.54 100.22L195.54 175.22L130.58 212.72L65.63 175.22L65.63 100.22zM780.12 62.72L845.08 100.22L845.08 175.22L780.12 212.72L715.17 175.22L715.17 100.22zM1039.94 62.72L1104.89 100.22L1104.89 175.22L1039.94 212.72L974.98 175.22L974.98 100.22z' stroke='rgba(12%2c 81%2c 150%2c 0.86)' stroke-width='2'%3e%3c/path%3e%3cpath d='M58.13 -49.78 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM123.08 -12.28 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM123.08 62.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM58.13 100.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-6.82 62.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-6.82 -12.28 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM188.04 100.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM188.04 175.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM123.08 212.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM58.13 175.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM772.62 62.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM837.58 100.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM837.58 175.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM772.62 212.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM707.67 175.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM707.67 100.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1032.44 62.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1097.39 100.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1097.39 175.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1032.44 212.72 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM967.48 175.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM967.48 100.22 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0z' fill='rgba(12%2c 81%2c 150%2c 0.86)'%3e%3c/path%3e%3cpath d='M144.91 30.25L188.21 55.25L188.21 105.25L144.91 130.25L101.61 105.25L101.61 55.25zM274.81 105.25L318.12 130.25L318.12 180.25L274.81 205.25L231.51 180.25L231.51 130.25zM404.72 30.25L448.03 55.25L448.03 105.25L404.72 130.25L361.42 105.25L361.42 55.25zM534.63 -44.75L577.93 -19.75L577.93 30.25L534.63 55.25L491.33 30.25L491.33 -19.75zM577.93 30.25L621.24 55.25L621.24 105.25L577.93 130.25L534.63 105.25L534.63 55.25zM621.24 -44.75L664.54 -19.75L664.54 30.25L621.24 55.25L577.93 30.25L577.93 -19.75zM1010.96 30.25L1054.26 55.25L1054.26 105.25L1010.96 130.25L967.66 105.25L967.66 55.25zM967.66 105.25L1010.96 130.25L1010.96 180.25L967.66 205.25L924.35 180.25L924.35 130.25zM1140.87 -44.75L1184.17 -19.75L1184.17 30.25L1140.87 55.25L1097.56 30.25L1097.56 -19.75zM1184.17 30.25L1227.47 55.25L1227.47 105.25L1184.17 130.25L1140.87 105.25L1140.87 55.25zM1357.38 30.25L1400.68 55.25L1400.68 105.25L1357.38 130.25L1314.08 105.25L1314.08 55.25z' stroke='rgba(18%2c 93%2c 170%2c 0.72)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1021'%3e%3crect width='1440' height='140' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+.contain-nav {
+  height: 70px;
+  width: 75%;
+  margin: 0 auto;;
 }
 .logo {
   position: relative;
-  color: rgb(20, 20, 20);
-  line-height: 90px;
-  font-size: 30px;
-  font-weight: bold;
+  color: rgb(255, 255, 255);
+  line-height: 70px;
+  font-size: 20px;
+  font-weight:500;
   text-decoration: none;
   margin-left: 15px; margin-top: 10px;
-  top: 18px;
 }
 .navlinks {
   list-style: none;
   float: right;
-  line-height: 90px;
+  line-height: 70px;
   margin: 0;
   padding: 0;
 }
@@ -280,9 +285,9 @@ header {background-color: #141b2500;}
   margin: 0px 20px;
 }
 .navlinks li a {
-  color: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   transition: all 0.3s linear 0s;
   text-transform: uppercase;
 }
@@ -304,9 +309,9 @@ header {background-color: #141b2500;}
 }
 .menu-btn {
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   float: right;
-  line-height: 90px;
+  line-height: 70px;
   margin-right: 40px;
   display: none;
   cursor: pointer;
@@ -430,6 +435,8 @@ table tr:hover td {
 }  
 @media screen and (max-width:767px){
   #wrapper {width: 95%;}
+  .container, .container-top {width: 90%;}
+  .contain-nav {width: 90%;}
   .main-nav {padding-left: 2%; padding-right: 2%;}
   .navlinks {
     position: fixed;
@@ -466,6 +473,8 @@ table tr:hover td {
 }
 @media screen and (max-width: 480px) {
     .wrapper {width: 98%}
+    .container, .container-top {width: 97%;}
+    .contain-nav {width: 97%;}
     .main-nav {padding-left: 1%; padding-right: 1%;}
 
     .logo {

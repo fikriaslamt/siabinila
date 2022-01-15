@@ -14,6 +14,7 @@ class Admin extends BaseController
     }
     public function index()
     {
+        
         $data1 = $this->M_register->findAll();
         
 

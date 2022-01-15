@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\M_register;
+use App\Config\Cache;
 
 class Login extends BaseController
 {   
@@ -13,8 +14,6 @@ class Login extends BaseController
     
     public function index()
     {
-
-
         $ModelAkun = new \App\Models\M_akun();
         $login = $this->request->getPost('login');
         if ($login) {
@@ -82,14 +81,11 @@ class Login extends BaseController
             'user' => $this->request->getVar('user'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
             'role' => "mahasiswa"
-          
-
         ];
         $this->M_register->insert($data);
         
         // password_hash($this->request->getVar('admin_password'), PASSWORD_BCRYPT)
-
-        
+   
         return redirect()->to(base_url('Admin'));
     }
 

@@ -16,13 +16,17 @@
 <!-- header -->
 <header>
       <nav class="main-nav">
-        <input type="checkbox" id="check" />
-       
-        
-        <ul class="navlinks">
-        <li><a href="<?= base_url('Mahasiswa')?>" class="<?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>">HOME</a></li>
-          <li><a href="<?= base_url('Mahasiswa/form')?>" class="<?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>">Formulir Akademik</a></li>
-          <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'Mahasiswa' ? 'active' : '' ?>"><?= !session()->get('user') ? 'Login ' : session()->get('user') ?></a></li>
-        </ul>
+        <div class="contain-nav">
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          </label>
+          <a href="/" class="logo">Sistem Informasi Akademik</a>
+          
+          <ul class="navlinks">
+          <li><a href="<?= base_url('Mahasiswa')?>" class="<?= \Config\Services::request()->uri->getSegment(1) == 'Mahasiswa' ? 'active' : '' ?>">HOME</a></li>
+            <li><a href="/Mahasiswa/profil" class="<?= \Config\Services::request()->uri->getSegment(1) == 'Mahasiswa/profil' ? 'active' : '' ?>"><i class="fa fa-user">&nbsp;</i><?= !session()->get('user') ? 'Login ' : session()->get('user') ?></a></li>
+          </ul>
+        </div>  
       </nav>
 </header>

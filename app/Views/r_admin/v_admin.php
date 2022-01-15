@@ -1,28 +1,88 @@
 
+<?php
+date_default_timezone_set("Etc/GMT-7");
+$jam = ((int)date("H"));
+$waktu = "";
+if ($jam > 3 and $jam <=9){
+	$waktu = "Pagi";
+} else if($jam>9 and $jam <=14){
+	$waktu = "Siang";
+} else if($jam>14 and $jam <=17){
+	$waktu = "Sore";
+} else { $waktu = "Malam"; }
+?>
 
-<div class="container-top" style="min-height: 10px!important; text-align: right; box-shadow:none">
-    <button style="background-color: #eb211a"><a style="background-color: #eb211a" href="<?= base_url('LoginAdmin/logout')?>">Logout &rarr;</a></button><br/>
+<div class="container-top" style="min-height: 10px!important; box-shadow:none">
+  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('LoginAdmin/logout')?>">Logout &rarr;</a></button><br/>
+
+  <div class="row">
+
+    <div class="atur-kolom">
+      <div class="card-counter success">
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">2019</span>
+        <span class="count-name">Ankatan</span>
+      </div>
+    </div>
+
+    <div class="atur-kolom">
+      <div class="card-counter primary">
+      <i class="fa fa-database"></i>
+        <span class="count-numbers">6</span>
+        <span class="count-name">Semester</span>
+      </div>
+    </div>
+
+
+    <div class="atur-kolom">
+      <div class="card-counter info">
+      <i class="fa fa-book-open"></i>
+        <span class="count-numbers">2</span>
+        <span class="count-name">Jadwal</span>
+      </div>
+    </div>
+
+    <div class="atur-kolom">
+      <div class="card-counter primary">
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">1</span>
+        <span class="count-name">Bimbingan</span>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
-<div class="row">
-<a  href="<?= base_url('Admin/request_akun')?>"
-    <div class="col-md-3">
+<div class="container">
+
+  <h2><?php echo "Selamat ".$waktu.", Admin"?></h2>
+  
+
+</div>
+<div class="container">
+  <h3>Akademik</h3>
+  <div class="row">
+  
+    <div class="atur-kolom-ka">
+    <a  href="<?= base_url('Admin/request_akun')?>">
       <div class="card-counter success">
         <i class="fa fa-database"></i>
         <span class="count-name">DATA REQUEST AKUN</span>
       </div>
+    </a>
     </div>
-</a>
-   
-<a href="<?= base_url('Admin/data_akun')?>">
-    <div class="col-md-3">
+  
+    <div class="atur-kolom-ka">
+    <a href="<?= base_url('Admin/data_akun')?>">
       <div class="card-counter info">
        <i  class="fa fa-book-open"></i>
         <span class="count-name">DATA AKUN</span>
       </div>
+    </a>
     </div>
-</a>
+
+</div>
     
 
-   
-    </div>
+</div>

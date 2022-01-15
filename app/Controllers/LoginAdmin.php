@@ -5,6 +5,9 @@ namespace App\Controllers;
 class LoginAdmin extends BaseController
 {   
    
+   
+        
+    
     public function index()
     {
 
@@ -54,7 +57,7 @@ class LoginAdmin extends BaseController
     }
 
     public function logout()
-    {
+    {   
         session()->destroy();
         return redirect()->to(base_url('LoginAdmin'));
     }
