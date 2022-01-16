@@ -91,6 +91,9 @@ footer a{color: black;}
 input {
   border: 1px solid rgb(219, 219, 219); border-radius: 3px;
 }
+input:hover {
+  border: 1px solid rgb(99, 99, 99); border-radius: 3px;
+}
 input:focus {
   background-color: #ffffff;
   border: 1px solid rgb(184, 247, 255); 

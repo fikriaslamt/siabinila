@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
+use App\Models\M_profil_mahasiswa;
 
 class Mahasiswa extends BaseController
 {
@@ -10,6 +11,7 @@ class Mahasiswa extends BaseController
     public function __construct()
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
+        $this->M_profil_mahasiswa = new M_profil_mahasiswa();
     }
 
     public function index()
@@ -22,6 +24,25 @@ class Mahasiswa extends BaseController
         echo view('r_mahasiswa/v_mahasiswa');
         echo view('layouts/footer');
     }
+
+    public function profil()
+    {
+        $data1 = $this->M_profil_mahasiswa->findAll();
+        $data = [
+            'title' => "Profile - Mahasiswa",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/profil_mahasiswa',$data);
+        echo view('layouts/footer');
+    }
+
+    public function edit_profil()
+    {
+       
+    }
+
     public function form()
     {
         $data = [

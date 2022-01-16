@@ -8,7 +8,8 @@
         <thead class="thead-light">
             <tr>
                 <th scope="col">npm</th>
-                <th scope="col">nama</th>
+                <th scope="col">judul</th>
+                <th scope="col">dosen pembimbing</th>
                 <th scope="col">AKSI</th>
                 
             </tr>
@@ -20,6 +21,7 @@
                 
                 <td><?= $data['npm']; ?></td>
                 <td><?= $data['judul']; ?></td>
+                <td><?= $data['dosen_pembimbing']; ?></td>
                 <td><a href="<?= base_url('Dosen/terima/'.$data["npm"])?>"><button>TERIMA</button></a></td>
                 
             </tr>

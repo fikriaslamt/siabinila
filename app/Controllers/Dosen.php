@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_data_skripsi;
+use App\Models\M_akun;
 
 
 class Dosen extends BaseController
@@ -15,6 +16,7 @@ class Dosen extends BaseController
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_data_skripsi = new M_data_skripsi();
+        $this->M_akun = new M_akun();
     }
 
     public function index()
@@ -62,9 +64,12 @@ class Dosen extends BaseController
 
     public function terima($npm)
     {   
-        $pengajuan = $this->M_data_pengajuan_judul->find($npm);
+        $pengajuan = 
+            $this->M_data_pengajuan_judul->find($npm);
+            
         
         
+        // if($dosen_pembimbing == )
         $this->M_data_skripsi->insert($pengajuan);
         $this->M_data_pengajuan_judul->delete($npm);
         

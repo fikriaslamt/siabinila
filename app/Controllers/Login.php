@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_register;
 use App\Config\Cache;
+use App\Models\M_profil_mahasiswa;
 
 class Login extends BaseController
 {   
@@ -10,6 +11,7 @@ class Login extends BaseController
     public function __construct()
     {
         $this->M_register = new M_register();
+        $this->M_profil_mahasiswa = new M_profil_mahasiswa();
     }
     
     public function index()
@@ -81,8 +83,16 @@ class Login extends BaseController
             'user' => $this->request->getVar('user'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
             'role' => "mahasiswa"
+            
+        ];
+        $data2 =[
+            'npm' => "1917051025",
+            'nama' => "mahasiswa",
+            'prodi' => "si ilmu komputer"
+            
         ];
         $this->M_register->insert($data);
+        $this->M_profil_mahasiswa->insert($data2);
         
         // password_hash($this->request->getVar('admin_password'), PASSWORD_BCRYPT)
    

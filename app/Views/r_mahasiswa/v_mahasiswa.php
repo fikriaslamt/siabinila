@@ -64,35 +64,41 @@ if ($jam > 3 and $jam <=9){
   <h3>Formulir Akademik</h3>
   <div class="row">
 
+    
       <div class="atur-kolom-ka">
-        <div class="card-counter success">Hallo
-        </div>
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+          <div class="card-counter success">Formulir Pengajuan Judul Skripsi </div>
+        </a>
+      </div>
+   
+      
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+          <div class="card-counter primary">   
+            <span class="count-name">Formulir Seminar Usul </span>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+          <div class="card-counter info">
+            <span class="count-name">Formulir Seminar Hasil</span>
+          </div>
+        </a>
       </div>
 
       <div class="atur-kolom-ka">
-        <div class="card-counter primary">
-        <i class="fa fa-database"></i>
-          <span class="count-numbers">6</span>
-          <span class="count-name">Semester</span>
-        </div>
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+          <div class="card-counter primary">
+            <span class="count-name">Formulir Ujian Komprehensif</span>
+          </div>
+        </a>
       </div>
 
-
-      <div class="atur-kolom-ka">
-        <div class="card-counter info">
-        <i class="fa fa-book-open"></i>
-          <span class="count-numbers">2</span>
-          <span class="count-name">Jadwal</span>
-        </div>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <div class="card-counter primary">
-          <i class="fa fa-users"></i>
-          <span class="count-numbers">1</span>
-          <span class="count-name">Bimbingan</span>
-        </div>
-      </div>
+      
 
     </div>
 
