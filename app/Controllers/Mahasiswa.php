@@ -26,8 +26,9 @@ class Mahasiswa extends BaseController
     }
 
     public function profil()
-    {
-        $data1 = $this->M_profil_mahasiswa->findAll();
+    {   
+       
+        $data1 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
         $data = [
             'title' => "Profile - Mahasiswa",
             'data' => $data1
@@ -37,10 +38,22 @@ class Mahasiswa extends BaseController
         echo view('r_mahasiswa/profil_mahasiswa',$data);
         echo view('layouts/footer');
     }
-
-    public function edit_profil()
+    public function form_edit_profil()
     {
-       
+        $data1 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
+        $data = [
+            'title' => "Profile - Edit",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/edit_profil_mahasiswa',$data);
+        echo view('layouts/footer');
+    }
+    public function edit_profil($npm)
+    {
+        $this->M_profil_mahasiswa->update($npm,$this->request->getPost());
+        return redirect()->to(base_url('Mahasiswa/profil'));
     }
 
     public function form()

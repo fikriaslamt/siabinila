@@ -82,6 +82,34 @@ if ($jam > 3 and $jam <=9){
     </a>
     </div>
 
+    <div class="atur-kolom-ka">
+    <a href="<?= base_url('Admin/data_pengajuan_judul')?>">
+      <div class="card-counter success">
+        <i class="fa fa-database"></i>
+        <span class="count-name">DATA REQUEST PENGAJUAN JUDUL</span>
+      </div>
+    </a>
+    </div>
+
+    <div class="atur-kolom-ka">
+    <a href="<?= base_url('Admin/data_pengajuan_usul')?>">
+      <div class="card-counter success">
+        <i class="fa fa-database"></i>
+        <span class="count-name">DATA REQUEST PENGAJUAN USUL</span>
+      </div>
+    </a>
+    </div>
+
+
+    <div class="atur-kolom-ka">
+    <a href="<?= base_url('Admin/data_skripsi')?>">
+      <div class="card-counter info">
+       <i  class="fa fa-book-open"></i>
+        <span class="count-name">DATA SKRIPSI</span>
+      </div>
+    </a>
+    </div>
+
 </div>
     
 

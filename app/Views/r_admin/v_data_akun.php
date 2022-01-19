@@ -13,7 +13,6 @@
             <tr>
                 <th scope="col">nama</th>
                 <th scope="col">user</th>
-                <th scope="col">password</th>
                 <th scope="col">role</th>
                 <th scope="col">AKSI</th>
                 
@@ -23,10 +22,10 @@
             <?php foreach ($data as $data) : ?>
         <tbody>
             <tr>
-                <td><?= $data['nama']; ?></td>
-                <td><?= $data['user']; ?></td>
-                <td><?= $data['password']; ?></td>
-                <td><?= $data['role']; ?></td>
+                <td><?= $data["nama"]; ?></td>
+                <td><?= $data["user"]; ?></td>
+                <td><?= $data["role"]; ?></td>
+               
                 
                
                 <td>

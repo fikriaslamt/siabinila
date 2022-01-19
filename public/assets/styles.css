@@ -3,6 +3,7 @@
 Reset css
 Layout
 Menu Navigasi
+Grid/Kolom
 Layout card
 Table
 Keyframes Animasi
@@ -18,6 +19,76 @@ li {list-style: none;}
 a {text-decoration: none;}
 h1, h2, h3, h4 { margin: 10px; text-transform: capitalize;}
 button, button a{ margin: 5px; padding: 10px 5px; border-radius: 5px; color: white !important; background-color: #66bb6a; border: none}
+
+/* Root Variabel ----------------------------------------------------------------------*/
+:root{
+  --primary-color: #03A9F4;
+  --accent-color: #FF4081;
+  --base-font-size: 12px;
+}
+
+  .meter {
+  box-sizing:content-box;
+  height:15px;
+  position:relative;
+  margin:10px 20px 20px;
+  background:#dfdfdf;
+  border-radius:25px;
+  padding:3px;
+  box-shadow:inset 0 -1px 1px rgba(255,255,255,0.3)
+  }
+  .meter > span {
+  display:block;
+  height:100%;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+  background-color:#2bc253;
+  background-image:linear-gradient(center bottom,#2bc253 37%,#54f054 69%);
+  box-shadow:inset 0 2px 9px rgba(255,255,255,0.3),inset 0 -2px 6px rgba(0,0,0,0.4);
+  position:relative;
+  overflow:hidden
+  }
+  .meter > span:after,.animate > span > span {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background-image:linear-gradient(-45deg,rgba(255,255,255,0.2) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0.2) 75%,transparent 75%,transparent);
+  z-index:1;
+  background-size:50px 50px;
+  animation:move 8s linear infinite;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+  overflow:hidden
+  }
+  .animate > span:after {
+  display:none
+  }
+  
+  @keyframes move {
+  0% {
+  background-position:0 0
+  }
+  100% {
+  background-position:50px 50px
+  }
+  }
+  
+  .orange > span {
+  background-image:linear-gradient(#f1a165,#f36d0a)
+  }
+  .red > span {
+  background-image:linear-gradient(#f0a3a3,#f42323)
+  }
+  .nostripes > span > span,.nostripes > span::after {
+  background-image:none
+  }
 
 /* Layout ----------------------------------------------------------------------*/
 body {
@@ -68,7 +139,7 @@ footer {
 footer a{color: black;}
 
 
-.kotak_form {
+.kotak_form, .login_form {
   width: 90%;
   background-color: #ffffff;
   background-attachment: fixed;
@@ -76,6 +147,9 @@ footer a{color: black;}
   border-radius: 3px;
   margin: 50px auto; /*meletakkan form ke tengah*/
   padding: 30px 20px;
+}
+.login_form{
+  width: 55%;
 }
 .tulisan_form {
   text-align: center;
@@ -102,12 +176,12 @@ label {
   font-size: 11pt;
 }
 .form_text {
-/*membuat lebar form penuh*/
-box-sizing: border-box;
-width: 100%;
-padding: 10px;
-font-size: 11pt;
-margin-bottom: 20px;
+  /*membuat lebar form penuh*/
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: 11pt;
+  margin-bottom: 20px;
 }
 .tombol_submit {
   background: rgb(0, 126, 252);
@@ -115,7 +189,6 @@ margin-bottom: 20px;
   font-size: 11pt;
   font-weight: 500;
   width: 100%;
-  border: none;
   border-radius: 3px;
   padding: 10px 20px;
 }
@@ -133,58 +206,21 @@ margin-bottom: 20px;
   overflow: auto;
 }
 
+/* Grid/Kolom -------------------------------------------------*/
 .row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap; width: 100%;}
 .atur-kolom, .atur-kolom-ka{position:relative;width:100%;min-height:1px;padding:5px;}
 .atur-kolom{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%;}
 .atur-kolom-ka{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%; }
 .atur-kolom:nth-child(1){padding-left: 0px;}
 .atur-kolom:nth-child(4){padding-right: 0px;}
-.card-counter{
-  box-shadow: 2px 2px 10px #DADADA;
-  margin: 0px;
-  padding: 20px 10px;
-  background-color: #fff;
-  height: 100px;
-  border-radius: 5px;
-  transition: .3s linear all;
-}
-.card-counter:hover{
-  box-shadow: 4px 4px 20px #DADADA;
-  transition: .3s linear all;
-}
-.card-counter.primary{
-  background-color: #007bff;
-  color: #FFF;
-}
-.card-counter.success{
-  background-color: #66bb6a;
-  color: #FFF;
-}  
-.card-counter.info{
-  background-color: #26c6da;
-  color: #FFF;
-}  
-.card-counter i{
-  font-size: 5em;
-  opacity: 0.2;
-}
-.card-counter .count-numbers{
-  position: absolute;
-  right: 35px;
-  top: 20px;
-  font-size: 32px;
-  display: block;
-}
-.card-counter .count-name{
-  position: absolute;
-  right: 35px;
-  top: 65px;
-  font-style: italic;
-  text-transform: capitalize;
-  opacity: 0.5;
-  display: block;
-  font-size: 18px;
-}
+.card-counter{box-shadow:2px 2px 10px #DADADA;margin:0;padding:20px 10px;background-color:#fff;height:100px;border:5px;transition:.3s linear all}
+.card-counter:hover{box-shadow:4px 4px 20px #DADADA;transition:.3s linear all}
+.card-counter.primary{background-color:#007bff;color:#FFF}
+.card-counter.success{background-color:#66bb6a;color:#FFF}
+.card-counter.info{background-color:#26c6da;color:#FFF}
+.card-counter i{font-size:5em;opacity:.2}
+.card-counter .count-numbers{position:absolute;right:35px;top:20px;font-size:32px;display:block}
+.card-counter .count-name{position:absolute;right:35px;top:65px;font-style:italic;text-transform:capitalize;opacity:.5;display:block;font-size:18px}
 
 .rekayasaB {
   text-align: center;
@@ -361,7 +397,7 @@ header {background-color: #141b2500;}
 
 /* Table ---------------------------------------------------------------------------- */
 table {
-  margin-left: 100px;
+  margin: 5% auto;
   width: 85%;
   font-family: Arial, Helvetica, sans-serif;
   color: #666;
@@ -441,32 +477,20 @@ table tr:hover td {
   .container, .container-top {width: 90%;}
   .contain-nav {width: 90%;}
   .main-nav {padding-left: 2%; padding-right: 2%;}
-  .navlinks {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    transition: all 0.5s;
-    right: -100%;
-    background: #222831;
-    z-index: 5;
-    }
-  .navlinks li {
-    display: block;
+  .atur-kolom{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;}
+  .atur-kolom:nth-child(2){padding-right: 0px;}
+  .atur-kolom:nth-child(3){padding-left: 0px;}
+
+  .login_form{
+    width: 75%;
   }
-  .navlinks li a {
-    font-size: 20px;
-    color: ivory;
-  }
-  .navlinks li a:hover {
-    border-bottom: none;
-  }
-  .menu-btn {
-    display: block;
-  }
-  #check:checked ~ .navlinks {
-    right: 0;
-  }
+
+  .navlinks{position:fixed;width:100%;height:100vh;text-align:center;transition:all .5s;right:-100%;background:#222831;z-index:5}
+  .navlinks li{display:block}
+  .navlinks li a{font-size:15px;color:#fffff0}
+  .navlinks li a:hover{border-bottom:none}
+  .menu-btn{display:block}
+  #check:checked ~ .navlinks{right:0}
 
   /* ----- */
   .card {
@@ -479,18 +503,14 @@ table tr:hover td {
     .container, .container-top {width: 97%;}
     .contain-nav {width: 97%;}
     .main-nav {padding-left: 1%; padding-right: 1%;}
+    
+    .login_form{
+      width: 90%;
+    }
 
-    .logo {
-      margin-left: 10px;
-      font-size: 25px;
-    }
-    .menu-btn {
-      margin-right: 10px;
-      font-size: 25px;
-    }
-    .menu-btn:focus {
-      color: blue;
-    }
+    .logo{margin-left:10px;font-size:20px}
+    .menu-btn{margin-right:10px;font-size:25px}
+    .menu-btn:focus{color:blue}
 
     .card {
       width: 100%;

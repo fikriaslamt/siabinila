@@ -28,8 +28,8 @@ if ($jam > 3 and $jam <=9){
     <div class="atur-kolom">
       <div class="card-counter primary">
       <i class="fa fa-database"></i>
-        <span class="count-numbers">6</span>
-        <span class="count-name">Semester</span>
+        <span class="count-numbers"><?php echo date("Y"); ?></span>
+        <span class="count-name">Tahun Saat Ini</span>
       </div>
     </div>
 
@@ -37,15 +37,15 @@ if ($jam > 3 and $jam <=9){
     <div class="atur-kolom">
       <div class="card-counter info">
       <i class="fa fa-book-open"></i>
-        <span class="count-numbers">2</span>
-        <span class="count-name">Jadwal</span>
+        <span class="count-numbers">6</span>
+        <span class="count-name">Semester Saat Ini</span>
       </div>
     </div>
 
     <div class="atur-kolom">
       <div class="card-counter primary">
         <i class="fa fa-users"></i>
-        <span class="count-numbers">1</span>
+        <span class="count-numbers">0</span>
         <span class="count-name">Bimbingan</span>
       </div>
     </div>
@@ -58,6 +58,10 @@ if ($jam > 3 and $jam <=9){
 
   <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
+  <div style="margin-left: 21px">Semester <b>6/14</b></div>
+  <div class="meter">
+	<span style="width: 42%"></span>
+  </div>
 
 </div>
 <div class="container">
@@ -75,26 +79,24 @@ if ($jam > 3 and $jam <=9){
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
-          <div class="card-counter primary">   
-            <span class="count-name">Formulir Seminar Usul </span>
-          </div>
+            <div class="card-counter success">Formulir Seminar Usul </div>
         </a>
       </div>
 
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
-          <div class="card-counter info">
-            <span class="count-name">Formulir Seminar Hasil</span>
-          </div>
+          
+            <div class="card-counter success">Formulir Seminar Hasil</div>
+          
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
-          <div class="card-counter primary">
-            <span class="count-name">Formulir Ujian Komprehensif</span>
-          </div>
+          
+            <div class="card-counter success">Formulir Ujian Komprehensif</div>
+          
         </a>
       </div>
 

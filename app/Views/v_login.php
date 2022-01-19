@@ -20,10 +20,10 @@
 </h1>
 
 
-<div class="kotak_form">
+<div class="login_form">
     <h2 class="tulisan_form">
         LOGIN
-    </h2>
+    </h2><br/>
     <div class="card-body">
         <form action="" method="POST">
             

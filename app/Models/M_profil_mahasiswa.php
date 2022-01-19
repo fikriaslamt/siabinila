@@ -9,8 +9,8 @@ class M_profil_mahasiswa extends Model
     
     protected $table                = 'profil_mahasiswa';
     protected $primaryKey           = 'npm';
-    protected $allowedFields        = ['npm','nama','prodi','angkatan'];
-    
+    protected $allowedFields        = ['npm','nama','prodi','jenis_kelamin', 'status','angkatan'];
+    protected $row_array           = 'array';
 
     // Dates
     

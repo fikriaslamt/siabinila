@@ -44,12 +44,12 @@ class Login extends BaseController
                     'role' => $dataAdmin['role']
                 ];
                 session()->set($dataSesi);
-                return redirect()->to(base_url('home'));
+                return redirect()->to(base_url('Home'));
             }
             if ($err) {
                 session()->setFlashdata('username', $username);
                 session()->setFlashdata('error', $err);
-                return redirect()->to(base_url('login'));
+                return redirect()->to(base_url('Login'));
             }
         }
         
