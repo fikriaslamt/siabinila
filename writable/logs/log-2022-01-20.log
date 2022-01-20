@@ -1,0 +1,56 @@
+CRITICAL - 2022-01-20 00:21:25 --> Invalid file: r_admin/index.php
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_admin/index.p...')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/index', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(35): view('r_admin/index', Array)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->index()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#8 {main}
+CRITICAL - 2022-01-20 02:04:21 --> syntax error, unexpected '"></script>' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ','
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('layouts/admin_f...', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(50): view('layouts/admin_f...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_akun()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#8 {main}
+CRITICAL - 2022-01-20 02:24:29 --> Illegal string offset 'npm'
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\data_skripsi.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\ACER\\O...', 57, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/data_sk...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(147): view('r_admin/data_sk...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_skripsi()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-20 02:25:39 --> Illegal string offset 'npm'
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\data_skripsi.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\ACER\\O...', 57, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/data_sk...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(147): view('r_admin/data_sk...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_skripsi()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-20 02:29:32 --> Illegal string offset 'npm'
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\request_judul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\ACER\\O...', 58, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/request...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(78): view('r_admin/request...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_pengajuan_judul()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}

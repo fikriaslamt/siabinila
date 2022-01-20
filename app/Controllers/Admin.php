@@ -20,33 +20,34 @@ class Admin extends BaseController
     }
     public function index()
     {
-        
         $data1 = $this->M_register->findAll();
-        
 
         $data = [
-            'title' => "Admin",
+            'title' => "Dashboard",
             'data' => $data1
         ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_admin');
+        // echo view('layouts/header', $data);
+        // echo view('layouts/navbar_admin');
+        // echo view('r_admin/v_admin',$data);
+        // echo view('layouts/footer');
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_admin',$data);
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
 
     public function data_akun()
     {
         $data1 = $this->M_akun->findAll();
         
-
         $data = [
             'title' => "Data Akun",
             'data' => $data1
         ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_admin');
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_data_akun',$data);
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
 
     public function request_akun()
@@ -58,10 +59,10 @@ class Admin extends BaseController
             'title' => "Data Request Akun",
             'data' => $data1
         ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_admin');
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_request_akun',$data);
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
 
     public function data_pengajuan_judul()
@@ -72,10 +73,10 @@ class Admin extends BaseController
             'title' => "Data Pengajuan Judul",
             'data' => $data1
         ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/request_judul', $data);
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
 
     public function data_pengajuan_usul()
@@ -86,10 +87,10 @@ class Admin extends BaseController
             'title' => "Data Pengajuan Usul",
             'data' => $data1
         ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/request_usul', $data);
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
 
     public function terima_judul($npm)
@@ -141,10 +142,10 @@ class Admin extends BaseController
             'title' => "Data Skripsi",
             'data' => $data1
         ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/data_skripsi', $data);
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
 
     public function form_add_akun_dosen()
@@ -152,9 +153,10 @@ class Admin extends BaseController
         $data = [
             'title' => 'Tambah Akun Dosen'
         ];
-        echo view('layouts/header', $data);
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
         echo view('r_admin/form_tambah_akun_dosen');
-        echo view('layouts/footer');
+        echo view('layouts/admin_footer');
     }
     public function add_akun_dosen()
     {

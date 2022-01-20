@@ -1,116 +1,86 @@
+<!-- Content Row -->
+<div class="row">
 
-<?php
-date_default_timezone_set("Etc/GMT-7");
-$jam = ((int)date("H"));
-$waktu = "";
-if ($jam > 3 and $jam <=9){
-	$waktu = "Pagi";
-} else if($jam>9 and $jam <=14){
-	$waktu = "Siang";
-} else if($jam>14 and $jam <=17){
-	$waktu = "Sore";
-} else { $waktu = "Malam"; }
-?>
-
-<div class="container-top" style="min-height: 10px!important; box-shadow:none">
-  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('LoginAdmin/logout')?>">Logout &rarr;</a></button><br/>
-
-  <div class="row">
-
-    <div class="atur-kolom">
-      <div class="card-counter success">
-        <i class="fa fa-users"></i>
-        <span class="count-numbers">2019</span>
-        <span class="count-name">Ankatan</span>
-      </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Earnings (Monthly)</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="atur-kolom">
-      <div class="card-counter primary">
-      <i class="fa fa-database"></i>
-        <span class="count-numbers">6</span>
-        <span class="count-name">Semester</span>
-      </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                            Earnings (Annual)</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    <div class="atur-kolom">
-      <div class="card-counter info">
-      <i class="fa fa-book-open"></i>
-        <span class="count-numbers">2</span>
-        <span class="count-name">Jadwal</span>
-      </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                            </div>
+                            <div class="col">
+                                <div class="progress progress-sm mr-2">
+                                    <div class="progress-bar bg-info" role="progressbar"
+                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="atur-kolom">
-      <div class="card-counter primary">
-        <i class="fa fa-users"></i>
-        <span class="count-numbers">1</span>
-        <span class="count-name">Bimbingan</span>
-      </div>
+    <!-- Pending Requests Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                            Pending Requests</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-  </div>
-
-</div>
-
-<div class="container">
-
-  <h2><?php echo "Selamat ".$waktu.", Admin"?></h2>
-  
-
-</div>
-<div class="container">
-  <h3>Akademik</h3>
-  <div class="row">
-  
-    <div class="atur-kolom-ka">
-    <a  href="<?= base_url('Admin/request_akun')?>">
-      <div class="card-counter success">
-        <i class="fa fa-database"></i>
-        <span class="count-name">DATA REQUEST AKUN</span>
-      </div>
-    </a>
-    </div>
-  
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Admin/data_akun')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">DATA AKUN</span>
-      </div>
-    </a>
-    </div>
-
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Admin/data_pengajuan_judul')?>">
-      <div class="card-counter success">
-        <i class="fa fa-database"></i>
-        <span class="count-name">DATA REQUEST PENGAJUAN JUDUL</span>
-      </div>
-    </a>
-    </div>
-
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Admin/data_pengajuan_usul')?>">
-      <div class="card-counter success">
-        <i class="fa fa-database"></i>
-        <span class="count-name">DATA REQUEST PENGAJUAN USUL</span>
-      </div>
-    </a>
-    </div>
-
-
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Admin/data_skripsi')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">DATA SKRIPSI</span>
-      </div>
-    </a>
-    </div>
-
-</div>
-    
-
 </div>

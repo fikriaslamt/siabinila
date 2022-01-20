@@ -1,42 +1,60 @@
-<div class="container-top" style="min-height: 10px!important; text-align: right; box-shadow:none">
-    <button style="background-color: #eb211a"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout &rarr;</a></button><br/>
-</div>
 
+<div class="col-xl-12 col-lg-4">
+    <a href="<?= base_url('Admin/form_Add_akun_dosen')?>"><button class="btn btn-primary">TAMBAH AKUN DOSEN</button></a>
+</div><br/>
 
-
-<H2><a >DATA AKUN YANG TERDAFTAR</H2>
-
-<a href="<?= base_url('Admin/form_Add_akun_dosen')?>"><button>TAMBAH AKUN DOSEN</button></a>
-<div class="clas mx-auto">
-<table>
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">nama</th>
-                <th scope="col">user</th>
-                <th scope="col">role</th>
-                <th scope="col">AKSI</th>
-                
-            </tr>
-        </thead>
+<!-- Area Chart -->
+<div class="col-xl-12 col-lg-4">
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div
+            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">DATA MAHASISWA YANG MENGAJUKAN JUDUL</h6>
+            <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                    aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Dropdown Header:</div>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
             
-            <?php foreach ($data as $data) : ?>
-        <tbody>
-            <tr>
-                <td><?= $data["nama"]; ?></td>
-                <td><?= $data["user"]; ?></td>
-                <td><?= $data["role"]; ?></td>
-               
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">nama</th>
+                    <th scope="col">user</th>
+                    <th scope="col">role</th>
+                    <th scope="col">AKSI</th>
+                    
+                </tr>
+            </thead>
                 
-               
-                <td>
-                    <a href="<?= base_url('Admin/delete_akun/'.$data["user"])?>">
-                    <button>DELETE</button>
-                </a></td>
+                <?php foreach ($data as $data) : ?>
+            <tbody>
+                <tr>
+                    <td><?= $data["nama"]; ?></td>
+                    <td><?= $data["user"]; ?></td>
+                    <td><?= $data["role"]; ?></td>
                 
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
+                    <td>
+                        <a href="<?= base_url('Admin/delete_akun/'.$data["user"])?>">
+                        <button class="btn btn-danger">DELETE</button>
+                    </a></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
 
+        </div>
+    </div>
 </div>
