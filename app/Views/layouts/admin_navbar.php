@@ -18,7 +18,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == '' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -32,21 +32,21 @@
             </div>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_skripsi' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/data_skripsi')?>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Data Skripsi</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_judul' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_judul')?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pengajuan Judul</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_usul' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_usul')?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pengajuan Usul</span></a>
@@ -60,21 +60,21 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_akun' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/data_akun')?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Akun</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'request_akun' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/request_akun')?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pengajuan Akun</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'form_Add_akun_dosen' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/form_Add_akun_dosen')?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tambah Akun Dosen</span></a>
@@ -112,7 +112,7 @@
             <i class="fa fa-bars"></i>
         </button>
 
-        <!-- Topbar Search -->
+        <!-- Topbar Search
         <form
             class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
@@ -124,7 +124,7 @@
                     </button>
                 </div>
             </div>
-        </form>
+        </form> -->
 
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
@@ -276,7 +276,7 @@
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrator</span>
                     <img class="img-profile rounded-circle"
                         src="<?= base_url('sbadmin/img/undraw_profile.svg')?>">
                 </a>

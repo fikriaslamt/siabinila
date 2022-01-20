@@ -24,8 +24,7 @@
           <a href="/" class="logo">Sistem Informasi Akademik</a>
           
           <ul class="navlinks">
-            <li><a href="/dosen" class="<?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>">Data</a></li>
-            <li><a href="/about" class="<?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>">About</a></li>
+            <li><a href="/dosen" class="<?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>">Home</a></li>
             <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'admin' ? 'active' : '' ?>"><?= !session()->get('admin_id') ? 'Login ' : 'Admin' ?></a></li>
           </ul>
         </div>

@@ -49,7 +49,7 @@ class LoginAdmin extends BaseController
         }
         
         $data = [
-            'title' => 'Login'
+            'title' => 'Login Admin'
         ];
         echo view('layouts/header', $data);
         echo view('r_admin/v_login_admin');

@@ -54,7 +54,7 @@ class Login extends BaseController
         }
         
         $data = [
-            'title' => 'home'
+            'title' => 'Login'
         ];
         echo view('layouts/header', $data);
         echo view('v_login');

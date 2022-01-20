@@ -1,4 +1,3 @@
-<br/><br/>
 <style>
 body{
     background-color: #f2f2f2;
@@ -18,6 +17,7 @@ body{
 
 </style>
 
+<br/><br/>
 <div class="container">
 <h1 class="tulisan_form" style="">
         Sistem Informasi Admin Bisnis
