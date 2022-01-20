@@ -1,7 +1,7 @@
 
 <div class="container"><br/>
 
-<form action="<?= base_url('Mahasiswa/tambah')?>" method="post">
+<form action="<?= base_url('Mahasiswa/tambah_pengajuan_judul')?>" method="post">
             
     <input type="number" name="npm" class="form_text" placeholder="Masukan npm">
     <input type="text" name="judul1" class="form_text" placeholder="Masukan judul skripsi 1">

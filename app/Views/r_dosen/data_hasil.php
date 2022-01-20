@@ -1,7 +1,7 @@
 <div class="container-top" style="min-height: 10px!important; text-align: right; box-shadow:none">
     <button style="background-color: #eb211a"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout &rarr;</a></button><br/>
 </div>
-<H2 style="margin-left:95px"><a href="#">DATA PENGAJUAN SEMINAR USUL</H2>
+<H2 style="margin-left:95px"><a href="#">DATA PENGAJUAN SEMINAR HASIL</H2>
 <div class="clas mx-auto">
 <table>
         <thead class="thead-light">

@@ -3,6 +3,9 @@
 namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_profil_mahasiswa;
+use App\Models\M_data_usul;
+use App\Models\M_data_hasil;
+use App\Models\M_data_kompre;
 
 class Mahasiswa extends BaseController
 {
@@ -12,6 +15,9 @@ class Mahasiswa extends BaseController
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
+        $this->M_data_usul = new M_data_usul();
+        $this->M_data_kompre = new M_data_kompre();
+        $this->M_data_hasil = new M_data_hasil();
     }
 
     public function index()
@@ -51,7 +57,7 @@ class Mahasiswa extends BaseController
         echo view('layouts/footer');
     }
     public function edit_profil($npm)
-    {
+    {   
         $this->M_profil_mahasiswa->update($npm,$this->request->getPost());
         return redirect()->to(base_url('Mahasiswa/profil'));
     }
@@ -77,17 +83,63 @@ class Mahasiswa extends BaseController
         echo view('layouts/footer');
     }
 
-    public function tambah()
+    public function form_pengajuan_usul()
     {
-        // $this->M_data_pengajuan_judul->save([
-        //     'npm' => $this->request->getVar('npm'),
-        //     'nama' => $this->request->getVar('nama')
-            
-        // ]); 
+        $data = [
+            'title' => "form-pengajuan-usul"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/form_pengajuan_usul');
+        echo view('layouts/footer');
+    }
 
-        $this->M_data_pengajuan_judul->insert($this->request->getPost());
+    public function form_pengajuan_hasil()
+    {
+        $data = [
+            'title' => "form-pengajuan-hasil"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/form_pengajuan_hasil');
+        echo view('layouts/footer');
+    }
 
+    public function form_pengajuan_kompre()
+    {
+        $data = [
+            'title' => "form-pengajuan-kompre"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/form_pengajuan_kompre');
+        echo view('layouts/footer');
+    }
+
+    public function tambah_pengajuan_judul()
+    {
         
+        $this->M_data_pengajuan_judul->insert($this->request->getPost());   
+        return redirect()->to(base_url('Mahasiswa'));
+    }
+
+    public function tambah_pengajuan_usul()
+    {
+       
+        $this->M_data_usul->insert($this->request->getPost());
+        return redirect()->to(base_url('Mahasiswa'));
+    }
+
+    public function tambah_pengajuan_hasil()
+    {
+        $this->M_data_hasil->insert($this->request->getPost()); 
+        return redirect()->to(base_url('Mahasiswa'));
+    }
+
+    public function tambah_pengajuan_kompre()
+    {
+        
+        $this->M_data_kompre->insert($this->request->getPost());
         return redirect()->to(base_url('Mahasiswa'));
     }
 

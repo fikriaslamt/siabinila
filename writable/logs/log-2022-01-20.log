@@ -70,3 +70,109 @@ Main connection [MySQLi]: No connection could be made because the target machine
 #8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
 #10 {main}
+CRITICAL - 2022-01-20 06:13:35 --> Invalid file: r_mahasiswa/profil_dosen.php
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_mahasiswa/pro...')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(49): view('r_mahasiswa/pro...', Array)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->profil()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#8 {main}
+CRITICAL - 2022-01-20 06:14:06 --> Invalid file: r_mahasiswa/profil_dosen.php
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_mahasiswa/pro...')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(49): view('r_mahasiswa/pro...', Array)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->profil()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#8 {main}
+CRITICAL - 2022-01-20 06:24:04 --> There is no data to update.
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(66): CodeIgniter\Model->update('Suprihatin Ali', Array)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->edit_profil('Suprihatin Ali')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#8 {main}
+CRITICAL - 2022-01-20 06:25:05 --> There is no data to update.
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(66): CodeIgniter\Model->update('Suprihatin Ali', Array)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->edit_profil('Suprihatin Ali')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#8 {main}
+CRITICAL - 2022-01-20 09:10:00 --> Cannot use object of type stdClass as array
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_dosen/data_ha...', Array, true)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(126): view('r_dosen/data_ha...', Array)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->data_pengajuan_hasil()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-20 09:11:14 --> Cannot use object of type stdClass as array
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_dosen/data_ha...', Array, true)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(126): view('r_dosen/data_ha...', Array)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->data_pengajuan_hasil()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-20 09:11:18 --> Cannot use object of type stdClass as array
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_dosen/data_ha...', Array, true)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(126): view('r_dosen/data_ha...', Array)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->data_pengajuan_hasil()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-20 09:13:59 --> There is no data to insert.
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(704): CodeIgniter\BaseModel->transformDataToArray(NULL, 'insert')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(620): CodeIgniter\BaseModel->insert(NULL, true)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(138): CodeIgniter\Model->insert(NULL)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->terima_hasil('1917051002')
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-20 09:15:05 --> There is no data to insert.
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(704): CodeIgniter\BaseModel->transformDataToArray(NULL, 'insert')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(620): CodeIgniter\BaseModel->insert(NULL, true)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(138): CodeIgniter\Model->insert(NULL)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->terima_hasil('1917051002')
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-20 09:15:11 --> There is no data to insert.
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(704): CodeIgniter\BaseModel->transformDataToArray(NULL, 'insert')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(620): CodeIgniter\BaseModel->insert(NULL, true)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(138): CodeIgniter\Model->insert(NULL)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->terima_hasil('1917051002')
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}

@@ -78,7 +78,7 @@ if ($jam > 3 and $jam <=9){
     </div>
 
     <div class="atur-kolom-ka">
-    <a href="">
+    <a href="<?= base_url('Dosen/data_pengajuan_hasil')?>">
       <div class="card-counter info">
        <i  class="fa fa-book-open"></i>
         <span class="count-name">DATA HASIL</span>
@@ -87,7 +87,7 @@ if ($jam > 3 and $jam <=9){
     </div>
 
     <div class="atur-kolom-ka">
-    <a href="">
+    <a href="<?= base_url('Dosen/data_pengajuan_kompre')?>">
       <div class="card-counter info">
        <i  class="fa fa-book-open"></i>
         <span class="count-name">DATA KOMPRE</span>
@@ -96,7 +96,7 @@ if ($jam > 3 and $jam <=9){
     </div>
 
     <div class="atur-kolom-ka">
-    <a href="">
+    <a href="<?=base_url("Dosen/data_pengajuan_usul")?>">
       <div class="card-counter info">
        <i  class="fa fa-book-open"></i>
         <span class="count-name">DATA USUL</span>

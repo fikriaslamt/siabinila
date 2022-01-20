@@ -78,14 +78,14 @@ if ($jam > 3 and $jam <=9){
       
 
       <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>">
             <div class="card-counter success">Formulir Seminar Usul </div>
         </a>
       </div>
 
 
       <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>">
           
             <div class="card-counter success">Formulir Seminar Hasil</div>
           
@@ -93,7 +93,7 @@ if ($jam > 3 and $jam <=9){
       </div>
 
       <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>">
           
             <div class="card-counter success">Formulir Ujian Komprehensif</div>
           

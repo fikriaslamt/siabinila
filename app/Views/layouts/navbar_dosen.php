@@ -15,18 +15,18 @@
 
 <!-- header -->
 <header>
-      <nav class="main-nav">
+<nav class="main-nav">
         <div class="contain-nav">
           <input type="checkbox" id="check" />
           <label for="check" class="menu-btn">
-            <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
           </label>
           <a href="/" class="logo">Sistem Informasi Akademik</a>
           
           <ul class="navlinks">
-            <li><a href="/dosen" class="<?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>">Home</a></li>
-            <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'admin' ? 'active' : '' ?>"><?= !session()->get('admin_id') ? 'Login ' : 'Admin' ?></a></li>
+          <li><a href="<?= base_url('Dosen')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == '' ? 'active'  : '' ?>">HOME</a></li>
+            <li><a href="<?= base_url('Dosen/profil')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == 'profil' ? 'active' : '' ?>"><i class="fa fa-user">&nbsp;</i><?= !session()->get('user') ? 'Login ' : session()->get('user') ?></a></li>
           </ul>
-        </div>
+        </div>  
       </nav>
 </header>

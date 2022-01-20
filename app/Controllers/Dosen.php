@@ -4,7 +4,10 @@ namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_data_skripsi;
 use App\Models\M_data_usul;
+use App\Models\M_data_hasil;
+use App\Models\M_data_kompre;
 use App\Models\M_akun;
+use App\Models\M_profil_dosen;
 
 
 class Dosen extends BaseController
@@ -18,7 +21,10 @@ class Dosen extends BaseController
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_data_skripsi = new M_data_skripsi();
         $this->M_data_usul = new M_data_usul();
+        $this->M_data_kompre = new M_data_kompre();
+        $this->M_data_hasil = new M_data_hasil();
         $this->M_akun = new M_akun();
+        $this->M_profil_dosen = new M_profil_dosen();
     }
 
     public function index()
@@ -34,7 +40,36 @@ class Dosen extends BaseController
         echo view('layouts/footer');
     }
     
-
+    public function profil()
+    {   
+       
+        $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nip='".session()->user."'")->getResult();
+        $data = [
+            'title' => "Profile - Dosen",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen', $data);
+        echo view('r_dosen/profil_dosen',$data);
+        echo view('layouts/footer');
+    }
+    public function form_edit_profil()
+    {
+        $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nip='".session()->user."'")->getResult();
+        $data = [
+            'title' => "Profile - Edit",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen', $data);
+        echo view('r_dosen/edit_profil_dosen',$data);
+        echo view('layouts/footer');
+    }
+    public function edit_profil($nip)
+    {   
+        $this->M_profil_dosen->update($nip,$this->request->getPost());
+        return redirect()->to(base_url('Dosen/profil'));
+    }
 
     public function data_skripsi()
     {
@@ -73,9 +108,65 @@ class Dosen extends BaseController
         
         // if($dosen_pembimbing == )
         $this->M_data_skripsi->insert($pengajuan);
-        $this->M_data_pengajuan_judul->delete($npm);
+        $this->M_data_usul->delete($npm);
+            
+        return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
+    }
+
+    public function data_pengajuan_hasil()
+    {
+        $data1 =$this->M_data_hasil->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResult();
+
+        $data = [
+            'title' => "Data Usul",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen');
+        echo view('r_dosen/data_hasil', $data);
+        echo view('layouts/footer');
+    }
+
+    public function terima_hasil($npm)
+    {   
+        $pengajuan = 
+            $this->M_data_hasil->find($npm);
+            
         
-        return redirect()->to(base_url('Admin/data_pengajuan_judul'));
+        
+        // if($dosen_pembimbing == )
+        $this->M_data_skripsi->insert($pengajuan);
+        $this->M_data_hasil->delete($npm);
+            
+        return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
+    }
+
+    public function data_pengajuan_kompre()
+    {
+        $data1 =$this->M_data_kompre->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResult();
+
+        $data = [
+            'title' => "Data Usul",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen');
+        echo view('r_dosen/data_kompre', $data);
+        echo view('layouts/footer');
+    }
+
+    public function terima_kompre($npm)
+    {   
+        $pengajuan = 
+            $this->M_data_kompre->find($npm);
+            
+        
+        
+        // if($dosen_pembimbing == )
+        $this->M_data_skripsi->insert($pengajuan);
+        $this->M_data_kompre->delete($npm);
+            
+        return redirect()->to(base_url('Admin/data_pengajuan_kompre'));
     }
 
 
