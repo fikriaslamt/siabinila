@@ -43,7 +43,7 @@
                     <td><?= $data['judul2']; ?></td>
                     <td><?= $data['dospem1']; ?></td>
                     <td><?= $data['dospem2']; ?></td>
-                    <td><a href="<?= base_url('Admin/terima_judul/'.$data["npm"])?>"><button class="btn btn-success">TERIMA</button></a></td>
+                    <td><a href="<?= base_url('Admin/terima_judul/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a></td>
                     
                 </tr>
                 <?php endforeach; ?>

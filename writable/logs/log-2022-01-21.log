@@ -1,0 +1,240 @@
+ERROR - 2022-01-21 09:02:38 --> Duplicate entry '1917051015' for key 'PRIMARY'
+CRITICAL - 2022-01-21 09:02:38 --> Duplicate entry '1917051015' for key 'PRIMARY'
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `profil_...', 0)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `profil_...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `profil_...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Model.php(721): CodeIgniter\Database\BaseConnection->query('UPDATE `profil_...')
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(65): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:09:38 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(63): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 09:12:11 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 09:12:16 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 09:12:37 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 09:12:40 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 09:12:51 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+ERROR - 2022-01-21 09:13:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Aslam,`prodi`='ilkom',`jenis_kelamin`='L',`angkatan`=2019,`status`='lulus' WHERE' at line 1
+CRITICAL - 2022-01-21 09:13:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Aslam,`prodi`='ilkom',`jenis_kelamin`='L',`angkatan`=2019,`status`='lulus' WHERE' at line 1
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `profil_...', 0)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `profil_...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `profil_...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Model.php(721): CodeIgniter\Database\BaseConnection->query('UPDATE `profil_...')
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(66): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:15:20 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 09:15:36 --> Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-21 09:17:01 --> Call to undefined function App\Controllers\__toString()
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+ERROR - 2022-01-21 09:19:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Aslam,`prodi`='ilkom',`jenis_kelamin`='L',`angkatan`=2019,`status`='lulus' WHERE' at line 1
+CRITICAL - 2022-01-21 09:19:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Aslam,`prodi`='ilkom',`jenis_kelamin`='L',`angkatan`=2019,`status`='lulus' WHERE' at line 1
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `profil_...', 0)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `profil_...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `profil_...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Model.php(721): CodeIgniter\Database\BaseConnection->query('UPDATE `profil_...')
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(66): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+ERROR - 2022-01-21 09:20:09 --> Unknown column 'Fikri' in 'field list'
+CRITICAL - 2022-01-21 09:20:09 --> Unknown column 'Fikri' in 'field list'
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `profil_...', 0)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `profil_...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `profil_...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Model.php(721): CodeIgniter\Database\BaseConnection->query('UPDATE `profil_...')
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(66): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:23:07 --> Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_profil('1917051025')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-21 09:39:58 --> Trying to get property 'npm' of non-object
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\profil_mahasiswa.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ACER\\O...', 3, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(44): view('r_mahasiswa/pro...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->profil()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:40:26 --> Undefined index: npm
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\profil_mahasiswa.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ACER\\O...', 3, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(44): view('r_mahasiswa/pro...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->profil()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:42:39 --> Cannot use object of type stdClass as array
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(44): view('r_mahasiswa/pro...', Array)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->profil()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#9 {main}
+CRITICAL - 2022-01-21 09:42:50 --> Trying to get property 'npm' of non-object
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\profil_mahasiswa.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ACER\\O...', 17, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(44): view('r_mahasiswa/pro...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->profil()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:43:54 --> Trying to get property 'npm' of non-object
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\profil_mahasiswa.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ACER\\O...', 17, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(44): view('r_mahasiswa/pro...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->profil()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:44:17 --> Undefined variable: datamhs
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\profil_mahasiswa.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 3, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/pro...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(44): view('r_mahasiswa/pro...', Array)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->profil()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-01-21 09:49:52 --> Call to a member function getName() on null
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_foto('1917051025')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-01-21 10:14:46 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(68): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_foto('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 10:29:17 --> The original file is not a valid file.
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(76): CodeIgniter\HTTP\Files\UploadedFile->move('./upload/foto/', '')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_foto('1917051025')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#7 {main}
+CRITICAL - 2022-01-21 11:05:55 --> Undefined property: CodeIgniter\HTTP\Files\UploadedFile::$getName
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 77, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->edit_foto('1917051025')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}

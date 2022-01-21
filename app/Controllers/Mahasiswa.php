@@ -33,11 +33,12 @@ class Mahasiswa extends BaseController
 
     public function profil()
     {   
-       
-        $data1 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
+        session();
+        $profil = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
         $data = [
             'title' => "Profile - Mahasiswa",
-            'data' => $data1
+            'data' => $profil,
+            'pesan_err' => \Config\Services::validation(),
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -59,6 +60,19 @@ class Mahasiswa extends BaseController
     public function edit_profil($npm)
     {   
         $this->M_profil_mahasiswa->update($npm,$this->request->getPost());
+        return redirect()->to(base_url('Mahasiswa/profil'));
+    }
+
+    public function edit_foto($npm){
+        if(!$this->validate([
+            'gambarmhs' => 'uploaded[gambarmhs]|max_size[gambarmhs,500]|ext_in[gambarmhs,png,jpg]'
+        ]) ){
+            return redirect()->to(base_url('Mahasiswa/profil'))->withInput();
+        }
+        $file =  $this->request->getFile('gambarmhs');  $namafile = $file->getName();
+        $file->move('./upload/foto', $namafile);        $file_fix = $file->getName();
+
+        $this->M_profil_mahasiswa->query("UPDATE `profil_mahasiswa` SET foto = '$file_fix' WHERE npm = $npm");
         return redirect()->to(base_url('Mahasiswa/profil'));
     }
 

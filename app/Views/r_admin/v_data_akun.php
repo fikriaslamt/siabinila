@@ -48,7 +48,7 @@
                 
                     <td>
                         <a href="<?= base_url('Admin/delete_akun/'.$data["user"])?>">
-                        <button class="btn btn-danger">DELETE</button>
+                        <button class="btn btn-danger btn-sm">DELETE</button>
                     </a></td>
                 </tr>
                 <?php endforeach; ?>

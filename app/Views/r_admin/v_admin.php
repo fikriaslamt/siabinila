@@ -8,8 +8,8 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Jumlah Akun</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">432</div>
+                            Jumlah Mahasiswa</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($mhs)?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -27,7 +27,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Mahasiswa Laki-laki</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">256</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($mhs_pria) ?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-male fa-2x text-gray-300"></i>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
-                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">195</div>
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= count($mhs_wanita) ?></div>
                             </div>
                             <!-- <div class="col">
                                 <div class="progress progress-sm mr-2">
@@ -75,7 +75,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                             Jumlah Dosen</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($dosen)?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-comments fa-2x text-gray-300"></i>

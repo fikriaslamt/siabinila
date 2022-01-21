@@ -24,7 +24,7 @@
           <a href="/" class="logo">Sistem Informasi Akademik</a>
           
           <ul class="navlinks">
-          <li><a href="<?= base_url('Dosen')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == '' ? 'active'  : '' ?>">HOME</a></li>
+          <li><a href="<?= base_url('Dosen')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == '' ? 'active'  : '' ?>"><i class="fa fa-home"></i> HOME</a></li>
             <li><a href="<?= base_url('Dosen/profil')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == 'profil' ? 'active' : '' ?>"><i class="fa fa-user">&nbsp;</i><?= !session()->get('user') ? 'Login ' : session()->get('user') ?></a></li>
           </ul>
         </div>  

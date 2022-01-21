@@ -6,6 +6,9 @@ use App\Models\M_data_pengajuan_judul;
 use App\Models\M_akun;
 use App\Models\M_data_skripsi;
 use App\Models\M_data_usul;
+use App\Models\M_profil_mahasiswa;
+use App\Models\M_profil_dosen;
+
 class Admin extends BaseController
 {
     protected $M_register;
@@ -17,14 +20,23 @@ class Admin extends BaseController
         $this->M_akun = new M_akun();
         $this->M_data_skripsi = new M_data_skripsi();
         $this->M_data_usul = new M_data_usul();
+        $this->M_profil_mahasiswa = new M_profil_mahasiswa();
+        $this->M_profil_dosen = new M_profil_dosen();
     }
+
     public function index()
     {
-        $data1 = $this->M_register->findAll();
+        $register = $this->M_register->findAll();
+        $data_dosen = $this->M_profil_dosen->findAll();
+        $data_mhs = $this->M_profil_mahasiswa->findAll();
+        $mhs_pria = $this->M_profil_mahasiswa->query("SELECT * FROM `profil_mahasiswa` WHERE jenis_kelamin = 'Laki-laki'")->getResultArray();
+        $mhs_wanita = $this->M_profil_mahasiswa->query("SELECT * FROM `profil_mahasiswa` WHERE jenis_kelamin = 'Perempuan'")->getResultArray();
+
 
         $data = [
-            'title' => "Dashboard",
-            'data' => $data1
+            'title' => "Dashboard", 'data' => $register,
+            'mhs' => $data_mhs, 'dosen' => $data_dosen, 
+            'mhs_pria' => $mhs_pria, 'mhs_wanita' => $mhs_wanita,
         ];
         // echo view('layouts/header', $data);
         // echo view('layouts/navbar_admin');

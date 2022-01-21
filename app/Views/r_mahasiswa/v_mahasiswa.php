@@ -13,7 +13,7 @@ if ($jam > 3 and $jam <=9){
 ?>
 
 <div class="container-top" style="min-height: 10px!important; box-shadow:none">
-  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout &rarr;</a></button><br/>
+  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout <i class="fa fa-sign-out-alt"></i></a></button><br/>
 
   <div class="row">
 
