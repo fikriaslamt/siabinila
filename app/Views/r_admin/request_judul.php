@@ -31,7 +31,7 @@
                     <th scope="col">judul 2</th>
                     <th scope="col">dosen pembimbing 1</th>
                     <th scope="col">dosen pembimbing 2</th>
-                    <th scope="col">AKSI</th>
+                    <th scope="col" class="text-center"><i class="fas fa-cog"></i></th>
                 </tr>
             </thead>
             <tbody>
@@ -43,7 +43,14 @@
                     <td><?= $data['judul2']; ?></td>
                     <td><?= $data['dospem1']; ?></td>
                     <td><?= $data['dospem2']; ?></td>
-                    <td><a href="<?= base_url('Admin/terima_judul/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a></td>
+                    
+                    <td><form method='POST' action='<?= base_url('Admin/terima_judul/'.$data["npm"])?>'>
+                    <select name="judul">
+                    <option value="<?= $data['judul1']; ?>">Judul 1</option>
+                    <option value="<?= $data['judul2']; ?>">Judul 2</option>
+                    </select>
+                    <input type="submit" name="submit" class="btn btn-success btn-sm" value="Terima"/>
+                    </form></td>
                     
                 </tr>
                 <?php endforeach; ?>

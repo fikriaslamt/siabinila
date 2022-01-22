@@ -108,19 +108,20 @@ class Admin extends BaseController
     public function terima_judul($npm)
     {   
         // $judul =$this->M_data_pengajuan_judul->query("SELECT judul1 FROM data_pengajuan_judul where npm='".$npm."'")->getResult();
-        
-        $pengajuan = 
-            
-            $this->M_data_pengajuan_judul->find($npm);
-       
-            
-            
-        
-        
-        // if($dosen_pembimbing == )
-        $this->M_data_skripsi->insert($pengajuan);
-      
-        // $this->M_data_pengajuan_judul->delete($npm);
+        $pengajuan = $this->M_data_pengajuan_judul->find($npm);
+        $p_npm = $pengajuan['npm'];
+        $p_dosp1 = $pengajuan['dospem1'];
+        $p_dosp2 = $pengajuan['dospem2'];
+        $date = date('Y-m-d') ;
+
+        $this->M_data_skripsi->insert([
+            'npm' => $p_npm,
+            'judul' => $this->request->getVar('judul'),
+            'dospem1' => $p_dosp1,
+            'dospem2' => $p_dosp2,
+            'date' => $date,
+        ]);
+        $this->M_data_pengajuan_judul->delete($npm);
         
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }

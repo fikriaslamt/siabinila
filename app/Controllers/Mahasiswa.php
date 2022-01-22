@@ -6,6 +6,7 @@ use App\Models\M_profil_mahasiswa;
 use App\Models\M_data_usul;
 use App\Models\M_data_hasil;
 use App\Models\M_data_kompre;
+use App\Models\M_data_skripsi;
 
 class Mahasiswa extends BaseController
 {
@@ -18,12 +19,16 @@ class Mahasiswa extends BaseController
         $this->M_data_usul = new M_data_usul();
         $this->M_data_kompre = new M_data_kompre();
         $this->M_data_hasil = new M_data_hasil();
+        $this->M_data_skripsi = new M_data_skripsi();
     }
 
     public function index()
-    {
+    {   
+        $skripsi = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where npm='".session()->user."'")->getResult();
+        
         $data = [
-            'title' => "Home - Mahasiswa"
+            'title' => "Home - Mahasiswa",
+            'skripsi' => $skripsi
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -33,7 +38,6 @@ class Mahasiswa extends BaseController
 
     public function profil()
     {   
-        session();
         $profil = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
         $data = [
             'title' => "Profile - Mahasiswa",

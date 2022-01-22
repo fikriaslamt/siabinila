@@ -10,6 +10,11 @@ if ($jam > 3 and $jam <=9){
 } else if($jam>14 and $jam <=17){
 	$waktu = "Sore";
 } else { $waktu = "Malam"; }
+
+foreach ($skripsi as $skripsi) :
+  $tanggal = $skripsi->date;
+endforeach;
+
 ?>
 
 <div class="container-top" style="min-height: 10px!important; box-shadow:none">
@@ -62,15 +67,17 @@ if ($jam > 3 and $jam <=9){
   <div class="meter">
 	<span style="width: 42%"></span>
   </div>
-  <div style="margin:11px; font-size: 20px;"> 
-  Skripsi anda telah berjalan 
   <?php 
-  $datetime1 = date_create('2019-07-11');
-  $datetime2 = date_create('2019-10-13');
+  $datetime1 = date_create($tanggal);
+  $datetime2 = date_create(date('Y-m-d'));
   $interval = date_diff($datetime1, $datetime2);
-
-  echo $interval->format('%R%a Hari');
+  // $interval->format('%R%a Hari');
+  $int_hari = $interval->format('%a');
   ?>
+
+  <div style="margin-left: 21px">Skripsi anda telah berjalan  <b><?= $interval->format('%R%a Hari');?></b></div>
+    <div class="meter">
+    <span style="width: <?= ($int_hari/180)*100?>%"></span>
   </div>
 
 </div>
