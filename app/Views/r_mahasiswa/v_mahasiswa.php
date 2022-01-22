@@ -62,6 +62,16 @@ if ($jam > 3 and $jam <=9){
   <div class="meter">
 	<span style="width: 42%"></span>
   </div>
+  <div style="margin:11px; font-size: 20px;"> 
+  Skripsi anda telah berjalan 
+  <?php 
+  $datetime1 = date_create('2019-07-11');
+  $datetime2 = date_create('2019-10-13');
+  $interval = date_diff($datetime1, $datetime2);
+
+  echo $interval->format('%R%a Hari');
+  ?>
+  </div>
 
 </div>
 <div class="container">

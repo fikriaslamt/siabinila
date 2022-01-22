@@ -69,12 +69,15 @@ class Mahasiswa extends BaseController
         ]) ){
             return redirect()->to(base_url('Mahasiswa/profil'))->withInput();
         }
+        $readFile =  './upload/foto/'.$this->request->getVar('foto');
+        if (is_readable($readFile)){
+            unlink($readFile);
+        } 
         $file =  $this->request->getFile('gambarmhs');  $namafile = $file->getName();
         $file->move('./upload/foto', $namafile);        $file_fix = $file->getName();
-
-        $this->M_profil_mahasiswa->query("UPDATE `profil_mahasiswa` SET foto = '$file_fix' WHERE npm = $npm");
+        $this->M_profil_mahasiswa->query("UPDATE profil_mahasiswa SET foto = '$file_fix' WHERE npm = $npm");
         return redirect()->to(base_url('Mahasiswa/profil'));
-    }
+}
 
     public function form()
     {
@@ -89,7 +92,7 @@ class Mahasiswa extends BaseController
     public function form_pengajuan_judul()
     {
         $data = [
-            'title' => "form-pengajuan-judul"
+            'title' => "form pengajuan judul"
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -100,7 +103,7 @@ class Mahasiswa extends BaseController
     public function form_pengajuan_usul()
     {
         $data = [
-            'title' => "form-pengajuan-usul"
+            'title' => "form pengajuan usul"
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -111,7 +114,7 @@ class Mahasiswa extends BaseController
     public function form_pengajuan_hasil()
     {
         $data = [
-            'title' => "form-pengajuan-hasil"
+            'title' => "form pengajuan hasil"
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -122,7 +125,7 @@ class Mahasiswa extends BaseController
     public function form_pengajuan_kompre()
     {
         $data = [
-            'title' => "form-pengajuan-kompre"
+            'title' => "form pengajuan kompre"
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
