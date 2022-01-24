@@ -81,7 +81,7 @@ class Mahasiswa extends BaseController
         $file->move('./upload/foto', $namafile);        $file_fix = $file->getName();
         $this->M_profil_mahasiswa->query("UPDATE profil_mahasiswa SET foto = '$file_fix' WHERE npm = $npm");
         return redirect()->to(base_url('Mahasiswa/profil'));
-}
+    }
 
     public function form()
     {

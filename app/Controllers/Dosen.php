@@ -46,7 +46,8 @@ class Dosen extends BaseController
         $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nip='".session()->user."'")->getResult();
         $data = [
             'title' => "Profile - Dosen",
-            'data' => $data1
+            'data' => $data1,
+            'pesan_err' => \Config\Services::validation(),
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen', $data);
@@ -64,6 +65,21 @@ class Dosen extends BaseController
         echo view('layouts/navbar_dosen', $data);
         echo view('r_dosen/edit_profil_dosen',$data);
         echo view('layouts/footer');
+    }
+    public function edit_foto($npm){
+        if(!$this->validate([
+            'gambar_profil' => 'uploaded[gambar_profil]|max_size[gambar_profil,500]|ext_in[gambar_profil,png,jpg]'
+        ]) ){
+            return redirect()->to(base_url('Dosen/profil'))->withInput();
+        }
+        $readFile =  './upload/foto/'.$this->request->getVar('foto');
+        if (is_readable($readFile)){
+            unlink($readFile);
+        } 
+        $file =  $this->request->getFile('gambar_profil');  $namafile = $file->getName();
+        $file->move('./upload/foto', $namafile);        $file_fix = $file->getName();
+        $this->M_profil_dosen->query("UPDATE profil_dosen SET foto = '$file_fix' WHERE nip   = $npm");
+        return redirect()->to(base_url('Dosen/profil'));
     }
     public function edit_profil($nip)
     {   
@@ -101,14 +117,33 @@ class Dosen extends BaseController
 
     public function terima_usul($npm)
     {   
-        $pengajuan = 
-            $this->M_data_usul->find($npm);
+        $date1 = $this->M_data_skripsi->find("date");
+        $date2 = date('Y-m-d');
+        $datetime1 = date_create($date1);
+        $datetime2 = date_create($date2);
+        $interval = date_diff($datetime1, $datetime2);
+        $interval = $interval->format('%a Hari');
+
+        $data = $this->M_data_usul->find($npm);
+        $skripsi = $this->M_data_skripsi->find($npm);
+        $pengajuan = [
+            'time' => $interval,
+            'date' => $date2,
+            'npm'=> $data["npm"],
+            'judul'=> $data["judul"],
+            'dospem1'=> $data["dospem1"],
+            'dospem2'=> $data["dospem2"],
+            'status'=> "TELAH DITERIMA USUL"
+        ];
+            
             
         
         
         // if($dosen_pembimbing == )
-        $this->M_data_skripsi->insert($pengajuan);
-        $this->M_data_usul->delete($npm);
+        
+        $this->M_data_skripsi->update($npm,$pengajuan);
+        
+        // $this->M_data_usul->delete($npm);
             
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
@@ -132,10 +167,10 @@ class Dosen extends BaseController
         $pengajuan = 
             $this->M_data_hasil->find($npm);
             
-        
+        $skripsi = $this->M_data_skripsi->find($npm);
         
         // if($dosen_pembimbing == )
-        $this->M_data_skripsi->insert($pengajuan);
+        $this->M_data_skripsi->update($skripsi,$pengajuan);
         $this->M_data_hasil->delete($npm);
             
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));

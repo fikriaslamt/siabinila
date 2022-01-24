@@ -56,7 +56,7 @@ if ($jam > 3 and $jam <=9){
 
 <div class="container">
 
-  <h2><?php echo "Selamat ".$waktu.", ".session()->get('user') ?></h2>
+  <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
 
 </div>

@@ -120,6 +120,7 @@ class Admin extends BaseController
             'dospem1' => $p_dosp1,
             'dospem2' => $p_dosp2,
             'date' => $date,
+            'status' => "TELAH MENGAJUKAN JUDUL"
         ]);
         $this->M_data_pengajuan_judul->delete($npm);
         
@@ -128,12 +129,25 @@ class Admin extends BaseController
 
     public function terima_usul($npm)
     {   
-        $date = date('Y-m-d') ;
-        // $origin->diff($target);
+
+        
+        $date1 = $this->M_data_skripsi->find("date");
+        $date2 = date('Y-m-d');
+        $datetime1 = date_create($date1);
+        $datetime2 = date_create($date2);
+        $interval = date_diff($datetime1, $datetime2);
+        $interval = $interval->format('%a Hari');
+
         $data = $this->M_data_usul->find($npm);
+        $skripsi = $this->M_data_skripsi->find($npm);
         $pengajuan = [
-            'data' => $data,
-            'date' => $date,
+            'time' => $interval,
+            'date' => $date2,
+            'npm'=> $data["npm"],
+            'judul'=> $data["judul"],
+            'dospem1'=> $data["dospem1"],
+            'dospem2'=> $data["dospem2"],
+            'status'=> "TELAH DITERIMA USUL"
         ];
             
             
@@ -141,10 +155,11 @@ class Admin extends BaseController
         
         // if($dosen_pembimbing == )
         
-        $this->M_data_skripsi->insert($pengajuan);
-        $this->M_data_usul->delete($npm);
+        $this->M_data_skripsi->update($npm,$pengajuan);
         
-        return redirect()->to(base_url('Admin/data_pengajuan_judul'));
+        // $this->M_data_usul->delete($npm);
+        
+        return redirect()->to(base_url('Admin/data_pengajuan_usul'));
     }
 
     public function data_skripsi()

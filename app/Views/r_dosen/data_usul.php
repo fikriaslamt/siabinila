@@ -24,7 +24,7 @@
 
                 <td><?= $data->dospem1; ?></td>
                 <td><?= $data->dospem2; ?></td>
-                <td><a href="<?= base_url('Dosen/terima_hasil/'.$data->npm)?>"><button>TERIMA</button></a></td>
+                <td><a href="<?= base_url('Dosen/terima_usul/'.$data->npm)?>"><button>TERIMA</button></a></td>
                 
             </tr>
             <?php endforeach; ?>

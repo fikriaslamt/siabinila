@@ -8,5 +8,5 @@ class M_data_skripsi extends Model
 {
     protected $table = 'data_skripsi';
     protected $primaryKey     = 'npm';
-    protected $allowedFields  =  ['npm','judul','dospem1','dospem2','date'];
+    protected $allowedFields  =  ['npm','judul','dospem1','dospem2','date','status','time'];
 }
