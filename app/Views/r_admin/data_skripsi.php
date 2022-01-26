@@ -27,6 +27,7 @@
             <thead>
                 <tr>
                 <th scope="col">NPM</th>
+                <th scope="col">Nama</th>
                 <th scope="col">Judul</th>
                 <th scope="col">Dosen Pembimbing 1</th>
                 <th scope="col">Dosen Pembimbing 2</th>
@@ -41,6 +42,7 @@
                 <tr>
                 
                 <td><?= $data["npm"]; ?></td>
+                <td><?= $data["nama"]; ?></td>
                 <td><?= $data["judul"]; ?></td>
                 <td><?= $data["dospem1"]; ?></td>
                 <td><?= $data["dospem2"]; ?></td>

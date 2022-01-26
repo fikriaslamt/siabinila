@@ -24,6 +24,29 @@
                     <span>Dashboard</span></a>
             </li>
 
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Mahasiswa
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_skripsi' ? 'active'  : '' ?>">
+                <a class="nav-link" href="<?= base_url('Admin/data_lulusan')?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Data Lulusan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_judul' ? 'active'  : '' ?>">
+                <a class="nav-link" href="<?= base_url('Admin/daftar_mahasiswa')?>">
+                    <i class="fas fa-fw fa-chart-bar"></i>
+                    <span>Daftar Mahasiswa</span></a>
+            </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->
@@ -49,7 +72,21 @@
             <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_usul' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_usul')?>">
                     <i class="fas fa-fw fa-chart-bar"></i>
-                    <span>Pengajuan Usul</span></a>
+                    <span>Pengajuan Seminar Usul</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_usul' ? 'active'  : '' ?>">
+                <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_hasil')?>">
+                    <i class="fas fa-fw fa-chart-bar"></i>
+                    <span>Pengajuan Seminar Hasil</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_usul' ? 'active'  : '' ?>">
+                <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_kompre')?>">
+                    <i class="fas fa-fw fa-chart-bar"></i>
+                    <span>Pengajuan Ujian Skripsi</span></a>
             </li>
 
             <!-- Divider -->

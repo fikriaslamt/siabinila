@@ -3,11 +3,12 @@
 </div>
 <H2 style="margin-left:95px"><a href="#">DATA MAHASISWA YANG MENGAJUKAN JUDUL</H2>
 <div class="clas mx-auto">
-
-        <table class="table table-bordered table-hover">
+<a href="<?= base_url('Cetak')?>"><button>TES</button></a>
+<table class="table table-bordered table-hover">
             <thead>
                 <tr>
                 <th scope="col">NPM</th>
+                <th scope="col">Nama</th>
                 <th scope="col">Judul</th>
                 <th scope="col">Dosen Pembimbing 1</th>
                 <th scope="col">Dosen Pembimbing 2</th>
@@ -21,18 +22,19 @@
                 <?php foreach ($data as $data) : ?>
                 <tr>
                 
-                <td><?= $data->npm; ?></td>
-                <td><?= $data->judul; ?></td>
-                <td><?= $data->dospem1; ?></td>
-                <td><?= $data->dospem2; ?></td>
-                <td><?= $data->date; ?></td>
-                <td><?= $data->time; ?></td>
-                <td><?= $data->status; ?></td>
+                <td><?= $data["npm"]; ?></td>
+                <td><?= $data["nama"]; ?></td>
+                <td><?= $data["judul"]; ?></td>
+                <td><?= $data["dospem1"]; ?></td>
+                <td><?= $data["dospem2"]; ?></td>
+                <td><?= $data["date"]; ?></td>
+                <td><?= $data["time"]; ?></td>
+                <td><?= $data["status"]; ?></td>
                 
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
 </div>
 
 </div>

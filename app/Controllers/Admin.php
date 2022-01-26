@@ -6,6 +6,8 @@ use App\Models\M_data_pengajuan_judul;
 use App\Models\M_akun;
 use App\Models\M_data_skripsi;
 use App\Models\M_data_usul;
+use App\Models\M_data_hasil;
+use App\Models\M_data_kompre;
 use App\Models\M_profil_mahasiswa;
 use App\Models\M_profil_dosen;
 
@@ -20,6 +22,8 @@ class Admin extends BaseController
         $this->M_akun = new M_akun();
         $this->M_data_skripsi = new M_data_skripsi();
         $this->M_data_usul = new M_data_usul();
+        $this->M_data_hasil = new M_data_hasil();
+        $this->M_data_kompre = new M_data_kompre();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
         $this->M_profil_dosen = new M_profil_dosen();
     }
@@ -46,6 +50,34 @@ class Admin extends BaseController
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_admin',$data);
         echo view('layouts/admin_footer');
+    }
+
+    public function data_lulusan()
+    {
+        $data1 = $this->M_data_skripsi->query("SELECT * FROM `data_skripsi` WHERE status = 'LULUS'")->getResultArray();
+        
+        $data = [
+            'title' => "Data Akun",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/data_lulusan',$data);
+        echo view('layouts/admin_footer');
+    }
+
+    public function daftar_mahasiswa()
+    {
+        // $data1 = $this->M_akun->findAll();
+        
+        // $data = [
+        //     'title' => "Data Akun",
+        //     'data' => $data1
+        // ];
+        // echo view('layouts/admin_header', $data);
+        // echo view('layouts/admin_navbar', $data);
+        // echo view('r_admin/v_data_akun',$data);
+        // echo view('layouts/admin_footer');
     }
 
     public function data_akun()
@@ -96,7 +128,7 @@ class Admin extends BaseController
         $data1 = $this->M_data_usul->findAll();
 
         $data = [
-            'title' => "Data Pengajuan Usul",
+            'title' => "Data Pengajuan Seminar Usul",
             'data' => $data1
         ];
         echo view('layouts/admin_header', $data);
@@ -105,21 +137,52 @@ class Admin extends BaseController
         echo view('layouts/admin_footer');
     }
 
+    public function data_pengajuan_hasil()
+    {
+        $data1 = $this->M_data_hasil->findAll();
+
+        $data = [
+            'title' => "Data Pengajuan Seminar Hasil",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/request_hasil', $data);
+        echo view('layouts/admin_footer');
+    }
+
+    public function data_pengajuan_kompre()
+    {
+        $data1 = $this->M_data_kompre->findAll();
+
+        $data = [
+            'title' => "Data Pengajuan Ujian Skripsi",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/request_kompre', $data);
+        echo view('layouts/admin_footer');
+    }
+
     public function terima_judul($npm)
     {   
         // $judul =$this->M_data_pengajuan_judul->query("SELECT judul1 FROM data_pengajuan_judul where npm='".$npm."'")->getResult();
         $pengajuan = $this->M_data_pengajuan_judul->find($npm);
         $p_npm = $pengajuan['npm'];
+        $p_nama = $pengajuan['nama'];
         $p_dosp1 = $pengajuan['dospem1'];
         $p_dosp2 = $pengajuan['dospem2'];
         $date = date('Y-m-d') ;
 
         $this->M_data_skripsi->insert([
             'npm' => $p_npm,
+            'nama' => $p_nama,
             'judul' => $this->request->getVar('judul'),
             'dospem1' => $p_dosp1,
             'dospem2' => $p_dosp2,
             'date' => $date,
+            'date_judul' => $date,
             'status' => "TELAH MENGAJUKAN JUDUL"
         ]);
         $this->M_data_pengajuan_judul->delete($npm);
@@ -127,11 +190,18 @@ class Admin extends BaseController
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }
 
+    public function tolak_judul($npm)
+    {      
+        $this->M_data_pengajuan_judul->delete($npm);
+        return redirect()->to(base_url('Admin/data_pengajuan_judul'));
+    }
+
+
     public function terima_usul($npm)
     {   
-
+        $skripsi = $this->M_data_skripsi->find($npm);
         
-        $date1 = $this->M_data_skripsi->find("date");
+        $date1 = $skripsi["date_judul"];
         $date2 = date('Y-m-d');
         $datetime1 = date_create($date1);
         $datetime2 = date_create($date2);
@@ -139,21 +209,19 @@ class Admin extends BaseController
         $interval = $interval->format('%a Hari');
 
         $data = $this->M_data_usul->find($npm);
-        $skripsi = $this->M_data_skripsi->find($npm);
+        
         $pengajuan = [
             'time' => $interval,
+            'time_judul-usul' => $interval,
             'date' => $date2,
+            'date_usul' => $date2,
             'npm'=> $data["npm"],
+            'nama'=> $data["nama"],
             'judul'=> $data["judul"],
             'dospem1'=> $data["dospem1"],
             'dospem2'=> $data["dospem2"],
-            'status'=> "TELAH DITERIMA USUL"
+            'status'=> "SEMINAR USUL"
         ];
-            
-            
-        
-        
-        // if($dosen_pembimbing == )
         
         $this->M_data_skripsi->update($npm,$pengajuan);
         
@@ -161,6 +229,95 @@ class Admin extends BaseController
         
         return redirect()->to(base_url('Admin/data_pengajuan_usul'));
     }
+
+    public function tolak_usul($npm)
+    {      
+        $this->M_data_usul->delete($npm);
+        return redirect()->to(base_url('Admin/data_pengajuan_usul'));
+    }
+
+    public function terima_hasil($npm)
+    {   
+        $skripsi = $this->M_data_skripsi->find($npm);
+        
+        $date1 = $skripsi["date_usul"];
+        $date2 = date('Y-m-d');
+        $datetime1 = date_create($date1);
+        $datetime2 = date_create($date2);
+        $interval = date_diff($datetime1, $datetime2);
+        $interval = $interval->format('%a Hari');
+
+        $data = $this->M_data_hasil->find($npm);
+        
+        $pengajuan = [
+            'time' => $interval,
+            'time_usul-hasil' => $interval,
+            'date' => $date2,
+            'date_hasil' => $date2,
+            'npm'=> $data["npm"],
+            'nama'=> $data["nama"],
+            'judul'=> $data["judul"],
+            'dospem1'=> $data["dospem1"],
+            'dospem2'=> $data["dospem2"],
+            'status'=> "SEMINAR HASIL"
+        ];
+        
+        $this->M_data_skripsi->update($npm,$pengajuan);
+        
+        // $this->M_data_usul->delete($npm);
+        
+        return redirect()->to(base_url('Admin/data_pengajuan_hasil'));
+    }
+
+    public function tolak_hasil($npm)
+    {      
+        $this->M_data_hasil->delete($npm);
+        return redirect()->to(base_url('Admin/data_pengajuan_hasil'));
+    }
+
+    public function terima_kompre($npm)
+    {   
+        $skripsi = $this->M_data_skripsi->find($npm);
+        $date = $skripsi["date_judul"];
+        $date1 = $skripsi["date_hasil"];
+        $date2 = date('Y-m-d');
+        $datetime = date_create($date);
+        $datetime1 = date_create($date1);
+        $datetime2 = date_create($date2);
+        $interval = date_diff($datetime1, $datetime2);
+        $interval = $interval->format('%a Hari');
+        $interval_total = date_diff($datetime, $datetime2);
+        $interval_total = $interval_total->format('%a Hari');
+
+        $data = $this->M_data_kompre->find($npm);
+        
+        $pengajuan = [
+            'time' => $interval,
+            'time_hasil-kompre' => $interval,
+            'time_total' => $interval_total,
+            'date' => $date2,
+            'date_kompre' => $date2,
+            'npm'=> $data["npm"],
+            'nama'=> $data["nama"],
+            'judul'=> $data["judul"],
+            'dospem1'=> $data["dospem1"],
+            'dospem2'=> $data["dospem2"],
+            'status'=> "LULUS"
+        ];
+        
+        $this->M_data_skripsi->update($npm,$pengajuan);
+        
+        // $this->M_data_usul->delete($npm);
+        
+        return redirect()->to(base_url('Admin/data_pengajuan_kompre'));
+    }
+
+    public function tolak_kompre($npm)
+    {      
+        $this->M_data_kompre->delete($npm);
+        return redirect()->to(base_url('Admin/data_pengajuan_kompre'));
+    }
+
 
     public function data_skripsi()
     {

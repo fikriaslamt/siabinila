@@ -142,8 +142,8 @@ class Mahasiswa extends BaseController
     public function tambah_pengajuan_judul()
     {
         
-        $this->M_data_pengajuan_judul->insert($this->request->getPost());   
-        return redirect()->to(base_url('Mahasiswa'));
+        // $this->M_data_pengajuan_judul->insert($this->request->getPost());
+        return redirect()->to(base_url('Cetak'));
     }
 
     public function tambah_pengajuan_usul()

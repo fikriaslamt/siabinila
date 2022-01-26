@@ -20,9 +20,8 @@ foreach ($profil as $profil) :
   $date2 = new DateTime(date('Y-m-d'));
   $interval = $date1->diff($date2);
   $semester = 1 + ((int)$interval->y * 2);
-  if($interval->m >= 6){
-	$semester += 1;
-  }
+  if($interval->m >= 6){	$semester += 1;}
+  $smtr_persen = ($semester/14)*100;
 endforeach;
 
 ?>
@@ -36,7 +35,7 @@ endforeach;
       <div class="card-counter success">
         <i class="fa fa-users"></i>
         <span class="count-numbers"><?=$angkatan?></span>
-        <span class="count-name">Ankatan</span>
+        <span class="count-name">Angkatan</span>
       </div>
     </div>
 
@@ -73,9 +72,9 @@ endforeach;
 
   <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
-  <div style="margin-left: 21px">Semester <b>6/14</b></div>
+  <div style="margin-left: 21px">Semester <b><?=$semester?></b>/14</div>
   <div class="meter">
-	<span style="width: 42%"></span>
+	<span style="width: <?=$smtr_persen?>%"></span>
   </div>
 
   <?php 

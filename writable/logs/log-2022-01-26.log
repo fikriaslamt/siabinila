@@ -82,3 +82,323 @@ CRITICAL - 2022-01-26 12:12:37 --> Undefined variable: int_hari
 #8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
 #10 {main}
+CRITICAL - 2022-01-26 00:18:28 --> Undefined array key "date"
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\data_skripsi.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\User\\K...', 47)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/data_sk...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(175): view('r_admin/data_sk...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_skripsi()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 00:18:31 --> Undefined array key "date"
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\data_skripsi.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\User\\K...', 47)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/data_sk...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(175): view('r_admin/data_sk...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_skripsi()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 00:20:06 --> Undefined array key "time"
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\data_skripsi.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\User\\K...', 48)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/data_sk...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(175): view('r_admin/data_sk...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_skripsi()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 01:12:06 --> Undefined property: App\Controllers\Admin::$M_skripsi
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 57)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_lulusan()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 01:12:38 --> Undefined property: App\Controllers\Admin::$data_skripsi
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 57)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_lulusan()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 01:12:46 --> Undefined array key "nama"
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\r_admin\data_lulusan.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\User\\K...', 43)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/data_lu...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(65): view('r_admin/data_lu...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->data_lulusan()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 01:33:55 --> Undefined property: App\Controllers\Admin::$M_pengajuan_judul
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Admin.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 195)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Admin->tolak_judul('1917051001')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 01:43:58 --> There is no data to update.
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(174): CodeIgniter\Model->update(Array, NULL)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->terima_hasil('111')
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-26 01:50:32 --> Attempt to read property "npm" on array
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\r_dosen\data_skripsi.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\Users\\User\\K...', 24)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_dosen/data_sk...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(266): view('r_dosen/data_sk...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->data_skripsi()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 02:31:20 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 10)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 02:35:31 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 11)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 02:36:34 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 11)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 02:38:15 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 11)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 02:41:17 --> Class "FPDF" not found
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#5 {main}
+CRITICAL - 2022-01-26 05:18:19 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 15)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 05:28:01 --> include_once(C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\/third_party/fpdf/fpdf.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(C:...', 'C:\\Users\\User\\K...', 13)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(13): include_once()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#7 {main}
+CRITICAL - 2022-01-26 05:31:39 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 13)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 05:34:55 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 14)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 05:34:56 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 14)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 05:34:56 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 14)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 05:34:57 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 14)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 06:33:53 --> Undefined property: App\Controllers\Cetak::$load
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 15)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetak->__construct()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 06:34:06 --> Class "App\ThirdParty\FPDF" not found
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#5 {main}
+CRITICAL - 2022-01-26 06:35:07 --> Class "App\ThirdParty\FPDF" not found
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#5 {main}
+CRITICAL - 2022-01-26 06:35:24 --> Class "App\ThirdParty\FPDF" not found
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#5 {main}
+CRITICAL - 2022-01-26 06:35:51 --> include(helveticab.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\ThirdParty\FPDF.php(1143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(helveti...', 'C:\\Users\\User\\K...', 1143)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\ThirdParty\FPDF.php(1143): include()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\ThirdParty\FPDF.php(461): App\ThirdParty\FPDF->_loadfont('helveticab.php')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\ThirdParty\FPDF.php(509): App\ThirdParty\FPDF->AddFont('helvetica', 'B')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(23): App\ThirdParty\FPDF->SetFont('helvetica', 'B', 16)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 06:41:36 --> require(App/ThirdParty/FPDF.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(App/Thi...', 'C:\\Users\\User\\K...', 17)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): require()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#7 {main}
+CRITICAL - 2022-01-26 06:41:55 --> require(../fpdf.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(../fpdf...', 'C:\\Users\\User\\K...', 17)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): require()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#7 {main}
+CRITICAL - 2022-01-26 06:42:32 --> require(../FPDF.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(../FPDF...', 'C:\\Users\\User\\K...', 17)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): require()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#7 {main}
+CRITICAL - 2022-01-26 06:42:54 --> include(helveticab.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\FPDF.php(1143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(helveti...', 'C:\\Users\\User\\K...', 1143)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\FPDF.php(1143): include()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\FPDF.php(461): App\ThirdParty\FPDF->_loadfont('helveticab.php')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\FPDF.php(509): App\ThirdParty\FPDF->AddFont('helvetica', 'B')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(21): App\ThirdParty\FPDF->SetFont('helvetica', 'B', 16)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-01-26 06:58:21 --> Unmatched '}'
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('Cetak')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('Cetak')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 07:08:11 --> Undefined property: App\Controllers\Cetak::$fpdf
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 20)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-01-26 07:11:55 --> The use statement with non-compound name 'Exception' has no effect
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Autoloader\Autoloader.php(264): CodeIgniter\Debug\Exceptions->errorHandler(2, 'The use stateme...', 'C:\\Users\\User\\K...', 11)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Autoloader\Autoloader.php(264): include_once()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Autoloader\Autoloader.php(200): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\User\\K...')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(16): CodeIgniter\Autoloader\Autoloader->loadClassmap('FPDF')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#9 {main}
+CRITICAL - 2022-01-26 07:12:10 --> include(helveticab.php): Failed to open stream: No such file or directory
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(helveti...', 'C:\\Users\\User\\K...', 1159)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1159): include()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(477): FPDF->_loadfont('helveticab.php')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(525): FPDF->AddFont('helvetica', 'B')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(368): FPDF->SetFont('helvetica', 'B', 15)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(17): FPDF->AddPage()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#12 {main}
+CRITICAL - 2022-01-26 07:12:52 --> Undefined property: App\Controllers\Cetak::$fpdf
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\User\\K...', 20)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}

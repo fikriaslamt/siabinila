@@ -88,37 +88,57 @@ class Dosen extends BaseController
         return redirect()->to(base_url('Dosen/profil'));
     }
 
-    public function data_skripsi()
-    {
-        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResult();
-
-        $data = [
-            'title' => "Data Skripsi",
-            'data' => $data1
-        ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
-        echo view('r_dosen/data_skripsi', $data);
-        echo view('layouts/footer');
-    }
-
     public function data_pengajuan_usul()
     {
-        $data1 =$this->M_data_usul->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResult();
+        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_usul where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
+
 
         $data = [
-            'title' => "Data Usul",
+            'title' => "Data Pengajuan Seminar Usul",
             'data' => $data1
         ];
         echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
+        echo view('layouts/navbar_dosen', $data);
         echo view('r_dosen/data_usul', $data);
         echo view('layouts/footer');
     }
 
+    public function data_pengajuan_hasil()
+    {
+        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_hasil where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
+
+
+        $data = [
+            'title' => "Data Pengajuan Seminar Hasil",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen', $data);
+        echo view('r_dosen/data_hasil', $data);
+        echo view('layouts/footer');
+    }
+
+    public function data_pengajuan_kompre()
+    {
+        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_kompre where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
+
+
+        $data = [
+            'title' => "Data Pengajuan Ujian Skripsi",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen', $data);
+        echo view('r_dosen/data_kompre', $data);
+        echo view('layouts/footer');
+    }
+
+
     public function terima_usul($npm)
     {   
-        $date1 = $this->M_data_skripsi->find("date");
+        $skripsi = $this->M_data_skripsi->find($npm);
+        
+        $date1 = $skripsi["date_judul"];
         $date2 = date('Y-m-d');
         $datetime1 = date_create($date1);
         $datetime2 = date_create($date2);
@@ -126,83 +146,128 @@ class Dosen extends BaseController
         $interval = $interval->format('%a Hari');
 
         $data = $this->M_data_usul->find($npm);
-        $skripsi = $this->M_data_skripsi->find($npm);
+        
         $pengajuan = [
             'time' => $interval,
+            'time_judul-usul' => $interval,
             'date' => $date2,
+            'date_usul' => $date2,
             'npm'=> $data["npm"],
+            'nama'=> $data["nama"],
             'judul'=> $data["judul"],
             'dospem1'=> $data["dospem1"],
             'dospem2'=> $data["dospem2"],
-            'status'=> "TELAH DITERIMA USUL"
+            'status'=> "SEMINAR USUL"
         ];
-            
-            
-        
-        
-        // if($dosen_pembimbing == )
         
         $this->M_data_skripsi->update($npm,$pengajuan);
         
         // $this->M_data_usul->delete($npm);
-            
+        
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
-    public function data_pengajuan_hasil()
-    {
-        $data1 =$this->M_data_hasil->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResult();
-
-        $data = [
-            'title' => "Data Usul",
-            'data' => $data1
-        ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
-        echo view('r_dosen/data_hasil', $data);
-        echo view('layouts/footer');
+    public function tolak_usul($npm)
+    {      
+        $this->M_data_usul->delete($npm);
+        return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
     public function terima_hasil($npm)
     {   
-        $pengajuan = 
-            $this->M_data_hasil->find($npm);
-            
         $skripsi = $this->M_data_skripsi->find($npm);
         
-        // if($dosen_pembimbing == )
-        $this->M_data_skripsi->update($skripsi,$pengajuan);
-        $this->M_data_hasil->delete($npm);
-            
-        return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
+        $date1 = $skripsi["date_usul"];
+        $date2 = date('Y-m-d');
+        $datetime1 = date_create($date1);
+        $datetime2 = date_create($date2);
+        $interval = date_diff($datetime1, $datetime2);
+        $interval = $interval->format('%a Hari');
+
+        $data = $this->M_data_hasil->find($npm);
+        
+        $pengajuan = [
+            'time' => $interval,
+            'time_usul-hasil' => $interval,
+            'date' => $date2,
+            'date_hasil' => $date2,
+            'npm'=> $data["npm"],
+            'nama'=> $data["nama"],
+            'judul'=> $data["judul"],
+            'dospem1'=> $data["dospem1"],
+            'dospem2'=> $data["dospem2"],
+            'status'=> "SEMINAR HASIL"
+        ];
+        
+        $this->M_data_skripsi->update($npm,$pengajuan);
+        
+        // $this->M_data_usul->delete($npm);
+        
+        return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
-    public function data_pengajuan_kompre()
-    {
-        $data1 =$this->M_data_kompre->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResult();
-
-        $data = [
-            'title' => "Data Usul",
-            'data' => $data1
-        ];
-        echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen');
-        echo view('r_dosen/data_kompre', $data);
-        echo view('layouts/footer');
+    public function tolak_hasil($npm)
+    {      
+        $this->M_data_hasil->delete($npm);
+        return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
     public function terima_kompre($npm)
     {   
-        $pengajuan = 
-            $this->M_data_kompre->find($npm);
-            
+        $skripsi = $this->M_data_skripsi->find($npm);
+        $date = $skripsi["date_judul"];
+        $date1 = $skripsi["date_hasil"];
+        $date2 = date('Y-m-d');
+        $datetime = date_create($date);
+        $datetime1 = date_create($date1);
+        $datetime2 = date_create($date2);
+        $interval = date_diff($datetime1, $datetime2);
+        $interval = $interval->format('%a Hari');
+        $interval_total = date_diff($datetime, $datetime2);
+        $interval_total = $interval_total->format('%a Hari');
+
+        $data = $this->M_data_kompre->find($npm);
         
+        $pengajuan = [
+            'time' => $interval,
+            'time_hasil-kompre' => $interval,
+            'time_total' => $interval_total,
+            'date' => $date2,
+            'date_kompre' => $date2,
+            'npm'=> $data["npm"],
+            'nama'=> $data["nama"],
+            'judul'=> $data["judul"],
+            'dospem1'=> $data["dospem1"],
+            'dospem2'=> $data["dospem2"],
+            'status'=> "LULUS"
+        ];
         
-        // if($dosen_pembimbing == )
-        $this->M_data_skripsi->insert($pengajuan);
+        $this->M_data_skripsi->update($npm,$pengajuan);
+        
+        // $this->M_data_usul->delete($npm);
+        
+        return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
+    }
+
+    public function tolak_kompre($npm)
+    {      
         $this->M_data_kompre->delete($npm);
-            
-        return redirect()->to(base_url('Admin/data_pengajuan_kompre'));
+        return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
+    }
+
+
+    public function data_skripsi()
+    {
+        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
+
+        $data = [
+            'title' => "Data Skripsi",
+            'data' => $data1
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen', $data);
+        echo view('r_dosen/data_skripsi', $data);
+        echo view('layouts/footer');
     }
 
 

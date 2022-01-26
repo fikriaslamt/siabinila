@@ -18,9 +18,7 @@ body{
 
 <br/><br/>
 <div class="container">
-    <h1 class="tulisan_form">
-            Sistem Skripsi
-    </h1>
+    <h1 class="tulisan_form">SISTEM INFORMASI ADMIN BISNIS</h1>
 
     <div class="login_form">
         <h2 class="tulisan_form">
@@ -38,13 +36,13 @@ body{
                 
                 <label for="inputUsername">
                     <i class="fa fa-user"></i> Username (NPM)</label>
-                <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username" required/>
+                <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan NPM Anda" required/>
                 <label for="inputPassword">
                     <i class="fa fa-key"></i> Password</label>
-                <input type="password" name="password" class="form_text" id="inputPassword" placeholder="Masukan Password" required>
+                <input type="password" name="password" class="form_text" id="inputPassword" placeholder="Buat Password" required>
                 <label for="nama">
                     <i class="fa fa-user"></i> Nama Lengkap</label>
-                <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukan Username" required/>
+                <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukan Nama Lengkap" required/>
                 <label for="Jenis_kelamin">
                     <i class="fa fa-user"></i> Jenis Kelamin</label>
                 <select name="jenis_kelamin" class="form_text" id="Jenis_kelamin">

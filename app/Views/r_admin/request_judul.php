@@ -4,7 +4,7 @@
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">DATA MAHASISWA YANG MENGAJUKAN JUDUL</h6>
+            <h6 class="m-0 font-weight-bold text-primary">DATA MAHASISWA YANG MENGAJUKAN JUDUL SKRIPSI</h6>
             <div class="dropdown no-arrow">
                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,8 +49,11 @@
                     <option value="<?= $data['judul1']; ?>">Judul 1</option>
                     <option value="<?= $data['judul2']; ?>">Judul 2</option>
                     </select>
-                    <input type="submit" name="submit" class="btn btn-success btn-sm" value="Terima"/>
-                    </form></td>
+                    <input type="submit" name="submit" class="btn btn-success btn-sm" value="TERIMA"/>
+                    
+                    
+                    </form>
+                    <a href="<?= base_url('Admin/tolak_judul/'.$data["npm"])?>"><button class="btn btn-danger btn-sm">TOLAK</button></a>
                     
                 </tr>
                 <?php endforeach; ?>

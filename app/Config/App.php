@@ -447,9 +447,9 @@ class App extends BaseConfig
      * Content Security Policy
      * --------------------------------------------------------------------------
      *
-     * Enables the Response's Content Secure Policy to restrict the sources that
+     * Enables the 's Content Secure Policy to restrict the sources that
      * can be used for images, scripts, CSS files, audio, video, etc. If enabled,
-     * the Response object will populate default values for the policy from the
+     * the  object will populate default values for the policy from the
      * `ContentSecurityPolicy.php` file. Controllers can always add to those
      * restrictions at run time.
      *
