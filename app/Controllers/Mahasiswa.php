@@ -25,10 +25,11 @@ class Mahasiswa extends BaseController
     public function index()
     {   
         $skripsi = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where npm='".session()->user."'")->getResult();
+        $profil = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
         
         $data = [
             'title' => "Home - Mahasiswa",
-            'skripsi' => $skripsi
+            'skripsi' => $skripsi, 'profil' => $profil
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -73,12 +74,13 @@ class Mahasiswa extends BaseController
         ]) ){
             return redirect()->to(base_url('Mahasiswa/profil'))->withInput();
         }
-        $readFile =  './upload/foto/'.$this->request->getVar('foto');
+        $readFile =  './upload/foto/mhs/'.$this->request->getVar('foto');
         if (is_readable($readFile)){
             unlink($readFile);
         } 
         $file =  $this->request->getFile('gambarmhs');  $namafile = $file->getName();
-        $file->move('./upload/foto', $namafile);        $file_fix = $file->getName();
+        $file->move('./upload/foto/mhs', 'profil_'.$npm.'.'.$file->getExtension()); 
+        $file_fix = $file->getName();
         $this->M_profil_mahasiswa->query("UPDATE profil_mahasiswa SET foto = '$file_fix' WHERE npm = $npm");
         return redirect()->to(base_url('Mahasiswa/profil'));
     }

@@ -11,8 +11,18 @@ if ($jam > 3 and $jam <=9){
 	$waktu = "Sore";
 } else { $waktu = "Malam"; }
 
-foreach ($skripsi as $skripsi) :
-  $tanggal = $skripsi->date;
+foreach ($skripsi as $skripsii) :
+  $tanggal = $skripsii->date;
+endforeach;
+foreach ($profil as $profil) :
+  $angkatan = $profil->angkatan;
+  $date1 = new DateTime(substr($profil->angkatan,2)."-07-01");
+  $date2 = new DateTime(date('Y-m-d'));
+  $interval = $date1->diff($date2);
+  $semester = 1 + ((int)$interval->y * 2);
+  if($interval->m >= 6){
+	$semester += 1;
+  }
 endforeach;
 
 ?>
@@ -25,7 +35,7 @@ endforeach;
     <div class="atur-kolom">
       <div class="card-counter success">
         <i class="fa fa-users"></i>
-        <span class="count-numbers">2019</span>
+        <span class="count-numbers"><?=$angkatan?></span>
         <span class="count-name">Ankatan</span>
       </div>
     </div>
@@ -42,7 +52,7 @@ endforeach;
     <div class="atur-kolom">
       <div class="card-counter info">
       <i class="fa fa-book-open"></i>
-        <span class="count-numbers">6</span>
+        <span class="count-numbers"><?=$semester?></span>
         <span class="count-name">Semester Saat Ini</span>
       </div>
     </div>
@@ -67,18 +77,20 @@ endforeach;
   <div class="meter">
 	<span style="width: 42%"></span>
   </div>
-  <?php 
-  $datetime1 = date_create($tanggal);
-  $datetime2 = date_create(date('Y-m-d'));
-  $interval = date_diff($datetime1, $datetime2);
-  // $interval->format('%R%a Hari');
-  $int_hari = $interval->format('%a');
-  ?>
 
-  <div style="margin-left: 21px">Skripsi anda telah berjalan  <b><?= $interval->format('%R%a Hari');?></b></div>
+  <?php 
+  if (!empty($skripsi)): 
+    $datetime1 = date_create($tanggal);
+    $datetime2 = date_create(date('Y-m-d'));
+    $interval = date_diff($datetime1, $datetime2);
+    //$interval->format('%R%a Hari');
+    $int_hari = $interval->format('%a');
+  ?>
+  <div style="margin-left: 21px">Skripsi anda telah berjalan  <b><?= $interval->format('%a');?></b> Hari</div>
     <div class="meter">
     <span style="width: <?= ($int_hari/180)*100?>%"></span>
   </div>
+  <?php endif ?>
 
 </div>
 <div class="container">

@@ -3,7 +3,7 @@
 <center>
     <br/>
   <?php foreach ($data as $datads) : ?>
-    <img src="../upload/foto/<?= $datads->foto ?>" width="150">
+    <img src="../upload/foto/dosen/<?= $datads->foto ?>" width="150">
   <form action="<?=base_url('Dosen/edit_foto/'.$datads->nip)?>" method="post" enctype="multipart/form-data">
     <input style="display:none;" type="text" name="foto" value="<?=$datads->foto?>">
     <input type="file" name="gambar_profil" value="add"><br/>

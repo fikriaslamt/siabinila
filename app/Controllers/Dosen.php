@@ -72,13 +72,14 @@ class Dosen extends BaseController
         ]) ){
             return redirect()->to(base_url('Dosen/profil'))->withInput();
         }
-        $readFile =  './upload/foto/'.$this->request->getVar('foto');
+        $readFile =  './upload/foto/dosen/'.$this->request->getVar('foto');
         if (is_readable($readFile)){
             unlink($readFile);
         } 
         $file =  $this->request->getFile('gambar_profil');  $namafile = $file->getName();
-        $file->move('./upload/foto', $namafile);        $file_fix = $file->getName();
-        $this->M_profil_dosen->query("UPDATE profil_dosen SET foto = '$file_fix' WHERE nip   = $npm");
+        $file->move('./upload/foto/dosen', 'profil_'.$npm.'.'.$file->getExtension());        
+        $file_fix = $file->getName();
+        $this->M_profil_dosen->query("UPDATE profil_dosen SET foto = '$file_fix' WHERE nip = $npm");
         return redirect()->to(base_url('Dosen/profil'));
     }
     public function edit_profil($nip)

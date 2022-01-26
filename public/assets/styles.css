@@ -116,7 +116,6 @@ body {
 .container, .container-top {
   position: relative;
   width: 75%;
-  min-height:50vmin !important;
   margin: 0 auto;
   margin-top: 20px; margin-bottom: 20px;
   text-align: left;

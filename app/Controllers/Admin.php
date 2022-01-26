@@ -202,21 +202,28 @@ class Admin extends BaseController
 
 
     public function tambah_akun($user)
-    {
+    {  
+        $akun = $this->M_register->find($user);
+
         
-        $akun = 
-            $this->M_register->find($user);
-            
-       
-        
-        
-        $this->M_akun->insert($akun);
+        $this->M_akun->insert([
+            'user' => $akun["user"],
+            'password' => $akun["password"],
+            'nama' => $akun["nama"],
+            'role' => "mahasiswa"
+        ]);
+        $this->M_profil_mahasiswa->insert([
+            'npm' => $akun["user"],
+            'nama' => $akun["nama"],
+            'prodi' => "Administrasi Bisnis",
+            'jenis_kelamin' => $akun["jenis_kelamin"],
+            'angkatan' => "20".substr($akun["user"],0,2),
+            'status' => "Mahasiswa"
+        ]);
         $this->M_register->delete($user);
         
         return redirect()->to(base_url('Admin'));
     }
-
-  
 
     public function delete_akun($user)
     {

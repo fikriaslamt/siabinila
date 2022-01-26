@@ -30,16 +30,15 @@ class Login extends BaseController
                 if ($dataAdmin == '') {
                     $err = "Username salah";
                 }
-                // else {
-                //     $hashed_one = $this->request->getPost('password');
-                //     if ($dataAdmin['password'] != $hashed_one) {
-                //     $err = "Password salah"; }
-                // } 
+                else {
+                    if (!password_verify($password, $dataAdmin['password'])) {
+                        $err = "Password salah"; 
+                    }
+                }
             }
             if (empty($err)) {
                 $dataSesi = [
                     'user' => $dataAdmin['user'],
-                    'password' => $dataAdmin['password'],
                     'nama' => $dataAdmin['nama'],
                     'role' => $dataAdmin['role']
                 ];
@@ -81,22 +80,16 @@ class Login extends BaseController
     {   
         $data =[
             'user' => $this->request->getVar('user'),
-            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            'nama' => $this->request->getVar('nama'),
+            'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
             'role' => "mahasiswa"
-            
-        ];
-        $data2 =[
-            'npm' => "1917051025",
-            'nama' => "mahasiswa",
-            'prodi' => "si ilmu komputer"
-            
         ];
         $this->M_register->insert($data);
-        $this->M_profil_mahasiswa->insert($data2);
         
         // password_hash($this->request->getVar('admin_password'), PASSWORD_BCRYPT)
    
-        return redirect()->to(base_url('Admin'));
+        return redirect()->to(base_url());
     }
 
 
