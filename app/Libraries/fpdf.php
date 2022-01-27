@@ -360,18 +360,34 @@ function AddPage($orientation='', $size='', $rotation=0)
 }
 
 function Header()
-{
-	// To be implemented in your own inherited class
-	 // Logo
-	//  $this->Image('logo.png',10,6,30);
-	 // Arial bold 15
-	 $this->SetFont('Arial','B',15);
-	 // Move to the right
-	 $this->Cell(80);
-	 // Title
-	 $this->Cell(30,10,'Title',1,0,'C');
-	 // Line break
-	 $this->Ln(20);
+{	$file = "public\assets\img\logo";
+	$this->SetFont('Times','B',16);
+	// $this->Image($file,10,6,30,30,'PNG');
+    // Move to the right
+    $this->Cell(65);
+    $this->Cell(60,10,'KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN',0,0,'C');
+    $this->Ln(5);
+    $this->Cell(65);
+	$this->SetFont('Times','B',14);
+    $this->Cell(60,10,'UNIVERSITAS LAMPUNG',0,0,'C');
+	$this->Ln(5);
+    $this->Cell(65);
+    $this->Cell(60,10,'FAKULTAS ILMU SOSIAL DAN ILMU POLITIK',0,0,'C');
+	$this->Ln(5);
+    $this->Cell(65);
+    $this->Cell(60,10,'JURUSAN ILMU ADMINISTRASI BISNIS',0,0,'C');
+    $this->SetFont('Times','',9);
+	$this->Ln(5);
+    $this->Cell(65);
+    $this->Cell(60,10,'Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626',0,0,'C');
+	$this->SetFont('Times','',14);
+	$this->Ln(5);
+    $this->Cell(65);
+    $this->Cell(60,10,'Website http://admbisnis.fisip.unila.ac.id/ Email admunila@gmail.com',0,0,'C');
+    // Line break
+    $this->SetLineWidth(1.2);
+    $this->Line(10,45,200,45);
+    $this->Ln(15);
 }
 
 function Footer()

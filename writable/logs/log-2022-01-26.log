@@ -418,3 +418,16 @@ CRITICAL - 2022-01-26 20:39:02 --> Duplicate entry '19170510251' for key 'PRIMAR
 #11 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #12 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
 #13 {main}
+CRITICAL - 2022-01-26 23:57:43 --> fopen(logo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(logo.png)...', 'C:\\Users\\User\\K...', 1277)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1277): fopen('logo.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(905): FPDF->_parsepng('logo.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(365): FPDF->Image('logo.png', 10, 6, 30)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(16): FPDF->AddPage()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->index()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}

@@ -3,7 +3,7 @@
 </div>
 <H2 style="margin-left:95px"><a href="#">DATA MAHASISWA YANG MENGAJUKAN JUDUL</H2>
 <div class="clas mx-auto">
-<a href="<?= base_url('Cetak')?>"><button>TES</button></a>
+<a href="<?= base_url('Cetak/surat_pengajuan_judul')?>"><button>TES</button></a>
 <table class="table table-bordered table-hover">
             <thead>
                 <tr>

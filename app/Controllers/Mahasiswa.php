@@ -7,6 +7,7 @@ use App\Models\M_data_usul;
 use App\Models\M_data_hasil;
 use App\Models\M_data_kompre;
 use App\Models\M_data_skripsi;
+use App\Models\M_surat_pengajuan_judul;
 
 class Mahasiswa extends BaseController
 {
@@ -20,6 +21,7 @@ class Mahasiswa extends BaseController
         $this->M_data_kompre = new M_data_kompre();
         $this->M_data_hasil = new M_data_hasil();
         $this->M_data_skripsi = new M_data_skripsi();
+        $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
     }
 
     public function index()
@@ -142,8 +144,20 @@ class Mahasiswa extends BaseController
     public function tambah_pengajuan_judul()
     {
         
-        // $this->M_data_pengajuan_judul->insert($this->request->getPost());
-        return redirect()->to(base_url('Cetak'));
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'prodi'         => $this->request->getVar('prodi'),
+            'judul1'        => $this->request->getVar('judul1'),
+            'judul2'        => $this->request->getVar('judul2'),
+            'moderator'     => $this->request->getVar('moderator'),
+            'npm_moderator' => $this->request->getVar('npm_moderator'),
+            'koor_seminar'  => $this->request->getVar('koor_seminar'),
+            'nip_koor_seminar'      => $this->request->getVar('nip_koor_seminar'),
+        ];
+        $this->M_surat_pengajuan_judul->insert($data);
+        
+        return redirect()->to(base_url('Cetak/surat_pengajuan_judul/'.$data['npm']));
     }
 
     public function tambah_pengajuan_usul()
