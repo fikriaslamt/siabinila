@@ -6,7 +6,7 @@
     <img src="../upload/foto/mhs/<?= $datamhs->foto ?>" width="150">
   <form action="<?=base_url('Mahasiswa/edit_foto/'.$datamhs->npm)?>" method="post" enctype="multipart/form-data">
     <input style="display:none;" type="text" name="foto" value="<?=$datamhs->foto?>">
-    <input type="file" name="gambarmhs" value="add"><br/>
+    <input class="form-file" type="file" name="gambarmhs" value="add"><br/>
     <?php if($pesan_err->getError('gambarmhs')!=""){echo $pesan_err->getError('gambarmhs')."<br/>";}?>
     <button type="submit">Ganti Foto</button>
   </form>

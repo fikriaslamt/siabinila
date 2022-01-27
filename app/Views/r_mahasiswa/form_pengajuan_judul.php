@@ -14,7 +14,7 @@
         <button type="submit" class="submit">
         <i class="fa fa-file-import"></i> Submit
         </button>
-        </div>        
+        </div>
     </form>
 </div>
 </div>

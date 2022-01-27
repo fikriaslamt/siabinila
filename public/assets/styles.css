@@ -19,6 +19,7 @@ li {list-style: none;}
 a {text-decoration: none;}
 h1, h2, h3, h4 { margin: 10px; text-transform: capitalize;}
 button, button a{ margin: 5px; padding: 10px 5px; border-radius: 2px; color: white !important; background-color: #66bb6a; border: none}
+.text-muted{color:#6c757d!important}
 
 /* Root Variabel ----------------------------------------------------------------------*/
 :root{
@@ -97,7 +98,7 @@ button, button a{ margin: 5px; padding: 10px 5px; border-radius: 2px; color: whi
 /* Layout ----------------------------------------------------------------------*/
 body {
   background-color: var(--warna-bg, #f1f1f1);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color:#000;
 }
 #wrapper {
@@ -165,26 +166,24 @@ footer a{color: black;}
   background-color: rgb(255, 254, 169);
 }
 input {
-  border: 1px solid rgb(219, 219, 219); border-radius: 3px;
-}
+  border: 1px solid rgb(219, 219, 219); border-radius: 3px;}
 input:hover {
-  border: 1px solid rgb(99, 99, 99); border-radius: 3px;
-}
+  border: 1px solid rgb(99, 99, 99); border-radius: 3px;}
 input:focus {
   background-color: #ffffff;
-  border: 1px solid rgb(184, 247, 255); 
-}
+  border: 1px solid rgb(184, 247, 255); }
 label {
-  font-size: 11pt;
-}
+  font-size: 11pt;}
+small { position:relative;font-size:80%;font-weight:400;top:-15px; }
 .form_text {
   /*membuat lebar form penuh*/
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
   font-size: 11pt;
-  margin-bottom: 20px;
-}
+  margin-top: 5px; margin-bottom: 15px;
+} 
+.form-file{border-radius:0px}
 .tombol_submit {
   background: var(--warna-utama);font-size: 11pt;font-weight: 500;color: white;
   width: 100%;
@@ -216,7 +215,7 @@ label {
 .card-counter.info{background-color:#26c6da;color:#FFF}
 .card-counter i{font-size:5em;opacity:.2}
 .card-counter .count-numbers{position:absolute;right:35px;top:20px;font-size:32px;display:block}
-.card-counter .count-name{position:absolute;right:35px;top:65px;text-transform:capitalize;display:block;font-size:18px;background-color: rgba(0, 0, 0, 0);}
+.card-counter .count-name{position:absolute;right:35px;top:65px;text-transform:capitalize;display:block;font-size:16px;background-color: rgba(0, 0, 0, 0);}
 
 /* Tooltip / popup ----------------------------------------------------------------- */
 .bar_munculan {

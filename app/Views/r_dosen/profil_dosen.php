@@ -13,9 +13,8 @@
   <?php endforeach; ?>
   </center>
 
-  <br/>
-    <a href="<?=base_url("Dosen/form_edit_profil")?>"><button>EDIT</button></a>
-  <br/>
+
+    
 <table>
 <?php foreach ($data as $data) : ?>
   <tr>
@@ -25,6 +24,10 @@
   <tr>
     <th>Nama</th>
     <td><?= $data->nama; ?></td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><a href="<?=base_url("Dosen/form_edit_profil")?>"><button>EDIT</button></a></td>
   </tr>
  
   <?php endforeach; ?>

@@ -36,15 +36,17 @@ body{
                 
                 <label for="inputUsername">
                     <i class="fa fa-user"></i> Username (NPM)</label>
-                <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan NPM Anda" required/>
+                <input type="text" maxlength="10" minlength="10" pattern="\d*"name="user" class="form_text" id="inputUsername" placeholder="Masukan NPM Anda" required/>
+                <small class="text-muted"> *Pastikan Username sudah sesuai NPM</small><br>
                 <label for="inputPassword">
                     <i class="fa fa-key"></i> Password</label>
-                <input type="password" name="password" class="form_text" id="inputPassword" placeholder="Buat Password" required>
+                <input type="password" minlength="6" name="password" class="form_text" id="inputPassword" placeholder="Buat Password" required>
+                <small class="text-muted"> *Password minimal 6 digit</small><br>
                 <label for="nama">
-                    <i class="fa fa-user"></i> Nama Lengkap</label>
+                    <i class="fas fa-file-signature"></i> Nama Lengkap</label>
                 <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukan Nama Lengkap" required/>
                 <label for="Jenis_kelamin">
-                    <i class="fa fa-user"></i> Jenis Kelamin</label>
+                    <i class="fa fa-user-circle"></i> Jenis Kelamin</label>
                 <select name="jenis_kelamin" class="form_text" id="Jenis_kelamin">
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
