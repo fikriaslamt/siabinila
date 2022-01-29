@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_profil_mahasiswa;
+use App\Models\M_profil_dosen;
 use App\Models\M_data_usul;
 use App\Models\M_data_hasil;
 use App\Models\M_data_kompre;
@@ -17,6 +18,7 @@ class Mahasiswa extends BaseController
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
+        $this->M_profil_dosen = new M_profil_dosen();
         $this->M_data_usul = new M_data_usul();
         $this->M_data_kompre = new M_data_kompre();
         $this->M_data_hasil = new M_data_hasil();
@@ -99,8 +101,10 @@ class Mahasiswa extends BaseController
     }
     public function form_pengajuan_judul()
     {
+        $Dosen =$this->M_profil_dosen->findAll();
+        
         $data = [
-            'title' => "form pengajuan judul"
+            'title' => "form pengajuan judul", 'dosen' => $Dosen,
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -153,7 +157,7 @@ class Mahasiswa extends BaseController
             'moderator'     => $this->request->getVar('moderator'),
             'npm_moderator' => $this->request->getVar('npm_moderator'),
             'koor_seminar'  => $this->request->getVar('koor_seminar'),
-            'nip_koor_seminar'      => $this->request->getVar('nip_koor_seminar'),
+            'nip_koor_seminar' => $this->request->getVar('nip_koor_seminar'),
         ];
         $this->M_surat_pengajuan_judul->insert($data);
         

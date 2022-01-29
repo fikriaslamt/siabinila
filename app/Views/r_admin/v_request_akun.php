@@ -23,6 +23,12 @@
         <!-- Card Body -->
         <div class="card-body">
 
+        <?php if (session()->getFlashdata('pesan')) { ?>
+        <div class="alert alert-primary">
+        <?php echo session()->getFlashdata('pesan') ?>
+        </div>
+        <?php } ?> 
+
     <table class="table table-bordered table-hover">
     <thead>
         <tr>

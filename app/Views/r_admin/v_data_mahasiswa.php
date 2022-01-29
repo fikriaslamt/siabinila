@@ -8,7 +8,13 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-            
+        
+        <?php if (session()->getFlashdata('pesan')) { ?>
+        <div class="alert alert-primary">
+        <?php echo session()->getFlashdata('pesan') ?>
+        </div>
+        <?php } ?> 
+
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -26,7 +32,7 @@
                     <td><?= $data["npm"]; ?></td>
                 
                     <td>
-                        <a href="<?= base_url('Admin/delete_akun/'.$data["npm"])?>">
+                        <a href="<?= base_url('Admin/delete_akun_M/'.$data["npm"])?>">
                         <button class="btn btn-danger btn-sm">Hapus</button>
                     </a></td>
                 </tr>

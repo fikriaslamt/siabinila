@@ -27,22 +27,30 @@
         <form action="<?= base_url('Admin/add_akun_dosen')?>" method="POST">
             
             <?php if (session()->getFlashdata('error')) { ?>
-            <div class="pesan_error">
+            <div class="alert alert-primary">
             <?php echo session()->getFlashdata('error') ?>
             </div>
             <?php } ?>
             
             <div class="form-group">
             <label for="inputUsername">
-                    Username
-            </label>
-            <input type="text" name="user" class="form-control" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username"/>
+                Username</label>
+            <input type="text" name="user" class="form-control" value="" id="inputUsername" placeholder="Buat username"/>
+            </div>
+            <div class="form-group">
+            <label for="Nama">
+                Nama</label>
+            <input type="text" name="nama" class="form-control" value="" id="Nama" placeholder="Masukan Nama Dosen"/>
+            </div>
+            <div class="form-group">
+            <label for="NIP">
+                NIP</label>
+            <input type="number" name="nip" class="form-control" value="" id="NIP" placeholder="Masukan Nama Dosen"/>
             </div>
             <div class="form-group">
             <label for="inputPassword">
-                    Password
-            </label>
-            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Masukan Password">
+                Password</label>
+            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Buat Password">
             </div>
             
             <input type="submit" name="register" class="btn btn-primary" value="Tambahkan" />

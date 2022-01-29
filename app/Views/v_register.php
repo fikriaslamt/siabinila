@@ -46,7 +46,8 @@ body{
                 <small class="text-muted"> *Password minimal 6 digit</small><br>
                 <label for="Jenis_kelamin">
                     <i class="fa fa-user-circle"></i> Jenis Kelamin</label>
-                <select name="jenis_kelamin" class="form_text" id="Jenis_kelamin">
+                <select name="jenis_kelamin" class="form_text" id="Jenis_kelamin" required>
+                    <option value="">- Pilih -</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>

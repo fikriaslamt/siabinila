@@ -95,6 +95,7 @@ class Admin extends BaseController
             'title' => "Data Request Akun",
             'data' => $data1
         ];
+        
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_request_akun',$data);
@@ -337,16 +338,20 @@ class Admin extends BaseController
     }
     public function add_akun_dosen()
     {
-        $data =[
+        $this->M_akun->insert([
             'user' => $this->request->getVar('user'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
-            'role' => "dosen"
-          
+            'nama' => $this->request->getVar('nama'),
+            'role' => "dosen",
+        ]);
 
-        ];
-        $this->M_akun->insert($data);
-    
-    return redirect()->to(base_url('Admin'));
+        $this->M_profil_dosen->insert([
+            'nip' => $this->request->getVar('nip'),
+            'nama' => $this->request->getVar('nama'),
+            'foto' => "profil.jpg",
+        ]);
+        session()->setFlashdata('error', "Akun dosen berhasil dibuat");
+        return redirect()->to(base_url('Admin/form_Add_akun_dosen'));
     }
 
 
@@ -371,16 +376,24 @@ class Admin extends BaseController
         ]);
         $this->M_register->delete($user);
         
-        return redirect()->to(base_url('Admin'));
+        session()->setFlashdata('pesan', "Akun Mahasiswa Telah Diterima");
+        return redirect()->to(base_url('Admin/request_akun'));
     }
 
-    public function delete_akun($user)
+    public function delete_akun_M($user)
     {
-        
-        $akun = $this->M_akun->find($user);
-    
         $this->M_akun->delete($user);
+        $this->M_profil_mahasiswa->delete($user);
         
+        session()->setFlashdata('pesan', "Akun Mahasiswa Berhasil Dihapus");
+        return redirect()->to(base_url('Admin/data_mahasiswa'));
+    }
+    public function delete_akun_D($user)
+    {
+        $this->M_akun->delete($user);
+        $this->M_profil_dosen->delete($user);
+
+        session()->setFlashdata('pesan', "Akun Dosen Berhasil Dihapus");
         return redirect()->to(base_url('Admin/data_dosen'));
     }
 
