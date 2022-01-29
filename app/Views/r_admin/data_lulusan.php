@@ -44,7 +44,7 @@
                 <td><?= $data["judul"]; ?></td>
                 <td><?= $data["date_kompre"]; ?></td>
                 <td><?= $data["time_total"]; ?></td>
-               
+                    
               
                 
                 </tr>

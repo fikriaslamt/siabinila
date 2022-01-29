@@ -34,6 +34,7 @@
                 <th scope="col">Tanggal</th>
                 <th scope="col">Waktu</th>
                 <th scope="col">Status</th>
+                <th scope="col">AKSI</th>
                 
                 </tr>
             </thead>
@@ -49,6 +50,12 @@
                 <td><?= $data["date"]; ?></td>
                 <td><?= $data["time"]; ?></td>
                 <td><?= $data["status"]; ?></td>
+                <td><a href="<?= base_url('Admin/detail_skripsi/'.$data["npm"])?>">
+                        <button class="btn btn-primary btn-sm">Detail</button>
+                    </a>
+                </td>
+
+
                 
                 </tr>
                 <?php endforeach; ?>

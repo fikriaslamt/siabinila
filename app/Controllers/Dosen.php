@@ -149,7 +149,7 @@ class Dosen extends BaseController
         
         $pengajuan = [
             'time' => $interval,
-            'time_judul-usul' => $interval,
+            'time_judul_usul' => $interval,
             'date' => $date2,
             'date_usul' => $date2,
             'npm'=> $data["npm"],
@@ -188,7 +188,7 @@ class Dosen extends BaseController
         
         $pengajuan = [
             'time' => $interval,
-            'time_usul-hasil' => $interval,
+            'time_usul_hasil' => $interval,
             'date' => $date2,
             'date_hasil' => $date2,
             'npm'=> $data["npm"],
@@ -230,7 +230,7 @@ class Dosen extends BaseController
         
         $pengajuan = [
             'time' => $interval,
-            'time_hasil-kompre' => $interval,
+            'time_hasil_kompre' => $interval,
             'time_total' => $interval_total,
             'date' => $date2,
             'date_kompre' => $date2,
@@ -268,6 +268,20 @@ class Dosen extends BaseController
         echo view('layouts/navbar_dosen', $data);
         echo view('r_dosen/data_skripsi', $data);
         echo view('layouts/footer');
+    }
+
+    public function detail_skripsi($npm)
+    {
+        $data1 = $this->M_data_skripsi->find($npm);
+        $data = [
+            'title' => "Detail",
+            'data' => $data1
+
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar_dosen', $data);
+        echo view('r_admin/v_detail_skripsi',$data);
+        echo view('layouts/footer'); 
     }
 
 

@@ -10,6 +10,18 @@
             Nama</label>  
         <input type="text" name="nama" class="form_text" placeholder="nama">
         <label for="Jenis_kelamin">
+            Moderator</label>  
+        <input type="text" name="moderator" class="form_text" placeholder="Moderator">
+        <label for="Jenis_kelamin">
+            NPM moderator</label>  
+        <input type="number" name="npm_moderator" class="form_text" placeholder="npm moderator">
+        <label for="Jenis_kelamin">
+            Koordinator Seminar</label>  
+        <input type="text" name="koor_seminar" class="form_text" placeholder="Koordinator seminar">
+        <label for="Jenis_kelamin">
+            NIP Koordinator Seminar</label>  
+        <input type="number" name="nip_koor_seminar" class="form_text" placeholder="nip koor seminar">
+        <label for="Jenis_kelamin">
             Judul Skripsi 1</label> 
         <input type="text" name="judul1" id="judul1" class="form_text" placeholder="Masukan judul skripsi 1">
         <label for="Jenis_kelamin">

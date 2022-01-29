@@ -205,7 +205,7 @@ class Admin extends BaseController
         
         $pengajuan = [
             'time' => $interval,
-            'time_judul-usul' => $interval,
+            'time_judul_usul' => $interval,
             'date' => $date2,
             'date_usul' => $date2,
             'npm'=> $data["npm"],
@@ -244,7 +244,7 @@ class Admin extends BaseController
         
         $pengajuan = [
             'time' => $interval,
-            'time_usul-hasil' => $interval,
+            'time_usul_hasil' => $interval,
             'date' => $date2,
             'date_hasil' => $date2,
             'npm'=> $data["npm"],
@@ -286,7 +286,7 @@ class Admin extends BaseController
         
         $pengajuan = [
             'time' => $interval,
-            'time_hasil-kompre' => $interval,
+            'time_hasil_kompre' => $interval,
             'time_total' => $interval_total,
             'date' => $date2,
             'date_kompre' => $date2,
@@ -388,6 +388,33 @@ class Admin extends BaseController
         session()->setFlashdata('pesan', "Akun Mahasiswa Berhasil Dihapus");
         return redirect()->to(base_url('Admin/data_mahasiswa'));
     }
+
+    public function detail_akun_M($user)
+    {
+        $data1 = $this->M_profil_mahasiswa->findAll();
+        $data = ['title' => "Data Mahasiswa",'data' => $data1];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/v_data_mahasiswa',$data);
+        echo view('layouts/admin_footer');    
+    }
+
+    public function detail_skripsi($npm)
+    {
+        $data1 = $this->M_data_skripsi->find($npm);
+        $data = [
+            'title' => "Detail",
+            'data' => $data1
+
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/v_detail_skripsi',$data);
+        echo view('layouts/admin_footer');    
+    }
+
+    
+
     public function delete_akun_D($user)
     {
         $this->M_akun->delete($user);

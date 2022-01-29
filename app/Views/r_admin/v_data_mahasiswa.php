@@ -34,7 +34,12 @@
                     <td>
                         <a href="<?= base_url('Admin/delete_akun_M/'.$data["npm"])?>">
                         <button class="btn btn-danger btn-sm">Hapus</button>
-                    </a></td>
+
+                    </a>
+                    <a href="<?= base_url('Admin/detail_akun_M/'.$data["npm"])?>">
+                        <button class="btn btn-primary btn-sm">Detail</button>
+                    </a>
+                </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
