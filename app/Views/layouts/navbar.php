@@ -26,7 +26,7 @@
           
           <ul class="navlinks">
           <li><a href="<?= base_url('Mahasiswa')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == '' ? 'active'  : '' ?>"><i class="fa fa-home"></i> HOME</a></li>
-            <li><a href="<?= base_url('Mahasiswa/profil')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == 'profil' ? 'active' : '' ?>"><i class="fa fa-user">&nbsp;</i><?= !session()->get('nama') ? 'Login ' : session()->get('nama') ?></a></li>
+            <li><a href="<?= base_url('Mahasiswa/profil')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == 'profil' ? 'active' : '' ?>"><i class="fa fa-user-alt">&nbsp;</i><?= !session()->get('nama') ? 'Login ' : session()->get('nama') ?></a></li>
           </ul>
         </div>  
       </nav>

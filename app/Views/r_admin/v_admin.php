@@ -85,3 +85,57 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="row"><!-- Content Row -->
+
+<!-- Area Chart -->
+<div class="col-xl-8 col-lg-7">
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div
+            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+            
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+
+<!-- Pie Chart -->
+<div class="col-xl-4 col-lg-5">
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div
+            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Perbandingan Gender</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+        
+            <div class="chart-pie pt-4 pb-2">
+                
+                <canvas id="myPieChart"></canvas>
+            </div>
+            <div class="mt-4 text-center small">
+                <span class="mr-2">
+                    <i class="fas fa-circle text-primary"></i> Laki-laki: 
+                    <a id="dom-pria" style=""><?php 
+                    echo htmlspecialchars(count($mhs_pria));?></a>
+                </span>
+
+                </span>
+                <span class="mr-2">
+                    <i class="fas fa-circle" style="color:#ff5d8f"></i> Perempuan:
+                    <a id="dom-wanita" style=""><?php 
+                    echo htmlspecialchars(count($mhs_wanita));?></a>
+                </span>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div><!-- Content Row -->

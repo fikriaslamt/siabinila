@@ -26,8 +26,7 @@
     <table class="table table-bordered table-hover">
     <thead>
         <tr>
-        <th scope="col">User</th>
-        <th scope="col">Password</th>
+        <th scope="col">NPM (Username)</th>
         <th scope="col">Nama</th>
         <th scope="col">Aksi</th>
         </tr>
@@ -37,10 +36,9 @@
         <tr>
         
         <td><?= $data['user']; ?></td>
-        <td><?= $data['password']; ?></td>
         <td><?= $data['nama']; ?></td>
     
-        <td><a href="<?= base_url('Admin/tambah_akun/'.$data["user"])?>"><button>TERIMA</button></a></td>
+        <td class="d-flex justify-content-center"><a href="<?= base_url('Admin/tambah_akun/'.$data["user"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a></td>
 
         </tr>
         <?php endforeach; ?>

@@ -45,7 +45,7 @@
                     
                     <td><?= $data['dospem1']; ?></td>
                     <td><?= $data['dospem2']; ?></td>
-                    <td>
+                    <td class="d-flex justify-content-center">
                         <a href="<?= base_url('Admin/terima_hasil/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a>
                         <a href="<?= base_url('Admin/tolak_hasil/'.$data["npm"])?>"><button class="btn btn-danger btn-sm">TOLAK</button></a>
                     </td>

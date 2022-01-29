@@ -66,31 +66,23 @@ class Admin extends BaseController
         echo view('layouts/admin_footer');
     }
 
-    public function daftar_mahasiswa()
+    public function data_mahasiswa()
     {
-        // $data1 = $this->M_akun->findAll();
-        
-        // $data = [
-        //     'title' => "Data Akun",
-        //     'data' => $data1
-        // ];
-        // echo view('layouts/admin_header', $data);
-        // echo view('layouts/admin_navbar', $data);
-        // echo view('r_admin/v_data_akun',$data);
-        // echo view('layouts/admin_footer');
-    }
-
-    public function data_akun()
-    {
-        $data1 = $this->M_akun->findAll();
-        
-        $data = [
-            'title' => "Data Akun",
-            'data' => $data1
-        ];
+        $data1 = $this->M_profil_mahasiswa->findAll();
+        $data = ['title' => "Data Mahasiswa",'data' => $data1];
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
-        echo view('r_admin/v_data_akun',$data);
+        echo view('r_admin/v_data_mahasiswa',$data);
+        echo view('layouts/admin_footer');
+    }
+
+    public function data_dosen()
+    {
+        $data1 = $this->M_profil_dosen->findAll();
+        $data = ['title' => "Data Dosen", 'data' => $data1];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/v_data_dosen',$data);
         echo view('layouts/admin_footer');
     }
 
@@ -386,12 +378,10 @@ class Admin extends BaseController
     {
         
         $akun = $this->M_akun->find($user);
-        
-        
-        
+    
         $this->M_akun->delete($user);
         
-        return redirect()->to(base_url('Admin/data_akun'));
+        return redirect()->to(base_url('Admin/data_dosen'));
     }
 
     

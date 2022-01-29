@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/favicon.ico" type="image/gif">
+    <link rel="icon" href="../assets/icon_unila.ico" type="image/gif">
    
     <!-- Ambil Resource -->
     <link href="/assets/styles.css" rel="stylesheet" type="text/css">

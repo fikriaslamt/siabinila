@@ -27,7 +27,7 @@ endforeach;
 ?>
 
 <div class="container-top" style="min-height: 10px!important; box-shadow:none">
-  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>">Logout <i class="fa fa-sign-out-alt"></i></a></button><br/>
+  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>"><i class="fa fa-sign-out-alt"></i> Logout</a></button><br/>
 
   <div class="row">
 
@@ -41,7 +41,7 @@ endforeach;
 
     <div class="atur-kolom">
       <div class="card-counter primary">
-      <i class="fa fa-database"></i>
+      <i class="fas fa-calendar-alt"></i>
         <span class="count-numbers"><?php echo date("Y"); ?></span>
         <span class="count-name">Tahun Saat Ini</span>
       </div>
@@ -50,7 +50,7 @@ endforeach;
 
     <div class="atur-kolom">
       <div class="card-counter info">
-      <i class="fa fa-book-open"></i>
+      <i class="fa fa-journal-whills"></i>
         <span class="count-numbers"><?=$semester?></span>
         <span class="count-name">Semester Saat Ini</span>
       </div>
@@ -72,7 +72,7 @@ endforeach;
 
   <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
-  <div style="margin-left: 21px">Semester <b><?=$semester?></b>/14</div>
+  <div style="margin-left: 21px">Semester <?=$semester?>/14</div>
   <div class="meter">
 	<span style="width: <?=$smtr_persen?>%"></span>
   </div>

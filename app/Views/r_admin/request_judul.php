@@ -44,7 +44,7 @@
                     <td><?= $data['dospem1']; ?></td>
                     <td><?= $data['dospem2']; ?></td>
                     
-                    <td><form method='POST' action='<?= base_url('Admin/terima_judul/'.$data["npm"])?>'>
+                    <td class="d-flex justify-content-center"><form method='POST' action='<?= base_url('Admin/terima_judul/'.$data["npm"])?>'>
                     <select name="judul">
                     <option value="<?= $data['judul1']; ?>">Judul 1</option>
                     <option value="<?= $data['judul2']; ?>">Judul 2</option>

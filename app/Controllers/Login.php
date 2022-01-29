@@ -78,6 +78,13 @@ class Login extends BaseController
     
     public function add_register()
     {   
+        if($this->request->getVar('password') != $this->request->getVar('konfir-password')){
+            $err = "Konfirmasi Password Salah";
+            session()->setFlashdata('username', $this->request->getPost('user'));
+            session()->setFlashdata('error', $err);
+            return redirect()->to(base_url('login/register'));
+        }
+
         $data =[
             'user' => $this->request->getVar('user'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
@@ -88,8 +95,9 @@ class Login extends BaseController
         $this->M_register->insert($data);
         
         // password_hash($this->request->getVar('admin_password'), PASSWORD_BCRYPT)
-   
-        return redirect()->to(base_url());
+        
+        session()->setFlashdata('error', "Akun berhasil disimpan, tunggu konfirmasi admin");
+        return redirect()->to(base_url('login'));
     }
 
 

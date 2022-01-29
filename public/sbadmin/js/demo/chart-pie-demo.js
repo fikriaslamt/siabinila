@@ -3,15 +3,17 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
 Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
+var j_pria = document.getElementById("dom-pria").textContent;
+var j_wanita = document.getElementById("dom-wanita").textContent;
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: ["Perempuan","Laki-laki", ],
     datasets: [{
-      data: [55, 30, 15],
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      data: [j_wanita, j_pria],
+      backgroundColor: ['#ff5d8f', '#4e73df', ],
+      hoverBackgroundColor: ['#ff5d8f', '#2e59d9', ],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
