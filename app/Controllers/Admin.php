@@ -42,10 +42,6 @@ class Admin extends BaseController
             'mhs' => $data_mhs, 'dosen' => $data_dosen, 
             'mhs_pria' => $mhs_pria, 'mhs_wanita' => $mhs_wanita,
         ];
-        // echo view('layouts/header', $data);
-        // echo view('layouts/navbar_admin');
-        // echo view('r_admin/v_admin',$data);
-        // echo view('layouts/footer');
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_admin',$data);
@@ -158,6 +154,16 @@ class Admin extends BaseController
         echo view('layouts/admin_footer');
     }
 
+    public function konfirmasi_terima_judul($npm)
+    {
+        $data_skrip = $this->M_data_pengajuan_judul->find($npm);
+        $Dosen =$this->M_profil_dosen->findAll();
+        $data = ['title' => "Data Mahasiswa",'data' => $data_skrip, 'dosen' => $Dosen, 'judul' => $this->request->getVar('judul')];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/request_judul_konfir',$data);
+        echo view('layouts/admin_footer');    
+    }
     public function terima_judul($npm)
     {   
         // $judul =$this->M_data_pengajuan_judul->query("SELECT judul1 FROM data_pengajuan_judul where npm='".$npm."'")->getResult();
@@ -188,7 +194,6 @@ class Admin extends BaseController
         $this->M_data_pengajuan_judul->delete($npm);
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }
-
 
     public function terima_usul($npm)
     {   
@@ -389,16 +394,6 @@ class Admin extends BaseController
         return redirect()->to(base_url('Admin/data_mahasiswa'));
     }
 
-    public function detail_akun_M($user)
-    {
-        $data1 = $this->M_profil_mahasiswa->findAll();
-        $data = ['title' => "Data Mahasiswa",'data' => $data1];
-        echo view('layouts/admin_header', $data);
-        echo view('layouts/admin_navbar', $data);
-        echo view('r_admin/v_data_mahasiswa',$data);
-        echo view('layouts/admin_footer');    
-    }
-
     public function detail_skripsi($npm)
     {
         $data1 = $this->M_data_skripsi->find($npm);
@@ -413,8 +408,6 @@ class Admin extends BaseController
         echo view('layouts/admin_footer');    
     }
 
-    
-
     public function delete_akun_D($user)
     {
         $this->M_akun->delete($user);
@@ -423,7 +416,5 @@ class Admin extends BaseController
         session()->setFlashdata('pesan', "Akun Dosen Berhasil Dihapus");
         return redirect()->to(base_url('Admin/data_dosen'));
     }
-
-    
 
 }

@@ -9,7 +9,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin')?>">
                 <div class="sidebar-brand-icon">
-                    <img src="../assets/logo_unila.png" width="40"></i>
+                    <img src="<?= base_url('assets/logo_unila.png')?>" width="40"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Admin</div>
             </a>

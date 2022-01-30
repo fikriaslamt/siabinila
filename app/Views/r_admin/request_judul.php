@@ -27,10 +27,8 @@
             <thead>
                 <tr>
                     <th scope="col">NPM</th>
-                    <th scope="col">judul 1</th>
-                    <th scope="col">judul 2</th>
-                    <th scope="col">dosen pembimbing 1</th>
-                    <th scope="col">dosen pembimbing 2</th>
+                    <th scope="col">Judul Skripsi 1</th>
+                    <th scope="col">Judul Skripsi 2</th>
                     <th scope="col" class="text-center"><i class="fas fa-cog"></i></th>
                 </tr>
             </thead>
@@ -41,19 +39,35 @@
                     <td><?= $data['npm']; ?></td>
                     <td><?= $data['judul1']; ?></td>
                     <td><?= $data['judul2']; ?></td>
-                    <td><?= $data['dospem1']; ?></td>
-                    <td><?= $data['dospem2']; ?></td>
                     
-                    <td class="d-flex justify-content-center"><form method='POST' action='<?= base_url('Admin/terima_judul/'.$data["npm"])?>'>
+                    <td class="d-flex justify-content-center">
+                    <form method='POST' action='<?= base_url('Admin/konfirmasi_terima_judul/'.$data["npm"])?>'>
                     <select name="judul">
                     <option value="<?= $data['judul1']; ?>">Judul 1</option>
                     <option value="<?= $data['judul2']; ?>">Judul 2</option>
                     </select>
                     <input type="submit" name="submit" class="btn btn-success btn-sm" value="TERIMA"/>
-                    
-                    
                     </form>
-                    <a href="<?= base_url('Admin/tolak_judul/'.$data["npm"])?>"><button class="btn btn-danger btn-sm">TOLAK</button></a>
+
+                        <a data-toggle="modal" data-target="#ke<?= $data["npm"]?>" class="btn btn-danger btn-sm">Tolak</a>
+                        <!-- Modal Tambah -->
+                        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="ke<?= $data["npm"]?>" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content" >
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Konfirmasi Tolak Judul</h4>
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                    </div>
+                                    <div style="padding: 10px;text-align:center;">
+                                    Tolak judul skripsi dari mahasiswa dengan npm, <?= $data["npm"]; ?> ?<hr/>
+                                    <a href="<?= base_url('Admin/tolak_judul/'.$data["npm"])?>">
+                                    <button class="btn btn-danger">Tolak</button></a>
+                                    <button aria-hidden="true" data-dismiss="modal" class="btn btn-secondary">Batal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Modal Tambah -->
                     
                 </tr>
                 <?php endforeach; ?>

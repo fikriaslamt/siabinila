@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?= $title; ?></title>
-    <link rel="icon" href="../assets/icon_unila.ico" type="image/gif">
+    <link rel="icon" href="<?=base_url('assets/icon_unila.ico')?>" type="image/gif">
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('sbadmin/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">

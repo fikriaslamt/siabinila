@@ -158,7 +158,11 @@ class Mahasiswa extends BaseController
             'npm_moderator' => $this->request->getVar('npm_moderator'),
             'koor_seminar'  => $this->request->getVar('koor_seminar'),
             'nip_koor_seminar' => $this->request->getVar('nip_koor_seminar'),
+            'dospem1' => $this->request->getVar('dospem1'),
+            'dospem2' => $this->request->getVar('dospem2'),
         ];
+        
+        $this->M_data_pengajuan_judul->insert($data);
         $this->M_surat_pengajuan_judul->insert($data);
         
         return redirect()->to(base_url('Cetak/surat_pengajuan_judul/'.$data['npm']));

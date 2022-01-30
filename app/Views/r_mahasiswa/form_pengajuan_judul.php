@@ -3,12 +3,12 @@
 <center><h2><?=$title?></h2></center>
 <div class="kotak-form">
     <form action="<?= base_url('Mahasiswa/tambah_pengajuan_judul')?>" method="post">
-        <label for="Jenis_kelamin">
+        <label>
             NPM</label>        
-        <input type="number" name="npm" id="npm" class="form_text" value="<?=session()->user?>"placeholder="Masukan npm">
-        <label for="Jenis_kelamin">
-            Nama</label>  
-        <input type="text" name="nama" class="form_text" placeholder="nama">
+        <input type="number" name="npm" id="npm" class="form_text" value="<?=session()->user?>" placeholder="Masukan npm">
+        <label>
+            Nama</label>
+        <input type="text" name="nama" class="form_text" value="<?=session()->nama?>" placeholder="nama">
         <label for="Jenis_kelamin">
             Moderator</label>  
         <input type="text" name="moderator" class="form_text" placeholder="Moderator">
@@ -27,17 +27,17 @@
         <label for="Jenis_kelamin">
             Judul Skripsi 2</label> 
         <input type="text" name="judul2" id="judul2" class="form_text" placeholder="Masukan judul skripsi 2">
-        <label for="Jenis_kelamin">
+        <label for="dospem1">
             Dosen Pembimbing 1</label>
-        <select name="dospem1" class="form_text" id="Jenis_kelamin" required>
+        <select name="dospem1" class="form_text" id="dospem1" required>
             <option value="">- Pilih Dosen-</option>
             <?php foreach ($dosen as $dsn1) : ?>
             <option value="<?= $dsn1["nama"]?> "><?= $dsn1["nama"]?></option>
             <?php endforeach;?>
         </select>
-        <label for="Jenis_kelamin">
+        <label for="dospem12">
             Dosen Pembimbing 2</label>
-        <select name="dospem2" class="form_text" id="Jenis_kelamin" required>
+        <select name="dospem2" class="form_text" id="dospem2" required>
             <option value="">- Pilih Dosen -</option>
             <?php foreach ($dosen as $dsn2) : ?>
             <option value="<?= $dsn2["nama"]?> "><?= $dsn2["nama"]?></option>
