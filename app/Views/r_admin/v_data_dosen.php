@@ -36,8 +36,26 @@
                     <td><?= $data["nip"]; ?></td>
                 
                     <td>
-                        <a href="<?= base_url('Admin/delete_akun_D/'.$data["nip"])?>">
-                        <button class="btn btn-danger btn-sm">Hapus</button>
+                        
+                        <a data-toggle="modal" data-target="#ke<?= $data["nip"]?>" class="btn btn-danger btn-sm">Hapus</a>
+                        <!-- Modal Tambah -->
+                        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="ke<?= $data["nip"]?>" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content" >
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Konfirmasi Hapus</h4>
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                    </div>
+                                    <div style="padding: 10px;text-align:center;">
+                                    Hapus akun dan data dosen bernama <?= $data["nama"]; ?> ?<hr/>
+                                    <a href="<?= base_url('Admin/delete_akun_D/'.$data["nip"])?>">
+                                    <button class="btn btn-danger">Hapus</button></a>
+                                    <button aria-hidden="true" data-dismiss="modal" class="btn btn-secondary">Batal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Modal Tambah -->
                     </a></td>
                 </tr>
                 <?php endforeach; ?>

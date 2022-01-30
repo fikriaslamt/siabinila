@@ -59,7 +59,7 @@
                                         <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                                     </div>
                                     <div style="padding: 10px;text-align:center;">
-                                    Tolak judul skripsi dari mahasiswa dengan npm, <?= $data["npm"]; ?> ?<hr/>
+                                    Tolak judul skripsi dari mahasiswa dengan NPM, <?= $data["npm"]; ?> ?<hr/>
                                     <a href="<?= base_url('Admin/tolak_judul/'.$data["npm"])?>">
                                     <button class="btn btn-danger">Tolak</button></a>
                                     <button aria-hidden="true" data-dismiss="modal" class="btn btn-secondary">Batal</button>

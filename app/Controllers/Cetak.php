@@ -194,8 +194,9 @@ class Cetak extends BaseController {
     
 
 
-        $this->response->setHeader('Content-Type', 'application/pdf');
-        $pdf->Output(); 
+        // $this->response->setHeader('Content-Type', 'application/pdf');
+        // $pdf->Output();
+        $pdf->Output('D',$data['npm'].'.pdf'); 
 
 	}
 }

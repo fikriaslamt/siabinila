@@ -125,6 +125,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
 }
+.content{padding:10px;}
 
 .container-top { background-color: rgba(0,0,0,0); border-radius:0px; box-shadow: none;}
 footer {

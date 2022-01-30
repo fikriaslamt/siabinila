@@ -43,7 +43,7 @@ class Dosen extends BaseController
     public function profil()
     {   
        
-        $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nip='".session()->user."'")->getResult();
+        $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".session()->nama."'")->getResult();
         $data = [
             'title' => "Profile - Dosen",
             'data' => $data1,

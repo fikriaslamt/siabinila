@@ -30,15 +30,22 @@ class Admin extends BaseController
 
     public function index()
     {
-        $register = $this->M_register->findAll();
         $data_dosen = $this->M_profil_dosen->findAll();
         $data_mhs = $this->M_profil_mahasiswa->findAll();
         $mhs_pria = $this->M_profil_mahasiswa->query("SELECT * FROM `profil_mahasiswa` WHERE jenis_kelamin = 'Laki-laki'")->getResultArray();
         $mhs_wanita = $this->M_profil_mahasiswa->query("SELECT * FROM `profil_mahasiswa` WHERE jenis_kelamin = 'Perempuan'")->getResultArray();
-
+        
+        $register = $this->M_register->findAll();
+        $data_peng_judul = $this->M_data_pengajuan_judul->findAll();
+        $data_usul = $this->M_data_usul->findAll();
+        $data_hasil = $this->M_data_hasil->findAll();
+        $data_kompre = $this->M_data_kompre->findAll();
+        $data_skripsi = $this->M_data_skripsi->findAll();
 
         $data = [
-            'title' => "Dashboard", 'data' => $register,
+            'title' => "Dashboard", 
+            'dat_regist' => $register, 'dat_pejudul' => $data_peng_judul, 'dat_skrip' => $data_skripsi, 
+            'dat_usul' => $data_usul, 'dat_hasil' => $data_hasil, 'dat_kompre' => $data_kompre,
             'mhs' => $data_mhs, 'dosen' => $data_dosen, 
             'mhs_pria' => $mhs_pria, 'mhs_wanita' => $mhs_wanita,
         ];
@@ -377,11 +384,12 @@ class Admin extends BaseController
             'prodi' => "Administrasi Bisnis",
             'jenis_kelamin' => $akun["jenis_kelamin"],
             'angkatan' => "20".substr($akun["user"],0,2),
-            'status' => "Mahasiswa"
+            'status' => "Mahasiswa",
+            'foto' => "default/foto_default.png",
         ]);
         $this->M_register->delete($user);
         
-        session()->setFlashdata('pesan', "Akun Mahasiswa Telah Diterima");
+        session()->setFlashdata('pesan', "Akun Mahasiswa Telah Diterima dan Dibuat");
         return redirect()->to(base_url('Admin/request_akun'));
     }
 

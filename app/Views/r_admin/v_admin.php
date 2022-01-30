@@ -96,11 +96,52 @@
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Statistic Overview</h6>
             
         </div>
         <!-- Card Body -->
-        <div class="card-body">
+        <div class="card-body row">
+
+        <div class="col-xl-5 ">
+            Pengajuan Judul Skripsi
+        </div>
+        <div class="col-xl-6 ">
+            : <?=count($dat_pejudul)?> Pengajuan Judul
+        </div>
+        <hr>
+        <div class="col-xl-5 ">
+            Data Skripsi
+        </div>
+        <div class="col-xl-6 ">
+            : <?=count($dat_skrip)?> Sedang Skripsi
+        </div>
+        <div class="col-xl-5 ">
+            Pengajuan Judul Usul
+        </div>
+        <div class="col-xl-6 ">
+            : <?=count($dat_usul)?> Pengajuan Usul
+        </div>
+        <div class="col-xl-5 ">
+            Pengajuan Seminar Hasil
+        </div>
+        <div class="col-xl-6 ">
+            : <?=count($dat_hasil)?> Pengajuan Seminar Hasil
+        </div>
+        <div class="col-xl-5 ">
+            Pengajuan Seminar Kompehensif
+        </div>
+        <div class="col-xl-6 ">
+            : <?=count($dat_kompre)?> Pengajuan Seminar Kompre
+        </div>
+        <hr>
+        <div class="col-xl-5 ">
+            Pengajuan Akun
+        </div>
+        <div class="col-xl-4 ">
+            : <?=count($dat_regist)?> Pengajuan Akun
+        </div>
+        
+
         </div>
     </div>
 </div>
