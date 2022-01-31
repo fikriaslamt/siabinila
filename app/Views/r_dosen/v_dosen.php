@@ -9,6 +9,12 @@ if ($jam > 3 and $jam <=9){
 } else if($jam>14 and $jam <=17){
 	$waktu = "Sore";
 } else { $waktu = "Malam"; }
+
+$bimbing = 0;
+foreach ($skripsi as $skrip) :
+  $bimbing++;
+endforeach
+
 ?>
 
 <div class="container-top" style="min-height: 10px!important; box-shadow:none">
@@ -19,8 +25,8 @@ if ($jam > 3 and $jam <=9){
 
   <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
-  <div class="content">
-  Bimbingan Skripsi: 0 Mahasiswa Bimbingan
+  <div class="content alert">
+  Bimbingan Skripsi: <b><?=$bimbing?></b> Mahasiswa Bimbingan
   </div>
 
 </div>

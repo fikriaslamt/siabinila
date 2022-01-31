@@ -29,9 +29,9 @@ class Dosen extends BaseController
 
     public function index()
     {
-
+        $dat_skrip =$this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
         $data = [
-            'title' => "Dosen",
+            'title' => "Dosen",'skripsi' => $dat_skrip
             
         ];
         echo view('layouts/header', $data);
@@ -258,7 +258,7 @@ class Dosen extends BaseController
 
     public function data_skripsi()
     {
-        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
+        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Skripsi",

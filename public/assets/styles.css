@@ -125,7 +125,11 @@ body {
   border-radius: 5px;
   overflow: hidden;
 }
-.content{padding:10px;}
+.content{padding:5px; margin: 10px;}
+
+.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;
+  color:#004085;background-color:#cce5ff;border-color:#b8daff;
+}
 
 .container-top { background-color: rgba(0,0,0,0); border-radius:0px; box-shadow: none;}
 footer {

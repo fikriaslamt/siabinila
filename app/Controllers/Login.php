@@ -85,6 +85,16 @@ class Login extends BaseController
             return redirect()->to(base_url('login/register'));
         }
 
+        $getNpm = $this->request->getVar('user');
+        $data1 = $this->M_register->query("SELECT * FROM data_register where user='".$getNpm."'")->getResult();
+        $data2 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".$getNpm."'")->getResult();
+        
+        if( !empty($data1) or !empty($data2)){
+            $err = "NPM yang masukkan sudah digunakan";
+            session()->setFlashdata('error', $err);
+            return redirect()->to(base_url('login/register'));
+        }
+
         $data =[
             'user' => $this->request->getVar('user'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
