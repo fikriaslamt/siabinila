@@ -29,6 +29,8 @@ endforeach;
 <div class="container-top" style="min-height: 10px!important; box-shadow:none">
   <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>"><i class="fa fa-sign-out-alt"></i> Logout</a></button><br/>
 
+<a href="<?= base_url('Cetakan/surat_pengajuan_judul')?>"><button>tes</button></a>
+
   <div class="row">
 
     <div class="atur-kolom">

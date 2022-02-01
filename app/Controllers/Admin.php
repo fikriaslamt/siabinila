@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_register;
 use App\Models\M_data_pengajuan_judul;
+use App\Models\M_surat_pengajuan_judul;
 use App\Models\M_akun;
 use App\Models\M_data_skripsi;
 use App\Models\M_data_usul;
@@ -18,6 +19,7 @@ class Admin extends BaseController
     public function __construct()
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
+        $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
         $this->M_register = new M_register();
         $this->M_akun = new M_akun();
         $this->M_data_skripsi = new M_data_skripsi();
@@ -199,6 +201,7 @@ class Admin extends BaseController
     public function tolak_judul($npm)
     {      
         $this->M_data_pengajuan_judul->delete($npm);
+        $this->M_surat_pengajuan_judul->delete($npm);
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }
 

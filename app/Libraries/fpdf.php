@@ -360,30 +360,26 @@ function AddPage($orientation='', $size='', $rotation=0)
 }
 
 function Header()
-{	$file = "public\assets\img\logo";
+{	
+	// $this->Image('https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg');
 	$this->SetFont('Times','B',16);
-	// $this->Image($file,10,6,30,30,'PNG');
+	
     // Move to the right
-    $this->Cell(65);
-    $this->Cell(60,10,'KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN',0,0,'C');
+
+    $this->Cell(190,10,'KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN',0,0,'C');
     $this->Ln(5);
-    $this->Cell(65);
 	$this->SetFont('Times','B',14);
-    $this->Cell(60,10,'UNIVERSITAS LAMPUNG',0,0,'C');
+    $this->Cell(190,10,'UNIVERSITAS LAMPUNG',0,0,'C');
 	$this->Ln(5);
-    $this->Cell(65);
-    $this->Cell(60,10,'FAKULTAS ILMU SOSIAL DAN ILMU POLITIK',0,0,'C');
+    $this->Cell(190,10,'FAKULTAS ILMU SOSIAL DAN ILMU POLITIK',0,0,'C');
 	$this->Ln(5);
-    $this->Cell(65);
-    $this->Cell(60,10,'JURUSAN ILMU ADMINISTRASI BISNIS',0,0,'C');
+    $this->Cell(190,10,'JURUSAN ILMU ADMINISTRASI BISNIS',0,0,'C');
     $this->SetFont('Times','',9);
 	$this->Ln(5);
-    $this->Cell(65);
-    $this->Cell(60,10,'Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626',0,0,'C');
+    $this->Cell(190,10,'Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626',0,0,'C');
 	$this->SetFont('Times','',14);
 	$this->Ln(5);
-    $this->Cell(65);
-    $this->Cell(60,10,'Website http://admbisnis.fisip.unila.ac.id/ Email admunila@gmail.com',0,0,'C');
+    $this->Cell(190,10,'Website http://admbisnis.fisip.unila.ac.id/ Email admunila@gmail.com',0,0,'C');
     // Line break
     $this->SetLineWidth(1.2);
     $this->Line(10,45,200,45);
@@ -392,13 +388,7 @@ function Header()
 
 function Footer()
 {
-	// To be implemented in your own inherited class
-	// Position at 1.5 cm from bottom
-    $this->SetY(-15);
-    // Arial italic 8
-    $this->SetFont('Arial','I',8);
-    // Page number
-    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+
 }
 
 function PageNo()
@@ -895,7 +885,7 @@ function Ln($h=null)
 		$this->y += $h;
 }
 
-function Image($file, $x=null, $y=null, $w=0, $h=0, $type='', $link='')
+function Image($file, $x=null, $y=null, $w=0, $h=0, $type='JPG', $link='')
 {
 	// Put an image on the page
 	if($file=='')

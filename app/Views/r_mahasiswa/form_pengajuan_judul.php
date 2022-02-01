@@ -5,7 +5,7 @@
     <form action="<?= base_url('Mahasiswa/tambah_pengajuan_judul')?>" method="post">
         <label>
             NPM</label>        
-        <input type="number" name="npm" id="npm" class="form_text" value="<?=session()->user?>" placeholder="Masukan npm" readonly>
+        <input type="number" name="npm" id="npm" class="form_text" value="<?=session()->user?>" placeholder="Masukan npm" >
         <label>
             Nama</label>
         <input type="text" name="nama" class="form_text" value="<?=session()->nama?>" placeholder="nama">
