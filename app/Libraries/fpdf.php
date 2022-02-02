@@ -360,8 +360,8 @@ function AddPage($orientation='', $size='', $rotation=0)
 }
 
 function Header()
-{	
-	// $this->Image('https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg');
+{	$logo = "";
+	$this->Image('unila.png');
 	$this->SetFont('Times','B',16);
 	
     // Move to the right
@@ -885,7 +885,7 @@ function Ln($h=null)
 		$this->y += $h;
 }
 
-function Image($file, $x=null, $y=null, $w=0, $h=0, $type='JPG', $link='')
+function Image($file, $x=null, $y=null, $w=0, $h=0, $type='', $link='')
 {
 	// Put an image on the page
 	if($file=='')

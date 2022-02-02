@@ -415,3 +415,57 @@ CRITICAL - 2022-02-01 07:27:35 --> Maximum execution time of 60 seconds exceeded
 CRITICAL - 2022-02-01 07:28:36 --> Maximum execution time of 60 seconds exceeded
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
+CRITICAL - 2022-02-01 21:40:12 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php on line 42
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(42): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-02-01 21:42:11 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php on line 42
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(42): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-02-01 21:44:28 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-01 21:45:52 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-01 22:12:19 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php on line 43
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(43): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-02-01 22:12:55 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php on line 43
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(43): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-02-01 22:13:11 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php on line 43
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(43): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-02-01 22:13:29 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php on line 44
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(44): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
