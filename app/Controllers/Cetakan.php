@@ -23,6 +23,7 @@ class Cetakan extends BaseController {
             'nama' => "Diffa Addien Aziz",
             'npm' => "1917051015",
             'judul' => "Robot Cerdas",
+            'nomor' => "083802784342",
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_judul', $data);
