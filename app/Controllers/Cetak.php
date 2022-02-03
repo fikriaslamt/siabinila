@@ -10,19 +10,20 @@ use PDF;
 
 class Cetak extends BaseController {
     
-        public function __construct()
+    public function __construct()
     {
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
  
     }
 
-        function surat_pengajuan_judul($npm)
+    function surat_pengajuan_judul($npm)
 	{       
+        
                 $data = $this->M_surat_pengajuan_judul->find($npm);
                 $pdf = new FPDF();
                 //FORM A4
                 $pdf->AddPage('P','Legal');
-                $pdf->Image('\public\assets\img\logo.png');
+                //$pdf->Image('\public\assets\img\logo.png');
                 $pdf->SetFont('Times','',12);
                 $pdf->Cell(165,10,'Form A.4',0,0,'R');
 
@@ -192,9 +193,9 @@ class Cetak extends BaseController {
         
 
 
-                $this->response->setHeader('Content-Type', 'application/pdf');
+                //$this->response->setHeader('Content-Type', 'application/pdf');
                 // $pdf->Output();
-                $pdf->Output('',$data['npm'].'.pdf'); 
+                $pdf->Output('d',$data['npm'].'.pdf'); 
 
 	}
 }

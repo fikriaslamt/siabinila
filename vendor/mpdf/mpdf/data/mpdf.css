@@ -6,15 +6,31 @@ A default margin-top/bottom for lists is NOT set in config.php - (standard brows
 Need to add the following to do this, but also prevent margins in nested lists as per default HTML in most browsers:
 */
 
-ul, ol {
-	margin-top: 0.83em;
-	margin-bottom: 0.83em;
+ul, ol { margin-top: 0.83em; margin-bottom: 0.83em;}
+
+a {color: red !important;}
+
+ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }
+
+.header td { text-align: center; }
+
+@page {
+	margin-top: 1cm; margin-bottom: 1cm;
+    margin-left: 1cm; margin-right: 1cm;
+}
+.text_right{
+	text-align: right;
+}
+.body{
+	margin: 20px 40px;
+}
+.title { text-align: center; font-weight:bold; text-decoration: underline; text-transform: uppercase;
+	margin: 20px 0;
 }
 
-ul ul, ul ol, ol ul, ol ol {
-	margin-top: 0;
-	margin-bottom: 0;
-}
+.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap; width: 100%;}
+.kolom{position:relative;width:100%;min-height:1px;padding:5px;}
+.col-4{flex:0 0 auto;width:33.33333333%}
 
 /* INDEXES */
 div.mpdf_index_main {

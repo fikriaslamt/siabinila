@@ -1,0 +1,274 @@
+CRITICAL - 2022-02-03 00:17:35 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:18:22 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:18:34 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:09 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:27 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:28 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:28 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:29 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:29 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:19:39 --> fopen(unila.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(unila.png...', 'C:\\Users\\User\\K...', 1281, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(1281): fopen('unila.png', 'rb')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(909): FPDF->_parsepng('unila.png')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(364): FPDF->Image('unila.png')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Libraries\fpdf.php(336): FPDF->Header()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(25): FPDF->AddPage('P', 'Legal')
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#11 {main}
+CRITICAL - 2022-02-03 00:20:07 --> Trying to access array offset on value of type null
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\User\\K...', 39, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+CRITICAL - 2022-02-03 00:20:25 --> Trying to access array offset on value of type null
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetak.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\User\\K...', 39, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051025')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#6 {main}
+ERROR - 2022-02-03 00:27:19 --> Duplicate entry '1917051025' for key 'PRIMARY'
+CRITICAL - 2022-02-03 00:27:19 --> Duplicate entry '1917051025' for key 'PRIMARY'
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(165): CodeIgniter\Model->insert(Array)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->tambah_pengajuan_judul()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#13 {main}
+ERROR - 2022-02-03 01:39:35 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-02-03 01:39:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(104): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->form_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-02-03 01:39:35 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\errors\html\error_exception.php:96
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\User\\K...', 96, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\errors\html\error_exception.php(96): print_r(Object(App\Controllers\Mahasiswa), true)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Debug\Exceptions.php(229): include('C:\\Users\\User\\K...')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Debug\Exceptions.php(232): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Debug\Exceptions.php(116): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2022-02-03 01:39:51 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-02-03 01:39:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(104): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->form_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-02-03 01:39:51 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\errors\html\error_exception.php:96
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\User\\K...', 96, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\errors\html\error_exception.php(96): print_r(Object(App\Controllers\Mahasiswa), true)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Debug\Exceptions.php(229): include('C:\\Users\\User\\K...')
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Debug\Exceptions.php(232): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Debug\Exceptions.php(116): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-03 01:39:53 --> Undefined variable: namaku
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\User\\K...', 35, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(28): view('mpdf/doc_pengaj...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-02-03 01:40:14 --> Undefined variable: namaku
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\User\\K...', 35, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(28): view('mpdf/doc_pengaj...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-02-03 01:40:17 --> Undefined variable: namaku
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\User\\K...', 35, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(28): view('mpdf/doc_pengaj...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-02-03 01:45:50 --> Undefined variable: namaku
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\User\\K...', 36, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(28): view('mpdf/doc_pengaj...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}
+CRITICAL - 2022-02-03 02:21:26 --> Undefined variable: namaku
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\User\\K...', 35, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(28): view('mpdf/doc_pengaj...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}

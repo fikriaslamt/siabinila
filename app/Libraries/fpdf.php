@@ -361,7 +361,7 @@ function AddPage($orientation='', $size='', $rotation=0)
 
 function Header()
 {	$logo = "";
-	$this->Image('unila.png');
+	//$this->Image('unila.png');
 	$this->SetFont('Times','B',16);
 	
     // Move to the right
