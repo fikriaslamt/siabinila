@@ -29,7 +29,10 @@ endforeach;
 <div class="container-top" style="min-height: 10px!important; box-shadow:none">
   <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>"><i class="fa fa-sign-out-alt"></i> Logout</a></button><br/>
 
-<a href="<?= base_url('Cetakan/surat_pengajuan_judul')?>"><button>tes</button></a>
+<a href="<?= base_url('Cetakan/surat_pengajuan_judul')?>"><button>TES JUDUL</button></a>
+<a href="<?= base_url('Cetakan/surat_pengajuan_usul')?>"><button>TES USUL</button></a>
+<a href="<?= base_url('Cetakan/surat_pengajuan_hasil')?>"><button>TES HASIL</button></a>
+<a href="<?= base_url('Cetakan/surat_pengajuan_kompre')?>"><button>TES KOMPRE</button></a>
 
   <div class="row">
 

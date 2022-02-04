@@ -30,4 +30,48 @@ class Cetakan extends BaseController {
         echo view('mpdf/doc_pengajual_judul', $data);
 
 	}
+
+    function surat_pengajuan_usul()
+	{       
+        // $data = $this->M_surat_pengajuan_judul->find($npm);
+        $data = [
+            'nama' => "Diffa Addien Aziz",
+            'npm' => "1917051015",
+            'ipk' => "3.77",
+            'judul' => "Robot Cerdas",
+            'nomor' => "083802784342",
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/doc_pengajual_usul', $data);
+
+	}
+    function surat_pengajuan_hasil()
+	{       
+        // $data = $this->M_surat_pengajuan_judul->find($npm);
+        $data = [
+            'nama' => "Diffa Addien Aziz",
+            'npm' => "1917051015",
+            'ipk' => "3.77",
+            'judul' => "Robot Cerdas",
+            'nomor' => "083802784342",
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/doc_pengajual_hasil', $data);
+
+	}
+
+    function surat_pengajuan_kompre()
+	{       
+        // $data = $this->M_surat_pengajuan_judul->find($npm);
+        $data = [
+            'nama' => "Diffa Addien Aziz",
+            'npm' => "1917051015",
+            'ipk' => "3.77",
+            'judul' => "Robot Cerdas",
+            'nomor' => "083802784342",
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/doc_pengajual_kompre', $data);
+
+	}
 }
