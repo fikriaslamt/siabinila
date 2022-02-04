@@ -14,7 +14,8 @@ Need to add the following to do this, but also prevent margins in nested lists a
 ul, ol { margin-top: 0.83em; margin-bottom: 0.83em;}
 
 a {color: red !important;}
-p {text-align: justify;}
+p {text-align: justify; line-height: 1.2;}
+.paragf {line-height: 1.4; text-indent: 50px;}
 
 ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }
  
@@ -24,14 +25,17 @@ table {
 }
 .tbl_isi td, .tbl_isi th {
 	border: 1px solid black;
-	
 }
+.tbl_kosong td, .tbl_kosong th {
+	border: 1px solid black; width:100%;
+}
+.tbl_kosong td { height: 350px;}
 .header td { text-align: center; }
 
 
 .text_kanan{ text-align: right; }
 .text_kiri{ text-align: left; }
-.text_tengah{ text-align: center; }
+.text_tengah{ text-align: center;}
 .title { text-align: center; font-weight:bold; text-decoration: underline; text-transform: uppercase;
 	margin: 0 20px 20px;
 }

@@ -22,6 +22,7 @@ class Cetakan extends BaseController {
         $data = [
             'nama' => "Diffa Addien Aziz",
             'npm' => "1917051015",
+            'ipk' => "3.77",
             'judul' => "Robot Cerdas",
             'nomor' => "083802784342",
         ];
