@@ -4,6 +4,9 @@ namespace App\Controllers;
 use App\Models\M_register;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_surat_pengajuan_judul;
+use App\Models\M_surat_pengajuan_usul;
+use App\Models\M_surat_pengajuan_hasil;
+use App\Models\M_surat_pengajuan_kompre;
 use App\Models\M_akun;
 use App\Models\M_data_skripsi;
 use App\Models\M_data_usul;
@@ -20,6 +23,9 @@ class Admin extends BaseController
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
+        $this->M_surat_pengajuan_usul = new M_surat_pengajuan_usul();
+        $this->M_surat_pengajuan_hasil = new M_surat_pengajuan_hasil();
+        $this->M_surat_pengajuan_kompre = new M_surat_pengajuan_kompre();
         $this->M_register = new M_register();
         $this->M_akun = new M_akun();
         $this->M_data_skripsi = new M_data_skripsi();
@@ -427,5 +433,63 @@ class Admin extends BaseController
         session()->setFlashdata('pesan', "Akun Dosen Berhasil Dihapus");
         return redirect()->to(base_url('Admin/data_dosen'));
     }
+
+    public function data_surat_judul()
+    {
+        $data1 = $this->M_surat_pengajuan_judul->findAll();
+
+        $data = [
+            'title' => "Data surat judul",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/data_surat_judul', $data);
+        echo view('layouts/admin_footer');
+    }
+
+    public function data_surat_usul()
+    {
+        $data1 = $this->M_surat_pengajuan_usul->findAll();
+
+        $data = [
+            'title' => "Data surat usul",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/data_surat_usul', $data);
+        echo view('layouts/admin_footer');
+    }
+
+    public function data_surat_hasil()
+    {
+        $data1 = $this->M_surat_pengajuan_hasil->findAll();
+
+        $data = [
+            'title' => "Data surat hasil",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/data_surat_hasil', $data);
+        echo view('layouts/admin_footer');
+    }
+
+        public function data_surat_kompre()
+    {
+        $data1 = $this->M_surat_pengajuan_kompre->findAll();
+
+        $data = [
+            'title' => "Data surat kompre",
+            'data' => $data1
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar', $data);
+        echo view('r_admin/data_surat_kompre', $data);
+        echo view('layouts/admin_footer');
+    }
+    
+
 
 }

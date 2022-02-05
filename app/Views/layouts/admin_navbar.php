@@ -13,7 +13,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">Admin</div>
             </a>
-
+          
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -47,6 +47,34 @@
                 </div>
             </li>
 
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Data Surat
+            </div>
+
+            <div>
+
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_mahasiswa' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_lulusan' ? 'active'  : ''?>">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri"
+                    aria-expanded="true" aria-controls="collapseTri">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Data Surat</span>
+                </a>
+                <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_judul')?>">Surat Pengajuan judul</a>
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_usul')?>">Surat Pengajuan usul</a>
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_hasil')?>">Surat Pengajuan hasil</a>
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_kompre')?>">Surat Pengajuan kompre</a>
+                        
+                    </div>
+                </div>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">

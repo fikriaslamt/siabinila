@@ -9,6 +9,9 @@ use App\Models\M_data_hasil;
 use App\Models\M_data_kompre;
 use App\Models\M_data_skripsi;
 use App\Models\M_surat_pengajuan_judul;
+use App\Models\M_surat_pengajuan_usul;
+use App\Models\M_surat_pengajuan_hasil;
+use App\Models\M_surat_pengajuan_kompre;
 
 class Mahasiswa extends BaseController
 {
@@ -24,6 +27,9 @@ class Mahasiswa extends BaseController
         $this->M_data_hasil = new M_data_hasil();
         $this->M_data_skripsi = new M_data_skripsi();
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
+        $this->M_surat_pengajuan_usul = new M_surat_pengajuan_usul();
+        $this->M_surat_pengajuan_hasil = new M_surat_pengajuan_hasil();
+        $this->M_surat_pengajuan_kompre = new M_surat_pengajuan_kompre();
     }
 
     public function index()
@@ -170,22 +176,61 @@ class Mahasiswa extends BaseController
 
     public function tambah_pengajuan_usul()
     {
+        $data =[
+            
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'judul'          => $this->request->getVar('judul'), 
+            'prodi'         => $this->request->getVar('prodi'),
+            'jurusan'         => $this->request->getVar('jurusan'),
+            
+        ];
+        
+        $this->M_data_usul->insert($data);
+        $this->M_surat_pengajuan_usul->insert($data);
+        $data1 = 
+           $this->M_surat_pengajuan_usul->select('no_surat');
        
-        $this->M_data_usul->insert($this->request->getPost());
-        return redirect()->to(base_url('Mahasiswa'));
+        return redirect()->to(base_url('Cetakan/surat_pengajuan_usul/'.$data1));
     }
 
     public function tambah_pengajuan_hasil()
     {
-        $this->M_data_hasil->insert($this->request->getPost()); 
-        return redirect()->to(base_url('Mahasiswa'));
+        $data =[
+            
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'judul'          => $this->request->getVar('judul'), 
+         
+            
+        ];
+        
+        $this->M_data_hasil->insert($data);
+        $this->M_surat_pengajuan_hasil->insert($data);
+        $data1 = 
+        $this->M_surat_pengajuan_hasil->select('no_surat');
+       
+        return redirect()->to(base_url('Cetakan/surat_pengajuan_hasil/'.$data1));
     }
 
     public function tambah_pengajuan_kompre()
     {
         
-        $this->M_data_kompre->insert($this->request->getPost());
-        return redirect()->to(base_url('Mahasiswa'));
+        $data =[
+            
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'judul'          => $this->request->getVar('judul'), 
+      
+            
+        ];
+        
+        $this->M_data_kompre->insert($data);
+        $this->M_surat_pengajuan_kompre->insert($data);
+        $data1 = 
+           $this->M_surat_pengajuan_kompre->select('no_surat');
+       
+        return redirect()->to(base_url('Cetakan/surat_pengajuan_kompre/'.$data1));
     }
 
 
