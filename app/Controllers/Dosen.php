@@ -122,11 +122,11 @@ class Dosen extends BaseController
     {
         $data1 =$this->M_data_skripsi->query("SELECT * FROM data_kompre where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
 
-
         $data = [
             'title' => "Data Pengajuan Ujian Skripsi",
-            'data' => $data1
+            'data'  => $data1
         ];
+
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen', $data);
         echo view('r_dosen/data_kompre', $data);

@@ -90,7 +90,7 @@ class Login extends BaseController
         $data2 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".$getNpm."'")->getResult();
         
         if( !empty($data1) or !empty($data2)){
-            $err = "NPM yang masukkan sudah digunakan";
+            $err = "NPM yang dimasukkan sudah ada dalam data akun";
             session()->setFlashdata('error', $err);
             return redirect()->to(base_url('login/register'));
         }

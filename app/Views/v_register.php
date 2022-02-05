@@ -55,6 +55,10 @@ body{
                     <i class="fas fa-file-signature"></i> Nama Lengkap</label>
                 <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
                
+                <input type="checkbox" id="check1" required>
+                <label class="form-check-label" for="check1">Saya setuju, data yang saya masukkan sudah benar</label>
+                <br/><br/>
+
                 <div class="row">
                 <a href="<?=base_url('home')?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>
                 <button type="submit" class="submit">

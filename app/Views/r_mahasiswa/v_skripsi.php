@@ -1,19 +1,62 @@
-<div class="container"><br/>
-    
+<!-- <div class="container-top">
     <center><h2><?=$title?></h2></center>
+</div> -->
+<div class="container">
     <div class="content row">
-        <a href="<?=base_url('home')?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>
+        <a href="<?=base_url('home')?>"class="back" style="float:right!important"><i class="fa fa-arrow-left"></i> Kembali</a>
+        <h4><?=$title?><h4>
     </div>
-    <?php if (!empty($pengajuan)): ?>
+    
+    <?php if (!empty($pengajuan) && empty($skripsi)): ?>
     <div class="content alert">
     Pengajuan Judul Skripsi Anda Sedang Dalam Peninjauan
     </div>
     <?php endif ?>
 
     <?php if (empty($pengajuan) && empty($skripsi)): ?>
-    <div class="content alert">
-    Anda Belum Mengajukan Skripsi
+    <div class="content">
+        <div class="alert">
+        Anda Belum Mengajukan Skripsi
+        </div>
+        Perhatian :<br/>
+        - Pastikan kamu sudah lulus 140 sks sebelum mengajukan skripsi<br/>
+        - Pastikan sedang tidak mengambil cuti<br/>
+        - Bersungguh-sungguh dalam mengerjakan skripsi<br/><br/>
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>"><button>Form Pengajuan Judul Skripsi</button></a>
     </div>
     <?php endif ?>
+
+    <?php if ($skripsi[0]["status"]=="TELAH MENGAJUKAN JUDUL"): ?>
+    <div class="content">
+        <div class="alert">
+        Pengajuan Judul Skripsi Anda Telah diterima
+        </div>
+        Perhatian :<br/>
+        - Saat ini anda harus fokus untuk seminar usul<br/>
+        - Usul penelitian<br/>
+        - Bersungguh-sungguh dalam mengerjakan skripsi<br/><br/>
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>"><button>Form Pengajuan Seminar Usul</button></a>
+    </div>
+    <?php endif ?>
+
+    <?php if ($skripsi[0]["status"]=="SEMINAR USUL"): ?>
+    <div class="content alert">
+    Anda Telah diterima Seminar Usul
+    </div>
+    <?php endif ?>
+
+    <?php if ($skripsi[0]["status"]=="SEMINAR HASIL"): ?>
+    <div class="content alert">
+    Anda Telah diterima Seminar Hasil
+    </div>
+    <?php endif ?>
+
+    <?php if ($skripsi[0]["status"]=="LULUS"): ?>
+    <div class="content alert">
+    Anda Telah Lulus
+    </div>
+    <?php endif ?>
+    
+
 
 </div>

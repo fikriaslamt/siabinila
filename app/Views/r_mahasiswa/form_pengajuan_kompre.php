@@ -9,7 +9,7 @@
         <input type="text" name="judul" class="form_text" placeholder="Masukan judul skripsi">
         
         <div class="row">
-        <a href="<?=base_url('home')?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>
+        <a href="<?=base_url('Mahasiswa/skripsi')?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>
         <button type="submit" class="submit">
         <i class="fa fa-file-import"></i> Submit
         </button>

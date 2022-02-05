@@ -31,3 +31,16 @@
         </div>  
       </nav>
 </header>
+
+<div class="container-top" style="min-height: 10px!important; box-shadow:none">
+<a class="btn btn-merah" style="float:right" href="<?= base_url('Login/logout')?>" onclick="javascript:return confirm('Anda yakin untuk logout?');"><i class="fa fa-sign-out-alt"></i> Logout</a><br/>
+  <div class="breadcrumb">
+    <a href="<?= base_url()?>">Home</a>
+    <?php 
+      if (!empty(\Config\Services::request()->uri->getSegment(2))): 
+        echo "> <a>".str_replace("_"," ",\Config\Services::request()->uri->getSegment(2))."</a>";
+      else: echo "> Beranda";
+      endif;
+    ?>
+  </div>
+</div>

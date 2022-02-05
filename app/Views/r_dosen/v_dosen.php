@@ -17,10 +17,6 @@ endforeach
 
 ?>
 
-<div class="container-top" style="min-height: 10px!important; box-shadow:none">
-  <button style="background-color: #eb211a; float:right"><a style="background-color: #eb211a" href="<?= base_url('Login/logout')?>"><i class="fa fa-sign-out-alt"></i> Logout</a></button><br/>
-</div>
-
 <div class="container">
 
   <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
