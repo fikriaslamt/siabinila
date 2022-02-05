@@ -47,6 +47,21 @@ class Mahasiswa extends BaseController
         echo view('layouts/footer');
     }
 
+    public function skripsi()
+    {   
+        $skripsi = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where npm='".session()->user."'")->getResultArray();
+        $pengajuan = $this->M_surat_pengajuan_judul->query("SELECT * FROM surat_pengajuan_judul where npm='".session()->user."'")->getResultArray();
+        $data = [
+            'title' => "Skripsi - Mahasiswa",
+            'skripsi' => $skripsi, 'pengajuan' => $pengajuan,
+            'pesan_err' => \Config\Services::validation(),
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/v_skripsi',$data);
+        echo view('layouts/footer');
+    }
+
     public function profil()
     {   
         $profil = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
@@ -171,7 +186,7 @@ class Mahasiswa extends BaseController
         $this->M_data_pengajuan_judul->insert($data);
         $this->M_surat_pengajuan_judul->insert($data);
         
-        return redirect()->to(base_url('Cetak/surat_pengajuan_judul/'.$data['npm']));
+        return redirect()->to(base_url('Mahasiswa/skripsi/'));
     }
 
     public function tambah_pengajuan_usul()

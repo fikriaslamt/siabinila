@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon">
                     <img src="<?= base_url('assets/logo_unila.png')?>" width="40"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin</div>
+                <div class="sidebar-brand-text mx-3">SISMAB</div>
             </a>
           
             <!-- Divider -->

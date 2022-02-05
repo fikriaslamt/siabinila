@@ -12,7 +12,7 @@ use \Mpdf\Mpdf;
 
 
 class Cetakan extends BaseController {
-    
+
     public function __construct()
     {
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();

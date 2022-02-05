@@ -97,25 +97,27 @@ endforeach;
   <?php endif ?>
 
 </div>
+<a href="<?= base_url('Mahasiswa/skripsi')?>">
+  <div class="container btn-skripsi">
+  <i class="fa fa-journal-whills"></i> Menu Pengerjaan Skripsi
+  </div>
+</a>
+
 <div class="container">
-  <h3>Formulir Akademik</h3>
+  <h3>Formulir Skripsi</h3>
   <div class="row">
 
-    
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
           <div class="card-counter success">Formulir Pengajuan Judul Skripsi </div>
         </a>
       </div>
-   
-      
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>">
             <div class="card-counter success">Formulir Seminar Usul </div>
         </a>
       </div>
-
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>">
@@ -133,8 +135,39 @@ endforeach;
         </a>
       </div>
 
-      
+    </div>
+</div>
+<div class="container">
+  <h3>Formulir Akademik</h3>
+  <div class="row">
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+          <div class="card-counter success">Formulir Pengajuan Judul Skripsi </div>
+        </a>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>">
+            <div class="card-counter success">Formulir Seminar Usul </div>
+        </a>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>">
+          
+            <div class="card-counter success">Formulir Seminar Hasil</div>
+          
+        </a>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>">
+          
+            <div class="card-counter success">Formulir Ujian Komprehensif</div>
+          
+        </a>
+      </div>
 
     </div>
-
 </div>
