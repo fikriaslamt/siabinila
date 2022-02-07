@@ -37,8 +37,18 @@
                 <tr>
                 
                     <td><?= $data['npm']; ?></td>
-                    <td><?= $data['judul1']; ?></td>
-                    <td><?= $data['judul2']; ?></td>
+                    <td>
+                        <form method='POST' target="_blank" action='<?= base_url('Cetakan/surat_pengajuan_jview/'.$data["npm"])?>'>
+                        <input type="hidden" name="judul" value="judul1">
+                        <button class="button btn-link" type="submit"><?= $data['judul1']; ?></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method='POST' target="_blank" action='<?= base_url('Cetakan/surat_pengajuan_jview/'.$data["npm"])?>'>
+                        <input type="hidden" name="judul" value="judul2">
+                        <button class="button btn-link" type="submit"><?= $data['judul2']; ?></button>
+                        </form>
+                    </td>
                     
                     <td class="d-flex justify-content-center">
                     <form method='POST' action='<?= base_url('Admin/konfirmasi_terima_judul/'.$data["npm"])?>'>

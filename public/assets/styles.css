@@ -190,6 +190,7 @@ small { position:relative;font-size:80%;font-weight:400;top:-15px; }
 .form_text {
   /*membuat lebar form penuh*/
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   padding: 10px;
   font-size: 11pt;
@@ -208,7 +209,7 @@ small { position:relative;font-size:80%;font-weight:400;top:-15px; }
   color: white; font-size: 11pt; font-weight: 500;
   -ms-flex:0 0 68%;flex:0 0 68%;max-width:68%;
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 10px 10px;
 } .back {background: var(--button-hijau); -ms-flex:0 0 30.5%;flex:0 0 30.5%;max-width:30.5%;margin-right: 1.5%}
 
 .tombol_submit:hover, .submit:hover, .back:hover{ background: var(--button-gelap)}

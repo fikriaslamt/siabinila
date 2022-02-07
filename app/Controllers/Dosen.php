@@ -29,9 +29,14 @@ class Dosen extends BaseController
 
     public function index()
     {
-        $dat_skrip =$this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_usul = $this->M_data_usul->query("SELECT * FROM data_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_hasil = $this->M_data_hasil->query("SELECT * FROM data_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_kompre = $this->M_data_pengajuan_judul->query("SELECT * FROM data_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+
         $data = [
-            'title' => "Dosen",'skripsi' => $dat_skrip
+            'title' => "Dosen",'skripsi' => $dat_skrip, 
+            'usul'  => $dat_usul, 'hasil' => $dat_hasil, 'kompre' => $dat_kompre, 
             
         ];
         echo view('layouts/header', $data);
@@ -90,8 +95,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_usul()
     {
-        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_usul where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
-
+        $data1 = $this->M_data_usul->query("SELECT * FROM data_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Usul",
@@ -105,8 +109,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_hasil()
     {
-        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_hasil where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
-
+        $data1 = $this->M_data_hasil->query("SELECT * FROM data_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Hasil",
@@ -120,7 +123,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_kompre()
     {
-        $data1 =$this->M_data_skripsi->query("SELECT * FROM data_kompre where dospem1='".session()->user."' OR dospem2='".session()->user."'")->getResultArray();
+        $data1 =$this->M_data_kompre->query("SELECT * FROM data_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Ujian Skripsi",

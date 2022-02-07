@@ -60,13 +60,13 @@ $mpdf->WriteHTML('
         <td>3. Jurusan </td><td>: </td><td> Administrasi Bisnis </td>
         </tr>
         <tr>
-        <td>4. Beban SKS yang diselesaikan </td><td>: </td><td> 140 </td>
+        <td>4. Beban SKS yang diselesaikan </td><td>: </td><td> '.$sks.' </td>
         </tr>
         <tr>
-        <td>5. Indek Prestasi Kumulatif </td><td>: </td><td> 3.77 </td>
+        <td>5. Indek Prestasi Kumulatif </td><td>: </td><td> '.$ipk.' </td>
         </tr>
         <tr>
-        <td>6. Alamat </td><td>: </td><td> Jl. Srikresna Gatot Kaca Sawah Brebes Hore Gg. Gatot Kaca No.2t Sawah Brebes </td>
+        <td>6. Alamat </td><td>: </td><td> '.$alamat.' </td>
         </tr>
         <tr>
         <td>7. No. Telepon </td><td>: </td><td>'.$nomor.' </td>
@@ -133,56 +133,12 @@ $mpdf->WriteHTML('
     <p>Yang bertanda tangan di bawah ini, mengajukan Rencana Judul Skripsi sebagai berikut:</p>
     <table>
         <tr><td>
-        1. Judul </td> <td>:</td><td> Analisis Kelayakan Usaha Home Industry Tempe Dimasa Pandemi Covid-l9 Di Kelurahan Sawah Brebes (Studi Kasus Pada Home Industry
-        Tempe BapakM. Sanif)
+        1. Judul </td> <td>:</td><td> '.$judul.'
         </td></tr>
     </table>
     <p>2. Permasalahan Pokok :</p>
     <div class="paragf">
-        <p>
-            Pertumbuhan ekonomi menjadi indikator utama yang sangat penting untuk
-            mengetahui tingkat pencapain an suatu negara. Menurut Schurrpeter (dalam
-            Adi Rahado,2006) pertumbuhan ekonomi diartikan juga sebagai peningkatan output
-            masyarakat yang disebabkan oleh semakin banyaknya faktor produksi yang
-            dipergunakan dalam proses produksi tanpa ada perubahan cara-cara atau teknologi itu
-            sendiri. Indikator ekonomi tidak hanya mengukur tingkat pertumbuhan
-            output dalam suatu perekonomian, naleun sesungguhnya juga memberikan indikasi
-            tentang sejauh mana aktivitas perekonbmomian yang terjadi pada suatu periode tertentu
-            telah menghasilkan pendapatan bag;i masyarakatKurangnya kesadaran para pelaku
-            UMKM untuk melakukan analisis tentang besaran rasio pendapatan dan biaya dari
-            kegiatan bisnis yang dilaksanakan.
-        </p>
-        <p>
-            Pertumbuhan ekonomi menjadi indikator utama yang sangat penting untuk
-            mengetahui tingkat pencapain an suatu negara. Menurut Schurrpeter (dalam
-            Adi Rahado,2006) pertumbuhan ekonomi diartikan juga sebagai peningkatan output
-            masyarakat yang disebabkan oleh semakin banyaknya faktor produksi yang
-            dipergunakan dalam proses produksi tanpa ada perubahan cara-cara atau teknologi itu
-            sendiri. Indikator ekonomi tidak hanya mengukur tingkat pertumbuhan
-            output dalam suatu perekonomian, naleun sesungguhnya juga memberikan indikasi
-            tentang sejauh mana aktivitas perekonbmomian yang terjadi pada suatu periode tertentu
-            telah menghasilkan pendapatan bag;i masyarakatKurangnya kesadaran para pelaku
-            UMKM untuk melakukan analisis tentang besaran rasio pendapatan dan biaya dari
-            kegiatan bisnis yang dilaksanakan.
-        </p> 
-        <p>
-            Prospek.psaha pembuatan tempe ini sangat baik dan menguntungkan. Hal ini
-            terlihat dari tempe yang sangat digemari oleh segala lapisan masyarakat, bahkan
-            sekarang ini tempe mulai dikenal dan diminati, karena tempe merupakan salah satu
-            makanan tradisional yang populer. Meskipun harganya murah dan bentuknya sederhana
-            temyata tempe mempunyai mutu yang istimewa dilihat dari segi gizi, ideal untuk
-            makanan diet, rendah kandungan lemak jenuh dan bebas kholesterol,kaya mineral dan
-            vitamin. Kandungan gizi kedelai per 100 $am yaitu Kalori 331 kcal, Air 7,5 gram
-        </p>
-        <p>
-            Prospek.psaha pembuatan tempe ini sangat baik dan menguntungkan. Hal ini
-            terlihat dari tempe yang sangat digemari oleh segala lapisan masyarakat, bahkan
-            sekarang ini tempe mulai dikenal dan diminati, karena tempe merupakan salah satu
-            makanan tradisional yang populer. Meskipun harganya murah dan bentuknya sederhana
-            temyata tempe mempunyai mutu yang istimewa dilihat dari segi gizi, ideal untuk
-            makanan diet, rendah kandungan lemak jenuh dan bebas kholesterol,kaya mineral dan
-            vitamin. Kandungan gizi kedelai per 100 $am yaitu Kalori 331 kcal, Air 7,5 gram
-        </p>
+        '.$isi.'
     </div>
     <table style="width:100%">
         <tr>
@@ -234,7 +190,7 @@ $mpdf->WriteHTML('
     <p>Yang bertanda tangan di bawah ini:</p>
     <table>
         <tr>
-        <td>1. Nama </td> <td>:</td><td> DamaYanti., S.A.N., M.A.B.</td>
+        <td>1. Nama </td> <td>:</td><td> '.$dospem1.'</td>
         </tr>
         <tr>
         <td>2. NIP </td> <td>:</td><td> 19810106200s012002</td>
@@ -257,8 +213,7 @@ $mpdf->WriteHTML('
         <td>3. Jurusan </td> <td>:</td><td> Administrasi Bisnis</td>
         </tr>
         <tr>
-        <td>4. Judul Skripsi</td> <td>:</td><td> Analisis Kelayakan Usaha Home Industry Tempe Dimasa Pandemi Covid-l9 bi Kelurahan Sawah grebes (Studi Kasus Pada Home Industry Tempe Bapak
-        M. Sanif) </td>
+        <td>4. Judul Skripsi</td> <td>:</td><td> '.$judul.' </td>
         </tr>
     </table>
     <p>Demikian surat persetujuan ini dan agar dapat dipergunakan sebagaimana mestinya.</p>
@@ -275,7 +230,7 @@ $mpdf->WriteHTML('
             Bandar Lampung, '.date('d F Y').'<br/>
             Dosen Pembimbing
             <br/><br/><br/><br/><br/><br/>
-            '.$nama.' <br/>
+            '.$dospem1.' <br/>
             NIP.'.$npm.'
          </td>
         </tr>
@@ -325,8 +280,7 @@ $mpdf->WriteHTML('
         <td>3. Jurusan </td> <td>:</td><td> Administrasi Bisnis</td>
         </tr>
         <tr>
-        <td>4. Judul Skripsi</td> <td>:</td><td> Analisis Kelayakan Usaha Home Industry Tempe Dimasa Pandemi Covid-l9 bi Kelurahan Sawah grebes (Studi Kasus Pada Home Industry Tempe Bapak
-        M. Sanif) </td>
+        <td>4. Judul Skripsi</td> <td>:</td><td> '.$judul.'</td>
         </tr>
     </table>
     
@@ -390,13 +344,13 @@ $mpdf->WriteHTML('
     <p>Saya yang bertanda tangan di bawah ini:</p>
     <table>
         <tr>
-        <td>1. Nama </td> <td>:</td><td> '.$nama.'</td>
+        <td>1. Nama </td> <td>:</td><td> .................................</td>
         </tr>
         <tr>
-        <td>2. NIP </td> <td>:</td><td> '.$npm.'</td>
+        <td>2. NIP </td> <td>:</td><td>  .................................</td>
         </tr>
         <tr>
-        <td>3. Jurusan </td> <td>:</td><td> Administrasi Bisnis</td>
+        <td>3. Jurusan </td> <td>:</td><td> .................................</td>
         </tr>
     </table>
     <p>Menyatakan telah bertugas sebagai Moderator/Pembahas Mahasiswa/I Pembahas
@@ -409,22 +363,22 @@ $mpdf->WriteHTML('
         <td>2. NIP </td> <td>:</td><td> '.$npm.'</td>
         </tr>
         <tr>
-        <td>3. Judul Skripsi</td> <td>:</td><td> Administrasi Bisnis</td>
+        <td>3. Judul Skripsi</td> <td>:</td><td> '.$judul.'</td>
         </tr>
     </table><br/>
     
     <table style="width:100%">
         <tr>
             <td style="width:58%">
-                <br/>
-                Penyaji Seminar
+                Penyaji Seminar,<br/>
+                Moderator/Pembahas
                 <br/><br/><br/><br/><br/><br/>
-                Nowico Edo Pratama <br/>
-                NIP.'.$npm.'
+                .................................. <br/>
+                NPM...................................
             </td>
             <td>
                 Bandar Lampung, '.date('d F Y').'<br/>
-                Dosen Pembimbing
+                Mahasiswa
                 <br/><br/><br/><br/><br/><br/>
                 '.$nama.' <br/>
                 NIP.'.$npm.'
@@ -436,10 +390,11 @@ $mpdf->WriteHTML('
         <td>
             <div class="teks_center" style="margin:auto;">
             <br/>
-            Penyaji Seminar
+            Mengetahui,<br/>
+            Koordinator Pelaksana Seminar
             <br/><br/><br/><br/><br/><br/>
-            Nowico Edo Pratama <br/>
-            NIP.'.$npm.'
+            .................................. <br/>
+            NIP. ..................................
             </div>
         </td>
     </tr>

@@ -50,7 +50,7 @@ class Mahasiswa extends BaseController
     public function skripsi()
     {   
         $skripsi = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where npm='".session()->user."'")->getResultArray();
-        $pengajuan = $this->M_surat_pengajuan_judul->query("SELECT * FROM surat_pengajuan_judul where npm='".session()->user."'")->getResultArray();
+        $pengajuan = $this->M_data_pengajuan_judul->query("SELECT * FROM data_pengajuan_judul where npm='".session()->user."'")->getResultArray();
         $data = [
             'title' => "Skripsi - Mahasiswa",
             'skripsi' => $skripsi, 'pengajuan' => $pengajuan,
@@ -167,24 +167,44 @@ class Mahasiswa extends BaseController
     }
 
     public function tambah_pengajuan_judul()
-    {
-        
+    {   $skrip1 = ""; $skrip2 = "";
+        $isi1 = explode(PHP_EOL, $this->request->getVar('judul1_isi'));
+        $isi2 = explode(PHP_EOL, $this->request->getVar('judul2_isi'));
+        foreach ($isi1 as $p1) :
+            $skrip1 .= "<p>".$p1."</p>";
+        endforeach;
+        foreach ($isi2 as $p2) :
+            $skrip2 .= "<p>".$p2."</p>";
+        endforeach;
+        $skrip1 = str_replace("<p></p>","",$skrip1);
+        $skrip2 = str_replace("<p></p>","",$skrip2);
+
         $data =[
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'prodi'         => $this->request->getVar('prodi'),
             'judul1'        => $this->request->getVar('judul1'),
+            'judul1_isi'    => $skrip1,
             'judul2'        => $this->request->getVar('judul2'),
-            'moderator'     => $this->request->getVar('moderator'),
-            'npm_moderator' => $this->request->getVar('npm_moderator'),
-            'koor_seminar'  => $this->request->getVar('koor_seminar'),
-            'nip_koor_seminar' => $this->request->getVar('nip_koor_seminar'),
+            'judul2_isi'    => $skrip2,
+            'alamat'     => $this->request->getVar('alamat'),
+            'telepon' => $this->request->getVar('telepon'),
+            'sks'   => $this->request->getVar('sks'),
+            'ipk'   => $this->request->getVar('ipk'),
             'dospem1' => $this->request->getVar('dospem1'),
             'dospem2' => $this->request->getVar('dospem2'),
         ];
         
         $this->M_data_pengajuan_judul->insert($data);
-        $this->M_surat_pengajuan_judul->insert($data);
+        $this->M_surat_pengajuan_judul->insert([
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'prodi'         => $this->request->getVar('prodi'),
+            'alamat'     => $this->request->getVar('alamat'),
+            'telepon' => $this->request->getVar('telepon'),
+            'sks'   => $this->request->getVar('sks'),
+            'ipk'   => $this->request->getVar('ipk'),
+        ]);
         
         return redirect()->to(base_url('Mahasiswa/skripsi/'));
     }

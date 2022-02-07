@@ -9,8 +9,7 @@ class M_profil_dosen extends Model
     
     protected $table                = 'profil_dosen';
     protected $primaryKey           = 'nip';
-    protected $allowedFields        = ['nip','nama',];
-    protected $row_array           = 'array';
+    protected $allowedFields        = ['nip','nama', 'foto', 'grup'];
 
     // Dates
     

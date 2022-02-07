@@ -47,6 +47,19 @@
                 NIP</label>
             <input type="number" name="nip" class="form-control" value="" id="NIP" placeholder="Masukan Nama Dosen"/>
             </div>
+
+            <div class="form-group">
+            <label for="grup">
+                Peer Grup</label>
+            <select name="grup" class="form-control" id="grup" required>
+                <option value="">- Pilih -</option>
+                <option value="grup 1">grup 1</option>
+                <option value="grup 2">grup 2</option>
+                <option value="grup 3">grup 3</option>
+                <option value="grup 4">grup 4</option>
+            </select>
+            </div>
+            
             <div class="form-group">
             <label for="inputPassword">
                 Password</label>

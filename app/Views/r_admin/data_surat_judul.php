@@ -22,7 +22,8 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-            
+        
+        <div class="table-responsive">
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -51,7 +52,8 @@
                 </tr>
                 <?php endforeach; ?>
             </tbody>
-        </table>   
+        </table>
+        </div>   
 
         </div>
     </div>

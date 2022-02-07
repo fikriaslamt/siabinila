@@ -183,11 +183,24 @@ class Admin extends BaseController
     {   
         // $judul =$this->M_data_pengajuan_judul->query("SELECT judul1 FROM data_pengajuan_judul where npm='".$npm."'")->getResult();
         $pengajuan = $this->M_data_pengajuan_judul->find($npm);
+
+        if($this->request->getVar('judul') == $pengajuan["judul1"]){
+            $p_isi = $pengajuan["judul1_isi"];
+        } else { $p_isi = $pengajuan["judul2_isi"]; }
+
         $p_npm = $pengajuan['npm'];
         $p_nama = $pengajuan['nama'];
         $p_dosp1 = $pengajuan['dospem1'];
         $p_dosp2 = $pengajuan['dospem2'];
         $date = date('Y-m-d') ;
+
+        $this->M_surat_pengajuan_judul->save([
+            'npm' => $npm,
+            'judul' => $this->request->getVar('judul'),
+            'judul_isi' => $p_isi,
+            'dosp1' => $p_dosp1,
+            'dosp2' => $p_dosp2,
+        ]); 
 
         $this->M_data_skripsi->insert([
             'npm' => $p_npm,
@@ -200,6 +213,7 @@ class Admin extends BaseController
             'status' => "TELAH MENGAJUKAN JUDUL"
         ]);
         $this->M_data_pengajuan_judul->delete($npm);
+
         
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }
@@ -369,6 +383,7 @@ class Admin extends BaseController
         $this->M_profil_dosen->insert([
             'nip' => $this->request->getVar('nip'),
             'nama' => $this->request->getVar('nama'),
+            'grup' => $this->request->getVar('grup'),
             'foto' => "profil.jpg",
         ]);
         session()->setFlashdata('error', "Akun dosen berhasil dibuat");

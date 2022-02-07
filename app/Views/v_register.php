@@ -56,7 +56,7 @@ body{
                 <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
                
                 <input type="checkbox" id="check1" required>
-                <label class="form-check-label" for="check1">Saya setuju, data yang saya masukkan sudah benar</label>
+                <label class="form-check-label" for="check1">Data yang saya masukkan sudah benar</label>
                 <br/><br/>
 
                 <div class="row">

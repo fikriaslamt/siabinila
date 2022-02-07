@@ -27,9 +27,10 @@ endforeach
 
 </div>
 <div class="container">
-  <h3>Akademik</h3>
+  <h3>Skripsi Bimbingan</h3>
   <div class="row">
   
+    <?php if (!empty($skripsi)): ?>
     <div class="atur-kolom-ka">
     <a href="<?= base_url('Dosen/data_skripsi')?>">
       <div class="card-counter info">
@@ -38,33 +39,42 @@ endforeach
       </div>
     </a>
     </div>
+    <?php endif ?>
 
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Dosen/data_pengajuan_hasil')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">DATA HASIL</span>
-      </div>
-    </a>
-    </div>
-
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Dosen/data_pengajuan_kompre')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">DATA KOMPRE</span>
-      </div>
-    </a>
-    </div>
-
+    <?php if (!empty($usul)): ?>
     <div class="atur-kolom-ka">
     <a href="<?=base_url("Dosen/data_pengajuan_usul")?>">
       <div class="card-counter info">
        <i  class="fa fa-book-open"></i>
-        <span class="count-name">DATA USUL</span>
+        <span class="count-name">PENGAJUAN USUL</span>
       </div>
     </a>
     </div>
+    <?php endif ?>
+    
+    <?php if (!empty($hasil)): ?>
+    <div class="atur-kolom-ka">
+    <a href="<?= base_url('Dosen/data_pengajuan_hasil')?>">
+      <div class="card-counter info">
+       <i  class="fa fa-book-open"></i>
+        <span class="count-name">PENGAJUAN HASIL</span>
+      </div>
+    </a>
+    </div>
+    <?php endif ?>
+
+    <?php if (!empty($kompre)): ?>
+    <div class="atur-kolom-ka">
+    <a href="<?= base_url('Dosen/data_pengajuan_kompre')?>">
+      <div class="card-counter info">
+       <i  class="fa fa-book-open"></i>
+        <span class="count-name">PENGAJUAN KOMPRE</span>
+      </div>
+    </a>
+    </div>
+    <?php endif ?>
+
+    
 
 </div>
     

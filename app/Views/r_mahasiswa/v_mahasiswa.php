@@ -26,10 +26,7 @@ endforeach;
 
 ?>
 
-
-
-<div class="container-top" style="min-height: 10px!important; box-shadow:none">
-
+<div class="container-top">
   <div class="row">
 
     <div class="atur-kolom">
@@ -60,8 +57,8 @@ endforeach;
     <div class="atur-kolom">
       <div class="card-counter primary">
         <i class="fa fa-users"></i>
-        <span class="count-numbers">0</span>
-        <span class="count-name">Bimbingan</span>
+        <span class="count-numbers">Aktif</span>
+        <span class="count-name">Status</span>
       </div>
     </div>
 
@@ -93,11 +90,49 @@ endforeach;
   <?php endif ?>
 
 </div>
+
+<?php if ($semester >= 6): ?>
 <a href="<?= base_url('Mahasiswa/skripsi')?>">
   <div class="container btn-skripsi">
-  <i class="fa fa-journal-whills"></i> Menu Pengerjaan Skripsi
+  <i class="fas fa-book"></i> Menu Pengerjaan Skripsi
   </div>
 </a>
+<?php endif ?>
+
+<div class="container">
+  <h3>Formulir Akademik</h3>
+  <div class="row">
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
+          <div class="card-counter success">Formulir Pengajuan Judul Skripsi </div>
+        </a>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>">
+            <div class="card-counter success">Formulir Seminar Usul </div>
+        </a>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>">
+          
+            <div class="card-counter success">Formulir Seminar Hasil</div>
+          
+        </a>
+      </div>
+
+      <div class="atur-kolom-ka">
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>">
+          
+            <div class="card-counter success">Formulir Ujian Komprehensif</div>
+          
+        </a>
+      </div>
+
+  </div>
+</div>
 
 <div class="container">
   <h3>Formulir Skripsi</h3>
@@ -132,38 +167,4 @@ endforeach;
       </div>
 
     </div>
-</div>
-<div class="container">
-  <h3>Formulir Akademik</h3>
-  <div class="row">
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
-          <div class="card-counter success">Formulir Pengajuan Judul Skripsi </div>
-        </a>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>">
-            <div class="card-counter success">Formulir Seminar Usul </div>
-        </a>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>">
-          
-            <div class="card-counter success">Formulir Seminar Hasil</div>
-          
-        </a>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>">
-          
-            <div class="card-counter success">Formulir Ujian Komprehensif</div>
-          
-        </a>
-      </div>
-
-  </div>
 </div>
