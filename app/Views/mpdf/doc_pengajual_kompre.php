@@ -486,7 +486,7 @@ $mpdf->WriteHTML('
     <div class="text_kanan">Form A.13</div>
     <div class="title">SURAT TUGAS</div>
     <div class="title">UJIAN SKRIPSI/UJIAN KOMPREHENSIF</div>
-    <div class="title">Nomor : /UN26.16.06/PP.05.02.00/2022</div>
+    <div style="text-align: center;">Nomor : /UN26.16.06/PP.05.02.00/'.$tahun.'</div><br>
     <br>
 
 

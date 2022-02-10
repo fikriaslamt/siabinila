@@ -50,6 +50,7 @@ body{
                     <option value="">- Pilih -</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
+                    <option value="Lainnya">Lainnya</option>
                 </select>
                 <label for="nama">
                     <i class="fas fa-file-signature"></i> Nama Lengkap</label>

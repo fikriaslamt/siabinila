@@ -39,6 +39,7 @@ class Cetakan extends BaseController {
             'sks' => $skrip["sks"],
             'dospem1' => $skrip["dosp1"],
             'dospem2' => $skrip["dosp2"],
+            'tahun' => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_judul', $data);
@@ -56,35 +57,167 @@ class Cetakan extends BaseController {
             'npm'      => $skrip["npm"],
             'judul'    => $judul,
             'isi'    => $skrip["judul1_isi"],
+            'tahun' => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_judul_view', $data);
 
 	}
 
-    function surat_pengajuan_usul($no_surat)
-	{       
-        $data = $this->M_surat_pengajuan_usul->find($no_surat);
+    function surat_pengajuan_usul($npm)
+	{   
+        $data1 = $this->M_surat_pengajuan_usul->find($npm);
+        $data = [
+            'npm'           => $data1["npm"],
+            'nama'          => $data1["nama"],
+            'judul'          => $data1["judul"],
+            'prodi'         => $data1["prodi"],
+            'jurusan'         => $data1["jurusan"],
+            'tahun' => date("Y")
+
+        ];
+        
 
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_usul', $data);
 
 	}
-    function surat_pengajuan_hasil($no_surat)
+    function surat_pengajuan_hasil($npm)
 	{       
-        $data = $this->M_surat_pengajuan_hasil->find($no_surat);
+        $data1 = $this->M_surat_pengajuan_hasil->find($npm);
+        $data = [
+            'npm'           => $data1["npm"],
+            'nama'          => $data1["nama"],
+            'judul'          => $data1["judul"],
+            'tahun' => date("Y")
+
+        ];
 
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_hasil', $data);
 
 	}
 
-    function surat_pengajuan_kompre($no_surat)
+    function surat_pengajuan_kompre($npm)
 	{       
-        $data = $this->M_surat_pengajuan_kompre->find($no_surat);
+        $data1 = $this->M_surat_pengajuan_kompre->find($npm);
+        $data = [
+            'npm'           => $data1["npm"],
+            'nama'          => $data1["nama"],
+            'judul'          => $data1["judul"],
+            'tahun' => date("Y")
+
+        ];
 
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_kompre', $data);
+
+	}
+
+
+    function surat_pembayaran_keterlambatan_ukt()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'orangtua'        => $this->request->getVar('orangtua'),
+            'tahun' => date("Y")
+           
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pembayaran_keterlambatan_ukt',$data);
+
+	}
+
+    function surat_kehilangan_ukt()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'orangtua'        => $this->request->getVar('orangtua'),
+            'tahun' => date("Y")
+           
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_kehilangan_ukt',$data);
+
+	}
+
+    function surat_keringanan_ukt()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'dospem'        => $this->request->getVar('dospem'),
+            'nip'        => $this->request->getVar('nip'),
+            'tahun' => date("Y")
+           
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_keringanan_ukt',$data);
+
+	}
+
+    function surat_pembebasan_ukt()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'dospem'        => $this->request->getVar('dospem'),
+            'nip'        => $this->request->getVar('nip'),
+            'tahun' => date("Y")
+           
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pembebasan_ukt',$data);
+
+	}
+
+    function surat_keringanan_ukt_50()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'sks'        => $this->request->getVar('sks'),
+            'tahun' => date("Y")
+           
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_keringanan_ukt_50',$data);
+
+	}
+
+    function surat_masih_aktif_kuliah()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'tahun' => date("Y")
+            
+           
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_masih_aktif_kuliah',$data);
 
 	}
 }

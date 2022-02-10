@@ -166,6 +166,116 @@ class Mahasiswa extends BaseController
         echo view('layouts/footer');
     }
 
+    public function form_pembayaran_keterlambatan_ukt()
+    {
+        $data = [
+            'title' => "Formulir Pembayaran Keterlambatan UKT"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirUKT/form_pembayaran_keterlambatan_ukt');
+        echo view('layouts/footer');
+    }
+
+    public function form_kehilangan_ukt()
+    {
+        $data = [
+            'title' => "Formulir Kehilangan UKT"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirUKT/form_kehilangan_ukt');
+        echo view('layouts/footer');
+    }
+
+    public function form_keringanan_ukt()
+    {
+        $data = [
+            'title' => "Formulir Keringanan UKT"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirUKT/form_keringanan_ukt');
+        echo view('layouts/footer');
+    }
+
+    public function form_pembebasan_ukt()
+    {
+        $data = [
+            'title' => "Formulir pembebasan UKT"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirUKT/form_pembebasan_ukt');
+        echo view('layouts/footer');
+    }
+
+    public function form_keringanan_ukt_50()
+    {
+        $data = [
+            'title' => "Formulir keringanan UKT 50%"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirUKT/form_keringanan_ukt_50');
+        echo view('layouts/footer');
+    }
+
+    public function form_masih_aktif_kuliah()
+    {
+        $data = [
+            'title' => "Formulir Keterangan Masih Aktif Kuliah"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_masih_aktif_kuliah');
+        echo view('layouts/footer');
+    }
+
+    public function form_keterangan_beasiswa()
+    {
+        $data = [
+            'title' => "Formulir Keterangan Beasiswa"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_keterangan_beasiswa');
+        echo view('layouts/footer');
+    }
+
+    public function form_permohonan_cuti_kuliah()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Cuti Kuliah"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_permohonan_cuti_kuliah');
+        echo view('layouts/footer');
+    }
+
+    public function form_studi_terbimbing()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Studi Terbimbing"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_studi_terbimbing');
+        echo view('layouts/footer');
+    }
+
+    public function form_pindah_kuliah()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Pindah Kuliah"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_pindah_kuliah');
+        echo view('layouts/footer');
+    }
+
     public function tambah_pengajuan_judul()
     {   $skrip1 = ""; $skrip2 = "";
         $isi1 = explode(PHP_EOL, $this->request->getVar('judul1_isi'));
@@ -223,10 +333,9 @@ class Mahasiswa extends BaseController
         
         $this->M_data_usul->insert($data);
         $this->M_surat_pengajuan_usul->insert($data);
-        $data1 = 
-           $this->M_surat_pengajuan_usul->select('no_surat');
        
-        return redirect()->to(base_url('Cetakan/surat_pengajuan_usul/'.$data1));
+        
+        return redirect()->to(base_url('Cetakan/surat_pengajuan_usul/'.$data['npm']));
     }
 
     public function tambah_pengajuan_hasil()
@@ -242,10 +351,9 @@ class Mahasiswa extends BaseController
         
         $this->M_data_hasil->insert($data);
         $this->M_surat_pengajuan_hasil->insert($data);
-        $data1 = 
-        $this->M_surat_pengajuan_hasil->select('no_surat');
+        
        
-        return redirect()->to(base_url('Cetakan/surat_pengajuan_hasil/'.$data1));
+        return redirect()->to(base_url('Cetakan/surat_pengajuan_hasil/'.$data['npm']));
     }
 
     public function tambah_pengajuan_kompre()
@@ -262,10 +370,9 @@ class Mahasiswa extends BaseController
         
         $this->M_data_kompre->insert($data);
         $this->M_surat_pengajuan_kompre->insert($data);
-        $data1 = 
-           $this->M_surat_pengajuan_kompre->select('no_surat');
        
-        return redirect()->to(base_url('Cetakan/surat_pengajuan_kompre/'.$data1));
+       
+        return redirect()->to(base_url('Cetakan/surat_pengajuan_kompre/'.$data['npm']));
     }
 
 

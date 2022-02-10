@@ -121,7 +121,7 @@ $mpdf->WriteHTML('
 <div class="teks_isi">
     <div class="text_kanan">Form A.7</div>
     <div class="title">SURAT TUGAS SEMIANR I/SEMINAR USUL PENELITIAN</div>
-    <div class="title">Nomor :     /UN26.16.06/PP.05.02.00/2020</div>
+    <div style="text-align: center;">Nomor :     /UN26.16.06/PP.05.02.00/'.$tahun.'</div><br>
     Ketua Jurusan Ilmu Administrasi Bisnis dengan ini menugaskan kepada :<br/>
 
     <br>

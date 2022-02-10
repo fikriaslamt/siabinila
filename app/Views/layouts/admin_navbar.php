@@ -59,7 +59,7 @@
 
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_mahasiswa' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_lulusan' ? 'active'  : ''?>">
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_judul' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_usul' ? 'active'  : ''?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri"
                     aria-expanded="true" aria-controls="collapseTri">
                     <i class="fas fa-fw fa-cog"></i>
