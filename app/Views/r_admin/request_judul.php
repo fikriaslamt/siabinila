@@ -70,9 +70,14 @@
                                     </div>
                                     <div style="padding: 10px;text-align:center;">
                                     Tolak judul skripsi dari mahasiswa dengan NPM, <?= $data["npm"]; ?> ?<hr/>
-                                    <a href="<?= base_url('Admin/tolak_judul/'.$data["npm"])?>">
-                                    <button class="btn btn-danger">Tolak</button></a>
-                                    <button aria-hidden="true" data-dismiss="modal" class="btn btn-secondary">Batal</button>
+                                    <form action="<?= base_url('Admin/tolak_judul/'.$data["npm"])?>" method="POST">
+                                        <div class="form-group">
+                                        <label>Pesan Penolakkan</label>
+                                        <textarea name="isi_pesan" rows="3" placeholder="....." class="form-control" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger">Tolak</button></a>
+                                        <button aria-hidden="true" data-dismiss="modal" class="btn btn-secondary">Batal</button>
+                                    </form>
                                     </div>
                                 </div>
                             </div>

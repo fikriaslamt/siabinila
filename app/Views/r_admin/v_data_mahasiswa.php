@@ -14,12 +14,32 @@
         <?php echo session()->getFlashdata('pesan') ?>
         </div>
         <?php } ?> 
+        
+        <form method="GET" action="<?= base_url('Admin/data_mahasiswa')?>" class="form-group">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="cari" placeholder="Cari berdasarkan Nama atau NPM" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="Submit">CARI DATA</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <?php if($jumlah != ""): 
+                    echo $jumlah
+                    ?>
+                    Tampilkan <a href="<?= base_url('Admin/data_mahasiswa')?>">semua data</a>
+                    <?php endif ?>
+                </div>
+            </div>
+        </form>
 
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Nama</th>
                     <th scope="col">NPM</th>
+                    <th scope="col">Nama</th>
                     <th scope="col">AKSI</th>
                     
                 </tr>
@@ -28,9 +48,8 @@
                 <?php foreach ($data as $data) : ?>
             <tbody>
                 <tr>
-                    <td><?= $data["nama"]; ?></td>
                     <td><?= $data["npm"]; ?></td>
-                
+                    <td><?= $data["nama"]; ?></td>
                     <td>
                         <a data-toggle="modal" data-target="#det<?= $data["npm"]?>" class="btn btn-primary btn-sm">Detail</a>
                         <a data-toggle="modal" data-target="#ke<?= $data["npm"]?>" class="btn btn-danger btn-sm">Hapus</a>
@@ -80,9 +99,27 @@
                                         </div>
                                     </div>
                                     <div class="row">
+                                        <label class="col-sm-4">Angkatan</label>
+                                        <div class="col-sm-8">
+                                        : <?= $data["angkatan"]; ?>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <label class="col-sm-4">Jenis Kelamin</label>
                                         <div class="col-sm-8">
                                         : <?= $data["jenis_kelamin"]; ?>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-4">Email</label>
+                                        <div class="col-sm-8">
+                                        : <?= $data["email"]; ?>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-4">No. HP</label>
+                                        <div class="col-sm-8">
+                                        : <?= $data["no_hp"]; ?>
                                         </div>
                                     </div>
                                     <!-- End isi -->
@@ -96,6 +133,8 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?= $pager->links('mhs','page_custom'); ?>
 
         </div>
     </div>

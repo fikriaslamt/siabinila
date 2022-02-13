@@ -96,9 +96,9 @@ class Login extends BaseController
         }
 
         $data =[
-            'user' => $this->request->getVar('user'),
+            'user' => trim($this->request->getVar('user')),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-            'nama' => $this->request->getVar('nama'),
+            'nama' => trim($this->request->getVar('nama')),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
             'role' => "mahasiswa"
         ];

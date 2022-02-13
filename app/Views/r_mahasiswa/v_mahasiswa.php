@@ -30,7 +30,7 @@ endforeach;
   <div class="row">
 
     <div class="atur-kolom">
-      <div class="card-counter success">
+      <div class="card-counter primary">
         <i class="fa fa-users"></i>
         <span class="count-numbers"><?=$angkatan?></span>
         <span class="count-name">Angkatan</span>
@@ -38,7 +38,7 @@ endforeach;
     </div>
 
     <div class="atur-kolom">
-      <div class="card-counter primary">
+      <div class="card-counter success">
       <i class="fas fa-calendar-alt"></i>
         <span class="count-numbers"><?php echo date("Y"); ?></span>
         <span class="count-name">Tahun Saat Ini</span>
@@ -56,7 +56,7 @@ endforeach;
 
     <div class="atur-kolom">
       <div class="card-counter primary">
-        <i class="fa fa-users"></i>
+        <i class="fas fa-calendar-check"></i>
         <span class="count-numbers">Aktif</span>
         <span class="count-name">Status</span>
       </div>
@@ -92,11 +92,13 @@ endforeach;
 </div>
 
 <?php if ($semester >= 6): ?>
-<a href="<?= base_url('Mahasiswa/skripsi')?>">
-  <div class="container btn-skripsi">
-  <i class="fas fa-book"></i> Menu Pengerjaan Skripsi
-  </div>
-</a>
+<div class="container">
+  <a href="<?= base_url('Mahasiswa/skripsi')?>">
+    <div class="btn-skripsi">
+    <i class="fas fa-book"></i> Menu Pengerjaan Skripsi
+    </div>
+  </a>
+</div>
 <?php endif ?>
 
 <div class="container">
@@ -105,20 +107,20 @@ endforeach;
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pembayaran_keterlambatan_ukt')?>">
-          <div class="card-counter success">Form Permohonan Pembayaran Keterlambatan UKT PS ABI Fisip Unila </div>
+          <div class="card-counter menu-content">Form Permohonan Pembayaran Keterlambatan UKT PS ABI Fisip Unila </div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_kehilangan_ukt')?>">
-            <div class="card-counter success">Form Permohonan Kehilangan UKT PS ABI Fisip Unila </div>
+            <div class="card-counter menu-content">Form Permohonan Kehilangan UKT PS ABI Fisip Unila </div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_keringanan_ukt')?>">
           
-            <div class="card-counter success">Form Permohonan Keringanan UKT PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content">Form Permohonan Keringanan UKT PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -126,7 +128,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pembebasan_ukt')?>">
           
-            <div class="card-counter success">Form Permohonan Pembebasan UKT PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content">Form Permohonan Pembebasan UKT PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -134,7 +136,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_keringanan_ukt_50')?>">
           
-            <div class="card-counter success">Form Permohonan Keringanan UKT 50% PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content">Form Permohonan Keringanan UKT 50% PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -143,60 +145,25 @@ endforeach;
 </div>
 
 <div class="container">
-  <h3>Formulir Skripsi</h3>
-  <div class="row">
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>">
-          <div class="card-counter success">Formulir Pengajuan Judul Skripsi </div>
-        </a>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>">
-            <div class="card-counter success">Formulir Seminar Usul </div>
-        </a>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>">
-          
-            <div class="card-counter success">Formulir Seminar Hasil</div>
-          
-        </a>
-      </div>
-
-      <div class="atur-kolom-ka">
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>">
-          
-            <div class="card-counter success">Formulir Ujian Komprehensif</div>
-          
-        </a>
-      </div>
-
-    </div>
-</div>
-
-<div class="container">
   <h3>Formulir Akademik</h3>
   <div class="row">
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_masih_aktif_kuliah')?>">
-          <div class="card-counter success">Form Keterangan Masih Aktif Kuliah PS ABI Fisip Unila</div>
+          <div class="card-counter menu-content-2">Form Keterangan Masih Aktif Kuliah PS ABI Fisip Unila</div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_keterangan_beasiswa')?>">
-            <div class="card-counter success">Form Keterangan Beasiswa PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content-2">Form Keterangan Beasiswa PS ABI Fisip Unila</div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_permohonan_cuti_kuliah')?>">
           
-            <div class="card-counter success">Form Permohonan Cuti Kuliah PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content-2">Form Permohonan Cuti Kuliah PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -204,7 +171,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_studi_terbimbing')?>">
           
-            <div class="card-counter success">Form Permohonan Studi Terbimbing PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content-2">Form Permohonan Studi Terbimbing PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -212,7 +179,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pindah_kuliah')?>">
           
-            <div class="card-counter success">Form Permohonan Pindah Kuliah PS ABI Fisip Unila</div>
+            <div class="card-counter menu-content-2">Form Permohonan Pindah Kuliah PS ABI Fisip Unila</div>
           
         </a>
       </div>

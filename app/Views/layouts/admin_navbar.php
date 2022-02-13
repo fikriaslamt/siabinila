@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon">
                     <img src="<?= base_url('assets/logo_unila.png')?>" width="40"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SISMAB</div>
+                <div class="sidebar-brand-text mx-3">SIMBISNIS</div>
             </a>
           
             <!-- Divider -->
@@ -36,7 +36,7 @@
             <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_mahasiswa' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_lulusan' ? 'active'  : ''?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Mahasiswa</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -48,33 +48,6 @@
             </li>
 
             
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Data Surat
-            </div>
-
-            <div>
-
-            </div>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_judul' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_usul' ? 'active'  : ''?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri"
-                    aria-expanded="true" aria-controls="collapseTri">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Data Surat</span>
-                </a>
-                <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_judul')?>">Surat Pengajuan judul</a>
-                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_usul')?>">Surat Pengajuan usul</a>
-                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_hasil')?>">Surat Pengajuan hasil</a>
-                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_kompre')?>">Surat Pengajuan kompre</a>
-                        
-                    </div>
-                </div>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -86,8 +59,26 @@
             <!-- Nav Item - Charts -->
             <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_skripsi' ? 'active'  : '' ?>">
                 <a class="nav-link" href="<?= base_url('Admin/data_skripsi')?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-book"></i>
                     <span>Data Skripsi</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_judul' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_usul' ? 'active'  : ''?>">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri"
+                    aria-expanded="true" aria-controls="collapseTri">
+                    <i class="fas fa-fw fa-scroll"></i>
+                    <span>Data Surat</span>
+                </a>
+                <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_judul')?>">Surat Pengajuan judul</a>
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_usul')?>">Surat Pengajuan usul</a>
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_hasil')?>">Surat Pengajuan hasil</a>
+                        <a class="collapse-item" href="<?= base_url('Admin/data_surat_kompre')?>">Surat Pengajuan kompre</a>
+                        
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -130,13 +121,6 @@
                 <a class="nav-link" href="<?= base_url('Admin/data_dosen')?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Dosen</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'form_Add_akun_dosen' ? 'active'  : '' ?>">
-                <a class="nav-link" href="<?= base_url('Admin/form_Add_akun_dosen')?>">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tambah Akun Dosen</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

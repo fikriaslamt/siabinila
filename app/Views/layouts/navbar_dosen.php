@@ -22,7 +22,7 @@
           <i class="fas fa-bars"></i>
           </label>
           <img class="nav_logo"src="<?=base_url('assets/logo_unila.png')?>">
-          <a href="/" class="logo">SISMAB | Unila</a>
+          <a href="/" class="logo">SIMBISNIS | UNILA</a>
           
           <ul class="navlinks">
           <li><a href="<?= base_url('Dosen')?>" class="<?= \Config\Services::request()->uri->getSegment(2) == '' ? 'active'  : '' ?>"><i class="fa fa-home"></i> HOME</a></li>

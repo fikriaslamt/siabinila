@@ -48,15 +48,16 @@ class Cetakan extends BaseController {
     function surat_pengajuan_jview($npm)
 	{       
         $skrip = $this->M_data_pengajuan_judul->find($npm);
-        if($this->request->getVar('npm')=="judul1"){
+        if($this->request->getVar('judul')=="judul1"){
             $judul = $skrip["judul1"];
-        } else { $judul = $skrip["judul2"]; }
+            $isi = $skrip["judul1_isi"];
+        } else { $judul = $skrip["judul2"]; $isi = $skrip["judul2_isi"]; }
 
         $data = [
             'nama'     => $skrip["nama"],
             'npm'      => $skrip["npm"],
             'judul'    => $judul,
-            'isi'    => $skrip["judul1_isi"],
+            'isi'    => $isi,
             'tahun' => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');

@@ -1,3 +1,16 @@
+<?php
+if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Laki-laki'])){
+    $j_laki = array_count_values(array_column($mhs, 'jenis_kelamin'))['Laki-laki'];
+} else { $j_laki = 0; }
+if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Perempuan'])){
+    $j_prem = array_count_values(array_column($mhs, 'jenis_kelamin'))['Perempuan'];
+} else { $j_prem = 0; }
+if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
+    $j_lain = array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'];
+} else { $j_lain = 0; }
+
+?>
+
 <!-- Content Row -->
 <div class="row">
 
@@ -27,7 +40,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Mahasiswa Laki-laki</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($mhs_pria) ?></div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $j_laki ?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-male fa-2x text-gray-300"></i>
@@ -48,7 +61,7 @@
                         </div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
-                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= count($mhs_wanita) ?></div>
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $j_prem ?></div>
                             </div>
                             <!-- <div class="col">
                                 <div class="progress progress-sm mr-2">
@@ -164,15 +177,15 @@
             <div class="mt-4 text-center small">
                 <span class="mr-2">
                     <i class="fas fa-circle text-primary"></i> Laki-laki: 
-                    <a id="dom-pria" style=""><?php 
-                    echo htmlspecialchars(count($mhs_pria));?></a>
-                </span>
-
+                    <a id="dom-pria" style=""><?= htmlspecialchars($j_laki)?></a>
                 </span>
                 <span class="mr-2">
                     <i class="fas fa-circle" style="color:#ff5d8f"></i> Perempuan:
-                    <a id="dom-wanita" style=""><?php 
-                    echo htmlspecialchars(count($mhs_wanita));?></a>
+                    <a id="dom-wanita" style=""><?= htmlspecialchars($j_prem)?></a>
+                </span>
+                <span class="mr-2">
+                    <i class="fas fa-circle" style="color:#999"></i> Lainnya:
+                    <a id="dom-lain" style=""><?= htmlspecialchars($j_lain)?></a>
                 </span>
                 
             </div>

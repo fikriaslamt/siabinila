@@ -8,6 +8,7 @@ use App\Models\M_data_usul;
 use App\Models\M_data_hasil;
 use App\Models\M_data_kompre;
 use App\Models\M_data_skripsi;
+use App\Models\M_data_notif;
 use App\Models\M_surat_pengajuan_judul;
 use App\Models\M_surat_pengajuan_usul;
 use App\Models\M_surat_pengajuan_hasil;
@@ -26,6 +27,7 @@ class Mahasiswa extends BaseController
         $this->M_data_kompre = new M_data_kompre();
         $this->M_data_hasil = new M_data_hasil();
         $this->M_data_skripsi = new M_data_skripsi();
+        $this->M_data_notif = new M_data_notif();
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
         $this->M_surat_pengajuan_usul = new M_surat_pengajuan_usul();
         $this->M_surat_pengajuan_hasil = new M_surat_pengajuan_hasil();
@@ -50,10 +52,11 @@ class Mahasiswa extends BaseController
     public function skripsi()
     {   
         $skripsi = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where npm='".session()->user."'")->getResultArray();
+        $notif = $this->M_data_notif->query("SELECT * FROM data_notif where untuk='".session()->user."'")->getResultArray();
         $pengajuan = $this->M_data_pengajuan_judul->query("SELECT * FROM data_pengajuan_judul where npm='".session()->user."'")->getResultArray();
         $data = [
             'title' => "Skripsi - Mahasiswa",
-            'skripsi' => $skripsi, 'pengajuan' => $pengajuan,
+            'skripsi' => $skripsi, 'pengajuan' => $pengajuan, 'notif' => $notif,
             'pesan_err' => \Config\Services::validation(),
         ];
         echo view('layouts/header', $data);
@@ -121,8 +124,8 @@ class Mahasiswa extends BaseController
         echo view('layouts/footer');
     }
     public function form_pengajuan_judul()
-    {
-        $Dosen =$this->M_profil_dosen->findAll();
+    {   
+        $Dosen = $this->M_profil_dosen->findAll();
         
         $data = [
             'title' => "form pengajuan judul", 'dosen' => $Dosen,
@@ -277,7 +280,8 @@ class Mahasiswa extends BaseController
     }
 
     public function tambah_pengajuan_judul()
-    {   $skrip1 = ""; $skrip2 = "";
+    {   
+        $skrip1 = ""; $skrip2 = "";
         $isi1 = explode(PHP_EOL, $this->request->getVar('judul1_isi'));
         $isi2 = explode(PHP_EOL, $this->request->getVar('judul2_isi'));
         foreach ($isi1 as $p1) :
@@ -315,7 +319,8 @@ class Mahasiswa extends BaseController
             'sks'   => $this->request->getVar('sks'),
             'ipk'   => $this->request->getVar('ipk'),
         ]);
-        
+        $this->M_data_notif->delete(session()->user);
+
         return redirect()->to(base_url('Mahasiswa/skripsi/'));
     }
 

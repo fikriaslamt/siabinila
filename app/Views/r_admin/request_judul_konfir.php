@@ -13,8 +13,14 @@
         
         <div class="card-body"><!-- Card Body -->
 
+        <?php if (session()->getFlashdata('error')) { ?>
+            <div class="alert alert-warning">
+            <?php echo session()->getFlashdata('error') ?>
+            </div>
+        <?php } ?> 
+
         <form action="<?= base_url('Admin/terima_judul/'.$data['npm'])?>" method="POST">
-            
+
             <div class="form-group">
             <label>
                 NPM</label>
@@ -36,7 +42,7 @@
             <select name="dospem1" class="form-control" id="dospem1" required>
                 <option value="<?=$data['dospem1']?>">- <?=$data['dospem1']?> -</option>
                 <?php foreach ($dosen as $dsn1) : ?>
-                <option value="<?= $dsn1["nama"]?> "><?= $dsn1["nama"]?></option>
+                <option value="<?= $dsn1["nama"]?>"><?= $dsn1["nama"]?></option>
                 <?php endforeach;?>
             </select>
             <label for="dospem2">
@@ -44,12 +50,12 @@
             <select name="dospem2" class="form-control" id="dospem2" required>
                 <option value="<?=$data['dospem2']?>">- <?=$data['dospem2']?> -</option>
                 <?php foreach ($dosen as $dsn2) : ?>
-                <option value="<?= $dsn2["nama"]?> "><?= $dsn2["nama"]?></option>
+                <option value="<?= $dsn2["nama"]?>"><?= $dsn2["nama"]?></option>
                 <?php endforeach;?>
             </select> 
-            <div class="row" style="margin-top:70px">
-            <input type="submit" name="register" class="btn btn-primary ml-3 mb-4"  value="Terima" />
-            <a href="<?= base_url('/Admin/data_pengajuan_judul')?>" class="btn btn-danger ml-3 mb-4">Kembali</a>
+            <div class="row" style="margin-top:70px">            
+            <a href="<?= base_url('/Admin/data_pengajuan_judul')?>" class="btn btn-dark ml-3 mb-4">&larr; Kembali</a>
+            <input type="submit" name="register" class="btn btn-success ml-3 mb-4"  value="Terima" />
             </div>
         
         </form>

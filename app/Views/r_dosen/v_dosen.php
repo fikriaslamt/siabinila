@@ -32,12 +32,12 @@ endforeach
   
     <?php if (!empty($skripsi)): ?>
     <div class="atur-kolom-ka">
-    <a href="<?= base_url('Dosen/data_skripsi')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">DATA SKRIPSI</span>
-      </div>
-    </a>
+      <a href="<?= base_url('Dosen/data_skripsi')?>">
+        <div class="card-counter info">
+        <i  class="fa fa-book-open"></i>
+          <span class="count-name">DATA SKRIPSI</span>
+        </div>
+      </a>
     </div>
     <?php endif ?>
 

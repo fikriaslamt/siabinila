@@ -15,7 +15,7 @@
    
         
         <div class="row">
-        <a href="<?=base_url('Mahasiswa/skripsi')?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>
+        <a href="<?=base_url()?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>
         <button type="submit" class="submit">
         <i class="fa fa-file-import"></i> CETAK
         </button>

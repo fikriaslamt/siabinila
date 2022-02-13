@@ -66,7 +66,7 @@
             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Buat Password">
             </div>
             
-            <input type="submit" name="register" class="btn btn-primary" value="Tambahkan" />
+            <a class="btn btn-dark" href="<?=base_url('Admin/data_dosen')?>">&larr; Kembali</a> <input type="submit" name="register" class="btn btn-primary" value="Tambahkan" />
 
         
         </form>

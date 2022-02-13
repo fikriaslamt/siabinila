@@ -12,6 +12,7 @@ use App\Models\M_data_skripsi;
 use App\Models\M_data_usul;
 use App\Models\M_data_hasil;
 use App\Models\M_data_kompre;
+use App\Models\M_data_notif;
 use App\Models\M_profil_mahasiswa;
 use App\Models\M_profil_dosen;
 
@@ -32,6 +33,7 @@ class Admin extends BaseController
         $this->M_data_usul = new M_data_usul();
         $this->M_data_hasil = new M_data_hasil();
         $this->M_data_kompre = new M_data_kompre();
+        $this->M_data_notif = new M_data_notif();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
         $this->M_profil_dosen = new M_profil_dosen();
     }
@@ -79,8 +81,20 @@ class Admin extends BaseController
 
     public function data_mahasiswa()
     {
-        $data1 = $this->M_profil_mahasiswa->findAll();
-        $data = ['title' => "Data Mahasiswa",'data' => $data1];
+        $kunci = $this->request->getVar('cari');
+        if ($kunci) {
+            $this->M_profil_mahasiswa->like('nama', $kunci);
+            $this->M_profil_mahasiswa->orLike('npm', $kunci);
+            $data1 = $this->M_profil_mahasiswa->paginate(20, 'mhs');
+            $jumlah = "Pencarian dengan kata kunci \"<B>$kunci</B>\" ditemukan ".count($data1)." Data. ";
+        } else {
+            $data1 = $this->M_profil_mahasiswa->paginate(20, 'mhs');
+            $jumlah = "";
+        }
+
+        $data = ['title' => "Data Mahasiswa",'data' => $data1,
+        'pager' => $this->M_profil_mahasiswa->pager, 'jumlah' => $jumlah
+        ];
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_data_mahasiswa',$data);
@@ -88,9 +102,23 @@ class Admin extends BaseController
     }
 
     public function data_dosen()
-    {
-        $data1 = $this->M_profil_dosen->findAll();
-        $data = ['title' => "Data Dosen", 'data' => $data1];
+    {   
+        $skrip = $this->M_data_skripsi->findAll();
+        $kunci = $this->request->getVar('cari');
+        if ($kunci) {
+            $this->M_profil_dosen->like('nama', $kunci);
+            $this->M_profil_dosen->orLike('nip', $kunci);
+            $data1 = $this->M_profil_dosen->paginate(10, 'dosen');
+            $jumlah = "Pencarian dengan kata kunci \"<B>$kunci</B>\" ditemukan ".count($data1)." Data. ";
+        } else {
+            $data1 = $this->M_profil_dosen->paginate(10, 'dosen');
+            $jumlah = "";
+        }
+
+        $data = [
+            'title' => "Data Dosen", 'data' => $data1, 'skrip' => $skrip,
+            'pager' => $this->M_profil_dosen->pager, 'jumlah' => $jumlah
+        ];
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/v_data_dosen',$data);
@@ -177,21 +205,25 @@ class Admin extends BaseController
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/request_judul_konfir',$data);
-        echo view('layouts/admin_footer');    
+        echo view('layouts/admin_footer');
     }
     public function terima_judul($npm)
     {   
         // $judul =$this->M_data_pengajuan_judul->query("SELECT judul1 FROM data_pengajuan_judul where npm='".$npm."'")->getResult();
+        if($this->request->getVar('dospem1') == $this->request->getVar('dospem2')){
+            session()->setFlashdata('error', "Dosen Pembimbing 1 dan 2 Tidak Boleh Sama");
+            return redirect()->to(base_url('Admin/konfirmasi_terima_judul/'.$npm));
+        }
+        
         $pengajuan = $this->M_data_pengajuan_judul->find($npm);
-
         if($this->request->getVar('judul') == $pengajuan["judul1"]){
             $p_isi = $pengajuan["judul1_isi"];
         } else { $p_isi = $pengajuan["judul2_isi"]; }
 
         $p_npm = $pengajuan['npm'];
         $p_nama = $pengajuan['nama'];
-        $p_dosp1 = $pengajuan['dospem1'];
-        $p_dosp2 = $pengajuan['dospem2'];
+        $p_dosp1 = $this->request->getVar('dospem1');
+        $p_dosp2 = $this->request->getVar('dospem2');
         $date = date('Y-m-d') ;
 
         $this->M_surat_pengajuan_judul->save([
@@ -222,6 +254,12 @@ class Admin extends BaseController
     {      
         $this->M_data_pengajuan_judul->delete($npm);
         $this->M_surat_pengajuan_judul->delete($npm);
+        $this->M_data_notif->insert([
+            'untuk' => $npm,
+            'oleh' => "Jurusan",
+            'subjek' => "Pengajuan Judul Skripsi",
+            'isi_pesan' => $this->request->getVar('isi_pesan'),
+        ]);
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }
 
@@ -374,15 +412,15 @@ class Admin extends BaseController
     public function add_akun_dosen()
     {
         $this->M_akun->insert([
-            'user' => $this->request->getVar('user'),
+            'user' => trim($this->request->getVar('user')),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
-            'nama' => $this->request->getVar('nama'),
+            'nama' => trim($this->request->getVar('nama')),
             'role' => "dosen",
         ]);
 
         $this->M_profil_dosen->insert([
-            'nip' => $this->request->getVar('nip'),
-            'nama' => $this->request->getVar('nama'),
+            'nip' => trim($this->request->getVar('nip')),
+            'nama' => trim($this->request->getVar('nama')),
             'grup' => $this->request->getVar('grup'),
             'foto' => "profil.jpg",
         ]);

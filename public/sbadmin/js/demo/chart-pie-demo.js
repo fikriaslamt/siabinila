@@ -5,15 +5,16 @@ Chart.defaults.global.defaultFontColor = '#858796';
 // Pie Chart Example
 var j_pria = document.getElementById("dom-pria").textContent;
 var j_wanita = document.getElementById("dom-wanita").textContent;
+var j_lain = document.getElementById("dom-lain").textContent;
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Perempuan","Laki-laki", ],
+    labels: ["Perempuan","Laki-laki", "Lainnya"],
     datasets: [{
-      data: [j_wanita, j_pria],
-      backgroundColor: ['#ff5d8f', '#4e73df', ],
-      hoverBackgroundColor: ['#ff5d8f', '#2e59d9', ],
+      data: [j_wanita, j_pria, j_lain],
+      backgroundColor: ['#ff5d8f', '#4e73df', '#999'],
+      hoverBackgroundColor: ['#ff5d58', '#4e73bf', '#777'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },

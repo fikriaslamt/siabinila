@@ -7,12 +7,8 @@ use CodeIgniter\Model;
 class M_register extends Model
 {
     
-    protected $table                = 'data_register';
+    protected $table                = 'akun_register';
     protected $primaryKey           = 'user';
     protected $allowedFields        = ['user','password','nama','role','jenis_kelamin'];
     
-
-    // Dates
-    
-
 }
