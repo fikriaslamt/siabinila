@@ -20,21 +20,24 @@
 
         <label for="cuti">Cuti Semester (contoh : Ganjil TA 2021/2022) :</label>
         <input type="text" name="cuti" class="form_text" placeholder="Cuti Semester">      
+
+        <label for="strata">Strata (D-3/S-1/S-2) :</label>
+        <input type="text" name="strata" class="form_text" placeholder="strata">      
         
-        <label for="lama">Lama Cuti :</label>
+        <label for="lama">Lama Cuti (Semester) :</label>
         <input type="number" name="lama" class="form_text" placeholder="Lama Cuti">     
 
         <label for="alasan">Alasan Cuti :</label>
         <input type="text" name="alasan" class="form_text" placeholder="Alasan Cuti">   
 
-        <label for="orantua">Orang Tua/Wali :</label>
-        <input type="text" name="orantua" class="form_text" placeholder="Orang Tua/Wali">
+        <label for="orangtua">Orang Tua/Wali :</label>
+        <input type="text" name="orangtua" class="form_text" placeholder="Orang Tua/Wali">
 
         <label for="dospem">Dosen Pembimbing Akademik :</label>
         <input type="text" name="dospem" class="form_text" placeholder="Dosen Pembimbing Akademik">
 
-        <label for="nip"> NIP Dosen Pembimbing Akademik :</label>
-        <input type="number" name="nip" class="form_text" placeholder=" NIP Dosen Pembimbing Akademik">
+        <label for="nip_dospem"> NIP Dosen Pembimbing Akademik :</label>
+        <input type="number" name="nip_dospem" class="form_text" placeholder=" NIP Dosen Pembimbing Akademik">
         
         <div class="row">
         <a href="<?=base_url()?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>

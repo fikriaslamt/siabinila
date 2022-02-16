@@ -223,8 +223,8 @@ $mpdf->WriteHTML('
             Menyetujui: <br/>
             Ketua Jurusan
             <br/><br/><br/><br/><br/><br/>
-            Suprihatin Ali, S.Sos., M.Sc <br/>
-            NIP.19740918 200112 I 001
+            '.$kajur.'<br>
+            NIP. '.$nip_kajur.'
          </td>
          <td>
             Bandar Lampung, '.date('d F Y').'<br/>

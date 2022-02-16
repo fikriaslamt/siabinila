@@ -336,8 +336,8 @@ $mpdf->WriteHTML('
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Ketua Jurusan, <br><br><br><br><br><br>
-                Suprihatin Ali, S.Sos., M.Sc <br>
-                NIP. 19740918 200112 1 001
+                '.$kajur.'<br>
+                NIP. '.$nip_kajur.'
             </td>
         </tr>
     </table>
@@ -445,8 +445,8 @@ $mpdf->WriteHTML('
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Ketua Jurusan, <br><br><br><br><br><br>
-                Suprihatin Ali, S.Sos., M.Sc <br>
-                NIP. 19740918 200112 1 001
+                '.$kajur.'<br>
+                NIP. '.$nip_kajur.'
             </td>
         </tr>
     </table>
@@ -564,8 +564,8 @@ $mpdf->WriteHTML('
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Ketua Jurusan, <br><br><br><br><br><br>
-                Suprihatin Ali, S.Sos., M.Sc <br>
-                NIP. 19740918 200112 1 001
+                '.$kajur.'<br>
+                NIP. '.$nip_kajur.'
             </td>
         </tr>
     </table>
@@ -1186,8 +1186,8 @@ $mpdf->WriteHTML('
             <td style="width: 50%;">
                 <br> Mengetahui,<br>
                 Ketua Jurusan/PS <br><br><br><br>
-                Suprihatin Ali, S.Sos., M.Sc <br>
-                NIP. 19740918 200112 1 001
+                '.$kajur.'<br>
+                NIP. '.$nip_kajur.'
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Staff Jurusan/PS, <br><br><br><br><br>

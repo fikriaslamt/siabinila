@@ -18,114 +18,157 @@ $mpdf = new \Mpdf\Mpdf(['format' => 'A4',
 
 
 
-$mpdf->WriteHTML('
-<table class="header">
-    <tr>
-        <td>
-            <img width="100" src="'.$img1["unila"].'">
-        </td>
-        <td>
-            <div style="font-size:120%;font-weight:bold;">
-                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
-                UNIVERSITAS LAMPUNG <br>
-                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
-                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
-                <span style="font-size:75%">
-                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
-                <div style="font-size:90%">
-                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
-            </div>
-        </td>
-        <td>
-            <img width="50" src="'.$img2["kan"].'">             
-            <img width="47" src="'.$img3["egs"].'">
-        </td>
-    </tr>
-</table>
-<hr style="height: 4px; color:black">
+
+$mpdf->WriteHTML('                        
+
 <div class="teks_isi">
-    <div class="title">SURAT PENGANTAR</div>
-    <div style="text-align: center;">Nomor: ....../UN.26.16.06/KM.00.03/'.$tahun.'</div>
+    <div class="text_kanan">Bandar Lampung, '.$tanggal.'</div>
+    
+    <br>
+    <table>
+        <tr>
+            <td>Perihal</td>
+            <td>: Permohonan Studi Lanjut dari Program Diploma ke Program Sarjana
+            </td>
+        </tr>
+        <tr>
+            <td>Lampiran</td>
+            <td>: 1 bundel</td>
+        </tr>
+    </table>
+    <br><br>
+    Kepada Yth. Rektor Universitas Lampung<br/>
+    
 
     
-        <br><br>
-        Yth. Wakil Dekan Bid. Kemahasiswaan dan Alumni<br/>
-
-        
-        <table class="padding_isi">
+    <table class="padding_isi">
+        <tr>
+            <td>
+            Up. Wakil Rektor Bidang Akademik
+            </td>
+        </tr>
+        <tr>
+            <td>
+                di-
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <table class="padding_isi">
+                    <tr>
+                        <td>Bandar Lampung</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    Dengan Hormat, <br>
+    Saya yang bertanda tangan dibawah ini: <br><br>
+    <table class="padding_isi">
+        <tr>
+            <td>Nama</td>
+            <td>: '.$nama.'</td>
+        </tr>
+        <tr>
+            <td>Tempat/Tgl. Lahir</td>
+            <td>: '.$ttl.'</td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>: '.$jk.'</td>
+        </tr>
+        <tr>
+            <td>Agama</td>
+            <td>: '.$agama.'</td>
+        </tr>
+        <tr>
+            <td>Alamat Lengkap</td>
+            <td>: '.$alamat.'</td>
+        </tr>
+        <tr>
+            <td>NPM Lama</td>
+            <td>: '.$npm.'</td>
+        </tr>
+        <tr>
+            <td>No. Telepon/HP</td>
+            <td>: '.$notlp.'</td>
+        </tr>
+        <tr>
+            <td>Asal Universitas</td>
+            <td>: Universitas Lampung</td>
+        </tr>
+        <tr>
+            <td>Asal Fakultas</td>
+            <td>: FISIP</td>
+        </tr>
     
-            <tr>
-                <td>FISIP Universitas Lampung</td>
-            </tr>
-            <tr>
-                <td>
-                    di-
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <table class="padding_isi">
-                        <tr>
-                            <td>Bandar Lampung</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <br><br>
-        Ketua Jurusan Ilmu Administrasi Bisnis Fisip Unila dengan ini menerangkan bahwa
-        mahasiswa tersebut dibawah ini: <br><br>
+        <tr>
+            <td>Strata</td>
+            <td>: Diploma (D3)</td>
+        </tr>
+        <tr>
+            <td>Asal Program Studi</td>
+            <td>: '.$prodi.'</td>
+         </tr>
 
-        <table class="padding_isi">
-            <tr>
-                <td>Nama</td>
-                <td>: '.$nama.'</td>
-            </tr>
-            <tr>
-                <td>NPM</td>
-                <td>: '.$npm.'</td>
-            </tr>
-            <tr>
-                <td>Semester</td>
-                <td>: '.$semester.'</td>
-            </tr>
-            <tr>
-                <td>Alamat</td>
-                <td>: '.$alamat.'</td>
-            </tr>
-            <tr>
-                <td>Tujuan</td>
-                <td>: Pengantar Keterangan Masih Kuliah</td>
-            </tr>
-        
-        </table>
-        <br>
-        Adalah benar mahasiswa Jurusan Ilmu Administrasi Bisnis dan sampai saat ini yang
-        bersangkutan masih aktif kuliah.
-    <br><br><br>
+        <tr>
+            <td>PS Yang Dituju</td>
+            <td>: '.$ps_tujuan.'</td>
+        </tr>
+  
+        <tr>
+            <td>Alasan Alih Program</td>
+            <td>: '.$alasan.'</td>
+        </tr>
+    </table>
+    <br><br>
 
-        <table style="width: 100%;">
+    Bersama ini kami mengajukan Alih Program (Studi Lanjut dari Program Diploma ke Program
+    Sarjana) dari dari Program Studi '.$prodi.' Fakultas FISIP Unila ke Program Studi '.$ps_tujuan.' Fakultas '.$fk_tujuan.' Unila
+    Sebagai bahan pertimbangan kami lampirkan persyaratan sebagai berikut:
+    <br>
+    <table class="padding_isi">
+        <tr>
+            <td>1. Transkrip akademik resmi yang disahkan oleh pejabat yang berwenang;</td>
+        </tr>
+        <tr>
+            <td>2. Fotokopi ijazah asli yang dilegalisir oleh pejabat yang berwenang;</td>
+        </tr>
             <tr>
-                <td style="width: 55%;">
-                </td>
-                <td>
-                    Bandar Lampung, '.$tanggal.' <br>
-                    Ketua Jurusan,
-                    <br><br><br><br><br><br>
-                    '.$kajur.'<br>
-                    NIP. '.$nip_kajur.'
-                    
-                </td>
-            </tr>
-        </table>
-        <br><br>
-        Tembusan:<br>
-        1. Dekan;<br>
-        2. Yang bersangkutan;<br>
-        3. Arsip.
+            <td>3. Surat keterangan berkelakuan baik dari kepolisian;</td>
+        </tr>
+        <tr>
+            <td>4. Fotokopi Akreditasi yang dilegalisir oleh pejabat yang berwenang.</td>
+         </tr>
+    </table>
+    <br>
+    Demikian surat permohonan kami, atas perhatian dan kerjasamanya disampaikan terimakasih. <br><br>
+  <br>
 
- 
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 55%;">
+                Mengetahui, <br>
+                Orang Tua/Wali <br><br><br><br><br>
+                '.$orangtua.'
+            </td>
+            <td>
+                Hormat Saya,
+                <br><br><br>Materai 6.000<br><br><br>
+                '.$nama.' <br>
+                NPM .'.$npm.'
+                
+            </td>
+        </tr>
+    </table>
+    <br>
+    Catatan: <br>
+    1. Bagi calon mahasiswa di lingkungan Unila IPK ≥ 3,00 dan di luar lingkungan Unila IPK ≥ 3,25;<br>
+    2. Alih program dari program studi di luar Unila dapat dilakukan jika program studi memiliki sekurang-kurangnya akreditasi yang sama dengan program studi yang dituju.
+    
 </div>
+
 ');
 
 $mpdf->Output('file.pdf','D');

@@ -39,6 +39,8 @@ class Cetakan extends BaseController {
             'sks' => $skrip["sks"],
             'dospem1' => $skrip["dosp1"],
             'dospem2' => $skrip["dosp2"],
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -58,6 +60,8 @@ class Cetakan extends BaseController {
             'npm'      => $skrip["npm"],
             'judul'    => $judul,
             'isi'    => $isi,
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -74,6 +78,8 @@ class Cetakan extends BaseController {
             'judul'          => $data1["judul"],
             'prodi'         => $data1["prodi"],
             'jurusan'         => $data1["jurusan"],
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
 
         ];
@@ -90,6 +96,8 @@ class Cetakan extends BaseController {
             'npm'           => $data1["npm"],
             'nama'          => $data1["nama"],
             'judul'          => $data1["judul"],
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
 
         ];
@@ -106,6 +114,8 @@ class Cetakan extends BaseController {
             'npm'           => $data1["npm"],
             'nama'          => $data1["nama"],
             'judul'          => $data1["judul"],
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
 
         ];
@@ -126,6 +136,8 @@ class Cetakan extends BaseController {
             'alasan'        => $this->request->getVar('alasan'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'orangtua'        => $this->request->getVar('orangtua'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
            
         ];
@@ -143,6 +155,8 @@ class Cetakan extends BaseController {
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'orangtua'        => $this->request->getVar('orangtua'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
            
         ];
@@ -161,6 +175,8 @@ class Cetakan extends BaseController {
             'tanggal'        => $this->request->getVar('tanggal'),
             'dospem'        => $this->request->getVar('dospem'),
             'nip'        => $this->request->getVar('nip'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
            
         ];
@@ -179,6 +195,8 @@ class Cetakan extends BaseController {
             'tanggal'        => $this->request->getVar('tanggal'),
             'dospem'        => $this->request->getVar('dospem'),
             'nip'        => $this->request->getVar('nip'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
            
         ];
@@ -196,6 +214,8 @@ class Cetakan extends BaseController {
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'sks'        => $this->request->getVar('sks'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
            
         ];
@@ -213,12 +233,113 @@ class Cetakan extends BaseController {
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'alamat'        => $this->request->getVar('alamat'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
             
            
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/surat_masih_aktif_kuliah',$data);
+
+	}
+
+    function surat_keterangan_beasiswa()
+	{       
+        
+        $data =[
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'         => $this->request->getVar('semester'),
+            'tanggal'        => $this->request->getVar('tanggal'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_keterangan_beasiswa',$data);
+
+	}
+    
+    function surat_permohonan_cuti()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'strata'         => $this->request->getVar('strata'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'notlp'        => $this->request->getVar('nomor'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'cuti'        => $this->request->getVar('cuti'),
+            'lama'        => $this->request->getVar('lama'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'dospem'        => $this->request->getVar('dospem'),
+            'orangtua'        => $this->request->getVar('orangtua'),
+            'nip_dospem'        => $this->request->getVar('nip_dospem'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_permohonan_cuti',$data);
+
+	}
+
+    function surat_pindah_kuliah()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'strata'         => $this->request->getVar('strata'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'notlp'        => $this->request->getVar('nomor'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'tujuan'        => $this->request->getVar('tujuan'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'dospem'        => $this->request->getVar('dospem'),
+            'orangtua'        => $this->request->getVar('orangtua'),
+            'nip_dospem'        => $this->request->getVar('nip_dospem'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pindah_kuliah',$data);
+
+	}
+
+    function surat_perpanjangan_masa_studi()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'strata'         => $this->request->getVar('strata'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'notlp'        => $this->request->getVar('nomor'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'semester'        => $this->request->getVar('semester'),
+            'ipk'        => $this->request->getVar('ipk'),
+            'sks'        => $this->request->getVar('sks'),
+            'tgl'        => $this->request->getVar('tgl'),
+            'bln'        => $this->request->getVar('bln'),
+            'thn'        => $this->request->getVar('thn'),
+            'dospa'        => $this->request->getVar('dospa'),
+            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'dospem'        => $this->request->getVar('dospem'),
+            'orangtua'        => $this->request->getVar('orangtua'),
+            'nip_dospem'        => $this->request->getVar('nip_dospem'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_perpanjangan_masa_studi',$data);
 
 	}
 }

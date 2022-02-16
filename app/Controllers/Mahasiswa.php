@@ -279,6 +279,127 @@ class Mahasiswa extends BaseController
         echo view('layouts/footer');
     }
 
+    public function form_perpanjangan_masa_studi()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Perpanjangan Masa Studi"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_perpanjangan_masa_studi');
+        echo view('layouts/footer');
+    }
+
+    public function form_pengisian_krs_terlambat()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Pengisian KRS Terlambat"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_pengisian_krs_terlambat');
+        echo view('layouts/footer');
+    }
+
+    public function form_penghapusan_mk()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Penghapusan Mata Kuliah"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_penghapusan_mk');
+        echo view('layouts/footer');
+    }
+
+    public function form_pembetulan_nilai()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Pembetulan Nilai"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_pembetulan_nilai');
+        echo view('layouts/footer');
+    }
+
+    public function form_mengundurkan_diri()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Mengundurkan Diri"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_mengundurkan_diri');
+        echo view('layouts/footer');
+    }
+
+    public function form_studi_lapangan()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Izin Studi Lapangan"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_studi_lapangan');
+        echo view('layouts/footer');
+    }
+
+    public function form_riset_data_skripsi()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Izin Riset & Pengambilan Data Skripsi"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_riset_data_skripsi');
+        echo view('layouts/footer');
+    }
+
+    public function form_studi_lanjut_sarjana()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Studi Lanjut Dari Diploma ke Sarjana"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_studi_lanjut_sarjana');
+        echo view('layouts/footer');
+    }
+
+    public function form_pindah_studi()
+    {
+        $data = [
+            'title' => "Formulir  Permohonan Pindah Studi ke Unila"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_pindah_studi');
+        echo view('layouts/footer');
+    }
+
+    public function form_pindah_studi_internal()
+    {
+        $data = [
+            'title' => "Formulir Permohonan Pindah Program Studi Internal Unila"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_pindah_studi_internal');
+        echo view('layouts/footer');
+    }
+
+    public function form_tidak_sanksi()
+    {
+        $data = [
+            'title' => "Formulir Keterangan Tidak Pernah Menerima Sanksi Akademik"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/form_tidak_sanksi');
+        echo view('layouts/footer');
+    }
+
     public function tambah_pengajuan_judul()
     {   
         $skrip1 = ""; $skrip2 = "";

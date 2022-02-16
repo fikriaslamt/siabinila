@@ -18,7 +18,9 @@ $mpdf = new \Mpdf\Mpdf(['format' => 'A4',
 
 
 
-$mpdf->WriteHTML('
+
+$mpdf->WriteHTML('                        
+
 <table class="header">
     <tr>
         <td>
@@ -43,89 +45,65 @@ $mpdf->WriteHTML('
     </tr>
 </table>
 <hr style="height: 4px; color:black">
+
 <div class="teks_isi">
-    <div class="title">SURAT PENGANTAR</div>
-    <div style="text-align: center;">Nomor: ....../UN.26.16.06/KM.00.03/'.$tahun.'</div>
+    <div class="title">SURAT KETERANGAN</div>
+    <div style="text-align: center;">Nomor: ....../UN.26.16.06/KM.00.05/'.$tahun.'</div>
+    <br>
+    Dekan Fakultas Ilmu Sosial dan Ilmu Politik Universitas Lampung menerangkan bahwa:
 
-    
-        <br><br>
-        Yth. Wakil Dekan Bid. Kemahasiswaan dan Alumni<br/>
+    <br>
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td>: '.$nama.'</td>
+        </tr>
+        <tr>
+            <td>NPM</td>
+            <td>: '.$npm.'</td>
+        </tr>
+        <tr>
+            <td>Tempat/tanggal lahir</td>
+            <td>: '.$ttl.'</td>
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td>: '.$alamat.'</td>
+        </tr>
+        <tr>
+            <td>Telp.rumah</td>
+            <td>: '.$nomor.'</td>
+        </tr>
+    </table>
+    <br><br>
 
-        
-        <table class="padding_isi">
-    
-            <tr>
-                <td>FISIP Universitas Lampung</td>
-            </tr>
-            <tr>
-                <td>
-                    di-
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <table class="padding_isi">
-                        <tr>
-                            <td>Bandar Lampung</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <br><br>
-        Ketua Jurusan Ilmu Administrasi Bisnis Fisip Unila dengan ini menerangkan bahwa
-        mahasiswa tersebut dibawah ini: <br><br>
-
-        <table class="padding_isi">
-            <tr>
-                <td>Nama</td>
-                <td>: '.$nama.'</td>
-            </tr>
-            <tr>
-                <td>NPM</td>
-                <td>: '.$npm.'</td>
-            </tr>
-            <tr>
-                <td>Semester</td>
-                <td>: '.$semester.'</td>
-            </tr>
-            <tr>
-                <td>Alamat</td>
-                <td>: '.$alamat.'</td>
-            </tr>
-            <tr>
-                <td>Tujuan</td>
-                <td>: Pengantar Keterangan Masih Kuliah</td>
-            </tr>
-        
-        </table>
-        <br>
-        Adalah benar mahasiswa Jurusan Ilmu Administrasi Bisnis dan sampai saat ini yang
-        bersangkutan masih aktif kuliah.
+    Adalah mahasiswa Fakultas Ilmu Sosial Dan Ilmu Politik Universitas Lampung yang terdaftar
+    pada Semester '.$semester.'.Tahun Akademik '.$akademik.' pada Jurusan/Program Studi '.$prodi.'. Tidak sedang menerima sanksi akademik karena melanggar kode etik dan tata pergaulan mahasiswa Universitas Lampung. Surat keterangan ini
+    diterbitkan untuk keperluan '.$keperluan.'
     <br><br><br>
+    Atas perhatian dan kerjasamanya disampaikan terimakasih.  <br><br><br>
 
-        <table style="width: 100%;">
-            <tr>
-                <td style="width: 55%;">
-                </td>
-                <td>
-                    Bandar Lampung, '.$tanggal.' <br>
-                    Ketua Jurusan,
-                    <br><br><br><br><br><br>
-                    '.$kajur.'<br>
-                    NIP. '.$nip_kajur.'
-                    
-                </td>
-            </tr>
-        </table>
-        <br><br>
-        Tembusan:<br>
-        1. Dekan;<br>
-        2. Yang bersangkutan;<br>
-        3. Arsip.
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 55%;">
+            </td>
+            <td>
+                Bandar Lampung, '.$tanggal.'<br>
+                a.n. Dekan <br>
+                Kabbag Tata Usaha,
+                <br><br><br><br><br><br>
+                '.$dekan.'<br>
+                NIP. '.$nip_dekan.'
+                
+            </td>
+        </tr>
+    </table>
+
+
 
  
 </div>
+
 ');
 
 $mpdf->Output('file.pdf','D');
