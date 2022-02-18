@@ -86,8 +86,10 @@ endforeach;
   <div style="margin-left: 21px">Skripsi anda telah berjalan  <b><?= $interval->format('%a');?></b> Hari</div>
     <div class="meter">
     <span style="width: <?= ($int_hari/180)*100?>%"></span>
+    <?php //echo($datetime2->format("N"))?>
   </div>
   <?php endif ?>
+  
 
 </div>
 
@@ -107,20 +109,20 @@ endforeach;
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pembayaran_keterlambatan_ukt')?>">
-          <div class="card-counter menu-content">Form Permohonan Pembayaran Keterlambatan UKT PS ABI Fisip Unila </div>
+          <div class="menu-content cntn-1">Form Permohonan Pembayaran Keterlambatan UKT PS ABI Fisip Unila </div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_kehilangan_ukt')?>">
-            <div class="card-counter menu-content">Form Permohonan Kehilangan UKT PS ABI Fisip Unila </div>
+            <div class="menu-content cntn-1">Form Permohonan Kehilangan UKT PS ABI Fisip Unila </div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_keringanan_ukt')?>">
           
-            <div class="card-counter menu-content">Form Permohonan Keringanan UKT PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-1">Form Permohonan Keringanan UKT PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -128,7 +130,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pembebasan_ukt')?>">
           
-            <div class="card-counter menu-content">Form Permohonan Pembebasan UKT PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-1">Form Permohonan Pembebasan UKT PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -136,7 +138,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_keringanan_ukt_50')?>">
           
-            <div class="card-counter menu-content">Form Permohonan Keringanan UKT 50% PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-1">Form Permohonan Keringanan UKT 50% PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -150,20 +152,20 @@ endforeach;
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_masih_aktif_kuliah')?>">
-          <div class="card-counter menu-content-2">Form Keterangan Masih Aktif Kuliah PS ABI Fisip Unila</div>
+          <div class="menu-content cntn-2">Form Keterangan Masih Aktif Kuliah PS ABI Fisip Unila</div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_keterangan_beasiswa')?>">
-            <div class="card-counter menu-content-2">Form Keterangan Beasiswa PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Keterangan Beasiswa PS ABI Fisip Unila</div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_permohonan_cuti_kuliah')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Cuti Kuliah PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Cuti Kuliah PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -171,7 +173,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_studi_terbimbing')?>">
           
-            <div class="card-counter menu-content-2">() Form Permohonan Studi Terbimbing PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">() Form Permohonan Studi Terbimbing PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -179,7 +181,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pindah_kuliah')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Pindah Kuliah PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Pindah Kuliah PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -187,7 +189,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_perpanjangan_masa_studi')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Perpanjangan Masa Studi PS ABI Fisip</div>
+            <div class="menu-content cntn-2">Form Permohonan Perpanjangan Masa Studi PS ABI Fisip</div>
           
         </a>
       </div>
@@ -195,7 +197,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pengisian_krs_terlambat')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Pengisian KRS Terlambat PS ABI Fisip</div>
+            <div class="menu-content cntn-2">Form Permohonan Pengisian KRS Terlambat PS ABI Fisip</div>
           
         </a>
       </div>
@@ -203,7 +205,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_penghapusan_mk')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Penghapusan Mata Kuliah PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Penghapusan Mata Kuliah PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -211,7 +213,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pembetulan_nilai')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Pembetulan Nilai PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Pembetulan Nilai PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -219,7 +221,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_mengundurkan_diri')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Mengundurkan Diri PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Mengundurkan Diri PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -227,7 +229,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_studi_lapangan')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Izin Studi Lapangan PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Izin Studi Lapangan PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -235,7 +237,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_riset_data_skripsi')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Izin Riset & Pengambilan Data Skripsi PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Izin Riset & Pengambilan Data Skripsi PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -243,7 +245,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_studi_lanjut_sarjana')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Studi Lanjut Dari Diploma ke Sarjana PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Studi Lanjut Dari Diploma ke Sarjana PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -251,7 +253,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pindah_studi')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Pindah Studi ke Unila PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Pindah Studi ke Unila PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -259,7 +261,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_pindah_studi_internal')?>">
           
-            <div class="card-counter menu-content-2">Form Permohonan Pindah Program Studi Internal Unila PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Permohonan Pindah Program Studi Internal Unila PS ABI Fisip Unila</div>
           
         </a>
       </div>
@@ -267,7 +269,7 @@ endforeach;
       <div class="atur-kolom-ka">
         <a href="<?= base_url('Mahasiswa/form_tidak_sanksi')?>">
           
-            <div class="card-counter menu-content-2">Form Keterangan Tidak Pernah Menerima Sanksi Akademik PS ABI Fisip Unila</div>
+            <div class="menu-content cntn-2">Form Keterangan Tidak Pernah Menerima Sanksi Akademik PS ABI Fisip Unila</div>
           
         </a>
       </div>

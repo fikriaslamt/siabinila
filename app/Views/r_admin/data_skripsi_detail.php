@@ -16,15 +16,15 @@
                 <td><?= $data["date_judul"]; ?></td>
             </tr>
             <tr>
-                <th>Tanggal Mengajukan Usul </th>
+                <th>Tanggal Diterima Usul </th>
                 <td><?= $data["date_usul"]; ?></td>
             </tr>
             <tr>
-                <th>Tanggal Mengajukan Hasil </th>
+                <th>Tanggal Diterima Hasil </th>
                 <td><?= $data["date_hasil"]; ?></td>
             </tr>
             <tr>
-                <th>Tanggal Mengajukan Kompre </th>
+                <th>Tanggal Lulus Kompre </th>
                 <td><?= $data["date_kompre"]; ?></td>
             </tr>
             <tr>

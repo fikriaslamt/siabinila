@@ -3,9 +3,9 @@
 namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_data_skripsi;
-use App\Models\M_data_usul;
-use App\Models\M_data_hasil;
-use App\Models\M_data_kompre;
+use App\Models\M_seminar_usul;
+use App\Models\M_seminar_hasil;
+use App\Models\M_ujian_kompre;
 use App\Models\M_akun;
 use App\Models\M_profil_dosen;
 
@@ -20,9 +20,9 @@ class Dosen extends BaseController
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_data_skripsi = new M_data_skripsi();
-        $this->M_data_usul = new M_data_usul();
-        $this->M_data_kompre = new M_data_kompre();
-        $this->M_data_hasil = new M_data_hasil();
+        $this->M_seminar_usul = new M_seminar_usul();
+        $this->M_ujian_kompre = new M_ujian_kompre();
+        $this->M_seminar_hasil = new M_seminar_hasil();
         $this->M_akun = new M_akun();
         $this->M_profil_dosen = new M_profil_dosen();
     }
@@ -30,9 +30,9 @@ class Dosen extends BaseController
     public function index()
     {
         $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_usul = $this->M_data_usul->query("SELECT * FROM data_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_hasil = $this->M_data_hasil->query("SELECT * FROM data_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_kompre = $this->M_data_pengajuan_judul->query("SELECT * FROM data_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_kompre = $this->M_data_pengajuan_judul->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Dosen",'skripsi' => $dat_skrip, 
@@ -95,7 +95,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_usul()
     {
-        $data1 = $this->M_data_usul->query("SELECT * FROM data_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $data1 = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Usul",
@@ -103,13 +103,13 @@ class Dosen extends BaseController
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen', $data);
-        echo view('r_dosen/data_usul', $data);
+        echo view('r_dosen/data_seminar_usul', $data);
         echo view('layouts/footer');
     }
 
     public function data_pengajuan_hasil()
     {
-        $data1 = $this->M_data_hasil->query("SELECT * FROM data_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $data1 = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Hasil",
@@ -117,13 +117,13 @@ class Dosen extends BaseController
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen', $data);
-        echo view('r_dosen/data_hasil', $data);
+        echo view('r_dosen/data_seminar_hasil', $data);
         echo view('layouts/footer');
     }
 
     public function data_pengajuan_kompre()
     {
-        $data1 =$this->M_data_kompre->query("SELECT * FROM data_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $data1 =$this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Ujian Skripsi",
@@ -132,7 +132,7 @@ class Dosen extends BaseController
 
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen', $data);
-        echo view('r_dosen/data_kompre', $data);
+        echo view('r_dosen/data_ujian_kompre', $data);
         echo view('layouts/footer');
     }
 
@@ -148,7 +148,7 @@ class Dosen extends BaseController
         $interval = date_diff($datetime1, $datetime2);
         $interval = $interval->format('%a Hari');
 
-        $data = $this->M_data_usul->find($npm);
+        $data = $this->M_seminar_usul->find($npm);
         
         $pengajuan = [
             'time' => $interval,
@@ -165,14 +165,14 @@ class Dosen extends BaseController
         
         $this->M_data_skripsi->update($npm,$pengajuan);
         
-        // $this->M_data_usul->delete($npm);
+        // $this->M_seminar_usul->delete($npm);
         
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
     public function tolak_usul($npm)
     {      
-        $this->M_data_usul->delete($npm);
+        $this->M_seminar_usul->delete($npm);
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
@@ -187,7 +187,7 @@ class Dosen extends BaseController
         $interval = date_diff($datetime1, $datetime2);
         $interval = $interval->format('%a Hari');
 
-        $data = $this->M_data_hasil->find($npm);
+        $data = $this->M_seminar_hasil->find($npm);
         
         $pengajuan = [
             'time' => $interval,
@@ -204,14 +204,14 @@ class Dosen extends BaseController
         
         $this->M_data_skripsi->update($npm,$pengajuan);
         
-        // $this->M_data_usul->delete($npm);
+        // $this->M_seminar_usul->delete($npm);
         
         return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
     public function tolak_hasil($npm)
     {      
-        $this->M_data_hasil->delete($npm);
+        $this->M_seminar_hasil->delete($npm);
         return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
@@ -229,7 +229,7 @@ class Dosen extends BaseController
         $interval_total = date_diff($datetime, $datetime2);
         $interval_total = $interval_total->format('%a Hari');
 
-        $data = $this->M_data_kompre->find($npm);
+        $data = $this->M_ujian_kompre->find($npm);
         
         $pengajuan = [
             'time' => $interval,
@@ -247,14 +247,14 @@ class Dosen extends BaseController
         
         $this->M_data_skripsi->update($npm,$pengajuan);
         
-        // $this->M_data_usul->delete($npm);
+        // $this->M_seminar_usul->delete($npm);
         
         return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
     }
 
     public function tolak_kompre($npm)
     {      
-        $this->M_data_kompre->delete($npm);
+        $this->M_ujian_kompre->delete($npm);
         return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
     }
 

@@ -5,20 +5,7 @@
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">Tambah Akun Dosen</h6>
-            <div class="dropdown no-arrow">
-                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                    aria-labelledby="dropdownMenuLink">
-                    <div class="dropdown-header">Dropdown Header:</div>
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
+            
         </div>
         <!-- Card Body -->
         <div class="card-body">
@@ -59,12 +46,15 @@
                 <option value="grup 4">grup 4</option>
             </select>
             </div>
-            
-            <div class="form-group">
-            <label for="inputPassword">
-                Password</label>
-            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Buat Password">
+
+            <label for="inputPassword">Password</label>
+            <div class="input-group">
+                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Buat Password">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"><i class="far fa-eye" id="togglePassword"></i></span>
+                </div>
             </div>
+            <br/>
             
             <a class="btn btn-dark" href="<?=base_url('Admin/data_dosen')?>">&larr; Kembali</a> <input type="submit" name="register" class="btn btn-primary" value="Tambahkan" />
 
@@ -75,3 +65,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#inputPassword');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+</script>

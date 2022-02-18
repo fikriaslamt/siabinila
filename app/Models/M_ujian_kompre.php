@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_data_usul extends Model
+class M_ujian_kompre extends Model
 {
-    protected $table = 'data_usul';
+    protected $table = 'data_ujian_kompre';
     protected $primaryKey     = 'npm';
     protected $allowedFields  =  ['npm','judul','dospem1','dospem2'];
 }

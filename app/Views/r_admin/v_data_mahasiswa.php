@@ -14,39 +14,17 @@
         <?php echo session()->getFlashdata('pesan') ?>
         </div>
         <?php } ?> 
-        
-        <form method="GET" action="<?= base_url('Admin/data_mahasiswa')?>" class="form-group">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="cari" placeholder="Cari berdasarkan Nama atau NPM" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="Submit">CARI DATA</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <?php if($jumlah != ""): 
-                    echo $jumlah
-                    ?>
-                    Tampilkan <a href="<?= base_url('Admin/data_mahasiswa')?>">semua data</a>
-                    <?php endif ?>
-                </div>
-            </div>
-        </form>
 
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" id="dataTable">
             <thead>
                 <tr>
                     <th scope="col">NPM</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">AKSI</th>
-                    
+                    <th scope="col"><i class="fas fa-user-cog"></i> Opsi</th>
                 </tr>
             </thead>
-                
-                <?php foreach ($data as $data) : ?>
             <tbody>
+                <?php foreach ($data as $data) : ?>
                 <tr>
                     <td><?= $data["npm"]; ?></td>
                     <td><?= $data["nama"]; ?></td>
@@ -128,13 +106,11 @@
                             </div>
                         </div>
                         <!-- END Modal Tambah -->
-                </td>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-        <?= $pager->links('mhs','page_custom'); ?>
 
         </div>
     </div>

@@ -1,20 +1,20 @@
-</div>
-<!-- /.container-fluid -->
-</div>
-<!-- End of Main Content -->
+    </div>
+    <!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Administrasi Bisnis 2021</span>
-                    </div>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Administrasi Bisnis 2021</span>
                 </div>
-            </footer>
-            <!-- End of Footer -->
+            </div>
+        </footer>
+        <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -54,12 +54,23 @@
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('sbadmin/js/sb-admin-2.min.js')?>"></script>
 
+    
     <!-- Page level plugins -->
-    <script src="<?= base_url('sbadmin/vendor/chart.js/Chart.min.js')?>"></script>
-
     <!-- Page level custom scripts -->
+    <!-- Custom styles for this page -->
+    <?php if (!empty($chart)): ?>
+    <script src="<?= base_url('sbadmin/vendor/chart.js/Chart.min.js')?>"></script>
     <script src="<?= base_url('sbadmin/js/demo/chart-area-demo.js')?>"></script>
     <script src="<?= base_url('sbadmin/js/demo/chart-pie-demo.js')?>"></script>
+    <?php endif ?>
+    
+    <?php if (!empty($tabel)): ?>
+    <link href="<?= base_url('sbadmin/vendor/datatables/dataTables.bootstrap4.min.css')?>" rel="stylesheet">
+    <script src="<?= base_url('sbadmin/vendor/datatables/jquery.dataTables.min.js')?>"></script>
+    <script src="<?= base_url('sbadmin/vendor/datatables/dataTables.bootstrap4.min.js')?>"></script>
+    <script src="<?= base_url('sbadmin/js/demo/datatables-demo.js')?>"></script>
+    <?php endif ?>
+
 
 </body>
 

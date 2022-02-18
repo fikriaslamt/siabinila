@@ -18,7 +18,10 @@ body{
 
 <br/><br/>
 <div class="container">
-    <h1 class="tulisan_form">SISTEM INFORMASI ADMIN BISNIS</h1>
+    <div class="tulisan_form">
+        <h2 class="title-form">Sistem Informasi</h2>
+        <h1>Administrasi Bisnis</h1>
+    </div>
 
     <div class="login_form">
         <h2 class="tulisan_form">
@@ -36,12 +39,14 @@ body{
                 
                 <label for="inputUsername">
                     <i class="fa fa-user"></i> Username (NPM)</label>
-                <input type="text" maxlength="10" minlength="10" pattern="\d*"name="user" class="form_text" id="inputUsername" placeholder="Masukkan NPM Anda" required/>
+                <input type="text" maxlength="10" minlength="10" pattern="\d*" name="user" class="form_text" id="inputUsername" placeholder="Masukkan NPM Anda" required/>
                 <small class="text-muted"> *Pastikan username sudah sesuai NPM anda</small><br>
                 <label for="inputPassword">
                     <i class="fa fa-key"></i> Buat Password</label>
-                <input type="password" minlength="6" name="password" class="form_text"  style="margin-bottom: 2px;" id="inputPassword" placeholder="Masukkan Password" required>
-                
+                <div class="row" style="margin-bottom: -10px;">  
+                    <input type="password" minlength="6" name="password" class="form-password"  id="inputPassword" placeholder="Masukkan Password" required>
+                    <div class="form-tag"><i class="far fa-eye" id="togglePassword"></i></div>
+                </div>
                 <input type="password" minlength="6" name="konfir-password"class="form_text" id="Konfir" placeholder="Konfirmasi Password" required>
                 <small class="text-muted"> *Password minimal 6 digit</small><br>
                 <label for="Jenis_kelamin">
@@ -55,6 +60,10 @@ body{
                 <label for="nama">
                     <i class="fas fa-file-signature"></i> Nama Lengkap</label>
                 <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
+                
+                <label for="email">
+                    <i class="fas fa-at"></i> E-Mail</label>
+                <input type="email" name="email" class="form_text" value="<?php echo session()->getFlashdata('email') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
                
                 <input type="checkbox" id="check1" required>
                 <label class="form-check-label" for="check1">Data yang saya masukkan sudah benar</label>
@@ -72,3 +81,16 @@ body{
         </div>
     </div>
 </div>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#inputPassword');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+</script>

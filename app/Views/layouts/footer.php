@@ -1,5 +1,5 @@
 <footer>
-© <?= date("Y")?> Jurusan Administrasi Bisnis | UNILA
+© <?= date("Y")?> Jurusan Administrasi Bisnis | Unila
 </footer>
 
 </body>

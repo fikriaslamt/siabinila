@@ -24,17 +24,17 @@
             <div class="form-group">
             <label>
                 NPM</label>
-            <input type="text" name="npm" class="form-control" value="<?=$data['npm']?>" id="inputUsername" placeholder="Buat username" readonly/>
+            <input type="text" name="npm" class="form-control" value="<?=$data['npm']?>" id="inputUsername" placeholder="NPM Kosong" readonly/>
             </div>
             <div class="form-group">
             <label>
                 Nama</label>
-            <input type="text" name="nama" class="form-control" value="<?=$data['nama']?>" id="Nama" placeholder="Buat username" readonly/>
+            <input type="text" name="nama" class="form-control" value="<?=$data['nama']?>" id="Nama" placeholder="Nama Kosong" readonly/>
             </div>
             <div class="form-group">
             <label for="Nama">
                 Judul</label>
-            <input type="text" name="judul" class="form-control" value="<?=$judul?>" placeholder="Masukan Nama Dosen" readonly/>
+            <input type="text" name="judul" class="form-control" value="<?=$judul?>" placeholder="Judul Kosong" readonly/>
             </div>
             <div class="form-group">
             <label for="dospem1">

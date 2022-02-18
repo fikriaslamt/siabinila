@@ -28,11 +28,12 @@ class Cetakan extends BaseController {
 	{       
         $skrip = $this->M_surat_pengajuan_judul->find($npm);
         $data = [
-            'nama'     => $skrip["nama"],
-            'npm'      => $skrip["npm"],
-            'ipk'      => $skrip["ipk"],
-            'judul'    => $skrip["judul"],
+            'nama'   => $skrip["nama"],
+            'npm'    => $skrip["npm"],
+            'ipk'    => $skrip["ipk"],
+            'judul'  => $skrip["judul"],
             'isi'    => $skrip["judul_isi"],
+            'dapus'  => $skrip["dapus"],
             'nomor'  => $skrip["telepon"],
             'alamat' => $skrip["alamat"],
             'ipk' => $skrip["ipk"],
@@ -53,16 +54,18 @@ class Cetakan extends BaseController {
         if($this->request->getVar('judul')=="judul1"){
             $judul = $skrip["judul1"];
             $isi = $skrip["judul1_isi"];
-        } else { $judul = $skrip["judul2"]; $isi = $skrip["judul2_isi"]; }
+            $dapus = $skrip["dapus1"];
+        } else { $judul = $skrip["judul2"]; $isi = $skrip["judul2_isi"]; $dapus = $skrip["dapus2"]; }
 
         $data = [
-            'nama'     => $skrip["nama"],
-            'npm'      => $skrip["npm"],
-            'judul'    => $judul,
+            'nama'   => $skrip["nama"],
+            'npm'    => $skrip["npm"],
+            'judul'  => $judul,
             'isi'    => $isi,
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'dapus'  => $dapus,
+            'kajur'  => 'Suprihatin Ali, S.Sos., M.Sc',
             'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
+            'tahun'  => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_judul_view', $data);
@@ -81,10 +84,8 @@ class Cetakan extends BaseController {
             'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
             'nip_kajur' => '19740918 200112 1 001',
             'tahun' => date("Y")
-
         ];
-        
-
+ 
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_usul', $data);
 

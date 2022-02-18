@@ -43,9 +43,11 @@ body{
             <label for="inputPassword">
                 <i class="fa fa-key">&nbsp;</i>Password
             </label>
-            <input type="password" name="password" class="form_text" id="inputPassword" placeholder="Masukan Password">
-            
-            
+            <div class="row">  
+                <input type="password" name="password" class="form-password" id="inputPassword" placeholder="Masukan Password">
+                <div class="form-tag"><i class="far fa-eye" id="togglePassword"></i></div>
+            </div>
+
             <input type="submit" name="loginadmin" class="tombol_submit" value="LOGIN" />
 
            
@@ -54,3 +56,16 @@ body{
     </div><br/>
 </div>
 </div>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#inputPassword');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+</script>

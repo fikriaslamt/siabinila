@@ -18,9 +18,10 @@ body{
 
 <br/><br/>
 <div class="container">
-<h1 class="tulisan_form" style="">
-        Sistem Informasi Admin Bisnis
-</h1>
+<div class="tulisan_form">
+    <h2 class="title-form">Sistem Informasi</h2>
+    <h1>Administrasi Bisnis</h1>
+</div>
 
 
 <div class="login_form">
@@ -40,11 +41,12 @@ body{
         <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username"/>
         
         <label for="inputPassword">
-        <i class="fa fa-key">&nbsp;</i>Password
-        </label>
-        <input type="password" name="password" class="form_text" id="inputPassword" placeholder="Masukan Password">
-        
-        
+        <i class="fa fa-key">&nbsp;</i>Password 
+        </label>      
+        <div class="row">  
+            <input type="password" name="password" class="form-password" id="inputPassword" placeholder="Masukan Password">
+            <div class="form-tag"><i class="far fa-eye" id="togglePassword"></i></div>
+        </div>
         <input type="submit" name="login" class="tombol_submit" value="LOGIN" />
 
         
@@ -52,3 +54,16 @@ body{
     Belum punya akun? <a href="<?= base_url('Login/register')?>">Register</a>
 </div>
 </div>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#inputPassword');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+</script>

@@ -4,8 +4,8 @@
 </div><br/>
 
 <!-- Area Chart -->
-<div class="col-xl-12 col-lg-4">
-    <div class="card shadow mb-4">
+<div class="col-xl-12 col-lg-12">
+    <div class="card shadow mb-12">
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -19,39 +19,18 @@
         </div>
         <?php } ?> 
 
-        <form method="GET" action="<?= base_url('Admin/data_dosen')?>" class="form-group">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="cari" placeholder="Cari berdasarkan Nama atau NIP" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="Submit">CARI DATA</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <?php if($jumlah != ""): 
-                    echo $jumlah
-                    ?>
-                    Tampilkan <a href="<?= base_url('Admin/data_dosen')?>">semua data</a>
-                    <?php endif ?>
-                </div>
-            </div>
-        </form>
-
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" id="dataTable">
             <thead>
                 <tr>
                     <th scope="col">Nama</th>
                     <th scope="col">Peer Grup</th>
                     <th scope="col">Bimbingan Skripsi</th>
-                    <th scope="col">AKSI</th>
+                    <th scope="col"><i class="fas fa-user-cog"></i> Opsi</th>
                     
                 </tr>
-            </thead>
-                
-                <?php foreach ($data as $data) : ?>
+            </thead>  
             <tbody>
+            <?php foreach ($data as $data) : ?>
                 <tr>
                     <td><?= $data["nama"]; ?></td>
                     <td><?= $data["grup"]; ?></td>
@@ -133,7 +112,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <?= $pager->links('dosen','page_custom'); ?>
 
         </div>
     </div>

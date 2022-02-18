@@ -25,7 +25,7 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($mhs)?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                        <i class="fas fa-users fa-3x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -39,11 +39,11 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Mahasiswa Laki-laki</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $j_laki ?></div>
+                            Sedang Skripsi</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($dat_skrip)?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-male fa-2x text-gray-300"></i>
+                        <i class="far fa-file-alt fa-3x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -57,11 +57,11 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                            Mahasiswa Perempuan
+                            Jumlah Dosen
                         </div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
-                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $j_prem ?></div>
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?=count($dosen)?></div>
                             </div>
                             <!-- <div class="col">
                                 <div class="progress progress-sm mr-2">
@@ -73,7 +73,7 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
                         </div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-female fa-2x text-gray-300"></i>
+                        <i class="fas fa-chalkboard-teacher fa-3x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -87,11 +87,11 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                            Jumlah Dosen</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($dosen)?></div>
+                            Pengajuan Akun</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($dat_regist)?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>
+                        <i class="fas fa-hand-paper fa-3x text-gray-300"></i>
                     </div>
                 </div>
             </div>

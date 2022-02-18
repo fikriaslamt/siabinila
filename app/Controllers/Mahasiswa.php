@@ -4,9 +4,9 @@ namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_profil_mahasiswa;
 use App\Models\M_profil_dosen;
-use App\Models\M_data_usul;
-use App\Models\M_data_hasil;
-use App\Models\M_data_kompre;
+use App\Models\M_seminar_usul;
+use App\Models\M_seminar_hasil;
+use App\Models\M_ujian_kompre;
 use App\Models\M_data_skripsi;
 use App\Models\M_data_notif;
 use App\Models\M_surat_pengajuan_judul;
@@ -23,9 +23,9 @@ class Mahasiswa extends BaseController
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
         $this->M_profil_dosen = new M_profil_dosen();
-        $this->M_data_usul = new M_data_usul();
-        $this->M_data_kompre = new M_data_kompre();
-        $this->M_data_hasil = new M_data_hasil();
+        $this->M_seminar_usul = new M_seminar_usul();
+        $this->M_ujian_kompre = new M_ujian_kompre();
+        $this->M_seminar_hasil = new M_seminar_hasil();
         $this->M_data_skripsi = new M_data_skripsi();
         $this->M_data_notif = new M_data_notif();
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
@@ -137,9 +137,11 @@ class Mahasiswa extends BaseController
     }
 
     public function form_pengajuan_usul()
-    {
+    {   
+        $jadwal1 = $this->M_seminar_usul->findAll();
+        $jadwal2 = $this->M_seminar_hasil->findAll();
         $data = [
-            'title' => "form pengajuan usul"
+            'title' => "form pengajuan usul", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2,
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -402,17 +404,26 @@ class Mahasiswa extends BaseController
 
     public function tambah_pengajuan_judul()
     {   
-        $skrip1 = ""; $skrip2 = "";
+        $skrip1 = ""; $skrip2 = ""; $dapus1 = ""; $dapus2 = "";
         $isi1 = explode(PHP_EOL, $this->request->getVar('judul1_isi'));
         $isi2 = explode(PHP_EOL, $this->request->getVar('judul2_isi'));
+        $dap1 = explode(PHP_EOL, $this->request->getVar('dapus1'));
+        $dap2 = explode(PHP_EOL, $this->request->getVar('dapus2'));
         foreach ($isi1 as $p1) :
             $skrip1 .= "<p>".$p1."</p>";
         endforeach;
         foreach ($isi2 as $p2) :
             $skrip2 .= "<p>".$p2."</p>";
         endforeach;
-        $skrip1 = str_replace("<p></p>","",$skrip1);
-        $skrip2 = str_replace("<p></p>","",$skrip2);
+        foreach ($dap1 as $d1) :
+            $dapus1 .= "<p>".$d1."</p>";
+        endforeach;
+        foreach ($dap2 as $d2) :
+            $dapus2 .= "<p>".$d2."</p>";
+        endforeach;
+        $skrip1 = str_replace("<p></p>","",$skrip1); $skrip2 = str_replace("<p></p>","",$skrip2);
+        $dapus1 = str_replace("<p></p>","",$dapus1); $dapus2 = str_replace("<p></p>","",$dapus2);
+
 
         $data =[
             'npm'           => $this->request->getVar('npm'),
@@ -420,21 +431,24 @@ class Mahasiswa extends BaseController
             'prodi'         => $this->request->getVar('prodi'),
             'judul1'        => $this->request->getVar('judul1'),
             'judul1_isi'    => $skrip1,
+            'dapus1'        => $dapus1,
             'judul2'        => $this->request->getVar('judul2'),
             'judul2_isi'    => $skrip2,
-            'alamat'     => $this->request->getVar('alamat'),
+            'dapus2'        => $dapus2,
+            'alamat'  => $this->request->getVar('alamat'),
             'telepon' => $this->request->getVar('telepon'),
             'sks'   => $this->request->getVar('sks'),
             'ipk'   => $this->request->getVar('ipk'),
             'dospem1' => $this->request->getVar('dospem1'),
             'dospem2' => $this->request->getVar('dospem2'),
+            'konsen'  => $this->request->getVar('konsen'),
         ];
         
         $this->M_data_pengajuan_judul->insert($data);
         $this->M_surat_pengajuan_judul->insert([
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'prodi'         => $this->request->getVar('prodi'),
+            'npm'        => $this->request->getVar('npm'),
+            'nama'       => $this->request->getVar('nama'), 
+            'prodi'      => $this->request->getVar('prodi'),
             'alamat'     => $this->request->getVar('alamat'),
             'telepon' => $this->request->getVar('telepon'),
             'sks'   => $this->request->getVar('sks'),
@@ -445,37 +459,41 @@ class Mahasiswa extends BaseController
         return redirect()->to(base_url('Mahasiswa/skripsi/'));
     }
 
-    public function tambah_pengajuan_usul()
+    public function tambah_pengajuan_usul($npm)
     {
-        $data =[
-            
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'judul'          => $this->request->getVar('judul'), 
-            'prodi'         => $this->request->getVar('prodi'),
-            'jurusan'         => $this->request->getVar('jurusan'),
-            
-        ];
+        $this->M_seminar_usul->insert([
+            'npm'      => $this->request->getVar('npm'),
+            'nama'     => $this->request->getVar('nama'), 
+            'judul'    => "Belum ditentukan", 
+            'dospem1'  => "Belum ditentukan",
+            'dospem2'  => "Belum ditentukan",
+            'jam'      => $this->request->getVar('jam'),
+            'tanggal'  => $this->request->getVar('tanggal'),
+        ]);
+        $this->M_surat_pengajuan_usul->insert([
+            'npm'      => $this->request->getVar('npm'),
+            'nama'     => $this->request->getVar('nama'), 
+            'judul'    => "Belum ditentukan", 
+            'prodi'    => "S1 Administrasi Bisnis",
+            'jurusan'  => "Administrasi Bisni",
+        ]);
+        $this->M_data_skripsi->save([
+            'npm' => $npm,
+            'status' => "Mengajukan Seminar Usul"
+        ]); 
         
-        $this->M_data_usul->insert($data);
-        $this->M_surat_pengajuan_usul->insert($data);
-       
-        
-        return redirect()->to(base_url('Cetakan/surat_pengajuan_usul/'.$data['npm']));
+        return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
 
     public function tambah_pengajuan_hasil()
     {
         $data =[
-            
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'judul'          => $this->request->getVar('judul'), 
-         
-            
+            'npm'      => $this->request->getVar('npm'),
+            'nama'     => $this->request->getVar('nama'), 
+            'judul'    => $this->request->getVar('judul'), 
         ];
         
-        $this->M_data_hasil->insert($data);
+        $this->M_seminar_hasil->insert($data);
         $this->M_surat_pengajuan_hasil->insert($data);
         
        
@@ -484,20 +502,15 @@ class Mahasiswa extends BaseController
 
     public function tambah_pengajuan_kompre()
     {
-        
         $data =[
-            
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
-            'judul'          => $this->request->getVar('judul'), 
-      
-            
+            'judul'         => $this->request->getVar('judul'), 
         ];
         
-        $this->M_data_kompre->insert($data);
+        $this->M_ujian_kompre->insert($data);
         $this->M_surat_pengajuan_kompre->insert($data);
-       
-       
+        
         return redirect()->to(base_url('Cetakan/surat_pengajuan_kompre/'.$data['npm']));
     }
 

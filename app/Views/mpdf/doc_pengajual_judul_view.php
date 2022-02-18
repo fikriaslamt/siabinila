@@ -57,6 +57,10 @@ $mpdf->WriteHTML('
     <div class="paragf">
         '.$isi.'
     </div>
+    <p>3. Daftar Pustaka :</p>
+    <div>
+        '.$dapus.'
+    </div>
     <table style="width:100%">
         <tr>
          <td style="width:60%">

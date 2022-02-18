@@ -86,7 +86,7 @@ class Login extends BaseController
         }
 
         $getNpm = $this->request->getVar('user');
-        $data1 = $this->M_register->query("SELECT * FROM data_register where user='".$getNpm."'")->getResult();
+        $data1 = $this->M_register->query("SELECT * FROM akun_register where user='".$getNpm."'")->getResult();
         $data2 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".$getNpm."'")->getResult();
         
         if( !empty($data1) or !empty($data2)){
@@ -100,7 +100,9 @@ class Login extends BaseController
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
             'nama' => trim($this->request->getVar('nama')),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
-            'role' => "mahasiswa"
+            'email' => $this->request->getVar('email'),
+            'role' => "mahasiswa",
+            
         ];
         $this->M_register->insert($data);
         

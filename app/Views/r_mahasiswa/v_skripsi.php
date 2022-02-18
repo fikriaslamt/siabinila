@@ -41,6 +41,15 @@
         <a href="<?= base_url('Cetakan/surat_pengajuan_judul/'.session()->user)?>"><button>Lihat PDF Pengajuan Judul</button></a>
         <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>"><button>Form Pengajuan Seminar Usul</button></a>
 
+        <?php } else if ($skripsi[0]["status"]=="Mengajukan Seminar Usul"){ ?>
+        <div class="alert">
+            - Anda sudah mengajukan seminar usul, tunggu sampai seminar anda berjalan<br/>
+            - Jika seminar anda sudah disetujui, minta dosen pembimbing terkait menyetujui skripsi anda pada sistem
+        </div>
+        Perhatian :<br/>
+        - Seminar usul sesuai waktu dan tempat yang telah ditentukan<br/>
+        - Bersungguh-sungguh dalam usulan tersebut<br/><br/>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_usul/'.session()->user)?>"><button>Lihat PDF Seminar Usul</button></a>
 
         <?php } else if ($skripsi[0]["status"]=="SEMINAR USUL"){ ?>
         <div class="alert">
