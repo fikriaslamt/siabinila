@@ -38,3 +38,30 @@ CRITICAL - 2022-02-18 00:57:26 --> Undefined index: jenis
 #8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
 #10 {main}
+CRITICAL - 2022-02-18 02:53:45 --> Invalid file: r_admin/v_detail_skripsi.php
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_admin/v_detai...')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/v_detai...', Array, true)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(286): view('r_admin/v_detai...', Array)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->detail_skripsi('1917051015')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#8 {main}
+CRITICAL - 2022-02-18 02:54:40 --> Invalid file: r_admin/v_detail_skripsi.php
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_admin/v_detai...')
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_admin/v_detai...', Array, true)
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Dosen.php(286): view('r_admin/v_detai...', Array)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Dosen->detail_skripsi('1917051015')
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#8 {main}
+CRITICAL - 2022-02-18 02:56:22 --> Too few arguments to function App\Controllers\Cetak::surat_pengajuan_judul(), 0 passed in C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php on line 824 and exactly 1 expected
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul()
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#5 {main}

@@ -277,13 +277,13 @@ class Dosen extends BaseController
     {
         $data1 = $this->M_data_skripsi->find($npm);
         $data = [
-            'title' => "Detail",
+            'title' => "Detail Skripsi",
             'data' => $data1
 
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen', $data);
-        echo view('r_admin/v_detail_skripsi',$data);
+        echo view('r_dosen/v_detail_skripsi',$data);
         echo view('layouts/footer'); 
     }
 

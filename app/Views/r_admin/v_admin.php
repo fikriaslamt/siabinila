@@ -9,6 +9,8 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
     $j_lain = array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'];
 } else { $j_lain = 0; }
 
+
+
 ?>
 
 <!-- Content Row -->
@@ -192,4 +194,6 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
         </div>
     </div>
 </div>
+
+
 </div><!-- Content Row -->
