@@ -212,7 +212,9 @@ class Admin extends BaseController
             'date' => $date,
             'date_judul' => $date,
             'konsen' => $pengajuan['konsen'],
-            'status' => "TELAH MENGAJUKAN JUDUL"
+            'penguji_u' => $this->request->getVar('penguji_u'),
+            'penguji_p' => implode("; ", $this->request->getVar('penguji_p')),
+            'status' => "Judul Disetujui"
         ]);
         $this->M_data_pengajuan_judul->delete($npm);
 

@@ -34,14 +34,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/home', 'Home::index');
 $routes->get('/Login', 'Login::index');
-$routes->get('/Mahasiswa', 'Mahasiswa::index', ['filter'  => 'filterMahasiswa']);
-$routes->get('/Mahasiswa/form_pengajuan_judul', 'Mahasiswa::form_pengajuan_judul', ['filter'  => 'filterMahasiswa']);
+$routes->get('/Mahasiswa', 'Mahasiswa::index');
 
-$routes->get('/Dosen/data_pengajuan_usul', 'Dosen::data_pengajuan_usul', ['filter'  => 'filterDosen']);
-$routes->get('/Dosen', 'Dosen::index', ['filter'  => 'filterDosen']);
+$routes->get('/Dosen', 'Dosen::index');
 $routes->get('/Admin-Login', 'LoginAdmin::index');
-$routes->get('/Admin', 'Admin::index', ['filter'  => 'filterAdmin']);
-$routes->get('/admin', 'Admin::index', ['filter'  => 'filterAdmin']);
+$routes->get('/Admin', 'Admin::index');
 
 
 

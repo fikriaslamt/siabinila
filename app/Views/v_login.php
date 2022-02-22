@@ -38,13 +38,13 @@ body{
         <label for="inputUsername">
         <i class="fa fa-user">&nbsp;</i>Username
         </label>
-        <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username"/>
+        <input type="text" name="user" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username" required>
         
         <label for="inputPassword">
         <i class="fa fa-key">&nbsp;</i>Password 
         </label>      
         <div class="row">  
-            <input type="password" name="password" class="form-password" id="inputPassword" placeholder="Masukan Password">
+            <input type="password" name="password" class="form-password" id="inputPassword" placeholder="Masukan Password" required>
             <div class="form-tag"><i class="far fa-eye" id="togglePassword"></i></div>
         </div>
         <input type="submit" name="login" class="tombol_submit" value="LOGIN" />
@@ -57,13 +57,13 @@ body{
 
 <script>
     const togglePassword = document.querySelector('#togglePassword');
-  const password = document.querySelector('#inputPassword');
+    const password = document.querySelector('#inputPassword');
  
-  togglePassword.addEventListener('click', function (e) {
+    togglePassword.addEventListener('click', function (e) {
     // toggle the type attribute
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
     // toggle the eye slash icon
     this.classList.toggle('fa-eye-slash');
-});
+    });
 </script>

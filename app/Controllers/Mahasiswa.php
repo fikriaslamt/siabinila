@@ -78,6 +78,7 @@ class Mahasiswa extends BaseController
         echo view('r_mahasiswa/profil_mahasiswa',$data);
         echo view('layouts/footer');
     }
+    
     public function form_edit_profil()
     {
         $data1 = $this->M_profil_mahasiswa->query("SELECT * FROM profil_mahasiswa where npm='".session()->user."'")->getResult();
@@ -113,6 +114,23 @@ class Mahasiswa extends BaseController
         return redirect()->to(base_url('Mahasiswa/profil'));
     }
 
+    public function menu_akademik()
+    {   
+        $data = ['title' => "Formulir Akademik Mahasiswa"];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirAkademik/aview_akademik',$data);
+        echo view('layouts/footer');
+    }
+    public function menu_ukt()
+    {   
+        $data = ['title' => "Formulir Akademik Mahasiswa"];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar', $data);
+        echo view('r_mahasiswa/FormulirUKT/aview_ukt',$data);
+        echo view('layouts/footer');
+    }
+
     public function form()
     {
         $data = [
@@ -140,8 +158,9 @@ class Mahasiswa extends BaseController
     {   
         $jadwal1 = $this->M_seminar_usul->findAll();
         $jadwal2 = $this->M_seminar_hasil->findAll();
+        $skripsi = $this->M_data_skripsi->find(session()->user);
         $data = [
-            'title' => "form pengajuan usul", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2,
+            'title' => "form pengajuan usul", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2, 'skripsi' => $skripsi
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -150,9 +169,12 @@ class Mahasiswa extends BaseController
     }
 
     public function form_pengajuan_hasil()
-    {
+    {   
+        $jadwal1 = $this->M_seminar_usul->findAll();
+        $jadwal2 = $this->M_seminar_hasil->findAll();
+        $skripsi = $this->M_data_skripsi->find(session()->user);
         $data = [
-            'title' => "form pengajuan hasil"
+            'title' => "form pengajuan hasil", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2, 'skripsi' => $skripsi
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -464,16 +486,17 @@ class Mahasiswa extends BaseController
         $this->M_seminar_usul->insert([
             'npm'      => $this->request->getVar('npm'),
             'nama'     => $this->request->getVar('nama'), 
-            'judul'    => "Belum ditentukan", 
-            'dospem1'  => "Belum ditentukan",
-            'dospem2'  => "Belum ditentukan",
+            'judul'    => $this->request->getVar('judul'), 
+            'dospem1'  => $this->request->getVar('dospem1'),
+            'dospem2'  => $this->request->getVar('dospem2'),
+            'penguji_u'=> $this->request->getVar('penguji'),
             'jam'      => $this->request->getVar('jam'),
             'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_surat_pengajuan_usul->insert([
             'npm'      => $this->request->getVar('npm'),
             'nama'     => $this->request->getVar('nama'), 
-            'judul'    => "Belum ditentukan", 
+            'judul'    => $this->request->getVar('judul'), 
             'prodi'    => "S1 Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisni",
         ]);

@@ -140,7 +140,9 @@ class Dosen extends BaseController
     public function terima_usul($npm)
     {   
         $skripsi = $this->M_data_skripsi->find($npm);
+        $data = $this->M_seminar_usul->find($npm);
         
+        var_dump($npm);
         $date1 = $skripsi["date_judul"];
         $date2 = date('Y-m-d');
         $datetime1 = date_create($date1);
@@ -160,18 +162,19 @@ class Dosen extends BaseController
             'judul'=> $data["judul"],
             'dospem1'=> $data["dospem1"],
             'dospem2'=> $data["dospem2"],
-            'status'=> "SEMINAR USUL"
+            'status'=> "Seminar Usul Disetujui"
         ];
         
-        $this->M_data_skripsi->update($npm,$pengajuan);
+        $this->M_data_skripsi->update($npm, $pengajuan);
         
-        // $this->M_seminar_usul->delete($npm);
+        $this->M_seminar_usul->delete($npm);
         
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
     public function tolak_usul($npm)
     {      
+        
         $this->M_seminar_usul->delete($npm);
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }

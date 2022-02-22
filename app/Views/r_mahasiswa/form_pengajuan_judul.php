@@ -63,7 +63,7 @@
         <textarea type="text" name="dapus2" id="isijudul2" class="form_text" rows="8" spellcheck="false" placeholder="Masukan daftar pustaka judul 2"></textarea>
         
         <label for="dospem1">
-            Dosen Pembimbing 1</label>
+            Permohonan Dosen Pembimbing 1</label>
         <select name="dospem1" class="form_text" id="dospem1" required>
             <option value="">- Pilih Dosen-</option>
             <?php foreach ($dosen as $dsn1) : ?>
@@ -71,7 +71,7 @@
             <?php endforeach;?>
         </select>
         <label for="dospem2">
-            Dosen Pembimbing 2</label>
+            Permohonan Dosen Pembimbing 2</label>
         <select name="dospem2" class="form_text" id="dospem2" required>
             <option value="">- Pilih Dosen -</option>
             <?php foreach ($dosen as $dsn2) : ?>

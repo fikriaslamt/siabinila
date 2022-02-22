@@ -12,8 +12,8 @@
   </form>
   <?php endforeach; ?>
   </center>
-
-<table class="profil">
+<div class="profil">
+<table>
 <?php foreach ($data as $data) : ?>
   <tr>
     <th>NPM</th>
@@ -52,5 +52,6 @@
   </tr>
   <?php endforeach; ?>
 </table>
+</div>
 <br/>
 </div>

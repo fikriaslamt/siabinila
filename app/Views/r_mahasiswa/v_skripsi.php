@@ -30,37 +30,58 @@
         Pengajuan Judul Skripsi Anda Sedang Dalam Peninjauan
         </div>
 
-        <?php } else if ($skripsi[0]["status"]=="TELAH MENGAJUKAN JUDUL"){ ?>
+        <?php } else if ($skripsi[0]["status"]=="Judul Disetujui"){ ?>
         <div class="alert">
-            Pengajuan Judul Skripsi Anda Telah diterima
+            Pengajuan Judul Skripsi Anda Telah disetujui<br/><br/>
+            <ul>
+            <li>Dosen Pembimbing 1 anda: <?=$skripsi[0]["dospem1"]?></li>
+            <li>Dosen Pembimbing 2 anda: <?=$skripsi[0]["dospem2"]?></li>
+            <li>Dosen Penguji Seminar anda: <?=$skripsi[0]["penguji_u"]?> (Utama); <?=$skripsi[0]["penguji_p"]?></li>
+        </ul>
         </div>
-        Perhatian :<br/>
-        - Saat ini anda harus fokus untuk seminar usul<br/>
-        - Usul penelitian<br/>
-        - Bersungguh-sungguh dalam mengerjakan skripsi<br/><br/>
-        <a href="<?= base_url('Cetakan/surat_pengajuan_judul/'.session()->user)?>"><button>Lihat PDF Pengajuan Judul</button></a>
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>"><button>Form Pengajuan Seminar Usul</button></a>
+        
+        Langkah Selanjutnya :<br/><br/>
+        <ol>
+            <li>Unduh PDF Form A.1-Form A.5 dibawah, dan lengkapi data yang masih kosong.</li>
+            <li>Mahasiswa mengerjakan skripsi dengan bimbingan Dosen Pembimbing 1/Dosen Pembimbing 2.</li>
+            <li>Setelah progres skripsi anda disetujui untuk melaksanakan Seminar Usul Penelitian, silahkan melakukan koordinasi secara mandiri dengan Dosen Pembimbing 1/Pembimbing 2, Dosen Penguji, Mahasiswa Pembahas, dan Moderator untuk menentukan waktu pelaksanaan Seminar Usul Penelitian.</li>
+            <li>Perlu diperhatikan bahwa jadwal seminar yang anda tentukan tidak boleh bentrok dengan jam seminar lain yang harinya sama, anda dapat melihat jadwal seminar pada form pengajuan.</li>
+            <li>Setelah semuanya siap, klik menu Form Pengajuan Seminar Usul untuk menginformasikan seminar anda kepada jurusan</li>
+            
+            
+        </ol>
+        <br/>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_judul/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.1-A.5</button></a>
+        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>"><button><i class="fa fa-memo"></i> Form Pengajuan Seminar Usul</button></a>
 
         <?php } else if ($skripsi[0]["status"]=="Mengajukan Seminar Usul"){ ?>
         <div class="alert">
-            - Anda sudah mengajukan seminar usul, tunggu sampai seminar anda berjalan<br/>
-            - Jika seminar anda sudah disetujui, minta dosen pembimbing terkait menyetujui skripsi anda pada sistem
+            Anda sudah mengajukan seminar usul, tunggu sampai seminar anda berjalan<br/>
         </div>
-        Perhatian :<br/>
-        - Seminar usul sesuai waktu dan tempat yang telah ditentukan<br/>
-        - Bersungguh-sungguh dalam usulan tersebut<br/><br/>
+        Langkah Selanjutnya :<br/>
+        - Silahkan unduh formulir yang tersedia dibawah<br/>
+        - Lengkapi data dan persyaratan yang masih kosong dengan tulis tangan<br/><br/>
         <a href="<?= base_url('Cetakan/surat_pengajuan_usul/'.session()->user)?>"><button>Lihat PDF Seminar Usul</button></a>
 
-        <?php } else if ($skripsi[0]["status"]=="SEMINAR USUL"){ ?>
+        <?php } else if ($skripsi[0]["status"]=="Seminar Usul Disetujui"){ ?>
         <div class="alert">
-            Pengajuan seminar usul anda telah diterima
+            Pengajuan seminar usul anda telah disetujui
         </div>
         Perhatian :<br/>
         - Seminar usul sesuai waktu dan tempat yang telah ditentukan<br/>
         - Bersungguh-sungguh dalam usulan tersebut<br/><br/>
         <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>"><button>Form Pengajuan Seminar Hasil</button></a>
 
-        <?php } else if ($skripsi[0]["status"]=="SEMINAR HASIL"){ ?>    
+        <?php } else if ($skripsi[0]["status"]=="Mengajukan Seminar Hasil"){ ?>
+        <div class="alert">
+            Anda sudah mengajukan seminar hasil, tunggu sampai seminar anda berjalan<br/>
+        </div>
+        Langkah Selanjutnya :<br/>
+        - Silahkan unduh formulir yang tersedia dibawah<br/>
+        - Lengkapi data dan persyaratan yang masih kosong dengan tulis tangan<br/><br/>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_usul/'.session()->user)?>"><button>Lihat PDF Seminar Usul</button></a>
+
+        <?php } else if ($skripsi[0]["status"]=="Seminar Hasil Disetujui"){ ?>    
         <div class="alert">
             Pengajuan Komprehensif anda telah diterima
         </div>

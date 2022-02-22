@@ -19,10 +19,10 @@ body{
 
 <br/><br/>
 <div class="container">
-<h1 class="tulisan_form">
-        Sistem Informasi Admin Bisnis
-</h1>
-<br/>
+<div class="tulisan_form">
+    <h2 class="title-form">Sistem Informasi</h2>
+    <h1>Administrasi Bisnis</h1>
+</div>
 <div class="login_form">
     <h2 class="tulisan_form">LOGIN ADMIN</h2><br/>
     <div class="card-body">

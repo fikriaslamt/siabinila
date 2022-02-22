@@ -38,8 +38,9 @@
   <div class="breadcrumb">
     <a href="<?= base_url()?>">Home</a>
     <?php 
-      if (!empty(\Config\Services::request()->uri->getSegment(2))): 
-        echo "> <a>".str_replace("_"," ",\Config\Services::request()->uri->getSegment(2))."</a>";
+      if (!empty(\Config\Services::request()->uri->getSegment(2))):
+        echo '> ';
+        echo "<a>".str_replace("_"," ",\Config\Services::request()->uri->getSegment(2))."</a>";
       else: echo "> Beranda";
       endif;
     ?>
