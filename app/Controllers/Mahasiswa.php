@@ -184,8 +184,10 @@ class Mahasiswa extends BaseController
 
     public function form_pengajuan_kompre()
     {
+        $jadwal = $this->M_ujian_kompre->findAll();
+        $skripsi = $this->M_data_skripsi->find(session()->user);
         $data = [
-            'title' => "form pengajuan kompre"
+            'title' => "Form Pengajuan Ujian Skripsi", 'jadwal' => $jadwal, 'skripsi' => $skripsi
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -446,7 +448,6 @@ class Mahasiswa extends BaseController
         $skrip1 = str_replace("<p></p>","",$skrip1); $skrip2 = str_replace("<p></p>","",$skrip2);
         $dapus1 = str_replace("<p></p>","",$dapus1); $dapus2 = str_replace("<p></p>","",$dapus2);
 
-
         $data =[
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -508,33 +509,58 @@ class Mahasiswa extends BaseController
         return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
 
-    public function tambah_pengajuan_hasil()
+    public function tambah_pengajuan_hasil($npm)
     {
-        $data =[
+        $this->M_seminar_hasil->insert([
             'npm'      => $this->request->getVar('npm'),
             'nama'     => $this->request->getVar('nama'), 
             'judul'    => $this->request->getVar('judul'), 
-        ];
-        
-        $this->M_seminar_hasil->insert($data);
-        $this->M_surat_pengajuan_hasil->insert($data);
-        
+            'dospem1'  => $this->request->getVar('dospem1'),
+            'dospem2'  => $this->request->getVar('dospem2'),
+            'penguji_u'=> $this->request->getVar('penguji'),
+            'jam'      => $this->request->getVar('jam'),
+            'tanggal'  => $this->request->getVar('tanggal'),
+        ]);
+        $this->M_surat_pengajuan_hasil->insert([
+            'npm'      => $this->request->getVar('npm'),
+            'nama'     => $this->request->getVar('nama'), 
+            'judul'    => $this->request->getVar('judul'), 
+            'prodi'    => "S1 Administrasi Bisnis",
+            'jurusan'  => "Administrasi Bisnis",
+        ]);
+        $this->M_data_skripsi->save([
+            'npm' => $npm,
+            'status' => "Mengajukan Seminar Hasil"
+        ]); 
        
-        return redirect()->to(base_url('Cetakan/surat_pengajuan_hasil/'.$data['npm']));
+        return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
 
-    public function tambah_pengajuan_kompre()
+    public function tambah_pengajuan_kompre($npm)
     {
-        $data =[
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'judul'         => $this->request->getVar('judul'), 
-        ];
+        $this->M_ujian_kompre->insert([
+            'npm'      => $this->request->getVar('npm'),
+            'nama'     => $this->request->getVar('nama'), 
+            'judul'    => $this->request->getVar('judul'), 
+            'dospem1'  => $this->request->getVar('dospem1'),
+            'dospem2'  => $this->request->getVar('dospem2'),
+            'penguji_u'=> $this->request->getVar('penguji'),
+            'jam'      => $this->request->getVar('jam'),
+            'tanggal'  => $this->request->getVar('tanggal'),
+        ]);
+        $this->M_surat_pengajuan_kompre->insert([
+            'npm'      => $this->request->getVar('npm'),
+            'nama'     => $this->request->getVar('nama'), 
+            'judul'    => $this->request->getVar('judul'), 
+            'prodi'    => "S1 Administrasi Bisnis",
+            'jurusan'  => "Administrasi Bisnis",
+        ]);
+        $this->M_data_skripsi->save([
+            'npm' => $npm,
+            'status' => "Mengajukan Ujian Skripsi"
+        ]); 
         
-        $this->M_ujian_kompre->insert($data);
-        $this->M_surat_pengajuan_kompre->insert($data);
-        
-        return redirect()->to(base_url('Cetakan/surat_pengajuan_kompre/'.$data['npm']));
+        return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
 
 

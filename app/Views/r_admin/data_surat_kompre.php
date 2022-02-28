@@ -31,7 +31,7 @@
                     <td><?= $data['nama']; ?></td>
                 
                     <td class="d-flex justify-content-center">
-                        <a href="<?= base_url('Cetakan/surat_pengajuan_kompre/'.$data["no_surat"])?>"><button class="btn btn-success btn-sm">CETAK</button></a>
+                        <a href="<?= base_url('Cetakan/surat_pengajuan_kompre/'.$data["npm"])?>"><button class="btn btn-success btn-sm">CETAK</button></a>
                         
                     </td>
                     

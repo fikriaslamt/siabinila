@@ -331,7 +331,7 @@ table{
   color: #666;
   background: inherit;
   border: 1px solid gray;
-} .profil table{ border: none !important;}
+} .profil table{ border: none !important;} .dosen table{ margin: 0px auto;  width: 100%; border-radius:6px; font-size: 95%;}
 table th {
   padding: 15px 35px;
   border-left:1px solid #e0e0e0;

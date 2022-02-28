@@ -67,7 +67,7 @@
         <input type="text" name="penguji" onClick="Grund()" id="penguji" class="form_text" value="<?=$skripsi["penguji_u"]?>"placeholder="Masukkan Dosen Penguji Yang Anda Dapat" readonly required>
         
         <label for="judul2">Pilih Tanggal</label> 
-        <input type="date" min="<?= date('Y-m-d'); ?>" name="tanggal" class="form_text" value="<?=date("Y-m-d")?>"placeholder="Tanggal" required>
+        <input type="date" min="<?= date('Y-m-d'); ?>" name="tanggal" class="form_text" placeholder="Tanggal" required>
         <label for="judul2">Pilih Jam</label> 
         <input type="time" min="07:30" max="17:00" name="jam" class="form_text" placeholder="Contoh: 13:00" required>
         <input type="checkbox" id="check1" required>

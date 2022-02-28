@@ -30,14 +30,13 @@ class Dosen extends BaseController
     public function index()
     {
         $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_kompre = $this->M_data_pengajuan_judul->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
+        $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
+        $dat_kompre = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Dosen",'skripsi' => $dat_skrip, 
             'usul'  => $dat_usul, 'hasil' => $dat_hasil, 'kompre' => $dat_kompre, 
-            
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar_dosen');

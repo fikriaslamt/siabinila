@@ -14,8 +14,8 @@
   </center>
 
 
-    
-<table class="profil">
+<div class="profil">    
+<table>
 <?php foreach ($data as $data) : ?>
   <tr>
     <th>NIP</th>
@@ -32,5 +32,6 @@
  
   <?php endforeach; ?>
 </table>
+</div>
 <br/><br/>
 </div>

@@ -49,19 +49,21 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">npm</th>
-                        <th scope="col">judul</th>
-                        <th scope="col">Dosen pembimbing</th>
+                        <th scope="col">NPM/Nama</th>
+                        <th scope="col">Judul</th>
+                        <th scope="col">Dosen Terkait</th>
                         <th scope="col">Tanggal</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($data2 as $data2) : ?>
                     <tr>
-                        <td><?= $data2['npm']; ?></td>
+                    <td><?= $data2['npm']; ?><br/><?= $data2['nama']; ?></td>
                         <td><?= $data2['judul']; ?></td>
-                        <td><?= $data2['dospem1']; ?>, <?= $data2['dospem2']; ?></td>
-                        <td><?= $data2['tanggal']; ?></td>
+                        <td>Pembimbing 1: <?= $data2['dospem1']; ?><br/>
+                            Pembimbing 2: <?= $data2['dospem2']; ?><br/>
+                            Penguji Utama: <?= $data2['penguji_u']; ?><br/></td>
+                        <td><?= $data2['tanggal']; ?><br/><?= $data2['jam']; ?></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

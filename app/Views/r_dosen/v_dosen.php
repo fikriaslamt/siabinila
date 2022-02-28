@@ -22,63 +22,107 @@ endforeach
   <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
   <div class="content alert">
-  Bimbingan Skripsi: <b><?=$bimbing?></b> Mahasiswa Bimbingan
+  Bimbingan Skripsi: <b><?=$bimbing?></b> Mahasiswa Bimbingan <?php if($bimbing!=0):?><a href="<?= base_url('Dosen/data_skripsi')?>"><i class="fa fa-eye">Lihat</i></a><?php endif?>
   </div>
 
 </div>
-<div class="container">
-  <h3>Skripsi Bimbingan</h3>
-  <div class="row">
-  
-    <?php if (!empty($skripsi)): ?>
-    <div class="atur-kolom-ka">
-      <a href="<?= base_url('Dosen/data_skripsi')?>">
-        <div class="card-counter info">
-        <i  class="fa fa-book-open"></i>
-          <span class="count-name">DATA SKRIPSI</span>
-        </div>
-      </a>
-    </div>
-    <?php endif ?>
+<div class="container dosen">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <td colspan="6"><b>Jadwal Seminar</b></td>
+      </tr>
+      <tr>
+          <th scope="col">NPM/Nama</th>
+          <th scope="col">Judul</th>
+          <th scope="col">Tanggal</th>
+          <th scope="col">Jenis</th>
+          <th scope="col">Anda Sebagai</th>
+          <th scope="col"><i class="fa fa-cog"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php if (!empty($usul)): ?>
+      <?php foreach ($usul as $usul) : ?>
+      <tr>
+        <td><?= $usul['npm']; ?><br/><?= $usul['nama']; ?></td>
+        <td><?= $usul['judul']; ?></td>
+        
+        <td><?= $usul['tanggal']; ?><br/><br/><?= $usul['jam']; ?></td>
+        <td>Seminar Usul</td>
+        <td>
+        <?php if($usul['dospem1']== session()->nama){
+          echo "Pembimbing 1";
+        } else if($usul['dospem2']== session()->nama){
+          echo "Pembimbing 2";
+        } else if($usul['penguji_u']== session()->nama){
+          echo "Penguji Utama";
+        }
+        ?>
+        </td>
+        <td>
+          <a class="btn" href="<?=base_url("Dosen/data_pengajuan_usul")?>">Lihat</a>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+      <?php endif ?>
+      <?php if (!empty($hasil)): ?>
+      <?php foreach ($hasil as $hasil) : ?>
+      <tr>
+        <td><?= $hasil['npm']; ?><br/><?= $hasil['nama']; ?></td>
+        <td><?= $hasil['judul']; ?></td>
+        <td><?= $hasil['tanggal']; ?><br/><br/><?= $hasil['jam']; ?></td>
+        <td>Seminar hasil</td>
+        <td>
+        <?php if($hasil['dospem1']== session()->nama){
+          echo "Pembimbing 1";
+        } else if($hasil['dospem2']== session()->nama){
+          echo "Pembimbing 2";
+        } else if($hasil['penguji_u']== session()->nama){
+          echo "Penguji Utama";
+        }
+        ?>
+        </td>
+        <td>
+          <a class="btn" href="<?= base_url('Dosen/data_pengajuan_hasil')?>">Lihat</a>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+      <?php endif ?>
+      <?php if (!empty($kompre)): ?>
+      <?php foreach ($kompre as $kompre) : ?>
+      <tr>
+        <td><?= $kompre['npm']; ?><br/><?= $kompre['nama']; ?></td>
+        <td><?= $kompre['judul']; ?></td>
+        <td><?= $kompre['tanggal']; ?><br/><br/><?= $kompre['jam']; ?></td>
+        <td>Ujian Kompre</td>
+        <td>
+        <?php if($kompre['dospem1']== session()->nama){
+          echo "Pembimbing 1";
+        } else if($kompre['dospem2']== session()->nama){
+          echo "Pembimbing 2";
+        } else if($kompre['penguji_u']== session()->nama){
+          echo "Penguji Utama";
+        }
+        ?>
+        </td>
+        <td>
+          <a class="btn" href="<?= base_url('Dosen/data_pengajuan_kompre')?>">Lihat</a>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+      <?php endif ?>
+      <?php if (empty($usul) && empty($hasil)): ?>
+      <tr>
+        <td colspan="6">
+          Tidak Ada Jadwal Seminar
+        </td>
+      </tr>
+      <?php endif ?>
 
-    <?php if (!empty($usul)): ?>
-    <div class="atur-kolom-ka">
-    <a href="<?=base_url("Dosen/data_pengajuan_usul")?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">PENGAJUAN USUL</span>
-      </div>
-    </a>
-    </div>
-    <?php endif ?>
+    </tbody>
+  </table> 
     
-    <?php if (!empty($hasil)): ?>
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Dosen/data_pengajuan_hasil')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">PENGAJUAN HASIL</span>
-      </div>
-    </a>
-    </div>
-    <?php endif ?>
-
-    <?php if (!empty($kompre)): ?>
-    <div class="atur-kolom-ka">
-    <a href="<?= base_url('Dosen/data_pengajuan_kompre')?>">
-      <div class="card-counter info">
-       <i  class="fa fa-book-open"></i>
-        <span class="count-name">PENGAJUAN KOMPRE</span>
-      </div>
-    </a>
-    </div>
-    <?php endif ?>
-
-    
-
-</div>
-    
-
 </div>
 
 

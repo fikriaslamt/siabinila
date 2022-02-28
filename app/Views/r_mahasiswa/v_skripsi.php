@@ -70,6 +70,7 @@
         Perhatian :<br/>
         - Seminar usul sesuai waktu dan tempat yang telah ditentukan<br/>
         - Bersungguh-sungguh dalam usulan tersebut<br/><br/>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_usul/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.6-A.7c</button></a>
         <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>"><button>Form Pengajuan Seminar Hasil</button></a>
 
         <?php } else if ($skripsi[0]["status"]=="Mengajukan Seminar Hasil"){ ?>
@@ -79,8 +80,8 @@
         Langkah Selanjutnya :<br/>
         - Silahkan unduh formulir yang tersedia dibawah<br/>
         - Lengkapi data dan persyaratan yang masih kosong dengan tulis tangan<br/><br/>
-        <a href="<?= base_url('Cetakan/surat_pengajuan_usul/'.session()->user)?>"><button>Lihat PDF Seminar Usul</button></a>
-
+        <a href="<?= base_url('Cetakan/surat_pengajuan_hasil/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.8-A.8c</button></a>
+       
         <?php } else if ($skripsi[0]["status"]=="Seminar Hasil Disetujui"){ ?>    
         <div class="alert">
             Pengajuan Komprehensif anda telah diterima
@@ -88,8 +89,18 @@
         Perhatian :<br/>
         - Seminar Komprehensif sesuai waktu dan tempat yang telah ditentukan<br/>
         - Mempersiapkan diri untuk menjawab materi yang akan ditanyakan<br/><br/>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_hasil/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.8-A.8c</button></a>
         <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>"><button>Form Pengajuan Seminar Kompre</button></a>
 
+        <?php } else if ($skripsi[0]["status"]=="Mengajukan Ujian Skripsi"){ ?>
+        <div class="alert">
+            Anda sudah mengajukan Ujian Skripsi, tunggu sampai ujian skripsi anda berjalan anda berjalan<br/>
+        </div>
+        Langkah Selanjutnya :<br/>
+        - Silahkan unduh formulir yang tersedia dibawah<br/>
+        - Lengkapi data dan persyaratan yang masih kosong dengan tulis tangan<br/><br/>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_kompre/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.9-A.14</button></a>
+        
         <?php } else if ($skripsi[0]["status"]=="LULUS"){ ?>
         <div class="alert">
         Anda Telah Lulus
