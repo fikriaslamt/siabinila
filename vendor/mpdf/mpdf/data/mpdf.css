@@ -23,6 +23,7 @@ table {
 	border-collapse: collapse;
 	vertical-align: top;
 }
+.tbl_isi{ vertical-align: middle; }
 .tbl_isi td, .tbl_isi th {
 	border: 1px solid black;
 }
@@ -31,7 +32,8 @@ table {
 }
 .tbl_kosong td { height: 350px;}
 .header td { text-align: center; }
-
+.tbl_center { text-align: center;}
+.tbl_top { vertical-align: top;}
 
 .text_kanan{ text-align: right; }
 .text_kiri{ text-align: left; }

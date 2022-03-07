@@ -26,7 +26,7 @@ endforeach
   </div>
 
 </div>
-<div class="container dosen">
+<div class="container dosen h-scroll-l">
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
@@ -52,16 +52,23 @@ endforeach
         <td>Seminar Usul</td>
         <td>
         <?php if($usul['dospem1']== session()->nama){
+          $nilai = $usul["nilai_d1"];
           echo "Pembimbing 1";
         } else if($usul['dospem2']== session()->nama){
+          $nilai = $usul["nilai_d2"];
           echo "Pembimbing 2";
         } else if($usul['penguji_u']== session()->nama){
+          $nilai = $usul["nilai_pu"];
           echo "Penguji Utama";
         }
         ?>
         </td>
         <td>
-          <a class="btn" href="<?=base_url("Dosen/data_pengajuan_usul")?>">Lihat</a>
+          <?php if($nilai==0):?>
+          <a class="btn" href="<?= base_url('Dosen/data_pengajuan_usul')?>">Lihat</a>
+          <?php else:?>
+          <i class="fas fa-check" style="color:green; font-size:110%"></i> <?=$nilai?>
+          <?php endif ?>
         </td>
       </tr>
       <?php endforeach; ?>
@@ -75,16 +82,23 @@ endforeach
         <td>Seminar hasil</td>
         <td>
         <?php if($hasil['dospem1']== session()->nama){
+          $nilai = $hasil["nilai_d1"];
           echo "Pembimbing 1";
         } else if($hasil['dospem2']== session()->nama){
+          $nilai = $hasil["nilai_d2"];
           echo "Pembimbing 2";
         } else if($hasil['penguji_u']== session()->nama){
+          $nilai = $hasil["nilai_pu"];
           echo "Penguji Utama";
         }
         ?>
         </td>
         <td>
+          <?php if($nilai==0):?>
           <a class="btn" href="<?= base_url('Dosen/data_pengajuan_hasil')?>">Lihat</a>
+          <?php else:?>
+          <i class="fas fa-check" style="color:green; font-size:110%"></i> <?=$nilai?>
+          <?php endif ?>
         </td>
       </tr>
       <?php endforeach; ?>
@@ -98,16 +112,23 @@ endforeach
         <td>Ujian Kompre</td>
         <td>
         <?php if($kompre['dospem1']== session()->nama){
+          $nilai = $kompre["nilai_d1"];
           echo "Pembimbing 1";
         } else if($kompre['dospem2']== session()->nama){
+          $nilai = $kompre["nilai_d2"];
           echo "Pembimbing 2";
         } else if($kompre['penguji_u']== session()->nama){
+          $nilai = $kompre["nilai_pu"];
           echo "Penguji Utama";
         }
         ?>
         </td>
         <td>
+          <?php if($nilai==0):?>
           <a class="btn" href="<?= base_url('Dosen/data_pengajuan_kompre')?>">Lihat</a>
+          <?php else:?>
+            <i class="fas fa-check" style="color:green; font-size:110%"></i> <?=$nilai?>
+          <?php endif ?>
         </td>
       </tr>
       <?php endforeach; ?>

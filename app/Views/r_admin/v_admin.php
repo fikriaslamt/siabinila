@@ -1,14 +1,41 @@
 <?php
-if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Laki-laki'])){
-    $j_laki = array_count_values(array_column($mhs, 'jenis_kelamin'))['Laki-laki'];
+$col_jk = array_column($mhs, 'jenis_kelamin');
+if (!empty(array_count_values($col_jk)['Laki-laki'])){
+    $j_laki = array_count_values($col_jk)['Laki-laki'];
 } else { $j_laki = 0; }
-if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Perempuan'])){
-    $j_prem = array_count_values(array_column($mhs, 'jenis_kelamin'))['Perempuan'];
+if (!empty(array_count_values($col_jk)['Perempuan'])){
+    $j_prem = array_count_values($col_jk)['Perempuan'];
 } else { $j_prem = 0; }
-if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
-    $j_lain = array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'];
+if (!empty(array_count_values($col_jk)['Lainnya'])){
+    $j_lain = array_count_values($col_jk)['Lainnya'];
 } else { $j_lain = 0; }
 
+$col_stats = array_column($dat_skrip, 'status');
+$j_usul = 0;
+if (!empty(array_count_values($col_stats)['Judul Disetujui'])){
+    $j_usul = array_count_values($col_stats)['Judul Disetujui'];
+}
+if (!empty(array_count_values($col_stats)['Mengajukan Seminar Usul'])){
+    $j_usul += array_count_values($col_stats)['Mengajukan Seminar Usul'];
+}
+$j_hasil = 0;
+if (!empty(array_count_values($col_stats)['Seminar Usul Disetujui'])){
+    $j_hasil = array_count_values($col_stats)['Seminar Usul Disetujui'];
+}
+if (!empty(array_count_values($col_stats)['Mengajukan Seminar Hasil'])){
+    $j_hasil += array_count_values($col_stats)['Mengajukan Seminar Hasil'];
+}
+$j_kompre = 0;
+if (!empty(array_count_values($col_stats)['Seminar Hasil Disetujui'])){
+    $j_kompre = array_count_values($col_stats)['Seminar Usul Disetujui'];
+}
+if (!empty(array_count_values($col_stats)['Mengajukan Ujian Skripsi'])){
+    $j_kompre += array_count_values($col_stats)['Mengajukan Ujian Skripsi'];
+}
+$j_lulus = 0;
+if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
+    $j_lulus = array_count_values($col_stats)['Telah Lulus Skripsi'];
+}
 
 
 ?>
@@ -109,55 +136,47 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
 <div class="col-xl-8 col-lg-7">
     <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
-        <div
-            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Statistic Overview</h6>
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-book"></i> Statistik Skripsi</h6>
+            <div style="color:#444"><i class="fas fa-users"></i> <?=count($dat_skrip)?> Mahasiswa</div>
             
         </div>
         <!-- Card Body -->
-        <div class="card-body row">
+        <div class="card-body">
+            <h4 class="small font-weight-bold">Progres Usul : <?=$j_usul?>
+                <span class="float-right"><?= round(($j_usul/count($dat_skrip))*100) ?>%</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: <?= ($j_usul/count($dat_skrip))*100?>%"
+                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
 
-        <div class="col-xl-5 ">
-            Pengajuan Judul Skripsi
-        </div>
-        <div class="col-xl-6 ">
-            : <?=count($dat_pejudul)?> Pengajuan Judul
+            <h4 class="small font-weight-bold">Progres Hasil : <?=$j_hasil?>
+                <span class="float-right"><?= round(($j_hasil/count($dat_skrip))*100) ?>%</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: <?= ($j_hasil/count($dat_skrip))*100?>%"
+                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Progres Kompre : <?=$j_kompre?>
+                <span class="float-right"><?= round(($j_kompre/count($dat_skrip))*100) ?>%</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-info" role="progressbar" style="width: <?= ($j_kompre/count($dat_skrip))*100?>%"
+                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Selesai Skripsi (Belum Wisuda) : <?=$j_lulus?>
+                <span class="float-right"><?= round(($j_lulus/count($dat_skrip))*100) ?>%</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-success" role="progressbar" style="width: <?= ($j_lulus/count($dat_skrip))*100?>%"
+                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
         </div>
         <hr>
-        <div class="col-xl-5 ">
-            Data Skripsi
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">Pengajual Judul Skripsi</div>
+                <div class="col-sm-6">: <?=count($dat_pejudul)?> Mahasiswa Mengajukan</div>
+            </div>
         </div>
-        <div class="col-xl-6 ">
-            : <?=count($dat_skrip)?> Sedang Skripsi
-        </div>
-        <div class="col-xl-5 ">
-            Pengajuan Judul Usul
-        </div>
-        <div class="col-xl-6 ">
-            : <?=count($dat_usul)?> Pengajuan Usul
-        </div>
-        <div class="col-xl-5 ">
-            Pengajuan Seminar Hasil
-        </div>
-        <div class="col-xl-6 ">
-            : <?=count($dat_hasil)?> Pengajuan Seminar Hasil
-        </div>
-        <div class="col-xl-5 ">
-            Pengajuan Seminar Kompehensif
-        </div>
-        <div class="col-xl-6 ">
-            : <?=count($dat_kompre)?> Pengajuan Seminar Kompre
-        </div>
-        <hr>
-        <div class="col-xl-5 ">
-            Pengajuan Akun
-        </div>
-        <div class="col-xl-4 ">
-            : <?=count($dat_regist)?> Pengajuan Akun
-        </div>
-        
-
-        </div>
+        <br/>
     </div>
 </div>
 
@@ -167,7 +186,7 @@ if (!empty(array_count_values(array_column($mhs, 'jenis_kelamin'))['Lainnya'])){
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Perbandingan Gender</h6>
+            <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-venus-mars"></i> Perbandingan Gender</h6>
         </div>
         <!-- Card Body -->
         <div class="card-body">

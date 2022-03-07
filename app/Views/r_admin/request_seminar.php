@@ -1,6 +1,6 @@
 <!-- Area Chart -->
-<div class="col-xl-12 col-lg-12">
-    <div class="card shadow mb-4">
+<div class="col-xl-12">
+    <div class="card shadow">
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -8,7 +8,7 @@
             
         </div>
         <!-- Card Body -->
-        <div class="card-body">
+        <div class="card-body table-responsive">
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -26,7 +26,7 @@
                         <td>Pembimbing 1: <?= $data1['dospem1']; ?><br/>
                             Pembimbing 2: <?= $data1['dospem2']; ?><br/>
                             Penguji Utama: <?= $data1['penguji_u']; ?><br/></td>
-                        <td><?= $data1['tanggal']; ?><br/><?= $data1['jam']; ?></td>
+                        <td><?= $data1['tanggal']; ?><br/><br/><?= $data1['jam']; ?></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -36,8 +36,8 @@
 </div>
 
 <!-- Area Chart -->
-<div class="col-xl-12 col-lg-12">
-    <div class="card shadow mb-4">
+<div class="col-xl-12">
+    <div class="card shadow">
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -45,7 +45,7 @@
             
         </div>
         <!-- Card Body -->
-        <div class="card-body">
+        <div class="card-body table-responsive">
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -63,7 +63,7 @@
                         <td>Pembimbing 1: <?= $data2['dospem1']; ?><br/>
                             Pembimbing 2: <?= $data2['dospem2']; ?><br/>
                             Penguji Utama: <?= $data2['penguji_u']; ?><br/></td>
-                        <td><?= $data2['tanggal']; ?><br/><?= $data2['jam']; ?></td>
+                        <td><?= $data2['tanggal']; ?><br/><br/><?= $data2['jam']; ?></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -1,10 +1,12 @@
-<div class="container">
+<div class="container-top">
+  <div class="row">
+    <a href="<?=base_url('Dosen/data_skripsi')?>" class="back" style="float:right!important"><i class="fa fa-arrow-left"></i> Kembali</a>     
+  </div>
+</div>
 
-    <div class="content row">
-        <a href="<?=base_url('Dosen/data_skripsi')?>" class="back" style="float:right!important"><i class="fa fa-arrow-left"></i> Kembali</a>
-        <h4><?=$title?><h4>
-    </div>
+<div class="container dosen">
 
+    <h3><?=$title?><h3>
 
     <table class="table table-bordered table-hover mb-5">
     

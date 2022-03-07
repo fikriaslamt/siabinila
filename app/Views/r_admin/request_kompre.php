@@ -1,6 +1,6 @@
 <!-- Area Chart -->
-<div class="col-xl-12 col-lg-4">
-    <div class="card shadow mb-4">
+<div class="col-xl-12">
+    <div class="card shadow">
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -8,39 +8,29 @@
             
         </div>
         <!-- Card Body -->
-        <div class="card-body">
+        <div class="card-body table-responsive">
             
         <table class="table table-bordered table-hover">
             <thead>
-                <tr>
-                    <th scope="col">npm</th>
-                    <th scope="col">judul</th>
-                    
-                    <th scope="col">dosen pembimbing 1</th>
-                    <th scope="col">dosen pembimbing 2</th>
-                    <th scope="col">AKSI</th>
-                    
-                </tr>
-            </thead>
-                
-                <?php foreach ($data as $data) : ?>
-            <tbody>
-                <tr>
-                    
-                    <td><?= $data['npm']; ?></td>
-                    <td><?= $data['judul']; ?></td>
-                    
-                    <td><?= $data['dospem1']; ?></td>
-                    <td><?= $data['dospem2']; ?></td>
-                    <td>
-                        <a href="<?= base_url('Admin/terima_kompre/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a>
-                        <a href="<?= base_url('Admin/tolak_kompre/'.$data["npm"])?>"><button class="btn btn-danger btn-sm">TOLAK</button></a>
-
-                    </td>
-                    
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
+                    <tr>
+                        <th scope="col">NPM/Nama</th>
+                        <th scope="col">judul</th>
+                        <th scope="col">Dosen Terkait</th>
+                        <th scope="col">Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($data as $data) : ?>
+                    <tr>
+                        <td><?= $data['npm']; ?><br/><?= $data['nama']; ?></td>
+                        <td><?= $data['judul']; ?></td>
+                        <td>Pembimbing 1: <?= $data['dospem1']; ?><br/>
+                            Pembimbing 2: <?= $data['dospem2']; ?><br/>
+                            Penguji Utama: <?= $data['penguji_u']; ?><br/></td>
+                        <td><?= $data['tanggal']; ?><br/><br/><?= $data['jam']; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
         </table>   
 
         </div>

@@ -101,6 +101,7 @@ class Login extends BaseController
             'nama' => trim($this->request->getVar('nama')),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
             'email' => $this->request->getVar('email'),
+            'no_hp' => $this->request->getVar('no_hp'),
             'role' => "mahasiswa",
             
         ];

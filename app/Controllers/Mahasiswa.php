@@ -159,11 +159,13 @@ class Mahasiswa extends BaseController
         $jadwal1 = $this->M_seminar_usul->findAll();
         $jadwal2 = $this->M_seminar_hasil->findAll();
         $skripsi = $this->M_data_skripsi->find(session()->user);
+        $dosen   = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "form pengajuan usul", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2, 'skripsi' => $skripsi
+            'title' => "form pengajuan usul", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2, 'skripsi' => $skripsi,
+            'dosen' => $dosen
         ];
         echo view('layouts/header', $data);
-        echo view('layouts/navbar', $data);
+        echo view('layouts/navbar');
         echo view('r_mahasiswa/form_pengajuan_usul');
         echo view('layouts/footer');
     }
@@ -499,7 +501,9 @@ class Mahasiswa extends BaseController
             'nama'     => $this->request->getVar('nama'), 
             'judul'    => $this->request->getVar('judul'), 
             'prodi'    => "S1 Administrasi Bisnis",
-            'jurusan'  => "Administrasi Bisni",
+            'jurusan'  => "Administrasi Bisnis",
+            'jam'      => $this->request->getVar('jam'),
+            'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_data_skripsi->save([
             'npm' => $npm,
@@ -562,8 +566,5 @@ class Mahasiswa extends BaseController
         
         return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
-
-
-
 
 }

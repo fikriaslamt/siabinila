@@ -74,16 +74,24 @@ class Cetakan extends BaseController {
 
     function surat_pengajuan_usul($npm)
 	{   
-        $data1 = $this->M_surat_pengajuan_usul->find($npm);
+        $usul = $this->M_surat_pengajuan_usul->find($npm);
         $data = [
-            'npm'           => $data1["npm"],
-            'nama'          => $data1["nama"],
-            'judul'          => $data1["judul"],
-            'prodi'         => $data1["prodi"],
-            'jurusan'         => $data1["jurusan"],
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'npm'       => $usul["npm"],
+            'nama'      => $usul["nama"],
+            'judul'     => $usul["judul"],
+            'prodi'     => $usul["prodi"],
+            'jurusan'   => $usul["jurusan"],
+            'dospem1'   => $usul["dospem1"],
+            'dospem2'   => $usul["dospem2"],
+            'penguji_u'   => $usul["penguji_u"],
+            'kajur'     => 'Suprihatin Ali, S.Sos., M.Sc',
             'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
+            'jam'       => $usul["jam"],
+            'tanggal'   => $usul["tanggal"],
+            'tahun'     => date("Y"),
+            'nilai_d1'  => $usul["nilai_d1"],
+            'nilai_d2'  => $usul["nilai_d2"],
+            'nilai_pu'  => $usul["nilai_pu"],
         ];
  
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -94,13 +102,20 @@ class Cetakan extends BaseController {
 	{       
         $data1 = $this->M_surat_pengajuan_hasil->find($npm);
         $data = [
-            'npm'           => $data1["npm"],
-            'nama'          => $data1["nama"],
-            'judul'          => $data1["judul"],
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'npm'       => $data1["npm"],
+            'nama'      => $data1["nama"],
+            'judul'     => $data1["judul"],
+            'dospem1'   => $data1["dospem1"],
+            'dospem2'   => $data1["dospem2"],
+            'penguji_u'   => $data1["penguji_u"],
+            'kajur'     => 'Suprihatin Ali, S.Sos., M.Sc',
             'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
-
+            'tahun'     => date("Y"),
+            'jam'       => $data1["jam"],
+            'tanggal'   => $data1["tanggal"],
+            'nilai_d1'  => $data1["nilai_d1"],
+            'nilai_d2'  => $data1["nilai_d2"],
+            'nilai_pu'  => $data1["nilai_pu"],
         ];
 
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -112,18 +127,30 @@ class Cetakan extends BaseController {
 	{       
         $data1 = $this->M_surat_pengajuan_kompre->find($npm);
         $data = [
-            'npm'           => $data1["npm"],
-            'nama'          => $data1["nama"],
-            'judul'          => $data1["judul"],
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'npm'       => $data1["npm"],
+            'nama'      => $data1["nama"],
+            'judul'     => $data1["judul"],
+            'dospem1'   => $data1["dospem1"],
+            'dospem2'   => $data1["dospem2"],
+            'penguji_u' => $data1["penguji_u"],
+            'nilai_d1'  => $data1["nilai_d1"],
+            'nilai_d2'  => $data1["nilai_d2"],
+            'nilai_pu'  => $data1["nilai_pu"],
+            'pelak11'  => $data1["pelak11"],
+            'pelak12'  => $data1["pelak12"],
+            'naskah21'  => $data1["naskah21"],
+            'naskah22'  => $data1["naskah22"],
+            'naskah23'  => $data1["naskah23"],
+            'kajur'     => 'Suprihatin Ali, S.Sos., M.Sc',
             'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
+            'jam'       => $data1["jam"],
+            'tanggal'   => $data1["tanggal"],
+            'tahun'     => date("Y"),
 
         ];
 
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_kompre', $data);
-
 	}
 
 

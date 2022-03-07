@@ -59,11 +59,15 @@ body{
                 </select>
                 <label for="nama">
                     <i class="fas fa-file-signature"></i> Nama Lengkap</label>
-                <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
+                <input type="text" name="nama" class="form_text" value="<?php echo session()->getFlashdata('nama') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
                 
                 <label for="email">
                     <i class="fas fa-at"></i> E-Mail</label>
-                <input type="email" name="email" class="form_text" value="<?php echo session()->getFlashdata('email') ?>" id="nama" placeholder="Masukkan Nama Lengkap" required/>
+                <input type="email" name="email" class="form_text" value="<?php echo session()->getFlashdata('email') ?>" id="nama" placeholder="Masukkan Alamat Email Aktif" required/>
+               
+                <label for="no_hp">
+                    <i class="fas fa-mobile-alt"></i> No. HP</label>
+                <input type="text" pattern="\d*" name="no_hp" class="form_text" value="<?php echo session()->getFlashdata('nomer') ?>" id="nama" placeholder="Masukkan Nomor HP aktif" required/>
                
                 <input type="checkbox" id="check1" required>
                 <label class="form-check-label" for="check1">Data yang saya masukkan sudah benar</label>

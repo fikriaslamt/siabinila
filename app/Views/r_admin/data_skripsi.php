@@ -1,13 +1,13 @@
 <!-- Area Chart -->
 <div class="col-xl-12 col-lg-12">
-    <div class="card shadow mb-4 table-responsive">
+    <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">DATA MAHASISWA SKRIPSI</h6>
         </div>
         <!-- Card Body -->
-        <div class="card-body">
+        <div class="card-body table-responsive">
             
         <table class="table table-bordered table-hover">
             <thead>
@@ -20,7 +20,6 @@
                 <th scope="col">Tanggal</th>
                 <th scope="col">Status</th>
                 <th scope="col">AKSI</th>
-                
                 </tr>
             </thead>
             <tbody>
@@ -34,13 +33,12 @@
                 <td><?= $data["dospem2"]; ?></td>
                 <td><?= $data["date"]; ?></td>
                 <td><?= $data["status"]; ?></td>
-                <td><a href="<?= base_url('Admin/detail_skripsi/'.$data["npm"])?>">
+                <td>
+                    <a href="<?= base_url('Admin/detail_skripsi/'.$data["npm"])?>">
                         <button class="btn btn-primary btn-sm">Detail</button>
                     </a>
                 </td>
-
-
-                
+          
                 </tr>
                 <?php endforeach; ?>
             </tbody>

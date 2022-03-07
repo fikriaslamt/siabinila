@@ -401,7 +401,6 @@ class Admin extends BaseController
     public function tambah_akun($user)
     {  
         $akun = $this->M_register->find($user);
-
         
         $this->M_akun->insert([
             'user' => $akun["user"],
@@ -414,9 +413,10 @@ class Admin extends BaseController
             'nama' => $akun["nama"],
             'prodi' => "Administrasi Bisnis",
             'jenis_kelamin' => $akun["jenis_kelamin"],
-            'angkatan' => "20".substr($akun["user"],0,2),
+            'angkatan' => "20".substr($akun["user"],0,2),//hanya berlaku sampa 2099
             'status' => "Mahasiswa",
             'email' => $akun["email"],
+            'no_hp' => $akun["no_hp"],
             'foto' => "default/foto_default.png",
         ]);
         $this->M_register->delete($user);

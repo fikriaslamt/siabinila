@@ -1,18 +1,18 @@
 
-<div class="col-xl-12 col-lg-4">
+<div class="col-xl-12">
     <a href="<?= base_url('Admin/form_Add_akun_dosen')?>"><button class="btn btn-primary">TAMBAH AKUN DOSEN</button></a>
 </div><br/>
 
 <!-- Area Chart -->
-<div class="col-xl-12 col-lg-12">
-    <div class="card shadow mb-12">
+<div class="col-xl-12">
+    <div class="card shadow">
         <!-- Card Header - Dropdown -->
         <div
             class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">TABEL DATA DOSEN</h6>
         </div>
         <!-- Card Body -->
-        <div class="card-body">
+        <div class="card-body table-responsive">
         <?php if (session()->getFlashdata('pesan')) { ?>
         <div class="alert alert-primary">
         <?php echo session()->getFlashdata('pesan') ?>

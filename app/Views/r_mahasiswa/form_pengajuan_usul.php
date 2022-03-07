@@ -44,7 +44,7 @@
     </tbody>
 </table>
 <div class="kotak-form">
-    <form action="<?= base_url('Mahasiswa/tambah_pengajuan_usul/'.session()->user)?>" method="post">
+    <form action="<?= base_url('Mahasiswa/tambah_pengajuan_usul/'.session()->user)?>" onsubmit="submitUbah()" method="post">
                 
         <input type="number" name="npm" class="form_text" value="<?=session()->user?>" placeholder="Masukan npm" readonly required>
         
@@ -62,10 +62,16 @@
         </label>  
         <input type="text" name="dospem2" class="form_text" value="<?=$skripsi["dospem2"]?>"placeholder="Dosen Pembimbing 2" readonly required>
         <label for="penguji">
-            Penguji Utama
+            Penguji Utama <a class="btn" id="peubah" style="padding: 3px; margin:5px!important;" href="javascript:void(0);" onClick="ubah()">ubah</a>
         </label>  
-        <input type="text" name="penguji" onClick="Grund()" id="penguji" class="form_text" value="<?=$skripsi["penguji_u"]?>"placeholder="Masukkan Dosen Penguji Yang Anda Dapat" readonly required>
-        
+        <!-- <input type="text" name="penguji" class="form_text" value="<?=$skripsi["penguji_u"]?>"placeholder="Masukkan Dosen Penguji Yang Anda Dapat" readonly required> -->
+        <select name="penguji" class="form_text"  id="penguji" disabled required>
+            <option value="<?=$skripsi["penguji_u"]?>"><?=$skripsi["penguji_u"]?> (Data Jurusan)</option>
+            <?php foreach ($dosen as $dosen):?>
+            <option value="<?=$dosen["nama"]?>"><?=$dosen["nama"]?></option>
+            <?php endforeach ?>
+        </select>
+
         <label for="judul2">Pilih Tanggal</label> 
         <input type="date" min="<?= date('Y-m-d'); ?>" name="tanggal" class="form_text" placeholder="Tanggal" required>
         <label for="judul2">Pilih Jam</label> 
@@ -87,11 +93,24 @@
 <script>
 function Grund() {
     if(document.getElementById('penguji').readOnly == true){
-        var result = confirm('Penguji telah ditentukan oleh jurusan, apakah ada perubahan dan anda ingin menganntinya?');
+        var result = confirm('Penguji telah ditentukan oleh jurusan, apakah ada perubahan dan anda ingin menggantinya?');
         if(result == true){
             document.getElementById('penguji').readOnly = false;
             document.getElementById("Grund").innerHTML = "Read-Only attribute enabled";
         } 
     }
 }
+function ubah() {
+    if(document.getElementById('penguji').disabled == true){
+        var result = confirm('Penguji telah ditentukan oleh jurusan, apakah ada perubahan dan anda ingin menggantinya?');
+        if(result == true){
+            document.getElementById('penguji').disabled = false;
+            document.getElementById('peubah').hidden = true;
+        } 
+    }
+}
+function submitUbah() {
+    document.getElementById('penguji').disabled = false;
+}
+
 </script>

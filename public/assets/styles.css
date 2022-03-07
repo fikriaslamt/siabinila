@@ -33,12 +33,13 @@ ol{list-style-type:decimal}
 a {text-decoration: none;}
 h1, h2, h3, h4 { margin: 10px; text-transform: capitalize;}
 hr{border-color: #b8daff; opacity: .5;}
-button, .btn{ margin: 5px; padding: 10px 10px; border-radius: 3px; color: white !important; background-color: var(--button-utama); border: none}
+button, .btn{ margin: 5px; padding: 10px 10px; border-radius: 3px; color: white !important; background-color: var(--button-utama); border: none; white-space:nowrap;}
 button:hover, .btn:hover { background-color: var(--button-gelap);}
 .btn-merah { background-color: var(--merah);}
 .btn-merah:hover { background-color: var(--merah-gelap);}
 .breadcrumb { font-size: 85%; float: left; text-transform:capitalize;}
-.text-muted{color:#6c757d!important}
+.text-muted {color:#6c757d!important}
+
 
   .meter {
   box-sizing:content-box;
@@ -133,6 +134,7 @@ body {
   overflow: hidden;
 }
 .content{padding:5px; margin: 10px;}
+.h-scroll-l,.h-scroll-m{overflow: auto;}
 .btn-skripsi { font-size:125%; color: white; background-color: var(--button-utama); text-align: center; padding: 15px; text-transform: uppercase;}
 .btn-skripsi:hover { background-color: var(--button-gelap);}
 
@@ -331,7 +333,9 @@ table{
   color: #666;
   background: inherit;
   border: 1px solid gray;
-} .profil table{ border: none !important;} .dosen table{ margin: 0px auto;  width: 100%; border-radius:6px; font-size: 95%;}
+} .profil table{ border: none !important;} 
+.dosen > table{ margin: 0px auto;  width: 100%; border-radius:6px; font-size: 96%;}
+.overlay td{ text-align: left !important; font-size: 96%; padding: 5px;} 
 table th {
   padding: 15px 35px;
   border-left:1px solid #e0e0e0;
