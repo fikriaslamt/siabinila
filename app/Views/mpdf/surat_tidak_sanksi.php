@@ -51,7 +51,7 @@ $mpdf->WriteHTML('
     <div style="text-align: center;">Nomor: ....../UN.26.16.06/KM.00.05/'.$tahun.'</div>
     <br>
     Dekan Fakultas Ilmu Sosial dan Ilmu Politik Universitas Lampung menerangkan bahwa:
-
+    <br>
     <br>
     <table>
         <tr>
@@ -75,7 +75,7 @@ $mpdf->WriteHTML('
             <td>: '.$nomor.'</td>
         </tr>
     </table>
-    <br><br>
+    <br>
 
     Adalah mahasiswa Fakultas Ilmu Sosial Dan Ilmu Politik Universitas Lampung yang terdaftar
     pada Semester '.$semester.'.Tahun Akademik '.$akademik.' pada Jurusan/Program Studi '.$prodi.'. Tidak sedang menerima sanksi akademik karena melanggar kode etik dan tata pergaulan mahasiswa Universitas Lampung. Surat keterangan ini
@@ -93,7 +93,7 @@ $mpdf->WriteHTML('
                 Kabbag Tata Usaha,
                 <br><br><br><br><br><br>
                 '.$dekan.'<br>
-                NIP. '.$nip_dekan.'
+                NIP '.$nip_dekan.'
                 
             </td>
         </tr>

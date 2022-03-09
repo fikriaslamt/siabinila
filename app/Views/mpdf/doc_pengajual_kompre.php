@@ -12,13 +12,6 @@ $img3 = [
     'egs' => "data:image/png;base64,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"
 ];
 
-$xd1 = $nilai_d1*(40/100);
-$xd2 = $nilai_d2*(20/100);
-$xpu = $nilai_pu*(40/100);
-$na = $xd1+$xd2+$xpu;
-$juml = $pelak11+$pelak12+$naskah21+$naskah22+$naskah23;
-$mean = $juml / 5;
-
 $mpdf = new \Mpdf\Mpdf(['format' => 'Legal', 
 'margin_top' => '10', 'margin_bottom' => '10',
 'margin_left' => '10', 'margin_right' => '10', 'defaultfooterline' => 0]);
@@ -87,7 +80,7 @@ $mpdf->WriteHTML('
 
         <tbody>
             <tr>
-                <th style="height:460px"></th>
+                <th style="height:300px"></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -102,9 +95,9 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width:50%"></td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
-                Pembimbing Utama/Pembantu <br><br><br><br><br><br>
-                ......................................... <br>
-                NIP......................................
+                Pembimbing Utama/Pembantu <br><br><br><br>
+                '.$nama.' <br>
+                NIP. '.$npm.'
             </td>
         </tr>
     </table>
@@ -164,7 +157,7 @@ $mpdf->WriteHTML('
     <br><br>
     
     
-    Telah kami terima dan disetujui untuk kami terbitkan pada Jurnal Bisnis Kompetitif<br>
+    Telah kami terima dan disetujui untuk kami terbitkan pada Jurnal Bisnis Kompetitif
     Volume ........... Nomor ............. Tahun ....................
     <br>
     <br>
@@ -173,16 +166,16 @@ $mpdf->WriteHTML('
 
     <table style="width:100%">
         <tr>
-            <td style="width:50%">
+            <td style="width:50%"><br>
                 Mengetahui,<br>
-                Ketua Jurusan/PS <br><br><br><br><br><br>
-                '.$kajur.' <br>
-                NIP. '.$nip_kajur.'
+                Ketua Jurusan/PS <br><br><br><br><br>
+                '.$nama.' <br>
+                NIP. '.$npm.'
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Redaksi Jurnal Bisnis Kompetitif, <br><br><br><br><br><br>
-                ........................................ <br>
-                NIP.....................................
+                '.$nama.' <br>
+                NIP. '.$npm.'
             </td>
         </tr>
     </table>
@@ -244,11 +237,7 @@ $mpdf->WriteHTML('
         <tr>
             <td style ="width :10%"></td>
             <td>Judul Skripsi </td> <td>: '.$judul.'</td>
-        </tr>
-        <tr>
-            <td style ="width :10%"></td>
-            <td>SKS yang diselesaikan</td> <td>: .........</td>
-        </tr>
+        </tr> 
 
     </table>
     <br><br>
@@ -265,8 +254,8 @@ $mpdf->WriteHTML('
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Pembimbing Utama/Pembantu <br><br><br><br><br><br>
-                ......................................... <br>
-                NIP......................................
+                '.$nama.' <br>
+                NIP. '.$npm.'
             </td>
         </tr>
     </table>
@@ -326,7 +315,7 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td style ="width :10%"></td>
-            <td>Program Studi</td> <td>: Ilmu Administrasi Bisnis</td>
+            <td>Jurusan</td> <td>: Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
             <td style ="width :10%"></td>
@@ -419,10 +408,10 @@ $mpdf->WriteHTML('
     <br>
     <table class="padding_isi">
         <tr>
-            <td>Hari/Tanggal </td><td>: '.$tanggal.'</td>
+            <td>Hari/Tanggal </td><td>: </td>
         </tr>
         <tr>
-            <td>Waktu Ujian </td><td>: '.$jam.' WIB</td>
+            <td>Waktu Ujian </td><td>: WIB</td>
         </tr>
         <tr>
             <td>Tempat </td><td>: Ruang Ujian Jurusan Administrasi Bisnis FISIP Unila</td>
@@ -434,13 +423,13 @@ $mpdf->WriteHTML('
     <br>
     <table class="padding_isi">
         <tr>
-            <td>1. Ketua (Pembimbing Utama)  </td><td>: '.$dospem1.'</td>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>: '.$nama.'</td>
         </tr>
         <tr>
-            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>: '.$dospem2.'</td>
+            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>: '.$nama.'</td>
         </tr>
         <tr>
-            <td>3. Penguji Utama  </td><td>: '.$penguji_u.'</td>
+            <td>3. Penguji Utama  </td><td>: '.$nama.'</td>
         </tr>
         
     </table>
@@ -520,13 +509,13 @@ $mpdf->WriteHTML('
     Mengharapkan kehadiran Saudara: <br>
     <table class="padding_isi">
         <tr>
-            <td>1. Ketua (Pembimbing Utama)  </td><td>: '.$dospem1.'</td>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>: '.$nama.'</td>
         </tr>
         <tr>
-            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>: '.$dospem2.'</td>
+            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>: '.$nama.'</td>
         </tr>
         <tr>
-            <td>3. Penguji Utama  </td><td>: '.$penguji_u.'</td>
+            <td>3. Penguji Utama  </td><td>: '.$nama.'</td>
         </tr>
         
     </table>
@@ -536,10 +525,10 @@ $mpdf->WriteHTML('
     <br>
     <table class="padding_isi">
         <tr>
-            <td>Hari/Tanggal </td><td>: '.$tanggal.'</td>
+            <td>Hari/Tanggal </td><td>: </td>
         </tr>
         <tr>
-            <td>Waktu Ujian </td><td>: '.$jam.'WIB</td>
+            <td>Waktu Ujian </td><td>: WIB</td>
         </tr>
         <tr>
             <td>Tempat </td><td>: Ruang Ujian Jurusan Administrasi Bisnis FISIP Unila</td>
@@ -640,7 +629,7 @@ $mpdf->WriteHTML('
     </table>
 
     <br><br>
-    Hasil Ujian Skripsi dengan nilai: …… huruf mutu: …… Predikat lulus : ...........................
+    Hasil Ujian Skripsi dengan nilai: ……huruf mutu: ……Predikat lulus : ...........................
     <br><br>
     <table style="width: 100%;">
         <tr>
@@ -658,13 +647,13 @@ $mpdf->WriteHTML('
     <br>
     <table>
         <tr>
-            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td><td> '.$dospem1.'</td><td>(...........................)</td>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>: '.$nama.'</td><td>(...........................)</td>
         </tr>
         <tr>
-            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td><td> '.$dospem2.'</td><td>(...........................)</td>
+            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>: '.$nama.'</td><td>(...........................)</td>
         </tr>
         <tr>
-            <td>3. Penguji Utama  </td><td>:</td><td> '.$penguji_u.'</td><td>(...........................)</td>
+            <td>3. Penguji Utama  </td><td>: '.$nama.'</td><td>(...........................)</td>
         </tr>
         <br><br>
     </table>
@@ -749,7 +738,7 @@ $mpdf->WriteHTML('
         </thead>
         <tbody>
             <tr>
-                <td class="tbl_top">1. <br><br><br><br><br>2.</td>
+                <td>1. <br><br><br><br><br>2.</td>
                 <td>Pelaksanaan Ujian <br>
                     1.1 Teknik penyajian <br><br>
                     1.2 Penguasaan Substansi <br><br>
@@ -758,25 +747,17 @@ $mpdf->WriteHTML('
                     2.2 Kegunaan dan kemuktahiran tinjauan pustaka <br><br>
                     2.3 Teknik Penulisan <br><br>
                 </td>
-                <td style="text-align: center">
-                    <br>
-                    '.$pelak11.'<br><br>
-                    '.$pelak12.'<br><br><br>
-                    '.$naskah21.'<br><br>
-                    '.$naskah22.'<br><br>
-                    '.$naskah23.'<br><br>
-                    
-                </td>
+                <td></td>
             </tr>
             <tr>
                 <td>3.</td>
                 <td>JUMLAH</td>
-                <td style="text-align: center">'.$juml.'</td>
+                <td></td>
             </tr>
             <tr>
                 <td>4.</td>
                 <td>NILAI RATA-RATA (tanpa dibulatkan)</td>
-                <td style="text-align: center">'.$mean.'</td>
+                <td></td>
             </tr>
 
         </tbody>
@@ -788,9 +769,9 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width: 50%;"></td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
-                Pembimbing Utama<br><br><br><br><br><br>
-                '.$dospem1.' <br>
-               NIP. '.$nip_kajur.'
+                Pembimbing Utama/Pembantu/Penguji Utama <br><br><br><br>
+                '.$nama.' <br>
+               NIP. '.$npm.'
             </td>
         </tr>
     </table>
@@ -866,40 +847,40 @@ $mpdf->WriteHTML('
     </thead>
     <tbody>
         <tr>
-            <td class="tbl_top">1.</td>
+            <td>1.</td>
             <td>Pembimbing Utama <br>
-                '.$dospem1.'<br>
+                '.$nama.'<br>
                 NIP.  '.$npm.'
             </td>
             <td>Ketua</td>
-            <td style="text-align: center">'.$nilai_d1.'</td>
-            <td class="tbl_center">60%</td>
-            <td class="tbl_center">40%</td>
-            <td class="tbl_center">'.$xd1.'</td>
+            <td></td>
+            <td>60%</td>
+            <td>40%</td>
+            <td></td>
         </tr>
         <tr>
-            <td class="tbl_top">2.</td>
+            <td>2.</td>
             <td>Pembimbing Pembantu <br>
-                '.$dospem2.'<br>
+                '.$nama.'<br>
                 NIP.  '.$npm.'
             </td>
             <td>Sekretaris</td>
-            <td style="text-align: center">'.$nilai_d2.'</td>
-            <td class="tbl_center">0%</td>
-            <td class="tbl_center">20%</td>
-            <td class="tbl_center">'.$xd2.'</td>
+            <td></td>
+            <td>0%</td>
+            <td>20%</td>
+            <td></td>
         </tr>
-        <tr style="text-align: center">
-            <td class="tbl_top">3.</td>
+        <tr>
+            <td>3.</td>
             <td>Penguji Utama <br>
-                '.$penguji_u.'<br>
+                '.$nama.'<br>
                 NIP.  '.$npm.'
             </td>
             <td>Penguji Utama</td>
-            <td class="tbl_center">'.$nilai_pu.'</td>
-            <td class="tbl_center">40%</td>
-            <td class="tbl_center">40%</td>
-            <td class="tbl_center">'.$xpu.'</td>
+            <td></td>
+            <td>40%</td>
+            <td>40%</td>
+            <td></td>
         </tr>
         <tr>
             <td></td>
@@ -908,9 +889,9 @@ $mpdf->WriteHTML('
             </td>
             <td></td>
             <td></td>
-            <td class="tbl_center">100%</td>
-            <td class="tbl_center">100%</td>
-            <td class="tbl_center">'.$na.'</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td></td>
         </tr>
 
     </tbody>
@@ -920,7 +901,7 @@ $mpdf->WriteHTML('
 <br>
 <table>
     <tr>
-        <td>Nilai Akhir  </td><td>: '.$na.'</td>
+        <td>Nilai Akhir  </td><td>: ...........................................................</td>
     </tr>
     <tr>
         <td>Predikat Lulus  </td><td>: ...........................................................</td>
@@ -932,9 +913,9 @@ $mpdf->WriteHTML('
 <table style="width: 100%;">
     <tr>
         <td style="width: 50%;">
-            1. '.$dospem1.'<br>
-            2. '.$dospem2.'<br>
-            3. '.$penguji_u.' <br>
+            1. '.$nama.' <br>
+            2. '.$nama.' <br>
+            3. '.$nama.' <br>
         </td>
         <td>
             (..........................) Ketua <br>
@@ -948,9 +929,9 @@ $mpdf->WriteHTML('
     <tr>
         <td style="width: 50%;"></td>
         <td>Bandar Lampung, ...... .................. 2022 <br>
-            Ketua, <br><br><br><br><br><br>
-            '.$dospem1.' <br>
-           NIP. '.$nip_kajur.'
+            Ketua, <br><br><br><br>
+            '.$nama.' <br>
+           NIP. '.$npm.'
         </td>
     </tr>
 </table>
@@ -1018,9 +999,9 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width: 50%;"></td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
-            Pembimbing Utama/Pembantu <br><br><br><br><br>
-            ......................................... <br>
-            NIP......................................
+                Pembimbing Utama/Pembantu/Penguji Utama <br><br><br><br>
+                '.$nama.' <br>
+               NIP. '.$npm.'
             </td>
         </tr>
     </table>
@@ -1203,15 +1184,15 @@ $mpdf->WriteHTML('
     <table>
         <tr>
             <td style="width: 50%;">
-                Mengetahui,<br>
-                Ketua Jurusan/PS <br><br><br><br><br>
+                <br> Mengetahui,<br>
+                Ketua Jurusan/PS <br><br><br><br>
                 '.$kajur.'<br>
                 NIP. '.$nip_kajur.'
             </td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
                 Staff Jurusan/PS, <br><br><br><br><br>
-                ........................................ <br>
-                NIP.....................................
+                '.$nama.' <br>
+               NIP. '.$npm.'
             </td>
         </tr>
     </table>
@@ -1259,7 +1240,7 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width: 50%;"></td>
             <td>Bandar Lampung, ...... .................. 2022 <br>
-                Yang membuat pernyataan, <br><br><br>Materai Rp.6000<br><br><br>
+                Yang membuat pernyataan, <br><br>Materai Rp.6000<br><br><br>
                 '.$nama.' <br>
                NPM. '.$npm.'
             </td>

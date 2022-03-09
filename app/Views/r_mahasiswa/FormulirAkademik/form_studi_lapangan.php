@@ -3,12 +3,44 @@
 <center><h2><?=$title?></h2></center>
 <div class="kotak-form">
     <form action="<?= base_url('Cetakan/surat_studi_lapangan')?>" method="post">
-        <label for="npm">NPM :</label>        
-        <input type="number" name="npm" class="form_text" placeholder="Masukan npm">
-        <label for="nama">Nama :</label>
-        <input type="text" name="nama" class="form_text" placeholder="Masukan Nama">
-        <label for="semester">Semester :</label>
-        <input type="number" name="semester" class="form_text" placeholder="Semester Saat ini">
+        <label for="npm1">NPM Anggota 1:</label>        
+        <input type="number" name="npm1" class="form_text" placeholder="Masukan npm">
+        <label for="mhs1">Nama Anggota 1 :</label>
+        <input type="text" name="mhs1" class="form_text" placeholder="Masukan Nama">
+
+        <label for="npm2">NPM Anggota 2:</label>        
+        <input type="number" name="npm2" class="form_text" placeholder="Masukan npm">
+        <label for="mhs2">Nama Anggota 2 :</label>
+        <input type="text" name="mhs2" class="form_text" placeholder="Masukan Nama">
+
+        <label for="npm3">NPM Anggota 3:</label>        
+        <input type="number" name="npm3" class="form_text" placeholder="Masukan npm">
+        <label for="mhs3">Nama Anggota 3 :</label>
+        <input type="text" name="mhs3" class="form_text" placeholder="Masukan Nama">
+
+        <label for="npm4">NPM Anggota 4:</label>        
+        <input type="number" name="npm4" class="form_text" placeholder="Masukan npm">
+        <label for="mhs4">Nama Anggota 4 :</label>
+        <input type="text" name="mhs4" class="form_text" placeholder="Masukan Nama">
+        <br>
+        <label for="perusahaan">Nama Perusahaan :</label>
+        <input type="text" name="perusahaan" class="form_text" placeholder="Nama Perusahaan">
+
+        <label for="mk">Mata Kuliah :</label>
+        <input type="text" name="mk" class="form_text" placeholder="Mata Kuliah">
+        <br>
+       
+        <label for="tgl_awal">Tanggal Mulai Studi : (contoh : 1 Januari 2022)</label>
+        <input type="text" name="tgl_awal" class="form_text" placeholder="Tanggal">
+        <label for="tgl_akhir">Tanggal Selesai Studi : (contoh : 1 Januari 2022)</label>
+        <input type="text" name="tgl_akhir" class="form_text" placeholder="Tanggal">
+
+        <br>
+        <label for="dosen">Dosen Pengampu Mata Kuliah :</label>
+        <input type="text" name="dosen" class="form_text" placeholder="Dosen Pengampu Mata Kuliah">
+        <label for="nip_dosen">NIP Dosen Pengampu Mata Kuliah :</label>
+        <input type="number" name="nip_dosen" class="form_text" placeholder="NIP Dosen Pengampu Mata Kuliah">
+        <br>
         <label for="tanggal">Tanggal : (contoh : 1 Januari 2022)</label> 
         <input type="text" name="tanggal" class="form_text" placeholder="tanggal">
         

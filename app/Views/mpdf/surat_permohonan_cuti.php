@@ -148,6 +148,7 @@ $mpdf->WriteHTML('
 
 $mpdf->AddPage();
 $mpdf->WriteHTML('
+<div class="teks_isi">
 <br><br>
 <table style="width: 100%;">
 <tr>
@@ -159,8 +160,14 @@ $mpdf->WriteHTML('
     </td>
 </tr>
 </table>
-<br>Catatan:  <br>
-Perlu ada tanda tangan orang tua/wali, apabila biaya perkuliahan masih ditanggung oleh orang tua/wali.
+<br><br>
+    <div style="font-size: 11;">
+        Catatan:  <br>
+        Perlu ada tanda tangan orang tua/wali, apabila biaya perkuliahan masih ditanggung oleh orang tua/wali.
+                
+    </div>
+</div>
+
 ');
 
 

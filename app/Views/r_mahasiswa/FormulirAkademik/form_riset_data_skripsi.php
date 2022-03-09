@@ -7,8 +7,29 @@
         <input type="number" name="npm" class="form_text" placeholder="Masukan npm">
         <label for="nama">Nama :</label>
         <input type="text" name="nama" class="form_text" placeholder="Masukan Nama">
-        <label for="semester">Semester :</label>
-        <input type="number" name="semester" class="form_text" placeholder="Semester Saat ini">
+
+        <br>
+        <label for="alamat">Alamat :</label>
+        <input type="text" name="alamat" class="form_text" placeholder="Alamat">
+
+        <label for="judul">Judul Skripsi :</label>
+        <input type="text" name="judul" class="form_text" placeholder="Judul Skripsi">
+        <br>
+    
+        <label for="nomor">No. Telp./HP :</label>
+        <input type="number" name="nomor" class="form_text" placeholder="No. Telp./HP">
+
+        <label for="perusahaan">Nama Perusahaan :</label>
+        <input type="text" name="perusahaan" class="form_text" placeholder="Nama Perusahaan">
+        <label for="alamat_perusahaan">Alamat Perusahaan:</label>
+        <input type="text" name="alamat_perusahaan" class="form_text" placeholder="Alamat Perusahaan">
+
+        <br>
+        <label for="dosen">Dosen Pembimbing I Skripsi, :</label>
+        <input type="text" name="dosen" class="form_text" placeholder="Dosen Pembimbing I Skripsi,">
+        <label for="nip_dosen">NIP Dosen Pembimbing I Skripsi, :</label>
+        <input type="number" name="nip_dosen" class="form_text" placeholder="NIP Dosen Pembimbing I Skripsi,">
+        <br>
         <label for="tanggal">Tanggal : (contoh : 1 Januari 2022)</label> 
         <input type="text" name="tanggal" class="form_text" placeholder="tanggal">
         

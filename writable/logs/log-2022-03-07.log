@@ -38,3 +38,15 @@ CRITICAL - 2022-03-07 03:45:19 --> syntax error, unexpected ''</td>' (T_CONSTAN
 #6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
 #8 {main}
+CRITICAL - 2022-03-07 08:54:50 --> Undefined variable: akademik
+#0 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\surat_tidak_sanksi.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\User\\K...', 81, Array)
+#1 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\User\\K...')
+#2 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/surat_tida...', Array, true)
+#4 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(654): view('mpdf/surat_tida...', Array)
+#5 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_tidak_sanksi()
+#6 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\KULIAH\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\User\\K...')
+#10 {main}

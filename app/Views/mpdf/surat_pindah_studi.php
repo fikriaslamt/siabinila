@@ -92,15 +92,15 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td>No. Telepon/HP</td>
-            <td>: '.$notlp.'</td>
+            <td>: '.$nomor.'</td>
         </tr>
         <tr>
             <td>Asal Universitas</td>
-            <td>: '.$univ_asal.'</td>
+            <td>: '.$asal_univ.'</td>
         </tr>
         <tr>
             <td>Asal Fakultas</td>
-            <td>: '.$fk_asal.'</td>
+            <td>: '.$asal_fk.'</td>
         </tr>
     
         <tr>
@@ -109,12 +109,12 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td>Asal Program Studi</td>
-            <td>: '.$prodi.'</td>
+            <td>: '.$asal_prodi.'</td>
          </tr>
 
         <tr>
             <td>PS Yang Dituju</td>
-            <td>: '.$ps_tujuan.'</td>
+            <td>: '.$prodi_tujuan.'</td>
         </tr>
   
         <tr>
@@ -125,7 +125,7 @@ $mpdf->WriteHTML('
     <br><br>
 
     Bersama ini kami mengajukan Pindah Studi ke Universitas Lampung. Saya berasal dari Program
-    Studi '.$prodi.' Fakultas '.$fk_asal.' '.$univ_asal.'. Sebagai bahan pertimbangan kami lampirkan persyaratan
+    Studi '.$asal_prodi.' Fakultas '.$asal_fk.' '.$asal_univ.'. Sebagai bahan pertimbangan kami lampirkan persyaratan
     sebagai berikut:
     <br>
     <table class="padding_isi">
@@ -159,7 +159,7 @@ $mpdf->WriteHTML('
             <td style="width: 55%;">
                 Mengetahui, <br>
                 Orang Tua/Wali <br><br><br><br><br>
-                '.$orangtua.'
+                '.$ortu.'
             </td>
             <td>
                 Hormat Saya,
@@ -171,8 +171,14 @@ $mpdf->WriteHTML('
         </tr>
     </table>
     <br>
-    Catatan: Pindah studi dari program studi di luar Unila dapat dilakukan jika program studi memiliki
-    sekurang-kurangnya akreditasi yang sama dengan program studi yang dituju.
+
+    <div style="font-size: 11;">
+        Catatan: Pindah studi dari program studi di luar Unila dapat dilakukan jika program studi memiliki
+        sekurang-kurangnya akreditasi yang sama dengan program studi yang dituju. <br>
+        
+    </div>
+
+    
 </div>
 
 ');

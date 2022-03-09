@@ -89,8 +89,8 @@ $mpdf->WriteHTML('
     Penghapusan Mata Kuliah, bahwa penghapusan mata kuliah dapat dilakukan sepanjang
     jumlah SKS minimal terpenuhi (min. 44 SKS dan maks. 160 SKS). Bersama dengan ini saya
     mengajukan permohonan penghapusan mata kuliah sebagai berikut:
-    <br>
-    <table class="tbl_isi">
+    <br><br>
+    <table class="tbl_isi" style="width:100%;">
         <thead>
             <tr>
                 <th>No</th>
@@ -105,7 +105,7 @@ $mpdf->WriteHTML('
 
         <tbody>
             <tr>
-                <td></td>
+                <td>1.</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -114,7 +114,7 @@ $mpdf->WriteHTML('
                 <td></td>
             </tr>
             <tr>
-                <td></td>
+                <td>2.</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -135,8 +135,8 @@ $mpdf->WriteHTML('
             <td style="width: 55%;">
                 Mengetahui, <br>
                 Dosen Pembimbing Akademik <br><br><br><br><br>
-                '.$dospem.'  <br>
-                NIP .'.$nip_dospem.'
+                '.$dospa.'  <br>
+                NIP .'.$nip_dospa.'
             </td>
             <td>
                 Hormat Saya,
@@ -150,7 +150,7 @@ $mpdf->WriteHTML('
     <br>
     <div style="font-size: 11;">
         Catatan:  <br>
-        <table> 
+        <table style="font-size: 11;"> 
             <tr>
                 <td>1. </td>
                 <td>Penghapusan mata kuliah sebagai syarat ujian skripsi, untuk teknis proses penghapusan mata kuliah

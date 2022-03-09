@@ -370,4 +370,288 @@ class Cetakan extends BaseController {
         echo view('mpdf/surat_perpanjangan_masa_studi',$data);
 
 	}
+
+    
+    function surat_pengisian_krs_terlambat()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'semester'        => $this->request->getVar('semester'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pengisian_krs_terlambat',$data);
+
+	}
+
+    function surat_penghapusan_mk()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'dospa'        => $this->request->getVar('dospa'),
+            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+           
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_penghapusan_mk',$data);
+
+	}
+
+    function surat_pembetulan_nilai()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'dospa'        => $this->request->getVar('dospa'),
+            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'dospj'        => $this->request->getVar('dospj'),
+            'nip_dospj'        => $this->request->getVar('nip_dospj'),
+           
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pembetulan_nilai',$data);
+
+	}
+
+    function surat_mengundurkan_diri()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+            'dospa'        => $this->request->getVar('dospa'),
+            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'ortu'        => $this->request->getVar('ortu'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'strata'        => $this->request->getVar('strata'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'semester'        => $this->request->getVar('semester'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'ta'        => $this->request->getVar('ta'),
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_mengundurkan_diri',$data);
+
+	}
+
+    function surat_studi_lapangan()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm1'           => $this->request->getVar('npm1'),
+            'mhs1'          => $this->request->getVar('mhs1'), 
+            'npm2'           => $this->request->getVar('npm2'),
+            'mhs2'          => $this->request->getVar('mhs2'), 
+            'npm3'           => $this->request->getVar('npm3'),
+            'mhs3'          => $this->request->getVar('mhs3'), 
+            'npm4'           => $this->request->getVar('npm4'),
+            'mhs4'          => $this->request->getVar('mhs4'), 
+            'dosen'        => $this->request->getVar('dosen'),
+            'nip_dosen'        => $this->request->getVar('nip_dosen'),
+            'perusahaan'        => $this->request->getVar('perusahaan'),
+            'mk'        => $this->request->getVar('mk'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'tgl_awal'        => $this->request->getVar('tgl_awal'),
+            'tgl_akhir'        => $this->request->getVar('tgl_akhir'),
+            'semester'        => $this->request->getVar('semester'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'ta'        => '2022/2023',
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_studi_lapangan',$data);
+
+	}
+
+    function surat_riset_data_skripsi()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+   
+            'dosen'        => $this->request->getVar('dosen'),
+            'nip_dosen'        => $this->request->getVar('nip_dosen'),
+            'perusahaan'        => $this->request->getVar('perusahaan'),
+            'alamat_perusahaan'        => $this->request->getVar('alamat_perusahaan'),
+            'judul'        => $this->request->getVar('judul'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'tgl_awal'        => $this->request->getVar('tgl_awal'),
+            'tgl_akhir'        => $this->request->getVar('tgl_akhir'),
+            'semester'        => $this->request->getVar('semester'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'ta'        => '2022/2023',
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_riset_data_skripsi',$data);
+
+	}
+
+    function surat_studi_lanjut_sarjana()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+   
+            'ortu'        => $this->request->getVar('ortu'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'ttl'        => $this->request->getVar('ttl'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'jk'        => $this->request->getVar('jk'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'agama'        => $this->request->getVar('agama'),
+            'npm_lama'        => $this->request->getVar('npm_lama'),
+            'asal_prodi'        => $this->request->getVar('asal_prodi'),
+            'prodi_tujuan'        => $this->request->getVar('prodi_tujuan'),
+            'fk_tujuan'        => $this->request->getVar('fk_tujuan'),
+            'ta'        => '2022/2023',
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_studi_lanjut_sarjana',$data);
+
+	}
+
+    function surat_pindah_studi()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+   
+            'ortu'        => $this->request->getVar('ortu'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'ttl'        => $this->request->getVar('ttl'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'jk'        => $this->request->getVar('jk'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'agama'        => $this->request->getVar('agama'),
+            'npm_lama'        => $this->request->getVar('npm_lama'),
+            'asal_prodi'        => $this->request->getVar('asal_prodi'),
+            'prodi_tujuan'        => $this->request->getVar('prodi_tujuan'),
+            'asal_fk'        => $this->request->getVar('asal_fk'),
+            'asal_univ'        => $this->request->getVar('asal_univ'),
+            'strata'        => $this->request->getVar('strata'),
+      
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pindah_studi',$data);
+
+	}
+
+    function surat_pindah_studi_internal()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+   
+            'ortu'        => $this->request->getVar('ortu'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'ttl'        => $this->request->getVar('ttl'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'jk'        => $this->request->getVar('jk'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'agama'        => $this->request->getVar('agama'),
+            'npm_lama'        => $this->request->getVar('npm_lama'),
+            'asal_prodi'        => $this->request->getVar('asal_prodi'),
+            'prodi_tujuan'        => $this->request->getVar('prodi_tujuan'),
+            'fk_tujuan'        => $this->request->getVar('fk_tujuan'),
+            'asal_univ'        => $this->request->getVar('asal_univ'),
+            'strata'        => $this->request->getVar('strata'),
+            'semester'        => $this->request->getVar('semester'),
+            'dospa'        => $this->request->getVar('dospa'),
+            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+      
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_pindah_studi_internal',$data);
+
+	}
+
+    function surat_tidak_sanksi()
+	{       
+        
+        $data =[
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'), 
+   
+            'ortu'        => $this->request->getVar('ortu'),
+            'alasan'        => $this->request->getVar('alasan'),
+            'ttl'        => $this->request->getVar('ttl'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'jk'        => $this->request->getVar('jk'),
+            'nomor'        => $this->request->getVar('nomor'),
+            'keperluan'        => $this->request->getVar('keperluan'),
+            'akademik'        => $this->request->getVar('akademik'),
+            'asal_prodi'        => $this->request->getVar('asal_prodi'),
+            'prodi'        => $this->request->getVar('prodi'),
+            'fk_tujuan'        => $this->request->getVar('fk_tujuan'),
+            'asal_univ'        => $this->request->getVar('asal_univ'),
+            'strata'        => $this->request->getVar('strata'),
+            'semester'        => $this->request->getVar('semester'),
+            'dospa'        => $this->request->getVar('dospa'),
+            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+      
+            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
+            'nip_kajur' => '19740918 200112 1 001',
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_tidak_sanksi',$data);
+
+	}
 }

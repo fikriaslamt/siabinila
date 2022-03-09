@@ -7,8 +7,13 @@
         <input type="number" name="npm" class="form_text" placeholder="Masukan npm">
         <label for="nama">Nama :</label>
         <input type="text" name="nama" class="form_text" placeholder="Masukan Nama">
+
         <label for="semester">Semester :</label>
         <input type="number" name="semester" class="form_text" placeholder="Semester Saat ini">
+
+        <label for="alasan">Alasan Keterlambatan :</label>
+        <input type="text" name="alasan" class="form_text" placeholder="Alasan">
+        
         <label for="tanggal">Tanggal : (contoh : 1 Januari 2022)</label> 
         <input type="text" name="tanggal" class="form_text" placeholder="tanggal">
         

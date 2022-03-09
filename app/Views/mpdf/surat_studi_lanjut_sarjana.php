@@ -92,7 +92,7 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td>No. Telepon/HP</td>
-            <td>: '.$notlp.'</td>
+            <td>: '.$nomor.'</td>
         </tr>
         <tr>
             <td>Asal Universitas</td>
@@ -109,12 +109,12 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td>Asal Program Studi</td>
-            <td>: '.$prodi.'</td>
+            <td>: '.$asal_prodi.'</td>
          </tr>
 
         <tr>
             <td>PS Yang Dituju</td>
-            <td>: '.$ps_tujuan.'</td>
+            <td>: '.$prodi_tujuan.'</td>
         </tr>
   
         <tr>
@@ -125,7 +125,7 @@ $mpdf->WriteHTML('
     <br><br>
 
     Bersama ini kami mengajukan Alih Program (Studi Lanjut dari Program Diploma ke Program
-    Sarjana) dari dari Program Studi '.$prodi.' Fakultas FISIP Unila ke Program Studi '.$ps_tujuan.' Fakultas '.$fk_tujuan.' Unila
+    Sarjana) dari dari Program Studi '.$asal_prodi.' Fakultas FISIP Unila ke Program Studi '.$prodi_tujuan.' Fakultas '.$fk_tujuan.' Unila
     Sebagai bahan pertimbangan kami lampirkan persyaratan sebagai berikut:
     <br>
     <table class="padding_isi">
@@ -146,29 +146,49 @@ $mpdf->WriteHTML('
     Demikian surat permohonan kami, atas perhatian dan kerjasamanya disampaikan terimakasih. <br><br>
   <br>
 
-    <table style="width: 100%;">
-        <tr>
-            <td style="width: 55%;">
-                Mengetahui, <br>
-                Orang Tua/Wali <br><br><br><br><br>
-                '.$orangtua.'
-            </td>
-            <td>
-                Hormat Saya,
-                <br><br><br>Materai 6.000<br><br><br>
-                '.$nama.' <br>
-                NPM .'.$npm.'
-                
-            </td>
-        </tr>
-    </table>
-    <br>
-    Catatan: <br>
-    1. Bagi calon mahasiswa di lingkungan Unila IPK ≥ 3,00 dan di luar lingkungan Unila IPK ≥ 3,25;<br>
-    2. Alih program dari program studi di luar Unila dapat dilakukan jika program studi memiliki sekurang-kurangnya akreditasi yang sama dengan program studi yang dituju.
+    
     
 </div>
 
 ');
+
+$mpdf->AddPage();
+$mpdf->WriteHTML('   
+
+<div class="teks_isi">
+<br><br><br><br>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 55%;">
+                    Mengetahui, <br>
+                    Orang Tua/Wali <br><br><br><br><br>
+                    '.$ortu.'
+                </td>
+                <td>
+                    Hormat Saya,
+                    <br><br><br>Materai 6.000<br><br><br>
+                    '.$nama.' <br>
+                    NPM .'.$npm.'
+                    
+                </td>
+            </tr>
+        </table>
+        <br><br>
+
+        <div style="font-size: 11;">
+            Catatan:  <br>
+            <table style="font-size: 11;"> 
+                <tr>
+                    <td>1. </td>
+                    <td>Bagi calon mahasiswa di lingkungan Unila IPK ≥ 3,00 dan di luar lingkungan Unila IPK ≥ 3,25;</td>
+                </tr>
+                <tr>
+                    <td>2. </td>
+                    <td>Alih program dari program studi di luar Unila dapat dilakukan jika program studi memiliki sekurang-kurangnya akreditasi yang sama dengan program studi yang dituju.</td>
+                </tr>
+            </table>
+        </div>
+</div> 
+');  
 
 $mpdf->Output('file.pdf','D');

@@ -80,17 +80,17 @@ $mpdf->WriteHTML('
          </tr>
          <tr>
             <td>No. Telepon/HP</td>
-            <td>: '.$notlp.'</td>
+            <td>: '.$nomor.'</td>
         </tr>
 
     </table>
     <br><br>
 
     Dengan ini mengajukan permohonan penerbitan surat pengantar izin riset dan pengambilan data
-    skripsi ke Perusahaan/PT/CV '.$instansi.' di '.$lokasi.'. Adapun judul riset/skripsi saya adalah
+    skripsi ke Perusahaan/PT/CV '.$perusahaan.' di '.$alamat_perusahaan.'. Adapun judul riset/skripsi saya adalah
     “'.$judul.'” sebagai persyaratan permohonan pengajuan Judul Skripsi, bersama
     ini saya lampirkan Form (A.1 s.d. A.4).
-    
+    <br>
     <br>
     Atas perhatian dan kerjasamanya disampaikan terimakasih. <br><br>
   <br>
@@ -100,14 +100,14 @@ $mpdf->WriteHTML('
             <td style="width: 55%;">
                 Mengetahui, <br>
                 Dosen Pembimbing I Skripsi,<br><br><br><br><br>
-                '.$dospem.'
-                NIP. '.$nip_dospem.'
+                '.$dosen.' <br>
+                NIP '.$nip_dosen.'
             </td>
             <td>
                 Hormat Saya,
                 <br><br><br><br><br><br>
                 '.$nama.' <br>
-                NPM .'.$npm.'
+                NPM '.$npm.'
                 
             </td>
         </tr>
@@ -162,7 +162,7 @@ $mpdf->WriteHTML('
             <td>: 1 (satu) Berkas</td>
         </tr>
         <tr>
-            <td>Perihal</td>
+            <td>Hal</td>
             <td>: Persetujuan Izin Riset dan Pengambilan Data</td>
         </tr>
     </table>
@@ -198,7 +198,7 @@ $mpdf->WriteHTML('
     
 
     Sehubungan dengan adanya permohonan penerbitan surat izin riset dan pengambilan data skripsi
-    ke Perusahaan/PT/CV '.$instansi.' di '.$lokasi.' dengan judul riset-skripsi “'.$judul.'” atas nama 
+    ke Perusahaan/PT/CV '.$perusahaan.' di '.$alamat_perusahaan.' dengan judul riset-skripsi “'.$judul.'” atas nama 
     '.$nama.' dengan NPM '.$npm.' pada dasarnya kami menyetujui permohonan beserta kelengkapan
     berkas mahasiswa yang bersangkutan dan mohon dapat diterbitkan surat pengantar izin riset dan
     pengambilan data skripsinya.
@@ -267,13 +267,13 @@ $mpdf->WriteHTML('
         </tr>
     </table>
     <br><br>
-    Yth. Direktur Perusahaan/PT/CV '.$instansi.'<br/>
+    Yth. Direktur Perusahaan/PT/CV '.$perusahaan.'<br/>
 
     
     <table class="padding_isi">
         <tr>
             <td>
-            '.$lokasi.'
+            '.$alamat_perusahaan.'
             </td>
         </tr>
     
@@ -298,7 +298,7 @@ $mpdf->WriteHTML('
     Dalam rangka menyusun Skripsi dengan judul “'.$judul.'”, sebagai salah satu syarat untuk
     menyelesaikan studi pada Jurusan Ilmu Administrasi Bisnis, Dekan Fakultas Ilmu Sosial dan Ilmu
     Politik Universitas Lampung dengan ini mengharapkan bantuan dan kesediaan Direktur
-    Perusahaan/PT/CV '.$instansi.' untuk dapat memberikan izin melakukan Riset dan Pengambilan
+    Perusahaan/PT/CV '.$perusahaan.' untuk dapat memberikan izin melakukan Riset dan Pengambilan
     Data pada mahasiswa dibawah ini :
     <br><br>
 
@@ -322,7 +322,7 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td>No. Telepon/HP</td>
-            <td>: '.$notlp.'</td>
+            <td>: '.$nomor.'</td>
         </tr>
 
     </table>
@@ -331,7 +331,7 @@ $mpdf->WriteHTML('
 
     <table style="width: 100%;">
         <tr>
-            <td style="width: 55%;">
+            <td style="width: 45%;">
             </td>
             <td>
                 a.n. Dekan<br>
@@ -343,10 +343,10 @@ $mpdf->WriteHTML('
             </td>
         </tr>
     </table>
-
+    <br><br><br><br><br><br><br>
     Tembusan :<br>
     1. Dekan;<br>
-    2. Direktur '.$instansi.';<br>
+    2. Direktur '.$perusahaan.';<br>
     3. Ketua Jur. Adm. Bisnis;<br>
     4. Yang bersangkutan;<br>
     5. Arsip.

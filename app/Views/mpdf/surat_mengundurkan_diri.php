@@ -91,14 +91,14 @@ $mpdf->WriteHTML('
          </tr>
          <tr>
             <td>No. Telepon/HP</td>
-            <td>: '.$notlp.'</td>
+            <td>: '.$nomor.'</td>
         </tr>
 
     </table>
     <br><br>
 
     Dengan ini mengajukan permohonan mengundurkan diri dikarenakan '.$alasan.' dan semenjak
-    semester '.$semester.' TA '.$ajaran.' menyatakan sudah tidak aktif kuliah lagi. Bersama ini
+    semester '.$semester.' TA '.$ta.' menyatakan sudah tidak aktif kuliah lagi. Bersama ini
     saya lampirkan persyaratan sebagai berikut:
     <br>
     <table class="padding_isi">
@@ -127,11 +127,11 @@ $mpdf->WriteHTML('
             <td style="width: 55%;">
                 Mengetahui, <br>
                 Orang Tua/Wali <br><br><br><br><br>
-                '.$orangtua.'
+                '.$ortu.'
             </td>
             <td>
                 Hormat Saya,
-                <br><br><br>Materai 6.000<br><br><br>
+                <br><br><br><br><br><br>
                 '.$nama.' <br>
                 NPM .'.$npm.'
                 
@@ -153,8 +153,8 @@ $mpdf->WriteHTML('
     <td style="width: 100%; text-align: center;">
         Mengetahui/Menyetujui, <br>
         Dosen Pembimbing Akademik <br><br><br><br><br>
-        '.$dospem.'<br>
-        NIP. '.$nip_dospem.'
+        '.$dospa.'<br>
+        NIP. '.$nip_dospa.'
     </td>
 </tr>
 </table>
