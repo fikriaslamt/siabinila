@@ -118,16 +118,32 @@ class Mahasiswa extends BaseController
     {   
         $data = ['title' => "Formulir Akademik Mahasiswa"];
         echo view('layouts/header', $data);
-        echo view('layouts/navbar', $data);
-        echo view('r_mahasiswa/FormulirAkademik/aview_akademik',$data);
+        echo view('layouts/navbar');
+        echo view('r_mahasiswa/FormulirAkademik/aview_akademik');
         echo view('layouts/footer');
     }
     public function menu_ukt()
     {   
         $data = ['title' => "Formulir Akademik Mahasiswa"];
         echo view('layouts/header', $data);
-        echo view('layouts/navbar', $data);
-        echo view('r_mahasiswa/FormulirUKT/aview_ukt',$data);
+        echo view('layouts/navbar');
+        echo view('r_mahasiswa/FormulirUKT/aview_ukt');
+        echo view('layouts/footer');
+    }
+    public function menu_jurusan()
+    {   
+        $data = ['title' => "Formulir Jurusan Administrasi Bisnis"];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar');
+        echo view('r_mahasiswa/FormulirJurusan/aview_jurusan');
+        echo view('layouts/footer');
+    }
+    public function menu_kelengkapan_wisuda()
+    {   
+        $data = ['title' => "Formulir Kelengkapan Wisuda"];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar');
+        echo view('r_mahasiswa/FormulirWisuda/aview_wisuda');
         echo view('layouts/footer');
     }
 

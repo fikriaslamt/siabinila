@@ -1,8 +1,14 @@
-<div class="container">
-    <div class="content row">
+<div class="container-top">
+    <div class="row">
         <a href="<?=base_url('home')?>" class="back" style="float:right!important"><i class="fa fa-arrow-left"></i> Kembali</a>
-        <h4><?=$title?><h4>
     </div>
+</div>
+
+<div class="container" style="border: 1px solid #005dbb ">
+    <div class="content-title text-center">
+    <?=$title?>
+    </div>
+    
     
     <div class="content">
         <?php if (!empty($notif)){ ?>

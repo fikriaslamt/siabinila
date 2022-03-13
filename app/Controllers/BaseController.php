@@ -48,5 +48,10 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+        
+        date_default_timezone_set('Asia/Jakarta');
+
+        $this->waktuHari = new \IntlDateFormatter('id_ID',NULL,NULL,NULL,NULL,'EEEE');
+        $this->waktuTanggal = new \IntlDateFormatter('id_ID',NULL,NULL,NULL,NULL,'d MMMM yyyy');
     }
 }

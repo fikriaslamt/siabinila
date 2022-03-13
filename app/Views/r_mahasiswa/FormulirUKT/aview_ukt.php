@@ -1,3 +1,9 @@
+<div class="container-top">
+    <div class="row">
+        <a href="<?=base_url('home')?>" class="back" style="float:right!important"><i class="fa fa-arrow-left"></i> Kembali</a>
+    </div>
+</div>
+
 <div class="container">
   <h3>Formulir UKT</h3>
   <div class="row">

@@ -1,0 +1,184 @@
+CRITICAL - 2022-03-12 00:32:30 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-12 14:37:46 --> Call to undefined function DateTime()
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(48): view('r_mahasiswa/v_m...')
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#9 {main}
+CRITICAL - 2022-03-12 01:43:23 --> syntax error, unexpected ';', expecting ')'
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(48): view('r_mahasiswa/v_m...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#8 {main}
+CRITICAL - 2022-03-12 01:50:37 --> Undefined variable: setTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 50, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-03-12 01:51:06 --> Undefined property: App\Controllers\Cetakan::$setTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 50, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-03-12 14:56:42 --> Undefined variable: setTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\v_mahasiswa.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 15, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(48): view('r_mahasiswa/v_m...')
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-03-12 14:59:02 --> Undefined variable: setTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\v_mahasiswa.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 15, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(48): view('r_mahasiswa/v_m...')
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-03-12 02:05:11 --> Class 'App\Controllers\IntlDateFormatter' not found
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetakan->__construct()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-03-12 02:06:12 --> Class 'App\Controllers\IntlDateFormatter' not found
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetakan->__construct()
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-03-12 02:06:28 --> IntlDateFormatter::__construct() expects at least 3 parameters, 2 given
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(27): IntlDateFormatter->__construct('id_ID', 'EEEE, d MMMM yy...')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetakan->__construct()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-03-12 02:06:42 --> IntlDateFormatter::__construct() expects parameter 3 to be int, string given
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(27): IntlDateFormatter->__construct('id_ID', NULL, 'EEEE, d MMMM yy...')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetakan->__construct()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-03-12 02:15:39 --> Undefined property: App\Controllers\Cetakan::$setTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ACER\\O...', 27, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(801): App\Controllers\Cetakan->__construct()
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}
+CRITICAL - 2022-03-12 02:16:10 --> Call to a member function format() on bool
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-03-12 02:16:39 --> Call to a member function format() on bool
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#5 {main}
+CRITICAL - 2022-03-12 16:33:13 --> Undefined variable: setTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\v_mahasiswa.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 15, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(48): view('r_mahasiswa/v_m...')
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-03-12 16:33:29 --> Undefined variable: waktuTanggal
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\r_mahasiswa\v_mahasiswa.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ACER\\O...', 15, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(48): view('r_mahasiswa/v_m...')
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->index()
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#10 {main}
+CRITICAL - 2022-03-12 17:05:04 --> Invalid file: r_mahasiswa/FormulirUKT/aview_jurusan.php
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_mahasiswa/For...')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/For...', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Mahasiswa.php(138): view('r_mahasiswa/For...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Mahasiswa->menu_jurusan()
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#8 {main}
+CRITICAL - 2022-03-12 19:53:53 --> imagecreatefromstring(): gd-png:  fatal libpng error: bad adaptive filter value
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefrom...', 'C:\\Users\\ACER\\O...', 581, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Image\ImageProcessor.php(581): imagecreatefromstring('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Tag\Img.php(276): Mpdf\Image\ImageProcessor->getImage('6e96c8c66a6c26b...', true, true, 'data:image/png;...', false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Tag.php(240): Mpdf\Tag\Img->open(Array, Array, 7)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Mpdf.php(13812): Mpdf\Tag->OpenTag('IMG', Array, Array, 7)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(94): Mpdf\Mpdf->WriteHTML(' <table class="...')
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(51): view('mpdf/doc_pengaj...', Array)
+#10 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#11 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#12 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#15 {main}
+CRITICAL - 2022-03-12 19:54:23 --> imagecreatefromstring(): gd-png:  fatal libpng error: bad adaptive filter value
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefrom...', 'C:\\Users\\ACER\\O...', 581, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Image\ImageProcessor.php(581): imagecreatefromstring('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Tag\Img.php(276): Mpdf\Image\ImageProcessor->getImage('6e96c8c66a6c26b...', true, true, 'data:image/png;...', false)
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Tag.php(240): Mpdf\Tag\Img->open(Array, Array, 7)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\vendor\mpdf\mpdf\src\Mpdf.php(13812): Mpdf\Tag->OpenTag('IMG', Array, Array, 7)
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Views\mpdf\doc_pengajual_judul.php(94): Mpdf\Mpdf->WriteHTML(' <table class="...')
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\app\Controllers\Cetakan.php(51): view('mpdf/doc_pengaj...', Array)
+#10 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#11 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#12 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ACER\OneDrive\Dokumen\PKL\Sistem-Informasi-Skripsi\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#15 {main}

@@ -84,8 +84,8 @@ $mpdf->WriteHTML('
          <td style="width:60%">
             Dosen Pembimbing Akademik
             <br/><br/><br/><br/><br/><br/>
-            Drs. A. Effendi <br/>
-            NIP.1959090619880301011
+            ..................................... <br/>
+            NIP. ..................................
          </td>
          <td>
             Mahasiswa yang bersangkutan
@@ -231,11 +231,11 @@ $mpdf->WriteHTML('
             NIP. '.$nip_kajur.'
          </td>
          <td>
-            Bandar Lampung, '.date('d F Y').'<br/>
+            Bandar Lampung, ....................<br/>
             Dosen Pembimbing
             <br/><br/><br/><br/><br/><br/>
-            '.$dospem1.' <br/>
-            NIP.'.$npm.'
+            .................................. <br/>
+            NIP. ..................................
          </td>
         </tr>
     </table>    
@@ -287,27 +287,29 @@ $mpdf->WriteHTML('
         <td>4. Judul Skripsi</td> <td>:</td><td> '.$judul.'</td>
         </tr>
     </table>
-    
+</div>
     <table class="tbl_kosong">
         <tr>
-        <th style="width:10%">No.</th> <th>Tanggal</th> <th> Saran Pembimbing </th> <th> Paraf </th>
+        <th style="width:15%">No.</th> <th>Tanggal</th> <th> Saran Pembimbing  </th> <th style="width:20%"> Paraf </th>
         </tr>
         <tr>
-        <td> </td> <td> </td> <td>  </td> <td>  </td>
+        <td style="width:15%"></td> <td></td> <td></td> <td style="width:20%"></td>
         </tr>
         </tr>
     </table>
+<div class="teks_isi">
+    <br>
     <table style="width:100%">
         <tr>
          <td style="width:58%">
             
          </td>
          <td>
-            Bandar Lampung, '.date('d F Y').'<br/>
+            Bandar Lampung, ....................<br/>
             Dosen Pembimbing
             <br/><br/><br/><br/><br/><br/>
-            '.$nama.' <br/>
-            NIP.'.$npm.'
+            ..................................... <br/>
+            NIP. ..................................
          </td>
         </tr>
     </table>    
@@ -377,15 +379,15 @@ $mpdf->WriteHTML('
                 Penyaji Seminar,<br/>
                 Moderator/Pembahas
                 <br/><br/><br/><br/><br/><br/>
-                .................................. <br/>
-                NPM...................................
+                ................................... <br/>
+                NPM ..................................
             </td>
             <td>
-                Bandar Lampung, '.date('d F Y').'<br/>
+                Bandar Lampung, '.$tanggal.'<br/>
                 Mahasiswa
                 <br/><br/><br/><br/><br/><br/>
                 '.$nama.' <br/>
-                NIP.'.$npm.'
+                NPM '.$npm.'
             </td>
         </tr>
     </table><br/>    

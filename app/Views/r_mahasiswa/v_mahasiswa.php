@@ -1,6 +1,4 @@
-
 <?php
-date_default_timezone_set("Etc/GMT-7");
 $jam = ((int)date("H"));
 $waktu = "";
 if ($jam > 3 and $jam <=9){
@@ -10,6 +8,7 @@ if ($jam > 3 and $jam <=9){
 } else if($jam>14 and $jam <=17){
 	$waktu = "Sore";
 } else { $waktu = "Malam"; }
+
 
 foreach ($skripsi as $skripsii) :
   $tanggal = $skripsii->date;
@@ -72,7 +71,7 @@ endforeach;
   
   <div style="margin-left: 21px">Semester <?=$semester?>/14</div>
   <div class="meter">
-	<span style="width: <?=$smtr_persen?>%"></span>
+	<span style="width: <?= round($smtr_persen)?>%"></span>
   </div>
 
   <?php 
@@ -85,8 +84,12 @@ endforeach;
   ?>
   <div style="margin-left: 21px">Skripsi anda telah berjalan  <b><?= $interval->format('%a');?></b> Hari</div>
     <div class="meter">
-    <span style="width: <?= ($int_hari/180)*100?>%"></span>
-    <?php //echo($datetime2->format("N"))?>
+    <span style="width: <?= round(($int_hari/180)*100)?>%"></span>
+    <?php //echo($datetime2->format("N")) 
+    // echo strftime("%A %e %B %Y");
+    // echo date('%A %e %B $Y', strtotime('1994-02-15'));
+    ?>
+    
   </div>
   <?php endif ?>
   
@@ -121,13 +124,13 @@ endforeach;
       </div>
 
       <div class="atur-kolom-ka">
-        <a href="#">
+        <a href="<?= base_url('Mahasiswa/menu_jurusan')?>">
             <div class="menu-content cntn-1">Form Jurusan Ilmu Administrasi Bisnis</div>
         </a>
       </div>
 
       <div class="atur-kolom-ka">
-        <a href="#">
+        <a href="<?= base_url('Mahasiswa/menu_kelengkapan_wisuda')?>">
             <div class="menu-content cntn-1">Form Kelengkapan Wisuda</div>
         </a>
       </div>

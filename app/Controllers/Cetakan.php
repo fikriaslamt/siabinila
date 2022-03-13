@@ -8,11 +8,14 @@ use App\Models\M_surat_pengajuan_usul;
 use App\Models\M_surat_pengajuan_hasil;
 use App\Models\M_surat_pengajuan_kompre;
 use App\Models\M_data_pengajuan_judul;
+use App\Models\M_profil_dosen;
+use App\Models\Z_instansi;
 use CodeIgniter\Images\Image;
 use \Mpdf\Mpdf;
 
 
 class Cetakan extends BaseController {
+    
 
     public function __construct()
     {
@@ -21,6 +24,10 @@ class Cetakan extends BaseController {
         $this->M_surat_pengajuan_hasil = new M_surat_pengajuan_hasil();
         $this->M_surat_pengajuan_kompre = new M_surat_pengajuan_kompre();
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
+        $this->M_profil_dosen = new M_profil_dosen();
+        $this->Z_instansi = new Z_instansi();
+        $this->jrusan = $this->Z_instansi->findAll();
+
         //$this->response->setHeader('Content-Type', 'application/pdf');
     }
 
@@ -36,13 +43,14 @@ class Cetakan extends BaseController {
             'dapus'  => $skrip["dapus"],
             'nomor'  => $skrip["telepon"],
             'alamat' => $skrip["alamat"],
-            'ipk' => $skrip["ipk"],
-            'sks' => $skrip["sks"],
+            'ipk'    => $skrip["ipk"],
+            'sks'    => $skrip["sks"],
             'dospem1' => $skrip["dosp1"],
             'dospem2' => $skrip["dosp2"],
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
+            'tanggal'   => $this->waktuTanggal->format(date_create(date("d-m-Y"))),
+            'tahun'     => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_judul', $data);
@@ -58,14 +66,14 @@ class Cetakan extends BaseController {
         } else { $judul = $skrip["judul2"]; $isi = $skrip["judul2_isi"]; $dapus = $skrip["dapus2"]; }
 
         $data = [
-            'nama'   => $skrip["nama"],
-            'npm'    => $skrip["npm"],
-            'judul'  => $judul,
-            'isi'    => $isi,
-            'dapus'  => $dapus,
-            'kajur'  => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
-            'tahun'  => date("Y")
+            'nama'      => $skrip["nama"],
+            'npm'       => $skrip["npm"],
+            'judul'     => $judul,
+            'isi'       => $isi,
+            'dapus'     => $dapus,
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
+            'tahun'     => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
         echo view('mpdf/doc_pengajual_judul_view', $data);
@@ -75,7 +83,10 @@ class Cetakan extends BaseController {
     function surat_pengajuan_usul($npm)
 	{   
         $usul = $this->M_surat_pengajuan_usul->find($npm);
+        $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$usul["dospem1"]."'")->getResultArray();
+        
         $data = [
+            'no_surat'  => substr(1000+$usul["no_surat"],1,3),
             'npm'       => $usul["npm"],
             'nama'      => $usul["nama"],
             'judul'     => $usul["judul"],
@@ -83,11 +94,13 @@ class Cetakan extends BaseController {
             'jurusan'   => $usul["jurusan"],
             'dospem1'   => $usul["dospem1"],
             'dospem2'   => $usul["dospem2"],
-            'penguji_u'   => $usul["penguji_u"],
-            'kajur'     => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'penguji_u' => $usul["penguji_u"],
+            'nip_dospem1' => $dosen1[0]["nip"],
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'jam'       => $usul["jam"],
-            'tanggal'   => $usul["tanggal"],
+            'hari'      => $this->waktuHari->format(date_create(date($usul["tanggal"]))),
+            'tanggal'   => $this->waktuTanggal->format(date_create(date($usul["tanggal"]))),
             'tahun'     => date("Y"),
             'nilai_d1'  => $usul["nilai_d1"],
             'nilai_d2'  => $usul["nilai_d2"],
@@ -100,22 +113,27 @@ class Cetakan extends BaseController {
 	}
     function surat_pengajuan_hasil($npm)
 	{       
-        $data1 = $this->M_surat_pengajuan_hasil->find($npm);
+        $hasil = $this->M_surat_pengajuan_hasil->find($npm);
+        $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$hasil["dospem1"]."'")->getResultArray();
+        
         $data = [
-            'npm'       => $data1["npm"],
-            'nama'      => $data1["nama"],
-            'judul'     => $data1["judul"],
-            'dospem1'   => $data1["dospem1"],
-            'dospem2'   => $data1["dospem2"],
-            'penguji_u'   => $data1["penguji_u"],
-            'kajur'     => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'no_surat'  => substr(1000+$hasil["no_surat"],1,3),
+            'npm'       => $hasil["npm"],
+            'nama'      => $hasil["nama"],
+            'judul'     => $hasil["judul"],
+            'dospem1'   => $hasil["dospem1"],
+            'dospem2'   => $hasil["dospem2"],
+            'penguji_u' => $hasil["penguji_u"],
+            'nip_dospem1' => $dosen1[0]["nip"],
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun'     => date("Y"),
-            'jam'       => $data1["jam"],
-            'tanggal'   => $data1["tanggal"],
-            'nilai_d1'  => $data1["nilai_d1"],
-            'nilai_d2'  => $data1["nilai_d2"],
-            'nilai_pu'  => $data1["nilai_pu"],
+            'jam'       => $hasil["jam"],
+            'hari'      => $this->waktuHari->format(date_create(date($hasil["tanggal"]))),
+            'tanggal'   => $this->waktuTanggal->format(date_create(date($hasil["tanggal"]))),
+            'nilai_d1'  => $hasil["nilai_d1"],
+            'nilai_d2'  => $hasil["nilai_d2"],
+            'nilai_pu'  => $hasil["nilai_pu"],
         ];
 
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -126,25 +144,30 @@ class Cetakan extends BaseController {
     function surat_pengajuan_kompre($npm)
 	{       
         $data1 = $this->M_surat_pengajuan_kompre->find($npm);
+        $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$data1["dospem1"]."'")->getResultArray();
+        
         $data = [
+            'no_surat'  => substr(1000+$data1["no_surat"],1,3),
             'npm'       => $data1["npm"],
             'nama'      => $data1["nama"],
             'judul'     => $data1["judul"],
             'dospem1'   => $data1["dospem1"],
             'dospem2'   => $data1["dospem2"],
             'penguji_u' => $data1["penguji_u"],
+            'nip_dospem1' => $dosen1[0]["nip"],
             'nilai_d1'  => $data1["nilai_d1"],
             'nilai_d2'  => $data1["nilai_d2"],
             'nilai_pu'  => $data1["nilai_pu"],
-            'pelak11'  => $data1["pelak11"],
-            'pelak12'  => $data1["pelak12"],
+            'pelak11'   => $data1["pelak11"],
+            'pelak12'   => $data1["pelak12"],
             'naskah21'  => $data1["naskah21"],
             'naskah22'  => $data1["naskah22"],
             'naskah23'  => $data1["naskah23"],
-            'kajur'     => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'jam'       => $data1["jam"],
-            'tanggal'   => $data1["tanggal"],
+            'hari'      => $this->waktuHari->format(date_create(date($data1["tanggal"]))),
+            'tanggal'   => $this->waktuTanggal->format(date_create(date($data1["tanggal"]))),
             'tahun'     => date("Y"),
 
         ];
@@ -158,15 +181,15 @@ class Cetakan extends BaseController {
 	{       
         
         $data =[
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'semester'         => $this->request->getVar('semester'),
-            'alasan'        => $this->request->getVar('alasan'),
-            'tanggal'        => $this->request->getVar('tanggal'),
-            'orangtua'        => $this->request->getVar('orangtua'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
+            'npm'       => $this->request->getVar('npm'),
+            'nama'      => $this->request->getVar('nama'), 
+            'semester'  => $this->request->getVar('semester'),
+            'alasan'    => $this->request->getVar('alasan'),
+            'tanggal'   => $this->request->getVar('tanggal'),
+            'orangtua'  => $this->request->getVar('orangtua'),
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
+            'tahun'     => date("Y")
            
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -178,13 +201,13 @@ class Cetakan extends BaseController {
 	{       
         
         $data =[
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'semester'         => $this->request->getVar('semester'),
-            'tanggal'        => $this->request->getVar('tanggal'),
-            'orangtua'        => $this->request->getVar('orangtua'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'npm'       => $this->request->getVar('npm'),
+            'nama'      => $this->request->getVar('nama'), 
+            'semester'  => $this->request->getVar('semester'),
+            'tanggal'   => $this->request->getVar('tanggal'),
+            'orangtua'  => $this->request->getVar('orangtua'),
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")
            
         ];
@@ -197,15 +220,15 @@ class Cetakan extends BaseController {
 	{       
         
         $data =[
-            'npm'           => $this->request->getVar('npm'),
-            'nama'          => $this->request->getVar('nama'), 
-            'semester'         => $this->request->getVar('semester'),
-            'tanggal'        => $this->request->getVar('tanggal'),
-            'dospem'        => $this->request->getVar('dospem'),
-            'nip'        => $this->request->getVar('nip'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
-            'tahun' => date("Y")
+            'npm'       => $this->request->getVar('npm'),
+            'nama'      => $this->request->getVar('nama'), 
+            'semester'  => $this->request->getVar('semester'),
+            'tanggal'   => $this->request->getVar('tanggal'),
+            'dospem'    => $this->request->getVar('dospem'),
+            'nip'       => $this->request->getVar('nip'),
+            'kajur'     => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
+            'tahun'     => date("Y")
            
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -223,8 +246,8 @@ class Cetakan extends BaseController {
             'tanggal'        => $this->request->getVar('tanggal'),
             'dospem'        => $this->request->getVar('dospem'),
             'nip'        => $this->request->getVar('nip'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")
            
         ];
@@ -242,8 +265,8 @@ class Cetakan extends BaseController {
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'sks'        => $this->request->getVar('sks'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")
            
         ];
@@ -261,8 +284,8 @@ class Cetakan extends BaseController {
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'alamat'        => $this->request->getVar('alamat'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")
             
            
@@ -280,8 +303,8 @@ class Cetakan extends BaseController {
             'nama'          => $this->request->getVar('nama'), 
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -306,8 +329,8 @@ class Cetakan extends BaseController {
             'dospem'        => $this->request->getVar('dospem'),
             'orangtua'        => $this->request->getVar('orangtua'),
             'nip_dospem'        => $this->request->getVar('nip_dospem'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -331,8 +354,8 @@ class Cetakan extends BaseController {
             'dospem'        => $this->request->getVar('dospem'),
             'orangtua'        => $this->request->getVar('orangtua'),
             'nip_dospem'        => $this->request->getVar('nip_dospem'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -362,8 +385,8 @@ class Cetakan extends BaseController {
             'dospem'        => $this->request->getVar('dospem'),
             'orangtua'        => $this->request->getVar('orangtua'),
             'nip_dospem'        => $this->request->getVar('nip_dospem'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -381,8 +404,8 @@ class Cetakan extends BaseController {
             'nama'          => $this->request->getVar('nama'), 
             'semester'        => $this->request->getVar('semester'),
             'alasan'        => $this->request->getVar('alasan'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -400,8 +423,8 @@ class Cetakan extends BaseController {
             'dospa'        => $this->request->getVar('dospa'),
             'nip_dospa'        => $this->request->getVar('nip_dospa'),
            
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -421,8 +444,8 @@ class Cetakan extends BaseController {
             'dospj'        => $this->request->getVar('dospj'),
             'nip_dospj'        => $this->request->getVar('nip_dospj'),
            
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -446,8 +469,8 @@ class Cetakan extends BaseController {
             'semester'        => $this->request->getVar('semester'),
             'alamat'        => $this->request->getVar('alamat'),
             'ta'        => $this->request->getVar('ta'),
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -478,8 +501,8 @@ class Cetakan extends BaseController {
             'semester'        => $this->request->getVar('semester'),
             'alamat'        => $this->request->getVar('alamat'),
             'ta'        => '2022/2023',
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'dekan' => 'Drs. Susetyo, M.Si.',
             'nip_dekan' => '19581004 198902 1 001',
             'tahun' => date("Y")     
@@ -508,8 +531,8 @@ class Cetakan extends BaseController {
             'semester'        => $this->request->getVar('semester'),
             'alamat'        => $this->request->getVar('alamat'),
             'ta'        => '2022/2023',
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'dekan' => 'Drs. Susetyo, M.Si.',
             'nip_dekan' => '19581004 198902 1 001',
             'tahun' => date("Y")     
@@ -539,8 +562,8 @@ class Cetakan extends BaseController {
             'prodi_tujuan'        => $this->request->getVar('prodi_tujuan'),
             'fk_tujuan'        => $this->request->getVar('fk_tujuan'),
             'ta'        => '2022/2023',
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'dekan' => 'Drs. Susetyo, M.Si.',
             'nip_dekan' => '19581004 198902 1 001',
             'tahun' => date("Y")     
@@ -572,8 +595,8 @@ class Cetakan extends BaseController {
             'asal_univ'        => $this->request->getVar('asal_univ'),
             'strata'        => $this->request->getVar('strata'),
       
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'dekan' => 'Drs. Susetyo, M.Si.',
             'nip_dekan' => '19581004 198902 1 001',
             'tahun' => date("Y")     
@@ -608,8 +631,8 @@ class Cetakan extends BaseController {
             'dospa'        => $this->request->getVar('dospa'),
             'nip_dospa'        => $this->request->getVar('nip_dospa'),
       
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'dekan' => 'Drs. Susetyo, M.Si.',
             'nip_dekan' => '19581004 198902 1 001',
             'tahun' => date("Y")     
@@ -644,8 +667,8 @@ class Cetakan extends BaseController {
             'dospa'        => $this->request->getVar('dospa'),
             'nip_dospa'        => $this->request->getVar('nip_dospa'),
       
-            'kajur' => 'Suprihatin Ali, S.Sos., M.Sc',
-            'nip_kajur' => '19740918 200112 1 001',
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'dekan' => 'Drs. Susetyo, M.Si.',
             'nip_dekan' => '19581004 198902 1 001',
             'tahun' => date("Y")     
