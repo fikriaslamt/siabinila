@@ -134,7 +134,7 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
 
 <!-- Area Chart -->
 <div class="col-xl-8 col-lg-7">
-    <div class="card shadow mb-4">
+    <div class="card shadow">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-book"></i> Statistik Skripsi</h6>
@@ -169,16 +169,21 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
-        <hr>
+    </div>
+    <div class="card shadow mb-4">
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-6">Pengajual Judul Skripsi</div>
+                <div class="col-sm-6">Pengajuan Judul Skripsi</div>
                 <div class="col-sm-6">: <?=count($dat_pejudul)?> Mahasiswa Mengajukan</div>
             </div>
+            <div class="row">
+                <div class="col-sm-6">Pengajuan Penguji Seminar</div>
+                <div class="col-sm-6">: <?=count($dat_penguji)?> Mahasiswa Mengajukan</div>
+            </div>
         </div>
-        <br/>
     </div>
 </div>
+
 
 <!-- Pie Chart -->
 <div class="col-xl-4 col-lg-5">

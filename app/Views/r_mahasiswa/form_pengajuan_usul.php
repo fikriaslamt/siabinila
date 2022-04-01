@@ -50,30 +50,34 @@
         
         <input type="text" name="nama" class="form_text" value="<?=session()->nama?>" placeholder="Masukan Nama" readonly required>
         <label for="judul">
-            Judul Skripsi
+            Judul Skripsi <a class="btn" id="peubah" style="padding: 3px; margin:5px!important;" href="javascript:void(0);" onClick="ubah()">ubah</a>
         </label>  
-        <input type="judul" name="judul" class="form_text" value="<?=$skripsi["judul"]?>" placeholder="Masukkan Judul Skripsi" readonly required>
+        <input type="judul" name="judul" id="judul" class="form_text" value="<?=$skripsi["judul"]?>" placeholder="Masukkan Judul Skripsi" readonly required>
         <label for="dospem1">
             Dosen Pembimbing 1
         </label>  
-        <input type="text" name="dospem1" class="form_text" value="<?=$skripsi["dospem1"]?>"placeholder="Dosen Pembimbing 1" readonly required>
-        <label for="dospem2">
-            Dosen Pembimbing 2
-        </label>  
-        <input type="text" name="dospem2" class="form_text" value="<?=$skripsi["dospem2"]?>"placeholder="Dosen Pembimbing 2" readonly required>
+        <input type="text" name="dospem1" class="form_text" value="<?=$skripsi["dospem1"]?>" readonly required>
+        
+        <div style="display: <?= $skripsi["dospem2"] == null ? "none" : "visible"?>">
+            <label for="dospem2">
+                Dosen Pembimbing 2
+            </label>  
+            <input type="text" name="dospem2" class="form_text" value="<?=$skripsi["dospem2"]?>" readonly required>
+        </div>
+        
         <label for="penguji">
-            Penguji Utama <a class="btn" id="peubah" style="padding: 3px; margin:5px!important;" href="javascript:void(0);" onClick="ubah()">ubah</a>
+            Penguji Utama
         </label>  
-        <!-- <input type="text" name="penguji" class="form_text" value="<?=$skripsi["penguji_u"]?>"placeholder="Masukkan Dosen Penguji Yang Anda Dapat" readonly required> -->
-        <select name="penguji" class="form_text"  id="penguji" disabled required>
+        <input type="text" name="penguji" class="form_text" value="<?=$skripsi["penguji_u"]?>" readonly required>
+        <!-- <select name="penguji" class="form_text"  id="penguji" disabled required>
             <option value="<?=$skripsi["penguji_u"]?>"><?=$skripsi["penguji_u"]?> (Data Jurusan)</option>
             <?php foreach ($dosen as $dosen):?>
             <option value="<?=$dosen["nama"]?>"><?=$dosen["nama"]?></option>
             <?php endforeach ?>
-        </select>
+        </select> -->
 
         <label for="judul2">Pilih Tanggal</label> 
-        <input type="date" min="<?= date('Y-m-d'); ?>" name="tanggal" class="form_text" placeholder="Tanggal" required>
+        <input type="date" name="tanggal" class="form_text" placeholder="Tanggal" required>
         <label for="judul2">Pilih Jam</label> 
         <input type="time" min="07:30" max="17:00" name="jam" class="form_text" placeholder="Contoh: 13:00" required>
         <input type="checkbox" id="check1" required>
@@ -91,26 +95,17 @@
 </div>
 </div>
 <script>
-function Grund() {
-    if(document.getElementById('penguji').readOnly == true){
-        var result = confirm('Penguji telah ditentukan oleh jurusan, apakah ada perubahan dan anda ingin menggantinya?');
-        if(result == true){
-            document.getElementById('penguji').readOnly = false;
-            document.getElementById("Grund").innerHTML = "Read-Only attribute enabled";
-        } 
-    }
-}
 function ubah() {
-    if(document.getElementById('penguji').disabled == true){
-        var result = confirm('Penguji telah ditentukan oleh jurusan, apakah ada perubahan dan anda ingin menggantinya?');
+    if(document.getElementById('judul').readOnly == true){
+        var result = confirm('Perubahan judul harus berdasarkan izin pembimbing, apakah anda yakin ingin mengubah judul skripsi anda?');
         if(result == true){
-            document.getElementById('penguji').disabled = false;
+            document.getElementById('judul').readOnly = false;
             document.getElementById('peubah').hidden = true;
         } 
     }
 }
-function submitUbah() {
-    document.getElementById('penguji').disabled = false;
-}
+// function submitUbah() {
+//     document.getElementById('penguji').disabled = false;
+// }
 
 </script>

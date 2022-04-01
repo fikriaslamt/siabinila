@@ -13,7 +13,9 @@ if ($jam > 3 and $jam <=9){
 $bimbing = 0;
 foreach ($skripsi as $skrip) :
   $bimbing++;
-endforeach
+endforeach;
+
+$nilai = 80;
 
 ?>
 
@@ -133,7 +135,7 @@ endforeach
       </tr>
       <?php endforeach; ?>
       <?php endif ?>
-      <?php if (empty($usul) && empty($hasil)): ?>
+      <?php if (empty($usul) && empty($hasil) && empty($kompre)): ?>
       <tr>
         <td colspan="6">
           Tidak Ada Jadwal Seminar

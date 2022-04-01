@@ -11,10 +11,10 @@ $img3 = [
     'egs' => "data:image/png;base64,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"
 ];
 
-$xd1 = $nilai_d1*(40/100);
+$xd1 = $nilai_d1*(40/100);  $xd1_2 = $nilai_d1*(60/100); 
 $xd2 = $nilai_d2*(20/100);
 $xpu = $nilai_pu*(40/100);
-$na = $xd1+$xd2+$xpu;
+$na = $xd1+$xd2+$xpu;       $na_2 = $xd1_2+$xpu;
 
 $mpdf = new \Mpdf\Mpdf(['format' => 'A4', 
 'margin_top' => '10', 'margin_bottom' => '10',
@@ -307,7 +307,7 @@ $mpdf->WriteHTML('
                 Ketua Pelaksana Seminar,
                 <br><br><br><br><br><br>
                 '.$dospem1.'<br>
-                '.$nip_dospem1.'
+                '.$nip_1.'
 
             </td>
         </tr>
@@ -316,7 +316,8 @@ $mpdf->WriteHTML('
 </div>
 ');
 
-//form A8b
+if($dospem2 != null):
+//FORM A8b ----------------------------------------- OPSI 1
 $mpdf->AddPage();
 $mpdf->WriteHTML('                        
 <table class="header">
@@ -392,7 +393,7 @@ $mpdf->WriteHTML('
         <tbody>
         <tr> 
             <td>1.</td>
-            <td>Pembimbing Utama <br> '.$dospem1.' <br> NIP.'.$nip_dospem1.'</td>
+            <td>Pembimbing Utama <br> '.$dospem1.' <br> NIP.'.$nip_1.'</td>
             <td></td>
             <td class="tbl_center">60%</td>
             <td></td>
@@ -404,7 +405,7 @@ $mpdf->WriteHTML('
 
         <tr>
             <td>2.</td>
-            <td>Pembimbing Pembantu <br> '.$dospem2.' <br> NIP. '.$nip_kajur.'</td>
+            <td>Pembimbing Pembantu <br> '.$dospem2.' <br> NIP. '.$nip_2.'</td>
             <td></td>
             <td class="tbl_center">0%</td>
             <td></td>
@@ -416,7 +417,7 @@ $mpdf->WriteHTML('
 
         <tr>
             <td>3.</td>
-            <td>Penguji Utama <br> '.$penguji_u.' <br> NIP. '.$nip_kajur.'</td>
+            <td>Penguji Utama <br> '.$penguji_u.' <br> NIP. '.$nip_p.'</td>
             <td></td>
             <td class="tbl_center">40%</td>
             <td></td>
@@ -492,6 +493,185 @@ $mpdf->WriteHTML('
     
 </div>
 ');
+
+else:
+//FORM A8b ----------------------------------------- OPSI 2
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.8b</div>
+    <div class="title">FORM NILAI SEMINAR II/SEMINAR HASIL PENELITIAN</div>
+
+
+    <table>
+        <tr>
+            <td>Nama</td> <td>: '.$nama.'</td>
+        </tr>
+        <tr>
+            <td>NPM </td> <td>: '.$npm.'</td> 
+        </tr>
+        <tr>
+            <td>Jurusan/PS </td> <td>: Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi </td> <td>: '.$judul.' </td>
+        </tr>
+ 
+
+    </table>
+    <br>
+
+
+    <table class="tbl_isi">
+        <thead>
+            <tr>
+                <th rowspan="2">NO</th>
+                <th rowspan="2">PENGUJI</th>               
+                <th colspan="3">Satu Pembimbing</th>          
+                <th colspan="3">Dua Pembimbing</th>
+                <th rowspan="2">Tanda Tangan</th>
+            </tr>
+            <tr>
+                <th>Nilai</th>
+                <th>Bobot</th>
+                <th>Nilai X Bobot</th>
+                
+                <th>Nilai</th>
+                <th>Bobot</th>
+                <th>Nilai X Bobot</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+        <tr> 
+            <td>1.</td>
+            <td>Pembimbing Utama <br> '.$dospem1.' <br> NIP.'.$nip_1.'</td>
+            <td class="tbl_center">'.$nilai_d1.'</td>
+            <td class="tbl_center">60%</td>
+            <td class="tbl_center">'.$xd1_2.'</td>
+            <td></td>
+            <td class="tbl_center">40%</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>2.</td>
+            <td> <br><br> </td>
+            <td></td>
+            <td class="tbl_center">0%</td>
+            <td></td>
+            <td class="tbl_center"></td>
+            <td class="tbl_center">20%</td>
+            <td class="tbl_center"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>3.</td>
+            <td>Penguji Utama <br> '.$penguji_u.' <br> NIP. '.$nip_p.'</td>
+            <td class="tbl_center">'.$nilai_pu.'</td>
+            <td class="tbl_center">40%</td>
+            <td class="tbl_center">'.$xpu.'</td>
+            <td></td>
+            <td class="tbl_center">40%</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            
+            <td colspan="2">Nilai Akhir</td>
+            <td></td>
+            <td class="tbl_center">100</td>
+            <td class="tbl_center">'.$na_2.'</td>
+            <td></td>
+            <td class="tbl_center">100</td>
+            <td ></td>
+            <td></td>
+        </tr>
+            
+        </tbody>
+        
+    </table><br/>
+    Nilai Akhir Seminar II/Seminar Hasil Penelitian: '.$na_2.' <br><br>
+
+    Komponen Penilaian meliputi: <br>
+    
+    <table class="tbl_isi">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Kriteria</th>
+                <th>Acuan Penelitian</th>
+                <th>Bobot</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Permasalahan</td>
+                <td>Orisinalitas & kemutakhiran topik, ketajaman rumusan masalah</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Manfaat hasil penelitian</td>
+                <td>Pengembangan IPTEK dan pembangunan</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Methodelogi Penelitian</td>
+                <td>Ketepatan metode yang digunakan, comprehensiveness, dan kedetailan metode</td>
+                <td>25%</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Referensi acuan (maksimal 7 tahun terakhir)</td>
+                <td>Kedalaman pustaka pendukung, relevansi, dan kemutakhiran daftar pustaka</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Kelayakan Penelitian</td>
+                <td>Kesesuaian jadwal, format penulisan.</td>
+                <td>20%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</div>
+');
+endif;
 
 //form A8c
 $mpdf->AddPage();
@@ -690,16 +870,15 @@ $mpdf->WriteHTML('
                 Bandar Lampung, ...... .................. 2020 <br>
                 Mengetahui, <br>
                 Ketua Pelaksana Seminar 
-                <br><br><br><br>
+                <br><br><br><br><br>
                 '.$dospem1.'<br>
-                NIP '.$nip_dospem1.'
+                NIP '.$nip_1.'
             </td>
         </tr>
     </table>   
     
 </div>
 ');
-
 
 $mpdf->Output('file.pdf','I');
 

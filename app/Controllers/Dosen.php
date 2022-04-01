@@ -183,6 +183,9 @@ class Dosen extends BaseController
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_usul->delete($npm);
+        } else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["dospem2"] == null ){
+            $this->M_data_skripsi->update($npm, $pengajuan);
+            $this->M_seminar_usul->delete($npm);
         }
         
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
@@ -236,6 +239,11 @@ class Dosen extends BaseController
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_hasil->delete($npm);
         }
+        else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["dospem2"] == null ){
+            $this->M_data_skripsi->update($npm, $pengajuan);
+            $this->M_seminar_hasil->delete($npm);
+        }
+
         return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
@@ -298,7 +306,11 @@ class Dosen extends BaseController
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_ujian_kompre->delete($npm);
+        } else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["dospem2"] == null ){
+            $this->M_data_skripsi->update($npm, $pengajuan);
+            $this->M_ujian_kompre->delete($npm);
         }
+
         return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
     }
 

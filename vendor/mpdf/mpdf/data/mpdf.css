@@ -30,7 +30,7 @@ table {
 .tbl_kosong td, .tbl_kosong th {
 	border: 1px solid black; width:100%;
 }
-.tbl_kosong td { height: 370px;}
+.tbl_kosong td { height: 420px;}
 .header td { text-align: center; }
 .tbl_center { text-align: center;}
 .tbl_top { vertical-align: top;}

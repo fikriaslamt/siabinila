@@ -67,7 +67,7 @@
         <select name="dospem1" class="form_text" id="dospem1" required>
             <option value="">- Pilih Dosen-</option>
             <?php foreach ($dosen as $dsn1) : ?>
-            <option value="<?= $dsn1["nama"]?> "><?= $dsn1["nama"]?></option>
+            <option value="<?= $dsn1["nama"]?>"><?= $dsn1["nama"]?></option>
             <?php endforeach;?>
         </select>
         <label for="dospem2">
@@ -75,7 +75,7 @@
         <select name="dospem2" class="form_text" id="dospem2" required>
             <option value="">- Pilih Dosen -</option>
             <?php foreach ($dosen as $dsn2) : ?>
-            <option value="<?= $dsn2["nama"]?> "><?= $dsn2["nama"]?></option>
+            <option value="<?= $dsn2["nama"]?>"><?= $dsn2["nama"]?></option>
             <?php endforeach;?>
         </select> 
         

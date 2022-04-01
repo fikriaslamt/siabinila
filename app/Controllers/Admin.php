@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_register;
 use App\Models\M_data_pengajuan_judul;
+use App\Models\M_data_pengajuan_penguji;
 use App\Models\M_surat_pengajuan_judul;
 use App\Models\M_surat_pengajuan_usul;
 use App\Models\M_surat_pengajuan_hasil;
@@ -47,6 +48,8 @@ class Admin extends BaseController
 
         $register = $this->M_register->findAll();
         $data_peng_judul = $this->M_data_pengajuan_judul->findAll();
+        $pengujii = new M_data_pengajuan_penguji();
+        $data_peng_uji = $pengujii->findAll();
         $data_usul = $this->M_surat_pengajuan_usul->findAll();
         $data_hasil = $this->M_surat_pengajuan_hasil->findAll();
         $data_kompre = $this->M_ujian_kompre->findAll();
@@ -54,7 +57,8 @@ class Admin extends BaseController
 
         $data = [
             'title' => "Dashboard", 
-            'dat_regist' => $register, 'dat_pejudul' => $data_peng_judul, 'dat_skrip' => $data_skripsi, 
+            'dat_regist' => $register, 'dat_pejudul' => $data_peng_judul, 'dat_penguji' => $data_peng_uji, 
+            'dat_skrip' => $data_skripsi, 
             'dat_usul' => $data_usul, 'dat_hasil' => $data_hasil, 'dat_kompre' => $data_kompre,
             'mhs' => $data_mhs, 'dosen' => $data_dosen, 
             'mhs_pria' => $mhs_pria, 'mhs_wanita' => $mhs_wanita, 'chart' => "aktif"
@@ -136,17 +140,34 @@ class Admin extends BaseController
     }
 
     public function data_pengajuan_seminar()
-    {
+    {   
+        $penguji = new M_data_pengajuan_penguji();
+        $pengajuan_p = $penguji->findAll();
+
         $data1 = $this->M_seminar_usul->findAll();
         $data2 = $this->M_seminar_hasil->findAll();
 
         $data = [
             'title' => "Data Pengajuan Seminar",
-            'data1' => $data1, 'data2' => $data2
+            'data1' => $data1, 'data2' => $data2, 'pengajuan_p' => $pengajuan_p,
         ];
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
         echo view('r_admin/request_seminar', $data);
+        echo view('layouts/admin_footer');
+    }
+    public function pilih_penguji($npm)
+    {  
+        $skripsi = $this->M_data_skripsi->find($npm);
+        $dosen =$this->M_profil_dosen->findAll();
+
+        $data = [
+            'title' => "Konfirmasi Penguji Seminar",
+            'skrip' => $skripsi, 'dosen' => $dosen
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar');
+        echo view('r_admin/request_penguji');
         echo view('layouts/admin_footer');
     }
 
@@ -212,8 +233,8 @@ class Admin extends BaseController
             'date' => $date,
             'date_judul' => $date,
             'konsen' => $pengajuan['konsen'],
-            'penguji_u' => $this->request->getVar('penguji_u'),
-            'penguji_p' => implode("; ", $this->request->getVar('penguji_p')),
+            // 'penguji_u' => $this->request->getVar('penguji_u'),
+            // 'penguji_p' => implode("; ", $this->request->getVar('penguji_p')),
             'status' => "Judul Disetujui"
         ]);
         $this->M_data_pengajuan_judul->delete($npm);
@@ -233,6 +254,19 @@ class Admin extends BaseController
             'isi_pesan' => $this->request->getVar('isi_pesan'),
         ]);
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
+    }
+
+    public function tambah_penguji($npm)
+    {      
+        $this->M_data_skripsi->update($npm,[
+            'penguji_u' => $this->request->getVar('penguji_u'),
+            'penguji_p' => $this->request->getVar('penguji_p')
+        ]);
+
+        $penguji = new M_data_pengajuan_penguji();
+        $pengajuan_p = $penguji->delete($npm);
+
+        return redirect()->to(base_url('Admin/data_pengajuan_seminar'));
     }
 
     public function terima_usul($npm)

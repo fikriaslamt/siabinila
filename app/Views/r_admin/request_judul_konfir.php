@@ -49,14 +49,16 @@
             <div class="form-group">
                 <label for="dospem2">
                     Dosen Pembimbing 2</label>
-                <select name="dospem2" class="form-control" id="dospem2" required>
+                <select name="dospem2" class="form-control" id="dospem2">
                     <option value="<?=$data['dospem2']?>"><?=$data['dospem2']?> (Permohonan)</option>
                     <?php foreach ($dosen as $dsn2) : ?>
                     <option value="<?= $dsn2["nama"]?>"><?= $dsn2["nama"]?></option>
                     <?php endforeach;?>
                 </select>
+                <small>*Tidak Wajib</small>
             </div>
-            <div class="form-group">
+            
+            <!-- <div class="form-group">
                 <label for="penguji">
                     Penguji Seminar dan Kompre (Utama)</label>
                 <select name="penguji_u" class="form-control" id="penguji"required>
@@ -76,7 +78,7 @@
                 <small id="passwordHelpBlock" class="form-text text-muted">
                     Tahan tombol Ctrl (windows) atau Command (Mac), untuk memilih beberapa penguji
                 </small>
-            </div>
+            </div> -->
             <div class="row" style="margin-top:70px">            
             <a href="<?= base_url('/Admin/data_pengajuan_judul')?>" class="btn btn-dark ml-3 mb-4">&larr; Kembali</a>
             <input type="submit" name="register" class="btn btn-success ml-3 mb-4"  value="Terima" />

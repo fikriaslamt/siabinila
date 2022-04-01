@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\M_data_pengajuan_judul;
+use App\Models\M_data_pengajuan_penguji;
 use App\Models\M_profil_mahasiswa;
 use App\Models\M_profil_dosen;
 use App\Models\M_seminar_usul;
@@ -21,6 +22,7 @@ class Mahasiswa extends BaseController
     public function __construct()
     {
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
+        $this->M_data_pengajuan_penguji = new M_data_pengajuan_penguji();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
         $this->M_profil_dosen = new M_profil_dosen();
         $this->M_seminar_usul = new M_seminar_usul();
@@ -54,14 +56,15 @@ class Mahasiswa extends BaseController
         $skripsi = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where npm='".session()->user."'")->getResultArray();
         $notif = $this->M_data_notif->query("SELECT * FROM data_notif where untuk='".session()->user."'")->getResultArray();
         $pengajuan = $this->M_data_pengajuan_judul->query("SELECT * FROM data_pengajuan_judul where npm='".session()->user."'")->getResultArray();
+        $pengajuan_p = $this->M_data_pengajuan_penguji->find(session()->user);
         $data = [
             'title' => "Skripsi - Mahasiswa",
-            'skripsi' => $skripsi, 'pengajuan' => $pengajuan, 'notif' => $notif,
+            'skripsi' => $skripsi, 'pengajuan' => $pengajuan,'pengajuan_p' => $pengajuan_p, 'notif' => $notif,
             'pesan_err' => \Config\Services::validation(),
         ];
         echo view('layouts/header', $data);
-        echo view('layouts/navbar', $data);
-        echo view('r_mahasiswa/v_skripsi',$data);
+        echo view('layouts/navbar');
+        echo view('r_mahasiswa/v_skripsi');
         echo view('layouts/footer');
     }
 
@@ -191,8 +194,10 @@ class Mahasiswa extends BaseController
         $jadwal1 = $this->M_seminar_usul->findAll();
         $jadwal2 = $this->M_seminar_hasil->findAll();
         $skripsi = $this->M_data_skripsi->find(session()->user);
+        $dosen   = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "form pengajuan hasil", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2, 'skripsi' => $skripsi
+            'title' => "form pengajuan hasil", 'jadwal1' => $jadwal1, 'jadwal2' => $jadwal2, 'skripsi' => $skripsi,
+            'dosen' => $dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -204,8 +209,10 @@ class Mahasiswa extends BaseController
     {
         $jadwal = $this->M_ujian_kompre->findAll();
         $skripsi = $this->M_data_skripsi->find(session()->user);
+        $dosen   = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Form Pengajuan Ujian Skripsi", 'jadwal' => $jadwal, 'skripsi' => $skripsi
+            'title' => "Form Pengajuan Ujian Skripsi", 'jadwal' => $jadwal, 'skripsi' => $skripsi,
+            'dosen' => $dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -500,6 +507,18 @@ class Mahasiswa extends BaseController
         return redirect()->to(base_url('Mahasiswa/skripsi/'));
     }
 
+    public function ajukan_penguji($npm)
+    {
+        $skrip = $this->M_data_skripsi->find($npm);
+        $this->M_data_pengajuan_penguji->insert([
+            'npm'           => $skrip["npm"],
+            'nama'          => $skrip["nama"], 
+            'judul'         => $skrip["judul"], 
+            'konsentrasi'   => $skrip["konsen"],
+        ]);
+        return redirect()->to(base_url('Mahasiswa/skripsi'));
+    }
+
     public function tambah_pengajuan_usul($npm)
     {
         $this->M_seminar_usul->insert([
@@ -516,7 +535,10 @@ class Mahasiswa extends BaseController
             'npm'      => $this->request->getVar('npm'),
             'nama'     => $this->request->getVar('nama'), 
             'judul'    => $this->request->getVar('judul'), 
-            'prodi'    => "S1 Administrasi Bisnis",
+            'dospem1'  => $this->request->getVar('dospem1'),
+            'dospem2'  => $this->request->getVar('dospem2'),
+            'penguji_u'=> $this->request->getVar('penguji'),
+            'prodi'    => "Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisnis",
             'jam'      => $this->request->getVar('jam'),
             'tanggal'  => $this->request->getVar('tanggal'),
@@ -544,9 +566,14 @@ class Mahasiswa extends BaseController
         $this->M_surat_pengajuan_hasil->insert([
             'npm'      => $this->request->getVar('npm'),
             'nama'     => $this->request->getVar('nama'), 
-            'judul'    => $this->request->getVar('judul'), 
-            'prodi'    => "S1 Administrasi Bisnis",
+            'judul'    => $this->request->getVar('judul'),
+            'dospem1'  => $this->request->getVar('dospem1'),
+            'dospem2'  => $this->request->getVar('dospem2'),
+            'penguji_u'=> $this->request->getVar('penguji'),
+            'prodi'    => "Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisnis",
+            'jam'      => $this->request->getVar('jam'),
+            'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_data_skripsi->save([
             'npm' => $npm,
@@ -571,9 +598,14 @@ class Mahasiswa extends BaseController
         $this->M_surat_pengajuan_kompre->insert([
             'npm'      => $this->request->getVar('npm'),
             'nama'     => $this->request->getVar('nama'), 
-            'judul'    => $this->request->getVar('judul'), 
-            'prodi'    => "S1 Administrasi Bisnis",
+            'judul'    => $this->request->getVar('judul'),
+            'dospem1'  => $this->request->getVar('dospem1'),
+            'dospem2'  => $this->request->getVar('dospem2'),
+            'penguji_u'=> $this->request->getVar('penguji'),
+            'prodi'    => "Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisnis",
+            'jam'      => $this->request->getVar('jam'),
+            'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_data_skripsi->save([
             'npm' => $npm,

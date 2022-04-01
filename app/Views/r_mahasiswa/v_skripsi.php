@@ -11,8 +11,22 @@
     
     
     <div class="content">
+        <?php if (!empty($skripsi)): ?>
+        <div class="alert alert-primary">
+            <i class="fas fa-chalkboard-teacher" style="display:block; float:right"></i>
+            <ul>
+            <li>Dosen Pembimbing 1 anda: <?=$skripsi[0]["dospem1"]?></li>
+            <?php if (!empty($skripsi[0]["dospem2"])){ ?>
+            <li>Dosen Pembimbing 2 anda: <?=$skripsi[0]["dospem2"]?></li>
+            <?php } if (!empty($skripsi[0]["penguji_u"])){ ?>
+            <li>Dosen Penguji Seminar anda: <?=$skripsi[0]["penguji_u"]?> (Utama); <?=$skripsi[0]["penguji_p"]?></li>
+            <?php } ?>
+            </ul>
+        </div>
+        <?php endif ?>
+
         <?php if (!empty($notif)){ ?>
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
         <?= $notif[0]["subjek"]?><br/>
         oleh : <?= $notif[0]["oleh"]?><br/><br/><hr/>
         <br/>
@@ -20,30 +34,25 @@
         </div>
         
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>"><button>Form Pengajuan Judul Skripsi</button></a>
-
+        
         <?php } else if (empty($pengajuan) && empty($skripsi)){ ?>
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
         Anda Belum Mengajukan Skripsi
         </div>
         Perhatian :<br/>
-        - Pastikan kamu sudah lulus 140 sks sebelum mengajukan skripsi<br/>
+        - Pastikan kamu sudah lulus 110 sks sebelum mengajukan skripsi<br/>
         - Pastikan sedang tidak mengambil cuti<br/>
         - Bersungguh-sungguh dalam mengerjakan skripsi<br/><br/>
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>"><button>Form Pengajuan Judul Skripsi</button></a>
 
         <?php } else if (!empty($pengajuan) && empty($skripsi)){ ?>
-        <div class="alert">
+        <div class="alert alert-warning">
         Pengajuan Judul Skripsi Anda Sedang Dalam Peninjauan
         </div>
 
         <?php } else if ($skripsi[0]["status"]=="Judul Disetujui"){ ?>
-        <div class="alert">
-            Pengajuan Judul Skripsi Anda Telah disetujui<br/><br/>
-            <ul>
-            <li>Dosen Pembimbing 1 anda: <?=$skripsi[0]["dospem1"]?></li>
-            <li>Dosen Pembimbing 2 anda: <?=$skripsi[0]["dospem2"]?></li>
-            <li>Dosen Penguji Seminar anda: <?=$skripsi[0]["penguji_u"]?> (Utama); <?=$skripsi[0]["penguji_p"]?></li>
-        </ul>
+        <div class="alert alert-warning">
+        <i class="fas fa-envelope" style="display:block; float:right"></i> Pengajuan Judul Skripsi Anda Telah disetujui <br/>
         </div>
         
         Langkah Selanjutnya :<br/><br/>
@@ -58,10 +67,16 @@
         </ol>
         <br/>
         <a href="<?= base_url('Cetakan/surat_pengajuan_judul/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.1-A.5</button></a>
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>"><button><i class="fa fa-memo"></i> Form Pengajuan Seminar Usul</button></a>
+        <?php if (empty($skripsi[0]["penguji_u"]) && $pengajuan_p == null){ ?>
+            <a href="<?= base_url('Mahasiswa/ajukan_penguji/'.session()->user)?>" onclick="javascript:return confirm('Anda yakin sudah siap untuk seminar dan mengajukan penguji seminar?');"><button><i class="fa fa-memo"></i> Ajukan Penguji Seminar</button></a>
+        <?php } else if ($pengajuan_p != null){ ?>
+            <a><i class="fa fa-memo"></i> Sedang Mengajukan Penguji <i class="fas fa-spinner fa-pulse"></i></a>
+        <?php } else { ?>
+            <a href="<?= base_url('Mahasiswa/form_pengajuan_usul')?>"><button><i class="fa fa-memo"></i> Form Pengajuan Seminar Usul</button></a>
+        <?php }?>
 
         <?php } else if ($skripsi[0]["status"]=="Mengajukan Seminar Usul"){ ?>
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
             Anda sudah mengajukan seminar usul, tunggu sampai seminar anda berjalan<br/>
         </div>
         Langkah Selanjutnya :<br/>
@@ -70,7 +85,7 @@
         <a href="<?= base_url('Cetakan/surat_pengajuan_usul/'.session()->user)?>"><button>Lihat PDF Seminar Usul</button></a>
 
         <?php } else if ($skripsi[0]["status"]=="Seminar Usul Disetujui"){ ?>
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
             Seminar usul anda telah dinilai dan disetujui
         </div>
         Perhatian :<br/>
@@ -81,7 +96,7 @@
         <a href="<?= base_url('Mahasiswa/form_pengajuan_hasil')?>"><button>Form Pengajuan Seminar Hasil</button></a>
 
         <?php } else if ($skripsi[0]["status"]=="Mengajukan Seminar Hasil"){ ?>
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
             Anda sudah mengajukan seminar hasil, tunggu sampai seminar anda berjalan<br/>
         </div>
         Langkah Selanjutnya :<br/>
@@ -90,7 +105,7 @@
         <a href="<?= base_url('Cetakan/surat_pengajuan_hasil/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.8-A.8c</button></a>
        
         <?php } else if ($skripsi[0]["status"]=="Seminar Hasil Disetujui"){ ?>    
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
             Seminar hasil anda telah dinilai dan disetujui
         </div>
         Perhatian :<br/>
@@ -101,7 +116,7 @@
         <a href="<?= base_url('Mahasiswa/form_pengajuan_kompre')?>"><button>Form Pengajuan Seminar Kompre</button></a>
 
         <?php } else if ($skripsi[0]["status"]=="Mengajukan Ujian Skripsi"){ ?>
-        <div class="alert">
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
             Anda sudah mengajukan Ujian Skripsi, tunggu sampai ujian skripsi anda berjalan anda berjalan<br/>
         </div>
         Langkah Selanjutnya :<br/>
@@ -110,9 +125,10 @@
         <a href="<?= base_url('Cetakan/surat_pengajuan_kompre/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Form A.9-A.14</button></a>
         
         <?php } else if ($skripsi[0]["status"]=="Telah Lulus Skripsi"){ ?>
-        <div class="alert">
-        Anda Telah Lulus
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
+        Anda Telah Lulus Ujian Skripsi
         </div>
+        <a href="<?= base_url('Cetakan/surat_pengajuan_kompre/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Ujian Kompre</button></a>
         <?php } ?>
     </div>
     

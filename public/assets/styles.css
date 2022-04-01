@@ -137,8 +137,9 @@ body {
 .btn-skripsi:hover { background-color: var(--button-gelap);}
 
 .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;
-  color:#004085;background-color:#cce5ff;border-color:#b8daff;
 }
+.alert-primary{color:#004085;background-color:#cce5ff;border-color:#b8daff;}
+.alert-warning{color:#856404;background-color:#fff3cd;border-color:#ffeeba}
 
 .container-top { background-color: rgba(0,0,0,0); border-radius:0px; box-shadow: none;}
 footer {

@@ -197,7 +197,7 @@ $mpdf->WriteHTML('
         <td>1. Nama </td> <td>:</td><td> '.$dospem1.'</td>
         </tr>
         <tr>
-        <td>2. NIP </td> <td>:</td><td> 19810106200s012002</td>
+        <td>2. NIP </td> <td>:</td><td> '.$nip_1.'</td>
         </tr>
         <tr>
         <td>3. Pangkat/Golongan </td> <td>:</td><td> Penata Muda Tingkat I
@@ -231,16 +231,100 @@ $mpdf->WriteHTML('
             NIP. '.$nip_kajur.'
          </td>
          <td>
-            Bandar Lampung, ....................<br/>
+            Bandar Lampung, ........................ <br/>
             Dosen Pembimbing
             <br/><br/><br/><br/><br/><br/>
-            .................................. <br/>
-            NIP. ..................................
+            '.$dospem1.' <br/>
+            NIP. '.$nip_1.'
          </td>
         </tr>
     </table>    
 </div>
 ');
+
+if(!empty($dospem2)):
+// FORM A.3 ---------------------------------------------------------
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.3</div>
+    <div class="title">Persetujuan Komisi Pembimbing</div>
+    <p>Yang bertanda tangan di bawah ini:</p>
+    <table>
+        <tr>
+        <td>1. Nama </td> <td>:</td><td> '.$dospem2.'</td>
+        </tr>
+        <tr>
+        <td>2. NIP </td> <td>:</td><td> '.$nip_2.'</td>
+        </tr>
+        <tr>
+        <td>3. Pangkat/Golongan </td> <td>:</td><td> Penata Muda Tingkat I
+        </td>
+        </tr>
+    </table>
+    <p>Menyatakan bersedia/tidak bersedia*) sebagai Pembimbing Utama/Pembimbing
+    pembantu *) pada penyusunan skripsi mahasiswa FISIP Universitas Lampung:</p>
+    <table>
+        <tr>
+        <td>1. Nama </td> <td>:</td><td> '.$nama.'</td>
+        </tr>
+        <tr>
+        <td>2. NIP </td> <td>:</td><td> '.$npm.'</td>
+        </tr>
+        <tr>
+        <td>3. Jurusan </td> <td>:</td><td> Administrasi Bisnis</td>
+        </tr>
+        <tr>
+        <td>4. Judul Skripsi</td> <td>:</td><td> '.$judul.' </td>
+        </tr>
+    </table>
+    <p>Demikian surat persetujuan ini dan agar dapat dipergunakan sebagaimana mestinya.</p>
+    <table style="width:100%">
+        <tr>
+         <td style="width:58%">
+            Menyetujui: <br/>
+            Ketua Jurusan
+            <br/><br/><br/><br/><br/><br/>
+            '.$kajur.'<br>
+            NIP. '.$nip_kajur.'
+         </td>
+         <td>
+            Bandar Lampung, ........................ <br/>
+            Dosen Pembimbing
+            <br/><br/><br/><br/><br/><br/>
+            '.$dospem2.' <br/>
+            NIP. '.$nip_2.'
+         </td>
+        </tr>
+    </table>    
+</div>
+');
+endif;
 
 // FORM A.4 ---------------------------------------------------------
 $mpdf->AddPage();
@@ -308,13 +392,89 @@ $mpdf->WriteHTML('
             Bandar Lampung, ....................<br/>
             Dosen Pembimbing
             <br/><br/><br/><br/><br/><br/>
-            ..................................... <br/>
-            NIP. ..................................
+            '.$dospem1.' <br/>
+            NIP. '.$nip_1.'
          </td>
         </tr>
     </table>    
 </div>
 ');
+
+if(!empty($dospem2)):
+// FORM A.4 ---------------------------------------------------------
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.4</div>
+    <div class="title">PROSES BIMBINGAN SKRIPSI</div>
+    <table>
+        <tr>
+        <td>1. Nama </td> <td>:</td><td> '.$nama.'</td>
+        </tr>
+        <tr>
+        <td>2. NIP </td> <td>:</td><td> '.$npm.'</td>
+        </tr>
+        <tr>
+        <td>3. Jurusan </td> <td>:</td><td> Administrasi Bisnis</td>
+        </tr>
+        <tr>
+        <td>4. Judul Skripsi</td> <td>:</td><td> '.$judul.'</td>
+        </tr>
+    </table>
+</div>
+    <table class="tbl_kosong">
+        <tr>
+        <th style="width:15%">No.</th> <th>Tanggal</th> <th> Saran Pembimbing  </th> <th style="width:20%"> Paraf </th>
+        </tr>
+        <tr>
+        <td style="width:15%"></td> <td></td> <td></td> <td style="width:20%"></td>
+        </tr>
+        </tr>
+    </table>
+<div class="teks_isi">
+    <br>
+    <table style="width:100%">
+        <tr>
+         <td style="width:58%">
+            
+         </td>
+         <td>
+            Bandar Lampung, ....................<br/>
+            Dosen Pembimbing
+            <br/><br/><br/><br/><br/><br/>
+            '.$dospem2.' <br/>
+            NIP. '.$nip_2.'
+         </td>
+        </tr>
+    </table>    
+</div>
+');
+endif;
 
 // FORM A.5 ---------------------------------------------------------
 $mpdf->AddPage();
@@ -399,8 +559,8 @@ $mpdf->WriteHTML('
             Mengetahui,<br/>
             Koordinator Pelaksana Seminar
             <br/><br/><br/><br/><br/><br/>
-            .................................. <br/>
-            NIP. ..................................
+            '.$dospem1.' <br/>
+            NIP. '.$nip_1.'
             </div>
         </td>
     </tr>

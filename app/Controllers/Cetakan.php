@@ -34,6 +34,8 @@ class Cetakan extends BaseController {
     function surat_pengajuan_judul($npm)
 	{       
         $skrip = $this->M_surat_pengajuan_judul->find($npm);
+        $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$skrip["dosp1"]."'")->getResultArray();
+        $dosen2 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$skrip["dosp2"]."'")->getResultArray();
         $data = [
             'nama'   => $skrip["nama"],
             'npm'    => $skrip["npm"],
@@ -46,7 +48,9 @@ class Cetakan extends BaseController {
             'ipk'    => $skrip["ipk"],
             'sks'    => $skrip["sks"],
             'dospem1' => $skrip["dosp1"],
+            'nip_1' => $dosen1[0]["nip"],
             'dospem2' => $skrip["dosp2"],
+            'nip_2' => $dosen2[0]["nip"],
             'kajur'     => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tanggal'   => $this->waktuTanggal->format(date_create(date("d-m-Y"))),
@@ -84,7 +88,12 @@ class Cetakan extends BaseController {
 	{   
         $usul = $this->M_surat_pengajuan_usul->find($npm);
         $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$usul["dospem1"]."'")->getResultArray();
-        
+        $dosenPenguji = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$usul["penguji_u"]."'")->getResultArray();
+        if(empty($usul["dospem2"])){
+        $dosen2 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$usul["dospem2"]."'")->getResultArray();
+        $dosen2[0]["nip"] = null;
+        }
+
         $data = [
             'no_surat'  => substr(1000+$usul["no_surat"],1,3),
             'npm'       => $usul["npm"],
@@ -95,7 +104,9 @@ class Cetakan extends BaseController {
             'dospem1'   => $usul["dospem1"],
             'dospem2'   => $usul["dospem2"],
             'penguji_u' => $usul["penguji_u"],
-            'nip_dospem1' => $dosen1[0]["nip"],
+            'nip_1' => $dosen1[0]["nip"],
+            'nip_2' => $dosen2[0]["nip"],
+            'nip_p' => $dosenPenguji[0]["nip"],
             'kajur'     => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'jam'       => $usul["jam"],
@@ -115,7 +126,11 @@ class Cetakan extends BaseController {
 	{       
         $hasil = $this->M_surat_pengajuan_hasil->find($npm);
         $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$hasil["dospem1"]."'")->getResultArray();
-        
+        $dosenPenguji = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$hasil["penguji_u"]."'")->getResultArray();
+        if(empty($hasil["dospem2"])){
+        $dosen2 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$hasil["dospem2"]."'")->getResultArray();
+        $dosen2[0]["nip"] = null;
+        }
         $data = [
             'no_surat'  => substr(1000+$hasil["no_surat"],1,3),
             'npm'       => $hasil["npm"],
@@ -124,7 +139,9 @@ class Cetakan extends BaseController {
             'dospem1'   => $hasil["dospem1"],
             'dospem2'   => $hasil["dospem2"],
             'penguji_u' => $hasil["penguji_u"],
-            'nip_dospem1' => $dosen1[0]["nip"],
+            'nip_1' => $dosen1[0]["nip"],
+            'nip_2' => $dosen2[0]["nip"],
+            'nip_p' => $dosenPenguji[0]["nip"],
             'kajur'     => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun'     => date("Y"),
@@ -145,7 +162,12 @@ class Cetakan extends BaseController {
 	{       
         $data1 = $this->M_surat_pengajuan_kompre->find($npm);
         $dosen1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$data1["dospem1"]."'")->getResultArray();
-        
+        $dosenPenguji = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$data1["penguji_u"]."'")->getResultArray();
+        if(empty($data1["dospem2"])){
+        $dosen2 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$data1["dospem2"]."'")->getResultArray();
+        $dosen2[0]["nip"] = null;
+        }
+
         $data = [
             'no_surat'  => substr(1000+$data1["no_surat"],1,3),
             'npm'       => $data1["npm"],
@@ -154,7 +176,9 @@ class Cetakan extends BaseController {
             'dospem1'   => $data1["dospem1"],
             'dospem2'   => $data1["dospem2"],
             'penguji_u' => $data1["penguji_u"],
-            'nip_dospem1' => $dosen1[0]["nip"],
+            'nip_1' => $dosen1[0]["nip"],
+            'nip_2' => $dosen2[0]["nip"],
+            'nip_p' => $dosenPenguji[0]["nip"],
             'nilai_d1'  => $data1["nilai_d1"],
             'nilai_d2'  => $data1["nilai_d2"],
             'nilai_pu'  => $data1["nilai_pu"],
