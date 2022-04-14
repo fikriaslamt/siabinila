@@ -48,6 +48,17 @@
             Penguji Utama
         </label>
         <input type="text" name="penguji" class="form_text" value="<?=$skripsi["penguji_u"]?>" readonly required>
+        <div style="display: <?= $skripsi["penguji_p"] == null ? "none" : "visible"?>">
+            <label for="penguji_p">
+            Penguji Dua
+            </label>  
+            <input type="text" name="penguji_p" class="form_text" value="<?=$skripsi["penguji_p"]?>" readonly required>
+        </div>
+        
+        <label for="sks">
+            SKS yang diselesaikan
+        </label>
+        <input type="number" name="sks" min="110" max="200" class="form_text" value="<?=$skripsi["penguji_u"]?>" required>
         
         
         <label for="judul2">Pilih Tanggal</label> 

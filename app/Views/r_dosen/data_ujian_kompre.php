@@ -112,17 +112,21 @@
                 <td>
                 <?php if($data['dospem1']== session()->nama){
                     $sebagai = "Pembimbing 1";
-                    $nilai = $data["nilai_d1"];
+                    $nilai = ($data["nilai_d1"] + $data["nilai_d1t"]) / 2;
                     echo "Pembimbing 1";
                 } else if($data['dospem2']== session()->nama){
                     $sebagai = "Pembimbing 1";
-                    $nilai = $data["nilai_d2"];
+                    $nilai = ($data["nilai_d2"] + $data["nilai_d2t"]) / 2;
                     echo "Pembimbing 2";
                 } else if($data['penguji_u']== session()->nama){
-                    $sebagai = "Penguji Utama";
-                    $nilai = $data["nilai_pu"];
-                    echo "Penguji Utama";
-                }
+                    $sebagai = "Penguji 1";
+                    $nilai = ($data["nilai_pu"] + $data["nilai_ppt"]) / 2;
+                    echo "Penguji 1";
+                } else if($data['penguji_p']== session()->nama){
+                  $sebagai = "Penguji 2";
+                  $nilai = ($data["nilai_pp"] + $data["nilai_ppt"]) / 2;
+                  echo "Penguji 2";
+              }
                 ?>
                 </td>
                 <td>
@@ -138,41 +142,26 @@
                             <h2>Nilai Ujian Skripsi</h2>
                             <a class="close" href="#">&times;</a>
                             <div class="content">
-                            <form action="<?= base_url('Dosen/terima_kompre/'.$data["npm"])?>" method="post">
-                            <label>"<?= $data['judul']; ?>"</label><br/><br/>
-                            <label><b>Masukkan Nilai Sebagai <?=$sebagai?></b></label>
-                            <input type="number" max="100" name="nilai" class="form_text" placeholder="Misal: 78" required>
+                              <form action="<?= base_url('Dosen/terima_kompre/'.$data["npm"])?>" method="post">
+                              <label>"<?= $data['judul']; ?>"</label><br/><br/>
 
-                            <?php if($sebagai == "Pembimbing 1"):?>
-                              <label>Masukkan Nilai Hasil Sidang</label>
+                              <label>Masukkan Nilai Hasil Sidang</label><br><br>
                               <table style="width: 100%;">
                                 <tr>
-                                <th colspan="2">Teknik Penyajian</th></tr>
-                                <tr>
-                                  <td>1.1 Teknik Penyajian</td>
-                                <td><input type="number" min="50" max="100" name="pelak11" class="form_text" placeholder="Nilai" required></td>
-                                </tr><tr>
-                                  <td>1.2 Penguasaan Substansi
-                                <td><input type="number" min="50" max="100" name="pelak12" class="form_text" placeholder="Nilai" required></td>
+                                  <td>1. Teknik Penyajian</td>
+                                <td><input type="number" min="50" max="100" name="nilai1" id="nilai1" oninput="myFunction()" class="form_text" placeholder="Nilai" value="0"required></td>
                                 </tr>
-                                <tr>
-                                <th colspan="2">Naskah Skripsi</th></tr>
                                 <tr>
                                 <tr style="border-top: 1px solid #000 !important;">
-                                  <td>2.1 Originilitas
-                                <td><input type="number" min="50" max="100" name="naskah21" class="form_text" placeholder="Nilai" required></td>
-                                </tr><tr>
-                                  <td>2.2 Kegunaan dan kemuktahiran tinjauan pustaka
-                                <td><input type="number" min="50" max="100" name="naskah22" class="form_text" placeholder="Nilai" required></td>
-                                </tr><tr>
-                                  <td>2.3 Teknik Penulisan
-                                <td><input type="number" min="50" max="100" name="naskah23" class="form_text" placeholder="Nilai" required></td>
+                                  <td>2. Naskah Skripsi</td>
+                                <td><input type="number" min="50" max="100" name="nilai2" id="nilai2" oninput="myFunction()" class="form_text" placeholder="Nilai" value="0" required></td>
                                 </tr>
                               </table><br/>
+                              <div id="jumlah" style="text-align:right;">Jumlah Nilai: 0</div>
+                              <div id="mean"   style="text-align:right;">Nilai Rata-rata: 0</div>
                             </div>
-                            <div class="content">
-                            <?php endif ?>
 
+                            <div class="content">
                             <input type="text" name="sebagai" value="<?=$sebagai?>" hidden required>
                             <input type="submit" class="tombol_submit" value="Konfirmasi Nilai">
                             </form>
@@ -186,3 +175,14 @@
         </tbody>
     </table> 
 </div>
+
+<script>
+function myFunction() {
+  var x = parseInt(document.getElementById("nilai1").value);
+  var y = parseInt(document.getElementById("nilai2").value);
+  let jumlah = x + y;
+  let mean = jumlah/2;
+  document.getElementById("jumlah").innerHTML = "Jumlah Nilai: " + jumlah;
+  document.getElementById("mean").innerHTML = "Nilai Rata-rata : " + mean;
+}
+</script>

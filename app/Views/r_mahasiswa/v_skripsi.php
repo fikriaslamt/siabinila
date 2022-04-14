@@ -128,6 +128,8 @@
         <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
         Anda Telah Lulus Ujian Skripsi
         </div>
+        Perhatian :<br/>
+        - Silahkan unduh formulir ujian terbaru, cukup cetak (Form A.13b-A13c) untuk keperluan nilai<br/><br/>
         <a href="<?= base_url('Cetakan/surat_pengajuan_kompre/'.session()->user)?>"><button><i class="fas fa-download"></i> Dokumen Ujian Kompre</button></a>
         <?php } ?>
     </div>

@@ -61,9 +61,12 @@ $nilai = 80;
           echo "Pembimbing 2";
         } else if($usul['penguji_u']== session()->nama){
           $nilai = $usul["nilai_pu"];
-          echo "Penguji Utama";
+          echo "Penguji 1";
+        } else if($usul['penguji_p']== session()->nama){
+          $nilai = $usul["nilai_pp"];
+          echo "Penguji 2";
         }
-        ?>
+        ?> 
         </td>
         <td>
           <?php if($nilai==0):?>
@@ -91,7 +94,10 @@ $nilai = 80;
           echo "Pembimbing 2";
         } else if($hasil['penguji_u']== session()->nama){
           $nilai = $hasil["nilai_pu"];
-          echo "Penguji Utama";
+          echo "Penguji 1";
+        } else if($hasil['penguji_p']== session()->nama){
+          $nilai = $hasil["nilai_pp"];
+          echo "Penguji 2";
         }
         ?>
         </td>
@@ -121,7 +127,10 @@ $nilai = 80;
           echo "Pembimbing 2";
         } else if($kompre['penguji_u']== session()->nama){
           $nilai = $kompre["nilai_pu"];
-          echo "Penguji Utama";
+          echo "Penguji 1";
+        } else if($kompre['penguji_p']== session()->nama){
+          $nilai = $kompre["nilai_pp"];
+          echo "Penguji 2";
         }
         ?>
         </td>

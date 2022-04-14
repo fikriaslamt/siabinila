@@ -75,6 +75,26 @@
             <option value="<?=$dosen["nama"]?>"><?=$dosen["nama"]?></option>
             <?php endforeach ?>
         </select> -->
+        <div style="display: <?= $skripsi["penguji_p"] == null ? "none" : "visible"?>">
+            <label for="penguji_p">
+                Penguji Dua
+            </label>  
+            <input type="text" name="penguji_p" class="form_text" value="<?=$skripsi["penguji_p"]?>" readonly required>
+        </div>
+
+        <label for="pembahas1">
+            Pembahas Mahasiswa I
+        </label>  
+        <input type="text" name="pembahas1" class="form_text" required>
+        <label for="pembahas2">
+            Pembahas Mahasiswa II
+        </label>  
+        <input type="text" name="pembahas2" class="form_text" required>
+        <label for="moderator">
+            Moderator
+        </label>  
+        <input type="text" name="moderator" class="form_text" required>
+        
 
         <label for="judul2">Pilih Tanggal</label> 
         <input type="date" name="tanggal" class="form_text" placeholder="Tanggal" required>

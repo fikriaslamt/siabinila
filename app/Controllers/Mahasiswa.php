@@ -528,6 +528,7 @@ class Mahasiswa extends BaseController
             'dospem1'  => $this->request->getVar('dospem1'),
             'dospem2'  => $this->request->getVar('dospem2'),
             'penguji_u'=> $this->request->getVar('penguji'),
+            'penguji_p'=> $this->request->getVar('penguji_p'),
             'jam'      => $this->request->getVar('jam'),
             'tanggal'  => $this->request->getVar('tanggal'),
         ]);
@@ -538,14 +539,19 @@ class Mahasiswa extends BaseController
             'dospem1'  => $this->request->getVar('dospem1'),
             'dospem2'  => $this->request->getVar('dospem2'),
             'penguji_u'=> $this->request->getVar('penguji'),
+            'penguji_p'=> $this->request->getVar('penguji_p'),
+            'pembahas1'=> $this->request->getVar('pembahas1'),
+            'pembahas2'=> $this->request->getVar('pembahas2'),
+            'moderator'=> $this->request->getVar('moderator'),
             'prodi'    => "Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisnis",
             'jam'      => $this->request->getVar('jam'),
             'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_data_skripsi->save([
-            'npm' => $npm,
-            'status' => "Mengajukan Seminar Usul"
+            'npm'      => $npm,
+            'judul'    => $this->request->getVar('judul'), 
+            'status'   => "Mengajukan Seminar Usul"
         ]); 
         
         return redirect()->to(base_url('Mahasiswa/skripsi'));
@@ -560,6 +566,7 @@ class Mahasiswa extends BaseController
             'dospem1'  => $this->request->getVar('dospem1'),
             'dospem2'  => $this->request->getVar('dospem2'),
             'penguji_u'=> $this->request->getVar('penguji'),
+            'penguji_p'=> $this->request->getVar('penguji_p'),
             'jam'      => $this->request->getVar('jam'),
             'tanggal'  => $this->request->getVar('tanggal'),
         ]);
@@ -570,6 +577,10 @@ class Mahasiswa extends BaseController
             'dospem1'  => $this->request->getVar('dospem1'),
             'dospem2'  => $this->request->getVar('dospem2'),
             'penguji_u'=> $this->request->getVar('penguji'),
+            'penguji_p'=> $this->request->getVar('penguji_p'),
+            'pembahas1'=> $this->request->getVar('pembahas1'),
+            'pembahas2'=> $this->request->getVar('pembahas2'),
+            'moderator'=> $this->request->getVar('moderator'),
             'prodi'    => "Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisnis",
             'jam'      => $this->request->getVar('jam'),
@@ -577,7 +588,8 @@ class Mahasiswa extends BaseController
         ]);
         $this->M_data_skripsi->save([
             'npm' => $npm,
-            'status' => "Mengajukan Seminar Hasil"
+            'status' => "Mengajukan Seminar Hasil",
+            'judul'    => $this->request->getVar('judul'),
         ]); 
        
         return redirect()->to(base_url('Mahasiswa/skripsi'));
@@ -592,6 +604,7 @@ class Mahasiswa extends BaseController
             'dospem1'  => $this->request->getVar('dospem1'),
             'dospem2'  => $this->request->getVar('dospem2'),
             'penguji_u'=> $this->request->getVar('penguji'),
+            'penguji_p'=> $this->request->getVar('penguji_p'),
             'jam'      => $this->request->getVar('jam'),
             'tanggal'  => $this->request->getVar('tanggal'),
         ]);
@@ -602,6 +615,8 @@ class Mahasiswa extends BaseController
             'dospem1'  => $this->request->getVar('dospem1'),
             'dospem2'  => $this->request->getVar('dospem2'),
             'penguji_u'=> $this->request->getVar('penguji'),
+            'penguji_p'=> $this->request->getVar('penguji_p'),
+            'sks'      => $this->request->getVar('sks'),
             'prodi'    => "Administrasi Bisnis",
             'jurusan'  => "Administrasi Bisnis",
             'jam'      => $this->request->getVar('jam'),
@@ -609,6 +624,7 @@ class Mahasiswa extends BaseController
         ]);
         $this->M_data_skripsi->save([
             'npm' => $npm,
+            'judul'    => $this->request->getVar('judul'),
             'status' => "Mengajukan Ujian Skripsi"
         ]); 
         

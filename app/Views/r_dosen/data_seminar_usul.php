@@ -97,10 +97,14 @@
                     $nilai = $data["nilai_d2"];
                     echo "Pembimbing 2";
                 } else if($data['penguji_u']== session()->nama){
-                    $sebagai = "Penguji Utama";
+                    $sebagai = "Penguji 1";
                     $nilai = $data["nilai_pu"];
-                    echo "Penguji Utama";
-                }
+                    echo "Penguji 1";
+                } else if($data['penguji_p']== session()->nama){
+                  $sebagai = "Penguji 2";
+                  $nilai = $data["nilai_pp"];
+                  echo "Penguji 2";
+              }
                 ?>
                 </td>
                 <td>

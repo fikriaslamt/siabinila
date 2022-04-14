@@ -11,10 +11,14 @@ $img2 = [
 $img3 = [
     'egs' => "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAACSCAMAAABIbqWJAAABhlBMVEX///8AZv8AY/89hv88uTYKbP+nyv/e6/8AYv8Ob//r8/+71v8Eaf8YExAKBAEhHBkAAAATDgvZ3uoiRZWktM8tfP8YOIDj6PT4+PgAWf/e3d0bFhPR0dAAWP8ROJGInMk1gf99eniWqNIxtSucmpkJaLEEJ3nz8vKwrq0nIh8NVZ4GecFmfK07XrAyVarAv76KiIYOTJYIbbbv8fbLysk5NTJBPTpcWFZPkf8KXqcQQ40Ehc1xpv8AfsquvNR+0Hrv+e++57x1cnBgXFpOSkjQ4/9TmP+YpsbCyt2Su/8RL3ZFi//Y5/8/pt1NZ6Xk9eNZw1TO7c265rgyLit5rP+uzv+Etf8ld//n+/+35/uY1fGCweWu1uxnueU8k8wlerp7qdCmx+CD0/UjnNsvU5QjRIgAIXJgdaYOl9tzhKpIe9UjWbpKX5MxdecBN57D2f8AFW16kMJjfbhSb7QaQZwoYaFmyGF5oeKn36SV2ZJznuRwtoOXsr5Vt1yMta1+tZlgsXGI1IVWaY4CAAANGElEQVR4nO2ci1vaWBbAL2iVapNwETEEqqApSdSaKBAoUlRAUNRWRa3a6WM7PuqMO91a67Y7+5r/fM+9CQ8fSAji7n5fz9fKDQn55Zx7XjcSETJlcXvF0WFxhnoW0WVZLDzyOzvNdTj9zuSnOmp06wGlOl2dFErwOwrRKjb52OVwuPyuBw87KQ+cfsA4HydNcF/yMbmQV8md1b5OSu9ycpCY1Z/so9wtPyjrSK+izkvvFpAcjwvUpR44HS5nzz1QiWwD2OnahlHB73A6tu8JC+BHToe/i0eLQPWn7w2L0A54k2sRbfsdrle998jtHXQ5XDso6QIHu0csnVjHQ/QItL5PMyPUAzPrRBC6jhadmd/d3d3bf23IT7utcnshgBytc/f29t+8ffv23bPx8WmQr+/evn3f29dZLr+7/3rt3czMM0PGQaZTqdT0+Nf3f7KMbpnL731YezvxxBSTS5UGdurr+6HOcIE6OzEzA/9mDGyNS8g+3/Rnz91zdz+sfZwgchk7XcGC+EqHI9HmZ2qJu/fm54mJOu4lMxtYonLpYOkuufz+2uzs7HMTS/UlxNRl8YFEfCf8nXHBxhUsgEHVaYIoRY6OIqXU4cHBIYwjER+V0tFpE/+yzN198zNgZw0qQFMEUyodHheLxcySx+NZyniLxZMDcikl+N/E1la5u28+zprcmWfjlHp0cFr0XFWLj3pOTg9LpVLE570L7gcDOzvx5BlMqQ9UPS5eZS4uU+lZ/uXXASD7Mu1z9382qDPElVKlo8NJzyXP6V1cLhRWQoOGrKz8GcgR3y2mtsbdM7CEOj7tOypNXsoN0Z6dlRCRrqqsrHT9OnB00DiQLXGjbyj2CQ3VUun0kh6LO8nQYI0Yqijd1fVr5LQh2BJ3n0zuBK0CqSv+sp2u6UlHya3lHiLLabD2b5PtcHfXZj9WsEfHdSbm+ws1VUOhQrpndbW3Mu98b+92+pdGU2yFu1/DRuoT0ad0varp7T7aDOzu1h2y2qhIWOBGQV0T6yvW3u7b6qrqOti1tWjQeED37TbLkpa4PwGW1oBUfUT2JOssnK5f4FGt74ALzkxrfKouHnu3BmsmLny69hm+/brQ93GW1rzpUs2RP3VVYzW0Ymt105z7epZ2Nc8iI5V3ostdNWW37LX7zblrz2mt9VVDsa/mxoMrdtdUTbk/kXYKJve0+olCzaHsr1ubcl8/J9xxXyUQe6t+HAot26U25+6uUa7vxNxerWG74BMeKmYW9tRtRT2eS/ta5fbNEu70oaluTdvBwiLyHhtdDQnraPHY7HEgtwyNnBobvkjxxtM25e7NkmbKdxK9ik33oRGo/tBSRY4gwJYOjiKG/AX8/vTI2ANbNrkfSGczfZCh3JpLEWwx4iulXkxOTh4voegL2Dg8niRbGeQt+XzGBtlniwvTOzHjO6FmjqZr2CiKHg77RirTB9eQ8lZbkOPI8AvP7RnLCnf61EuvuidUh0XF4eEX1cNeDA9/rn1ocni4YeFtgZs6odz+SroYTBNdPg8PvKj4LA/c0YoPR9HZ8MC0l44bdtHNubPPDr1esHO0EKrTlnIrkhk6GB5YQl76DlyAt7pnetRmHAF3/NhL3GrZxIYKxiKXcIcNyXjGz6eXUPG34eFzwkWj5h44YuTmebZg59RIJsOj1ZWQmS7M27ifzweejhjiGXo6MDCKlj6PjJwNnAMXZT7THUTlm03dnDtz4PVCYtgyfTlUqQQj5+dnlaP4L+fnRrnKnFOuKd7zqSm73CenGeCuVrJjNScX4ZzV4ATul+h1rsc2983zJ8eEuxOqc2Uq0S9TU09HPUMgUXIR51+WYDhKuUOGeM6m7HI/PH9SBDv3Gc4cStYVPu8AnPUpyFSGXgQdw9Yo2TLHT6fO5m1x954/83q9S9uDlyeXCF/88nSKCkx/9MwcTxFudTx1trFpi9s3Ow7cjBFEoa3LQREtjowSoVl0yRiPji4h3hyNjoxG577Z4qK1r8D1FowQar292OjesMd9/Y5w09SpbPQXF2Mv7XF73xM7/zVEnKqVG4GGfBvrtslFr4smd7D1Rvllt33uEtWXqNtypzx/MTb2/eZdzblRMr/eZNfglg1s99jN7myBy2eIwoVqPbAuc4Bdv9nMVtZlHsL9W6jQInUesN1jcw32Wln/EjuPhlr0KortbhC91tb7S3SCry82b5OXFwTbUF1LXEPhloJ3YZ1iGwSRRa4RSg1PcV3mv49RIzcKIqtc6tK//zFvEWsoC9iLxsdYu183BNy/d3d/s0JeuBgzsY2tbPn+JIml38fG1puR5xcuug0qvDTy5Ra4FPyPMdDk+0LjBcjGt/UKtQnW+n1vj7f4T3LSsbGLuYX5+au75+c3/gBVK9Rm2Bbu83u8o/8yvBR+rv+xubmw8XIe5OXGwubm9/XuOiiM12/HtvJ7jWim+O+aPsTm6+sXF+vrdFzHJDvnmkVdS7/H8WT+ceX8V4mmjRsUIbtcxAsXN3CuUpsq2zIXZPN2MlCbzKxNLiSGue6brGs41ndLVJu//53/Prd+zZUgq8xtzls9hc3fO6OXm9/m6rkQWAuWoW1widDgrcRxi59th9uO/OD+4P7g/uDeBzcWBonRoSRqogSvcpi+IDkLe6SOcKUsx4JwYXL6IGaxAO/F3ViGtkBjWLebEzvB5bMsZjgugNksNLRBJoDDCIk4wMKLEGC4XFzpiL4qZhRNEEQmwIKGKnDjPJ/AHOFm4WKQJFg5TatcPo8xtaOGcY5HWSbAMLLABKi+YczomiVsy1xJYXVqR4FjFAHpuBxns1ms5Nm8hIQ4i9lyzgq5ZW6ZzfPk17tBhXLZhMgqMMcay4CHB7Mcw7C5DnANO8tlPRsAO0txNiGUcYARZBarZL8gcjhuQeGW/UpmmbKIwizDQeTIAUZECYwTSCRcKSzARGDdgkPbiyNdDwRwHpyLZYLg4WABEcNlaO6yrnPg0x3gQt5gMEvU5VTgBoJI0uM8UhVQWiN7cD7YES54TzifzwpaPCFIggDJg0QsLwgCmd1cTraSNv6v6sIP7t1zJS1M8kFQ0zTZeEOEoSbVHaBlw3Sb17SwFjQ/pGm8sVPTYna4AuuGcJQVqKtYg21VJ8WXjcsVbB72uN15SBg5eGUV2BHT4T02IZEy6WbdN5bjplxS4CDfK9kcxCuKKRhqT4DBjAGGLMLktGwAcgWkMD1HqiLKsziRZ0h9DpY5jrXPhdwIyYlEqY6ZRCwYhNRhJMMgRwcJXFbLOB7kc5C71ADoCnbgBIhqkWmLG1A0Ms0qZ/J0khYJF2MoT1DwOVGhHYfCZsMssUyYDZAjVNwGV8pBXQ3kVTg/NpKvaJ5OiOOAGITpz6m044DyHM6yZbg2mTZASG6HC34ZxwxbrnGrp5MxJjPOisHrXK1tLrzKcaxIMY6aFUoBg03HknU9zuC8ZBx4zc7tcUU4RYKFRhH8KqciFYp/rchKCZaLARHrAjEI0TyPBB1zQrtcmeXyeYWNS0hmMPRSCvxQK0fwOZYFi/JQgeN52n2BK+fjmA3z7XAD7jAUV5orSC6SyxhadQib6hEaa8wED12scRCEO5ThBO12ZJt5gw/GSF1VRU01uiZBzepZta6DCsbMRMirCV2kOyRRz6vGPEixm5ct/6t14Qf3qvACmUApnA9KwrWpDNaXzNa5kgjr3BvrKEmZ0KfH4tityqx+tWMXMXNzd2mJK5PAcF9ffkikh9TcbJAklXxMdLPqlSNg2WifC8mCYZgbuBrWocaGIZnBsgwZo7vjSnGoBrGYrBkaCqaiMJtZSBMSL8E/4EInDSPYCYcYcwoDMWCfK7JMwhjxkK0YchshjMtaOR/GHIc1EXJmnoGRKmMlBktChiGZmtyPYJQ8x7XBxWplFBBlDtb5UGzYQC4cCHCKCG+qOTKKQXsQlPJuPZZlwf5QsxVYKrbFNVvJMquLou7WCTcXE6QwcWWyRuKJneFATlBZJiuLUI/5Mi4HpQRugwvrPxqiksJwilKOx/kwS4ucRvSia0LqV4QLpUtRlHg5LNC+R+Xa86ucrGphXiFLefAjVONK17j0hhK4mkJuDGht6Eu6OYw56KOzbkWO5XStMTcIaiYELQ9WJ1U4ARZqI2+o0D5iiF8hAaXXDV1M1k3ulqGwGzopyBsxpLsJ141jpMVnIMdIKEiSDXQITbi3PoQrqbIoB0mJFUWZ1mOVRqoa48lYQjE1howRdGKibNzqkGU1qKq35WfynGar3wtpT5YB60SF/8pzqa9Qv9/hfNjy92/aEPIcrn8ZrT6Al/s09Jbx3DF9ztp1fx3HNnm+mkzs4kOXw+Vs4/v5LUmP0+VwPqJf+Fkmz9G7kv33QP1UAGzlcfJoASwOKicLy/2dlJ5Ckv45hseVLwnyBfoHDPx+56NOisNPqK7q30kgVn9FyJC5OirEqv6HO/VfA19NG+TOClALV1NFX//Wqw5jH6b7q9+H/A+lZIrB4G5q1gAAAABJRU5ErkJggg=="
 ];
-$xd1 = $nilai_d1*(40/100);  $xd1_2 = $nilai_d1*(60/100); 
+$xd1 = $nilai_d1*(40/100); 
 $xd2 = $nilai_d2*(20/100);
 $xpu = $nilai_pu*(40/100);
-$na = $xd1+$xd2+$xpu;       $na_2 = $xd1_2+$xpu;
+$xpp = $nilai_pp*(20/100);
+$na   = $xd1+$xd2+$xpu;
+$na_2 = $xd1+$xpu+$xpp;
+
+$xd1_2 = $nilai_d1*(60/100); 
 
 $mpdf = new \Mpdf\Mpdf(['format' => 'A4', 
 'margin_top' => '10', 'margin_bottom' => '10',
@@ -53,15 +57,14 @@ $mpdf->WriteHTML('
 <div class="teks_isi">
     <div class="text_kanan">Form A.6</div>
     <div class="title">KARTU PESERTA SEMINAR</div>
-    
  
     <br>
     <table>
         <tr>
-        <td>Nama </td> <td>: '.$nama.'</td> <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td> <td>Program Studi </td> <td>: '.$prodi.'</td>
+        <td>Nama </td> <td>: '.$surat["nama"].'</td> <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td> <td>Program Studi </td> <td>: '.$surat["prodi"].'</td>
         </tr>
         <tr>
-        <td>NIP </td> <td>: '.$npm.'</td> <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td> <td>Jurusan </td> <td>: '.$jurusan.'</td>
+        <td>NIP </td> <td>: '.$surat["npm"].'</td> <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td> <td>Jurusan </td> <td>: '.$surat["jurusan"].'</td>
         </tr>  
     </table>
 </div>
@@ -95,7 +98,8 @@ $mpdf->WriteHTML('
 
 ');
 
-//form A7
+if($dospem2 != null):
+//form A7 ---------------------------------------------------- OPSI 1
 $mpdf->AddPage();
 $mpdf->WriteHTML('                        
 <table class="header">
@@ -126,7 +130,7 @@ $mpdf->WriteHTML('
 <div class="teks_isi">
     <div class="text_kanan">Form A.7</div>
     <div class="title">SURAT TUGAS SEMIANR I/SEMINAR USUL PENELITIAN</div>
-    <div style="text-align: center;">Nomor : '.$no_surat.'/UN26.16.06/PP.05.02.00/'.$tahun.'</div><br>
+    <div style="text-align: center;">Nomor : '.$no_surat.'/UN26.16.06/PP.05.02.00/'.date("Y").'</div><br>
     Ketua Jurusan Ilmu Administrasi Bisnis dengan ini menugaskan kepada :<br/>
 
     <br>
@@ -157,17 +161,17 @@ $mpdf->WriteHTML('
             </tr>
             <tr>
                 <td>4.</td>
-                <td> &nbsp;......................................................&nbsp; </td>
+                <td>'.$surat["pembahas1"].' </td>
                 <td>Pembahas Mahasiswa I</td>
             </tr>
             <tr>
                 <td>5.</td>
-                <td> &nbsp;......................................................&nbsp; </td>
+                <td>'.$surat["pembahas2"].' </td>
                 <td>Pembahas Mahasiswa II</td>
             </tr>
             <tr>
                 <td>6.</td>
-                <td> &nbsp;......................................................&nbsp; </td>
+                <td>'.$surat["moderator"].' </td>
                 <td>Moderator</td>
             </tr>
         </tbody>       
@@ -176,13 +180,13 @@ $mpdf->WriteHTML('
     Untuk melaksanakan Seminar I/Seminar Usul Penelitian mahasiswa atas nama :<br/>
     <table class="padding_isi">
         <tr>
-            <td>Nama </td><td> : '.$nama.'</td>
+            <td>Nama </td><td> : '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM </td><td> : '.$npm.'</td>
+            <td>NPM </td><td> : '.$surat["npm"].'</td>
         </tr>
         <tr>
-            <td>Judul Skripsi </td><td> : '.$judul.'</td>
+            <td>Judul Skripsi </td><td> : '.$surat["judul"].'</td>
         </tr>
     </table>
     <br>
@@ -207,7 +211,7 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width:50%"></td>
             <td > 
-                Bandar Lampung, ...... .................. '.$tahun.'
+                Bandar Lampung, ...... .................. '.date("Y").'
                 <br>
                 Ketua Jurusan, 
                 <br><br><br><br><br><br>
@@ -221,7 +225,137 @@ $mpdf->WriteHTML('
 </div>
 ');
 
-//form A7a
+else:
+//form A7 ---------------------------------------------------- OPSI 2
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.7</div>
+    <div class="title">SURAT TUGAS SEMIANR I/SEMINAR USUL PENELITIAN</div>
+    <div style="text-align: center;">Nomor : '.$no_surat.'/UN26.16.06/PP.05.02.00/'.date("Y").'</div><br>
+    Ketua Jurusan Ilmu Administrasi Bisnis dengan ini menugaskan kepada :<br/>
+
+    <br>
+    <table class="tbl_isi" style="width:100%">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>NAMA</th>
+                <th>JENIS TUGAS</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>'.$dospem1.'</td>
+                <td>Ketua Pelaksana Seminar (Pembimbing Utama)</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>'.$penguji_u.'</td>
+                <td>Penguji Utama</td>
+            </tr>
+            
+            <tr>
+                <td>2.</td>
+                <td>'.$surat["penguji_p"].'</td>
+                <td>Penguji Pembantu</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>'.$surat["pembahas1"].' </td>
+                <td>Pembahas Mahasiswa I</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>'.$surat["pembahas2"].' </td>
+                <td>Pembahas Mahasiswa II</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>'.$surat["moderator"].' </td>
+                <td>Moderator</td>
+            </tr>
+        </tbody>       
+    </table>
+    <br>
+    Untuk melaksanakan Seminar I/Seminar Usul Penelitian mahasiswa atas nama :<br/>
+    <table class="padding_isi">
+        <tr>
+            <td>Nama </td><td> : '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM </td><td> : '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi </td><td> : '.$surat["judul"].'</td>
+        </tr>
+    </table>
+    <br>
+    Seminar dilaksanakan pada :<br/>
+    <table class="padding_isi">
+        <tr>
+            <td>Hari/Tanggal </td><td> : '.$hari.', '.$tanggal.'</td>
+        </tr>
+        <tr>
+            <td>Waktu</td><td> : '.$jam.' WIB</td>
+        </tr>
+        <tr>
+            <td>Tempat</td><td> : Ruang Seminar Adm. Bisnis Gd. B Lt. II FISIP Unila</td>
+        </tr>
+    </table>
+    <br>
+    <p>Setelah kegiatan seminar selesai, Ketua Pelaksana Seminar agar menyerahkan berita
+        acara seminar dan daftar hadir mahasiswa ke jurusan. Demikian surat tugas ini dibuat
+        untuk dilaksanakan sebagaimana mestinya.</p>
+    <br>
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%"></td>
+            <td > 
+                Bandar Lampung, ...... .................. '.date("Y").'
+                <br>
+                Ketua Jurusan, 
+                <br><br><br><br><br><br>
+                '.$kajur.'<br>
+                '.$nip_kajur.'
+
+            </td>
+        </tr>
+    </table>
+
+</div>
+');
+endif;
+
+if($dospem2 != null):
+//form A7a ---------------------------------------------------- OPSI 1
 $mpdf->AddPage();
 $mpdf->WriteHTML('                        
 <table class="header">
@@ -254,17 +388,17 @@ $mpdf->WriteHTML('
     <div class="title">BERITA ACARA SEMINAR I/SEMINAR USUL PENELITIAN</div>
     <p>Pada hari ini .........., tanggal .......... bulan .........., tahun .......... bertempat di ruang
         seminar Jurusan Ilmu Administrasi Bisnis FISIP Unila, telah diselenggarakan Seminar
-        I/Seminar Usul Penelitian (Skripsi) mahasiswa dengan judul:</p>
-    <br>
-    <p>'.$judul.'</p>
+        I/Seminar Usul Penelitian (Skripsi) mahasiswa dengan judul:
+    </p>
+    <p>'.$surat["judul"].'</p>
     Dengan penyaji: <br>
 
     <table>
         <tr>
-            <td>Nama Mahasiswa </td> <td>: '.$nama.'</td>
+            <td>Nama Mahasiswa </td> <td>: '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM </td> <td>: '.$npm.'</td> 
+            <td>NPM </td> <td>: '.$surat["npm"].'</td> 
         </tr>
         <tr>
             <td>Pembimbing Utama </td> <td>: '.$dospem1.' </td>
@@ -276,13 +410,13 @@ $mpdf->WriteHTML('
             <td>Dosen Penguji </td> <td>: '.$penguji_u.' </td>
         </tr>
         <tr>
-            <td>Pembahas Mahasiswa I </td> <td>: ......................................................&nbsp; </td> 
+            <td>Pembahas Mahasiswa I </td> <td>: '.$surat["pembahas1"].' </td> 
         </tr>
         <tr>
-            <td>Pembahas Mahasiswa II </td> <td>: ......................................................&nbsp; </td>
+            <td>Pembahas Mahasiswa II </td> <td>: '.$surat["pembahas2"].' </td>
         </tr>
         <tr>
-            <td>Moderator</td> <td>: ......................................................&nbsp; </td>
+            <td>Moderator</td> <td>: '.$surat["moderator"].' </td>
         </tr>
         <tr>
             <td>Jumlah Mahasiswa Yang hadir</td> 
@@ -358,19 +492,19 @@ $mpdf->WriteHTML('
     Mengetahui/Menyetujui: <br>
     <table>
         <tr>
-            <td>1. Pembimbing Utama</td><td>(.............................)</td>
+            <td>1. Pembimbing Utama</td>    <td>(.............................)</td> <br/><br/>
         </tr>
         <tr>
-            <td>2. Pembimbing Pembantu</td><td>(.............................)</td>
+            <td>2. Pembimbing Pembantu</td><td>(.............................)</td> <br/><br/>
         </tr>
         <tr>
-            <td>3. Penguji Utama</td><td>(.............................)</td>
+            <td>3. Penguji Utama</td>       <td>(.............................)</td> <br/><br/>
         </tr>
         <tr>
-            <td>4. Pembahas Mahasiswa I</td><td>(.............................)</td>
+            <td>4. Pembahas Mahasiswa I</td><td>(.............................)</td> <br/><br/>
         </tr>
         <tr>
-            <td>5. Pembahas Mahasiswa II</td><td>(.............................)</td>
+            <td>5. Pembahas Mahasiswa II</td><td>(.............................)</td><br/><br/>
         </tr>
     </table>
       <br><br><br>
@@ -390,6 +524,177 @@ $mpdf->WriteHTML('
     
 </div>
 ');
+else:
+//form A7a ---------------------------------------------------- OPSI 2
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.7a</div>
+    <div class="title">BERITA ACARA SEMINAR I/SEMINAR USUL PENELITIAN</div>
+    <p>Pada hari ini .........., tanggal .......... bulan .........., tahun .......... bertempat di ruang
+        seminar Jurusan Ilmu Administrasi Bisnis FISIP Unila, telah diselenggarakan Seminar
+        I/Seminar Usul Penelitian (Skripsi) mahasiswa dengan judul:
+    </p>
+    <p>'.$surat["judul"].'</p>
+    Dengan penyaji: <br>
+
+    <table>
+        <tr>
+            <td>Nama Mahasiswa </td> <td>: '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM </td> <td>: '.$surat["npm"].'</td> 
+        </tr>
+        <tr>
+            <td>Pembimbing Utama </td> <td>: '.$dospem1.' </td>
+        </tr>
+        <tr>
+            <td>Dosen Penguji Satu </td> <td>: '.$penguji_u.' </td>
+        </tr>
+        <tr>
+            <td>Dosen Penguji Dua </td> <td>: '.$surat["penguji_p"].' </td>
+        </tr>
+        <tr>
+            <td>Pembahas Mahasiswa I </td> <td>: '.$surat["pembahas1"].' </td> 
+        </tr>
+        <tr>
+            <td>Pembahas Mahasiswa II </td> <td>: '.$surat["pembahas2"].' </td>
+        </tr>
+        <tr>
+            <td>Moderator</td> <td>: '.$surat["moderator"].' </td>
+        </tr>
+        <tr>
+            <td>Jumlah Mahasiswa Yang hadir</td> 
+        </tr>
+        <tr>
+            <td> (daftar terlampir)</td> <td>: ....... orang</td>
+        </tr>
+
+    </table>
+    <br>
+    Dengan hasil seminar sebagai berikut: <br>
+    I. Saran Pembimbing dan Penguji: 
+
+    <table class="padding_isi">
+        <tr>
+            <td>1............................................................</td>
+        </tr>
+        <tr>
+            <td>2............................................................</td>
+        </tr>
+        <tr>
+            <td>3............................................................</td>
+        </tr>
+        <tr>
+            <td>4............................................................</td>
+        </tr>
+        <tr>
+            <td>5............................................................</td>
+        </tr>
+    </table>
+    II. Saran Pembahas Mahasiswa I & II: 
+
+    <table class="padding_isi">
+        <tr>
+            <td>1............................................................</td>
+        </tr>
+        <tr>
+            <td>2............................................................</td>
+        </tr>
+        <tr>
+            <td>3............................................................</td>
+        </tr>
+        <tr>
+            <td>4............................................................</td>
+        </tr>
+        <tr>
+            <td>5............................................................</td>
+        </tr>
+    </table>
+    III. Perbaikan Hasil Seminar 
+
+    <table class="padding_isi">
+        <tr>
+            <td>1............................................................</td>
+        </tr>
+        <tr>
+            <td>2............................................................</td>
+        </tr>
+        <tr>
+            <td>3............................................................</td>
+        </tr>
+        <tr>
+            <td>4............................................................</td>
+        </tr>
+        <tr>
+            <td>5............................................................</td>
+        </tr>
+    </table>
+    <br><br><br><br><br>
+    Demikian berita acara ini dibuat dengan sebenarnya, agar dapat dipergunakan
+    sebagaimana mestinya. <br>
+
+    Mengetahui/Menyetujui: <br>
+    <table>
+        <tr>
+            <td>1. Pembimbing Utama</td>    <td>(.............................)</td> <br/><br/>
+        </tr>
+        <tr>
+            <td>2. Pembimbing Pembantu</td><td>(.............................)</td> <br/><br/>
+        </tr>
+        <tr>
+            <td>3. Penguji Utama</td>       <td>(.............................)</td> <br/><br/>
+        </tr>
+        <tr>
+            <td>4. Pembahas Mahasiswa I</td><td>(.............................)</td> <br/><br/>
+        </tr>
+        <tr>
+            <td>5. Pembahas Mahasiswa II</td><td>(.............................)</td><br/><br/>
+        </tr>
+    </table>
+      <br><br><br>
+
+    <table style="width:100%">
+        <tr>
+            <td style="width:60%"></td>
+            <td > 
+                Ketua Pelaksana Seminar,
+                <br><br><br><br><br><br>
+                '.$dospem1.'<br>
+                '.$nip_1.'
+
+            </td>
+        </tr>
+    </table>
+    
+</div>
+');
+endif;
 
 if($dospem2 != null):
 //form A7b ------------------------------------------------- opsi 1
@@ -427,16 +732,16 @@ $mpdf->WriteHTML('
 
     <table>
         <tr>
-            <td>Nama</td> <td>: '.$nama.'</td>
+            <td>Nama</td> <td>: '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM </td> <td>: '.$npm.'</td> 
+            <td>NPM </td> <td>: '.$surat["npm"].'</td> 
         </tr>
         <tr>
             <td>Jurusan/PS </td> <td>: Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi </td> <td>: '.$judul.' </td>
+            <td>Judul Skripsi </td> <td>: '.$surat["judul"].' </td>
         </tr>
  
 
@@ -606,16 +911,16 @@ $mpdf->WriteHTML('
 
     <table>
         <tr>
-            <td>Nama</td> <td>: '.$nama.'</td>
+            <td>Nama</td> <td>: '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM </td> <td>: '.$npm.'</td> 
+            <td>NPM </td> <td>: '.$surat["npm"].'</td> 
         </tr>
         <tr>
             <td>Jurusan/PS </td> <td>: Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi </td> <td>: '.$judul.' </td>
+            <td>Judul Skripsi </td> <td>: '.$surat["judul"].' </td>
         </tr>
  
 
@@ -649,8 +954,8 @@ $mpdf->WriteHTML('
             <td>1.</td>
             <td>Pembimbing Utama <br> '.$dospem1.' <br> NIP. 1'.$nip_1.'</td>
             <td class="tbl_center">'.$nilai_d1.'</td>
-            <td class="tbl_center">60%</td>
-            <td class="tbl_center">'.$xd1_2.'</td>
+            <td class="tbl_center">40%</td>
+            <td class="tbl_center">'.$xd1.'</td>
             <td></td>
             <td class="tbl_center">40%</td>
             <td></td>
@@ -659,18 +964,6 @@ $mpdf->WriteHTML('
 
         <tr>
             <td>2.</td>
-            <td>Pembimbing Pembantu <br><br></td>
-            <td></td>
-            <td class="tbl_center">0%</td>
-            <td></td>
-            <td class="tbl_center"></td>
-            <td class="tbl_center">20%</td>
-            <td class="tbl_center"></td>
-            <td></td>
-        </tr>
-
-        <tr>
-            <td>3.</td>
             <td>Penguji Utama <br> '.$penguji_u.' <br> NIP. '.$nip_p.'</td>
             <td class="tbl_center">'.$nilai_pu.'</td>
             <td class="tbl_center">40%</td>
@@ -678,6 +971,18 @@ $mpdf->WriteHTML('
             <td></td>
             <td class="tbl_center">40%</td>
             <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>3.</td>
+            <td>Penguji Pembantu <br>'.$surat["penguji_p"].'<br> NIP. '.$nip_pp.'</td>
+            <td class="tbl_center">'.$nilai_pp.'</td>
+            <td class="tbl_center">20%</td>
+            <td class="tbl_center">'.$xpp.'</td>
+            <td class="tbl_center"></td>
+            <td class="tbl_center">20%</td>
+            <td class="tbl_center"></td>
             <td></td>
         </tr>
 
@@ -787,16 +1092,16 @@ $mpdf->WriteHTML('
 
     <table>
         <tr>
-            <td>Nama</td> <td>: '.$nama.'</td>
+            <td>Nama</td> <td>: '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM </td> <td>: '.$npm.'</td> 
+            <td>NPM </td> <td>: '.$surat["npm"].'</td> 
         </tr>
         <tr>
-            <td>Jurusan/PS </td> <td>: '.$jurusan.'</td>
+            <td>Jurusan/PS </td> <td>: '.$surat["jurusan"].'</td>
         </tr>
         <tr>
-            <td>Judul Skripsi </td> <td>: '.$judul.' </td>
+            <td>Judul Skripsi </td> <td>: '.$surat["judul"].' </td>
         </tr>
         <tr>
         <td>Hari/Tanggal </td> <td>: '.$hari.', '.$tanggal.'</td>
@@ -945,7 +1250,7 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width: 55%;"></td>
             <td>
-                Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Bandar Lampung, ...... .................. '.date("Y").' <br>
                 Mengetahui, <br>
                 Ketua Pelaksana Seminar 
                 <br><br><br><br><br>

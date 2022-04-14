@@ -27,7 +27,7 @@ if (!empty(array_count_values($col_stats)['Mengajukan Seminar Hasil'])){
 }
 $j_kompre = 0;
 if (!empty(array_count_values($col_stats)['Seminar Hasil Disetujui'])){
-    $j_kompre = array_count_values($col_stats)['Seminar Usul Disetujui'];
+    $j_kompre = array_count_values($col_stats)['Seminar Hasil Disetujui'];
 }
 if (!empty(array_count_values($col_stats)['Mengajukan Ujian Skripsi'])){
     $j_kompre += array_count_values($col_stats)['Mengajukan Ujian Skripsi'];

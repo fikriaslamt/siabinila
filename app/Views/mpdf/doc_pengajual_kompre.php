@@ -12,12 +12,22 @@ $img3 = [
     'egs' => "data:image/png;base64,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"
 ];
 
-$xd1 = $nilai_d1*(40/100);  $xd1_2 = $nilai_d1*(60/100); 
-$xd2 = $nilai_d2*(20/100);
-$xpu = $nilai_pu*(40/100);
-$na = $xd1+$xd2+$xpu;       $na_2 = $xd1_2+$xpu;
-$juml = $pelak11+$pelak12+$naskah21+$naskah22+$naskah23;
-$mean = $juml / 5;
+$jumlah_rincid1 = $surat["nilai_d1"] + $surat["nilai_d1t"];
+$jumlah_rincid2 = $surat["nilai_d2"] + $surat["nilai_d2t"];
+$jumlah_rincip1 = $surat["nilai_pu"] + $surat["nilai_put"];
+$jumlah_rincip2 = $surat["nilai_pp"] + $surat["nilai_ppt"];
+
+$mean_rincid1 = $jumlah_rincid1 / 2;
+$mean_rincid2 = $jumlah_rincid2 / 2;
+$mean_rincip1 = $jumlah_rincip1 / 2;
+$mean_rincip2 = $jumlah_rincip2 / 2;
+
+$xd1 = $mean_rincid1*(40/100); 
+$xd2 = $mean_rincid2*(20/100);
+$xpu = $mean_rincip1*(40/100);
+$xpp = $mean_rincip2*(20/100);
+$na   = $xd1+$xd2+$xpu;
+$na_2 = $xd1+$xpu+$xpp;
 
 $mpdf = new \Mpdf\Mpdf(['format' => 'Legal', 
 'margin_top' => '10', 'margin_bottom' => '10',
@@ -62,13 +72,13 @@ $mpdf->WriteHTML('
     
     <table>
         <tr>
-            <td>Nama </td> <td>:</td> <td>'.$nama.'</td> 
+            <td>Nama </td> <td>:</td> <td>'.$surat["nama"].'</td> 
         </tr>
         <tr>
-            <td>NPM </td> <td>:</td> <td> '.$npm.'</td>
+            <td>NPM </td> <td>:</td> <td> '.$surat["npm"].'</td>
         </tr>  
         <tr>
-            <td>Judul Artikel </td> <td>:</td> <td> '.$judul.'</td>
+            <td>Judul Artikel </td> <td>:</td> <td> '.$surat["judul"].'</td>
         </tr> 
 
     </table>
@@ -102,14 +112,103 @@ $mpdf->WriteHTML('
         <tr>
             <td style="width:50%"></td>
             <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
-                Pembimbing Utama/Pembantu <br><br><br><br><br><br>
-                ......................................... <br>
-                NIP. ....................................
+                Pembimbing Utama <br><br><br><br><br><br>
+                '.$surat["dospem1"].' <br>
+                NIP. '.$nip_1.'
             </td>
         </tr>
     </table>
 </div>
 ');
+
+if($dospem2 != null):
+//form A9
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.9</div>
+    <div class="title">LEMBAR BIMBINGAN</div>
+    <div class="title">NASKAH ARTIKEL ILMIAH</div>
+
+    <br>
+
+    
+    <table>
+        <tr>
+            <td>Nama </td> <td>:</td> <td>'.$surat["nama"].'</td> 
+        </tr>
+        <tr>
+            <td>NPM </td> <td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>  
+        <tr>
+            <td>Judul Artikel </td> <td>:</td> <td> '.$surat["judul"].'</td>
+        </tr> 
+
+    </table>
+    <br><br>
+    <table class="tbl_isi" style="width:100%">
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>TANGGAL</th>
+                <th>SARAN PEMBIMBING</th>
+                <th>PARAF</th>
+                
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <th style="height:460px"></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            
+            </tr>
+        </tbody>
+        
+    </table>
+
+    <br><br>
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%"></td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Pembimbing Pembantu <br><br><br><br><br><br>
+                '.$dospem2.' <br>
+                NIP. '.$nip_2.'
+            </td>
+        </tr>
+    </table>
+</div>
+');
+endif;
 
 //form A9a
 $mpdf->AddPage();
@@ -151,13 +250,13 @@ $mpdf->WriteHTML('
     
     <table>
         <tr>
-            <td>Nama </td> <td>:</td> <td> '.$nama.'</td> 
+            <td>Nama </td> <td>:</td> <td> '.$surat["nama"].'</td> 
         </tr>
         <tr>
-            <td>NPM </td> <td>:</td> <td> '.$npm.'</td>
+            <td>NPM </td> <td>:</td> <td> '.$surat["npm"].'</td>
         </tr>  
         <tr>
-            <td>Judul Artikel </td> <td>:</td> <td> '.$judul.'</td>
+            <td>Judul Artikel </td> <td>:</td> <td> '.$surat["judul"].'</td>
         </tr> 
 
     </table>
@@ -231,11 +330,11 @@ $mpdf->WriteHTML('
     <table class="padding_isi">
         <tr>
             <td style ="width :10%"></td>
-            <td>Nama </td> <td>:</td> <td> '.$nama.'</td> 
+            <td>Nama </td> <td>:</td> <td> '.$surat["nama"].'</td> 
         </tr>
         <tr>
             <td style ="width :10%"></td>
-            <td>NPM </td> <td>:</td> <td> '.$npm.'</td>
+            <td>NPM </td> <td>:</td> <td> '.$surat["npm"].'</td>
         </tr>  
         <tr>
             <td style ="width :10%"></td>
@@ -243,11 +342,11 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td style ="width :10%"></td>
-            <td>Judul Skripsi </td> <td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi </td> <td>:</td> <td> '.$surat["judul"].'</td>
         </tr>
         <tr>
             <td style ="width :10%"></td>
-            <td>SKS yang diselesaikan</td> <td>:</td> <td> .........</td>
+            <td>SKS yang diselesaikan</td> <td>:</td> <td> '.$surat["sks"].'</td>
         </tr>
 
     </table>
@@ -314,11 +413,11 @@ $mpdf->WriteHTML('
     <table class="padding_isi">
         <tr>
             <td style ="width :10%"></td>
-            <td>Nama </td> <td>:</td> <td> '.$nama.'</td> 
+            <td>Nama </td> <td>:</td> <td> '.$surat["nama"].'</td> 
         </tr>
         <tr>
             <td style ="width :10%"></td>
-            <td>NPM </td> <td>:</td> <td> '.$npm.'</td>
+            <td>NPM </td> <td>:</td> <td> '.$surat["npm"].'</td>
         </tr>  
         <tr>
             <td style ="width :10%"></td>
@@ -330,7 +429,7 @@ $mpdf->WriteHTML('
         </tr>
         <tr>
             <td style ="width :10%"></td>
-            <td>Judul Skripsi </td> <td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi </td> <td>:</td> <td> '.$surat["judul"].'</td>
         </tr> 
 
     </table>
@@ -355,7 +454,9 @@ $mpdf->WriteHTML('
 </div>
 ');
 
-//form A12
+if($dospem2 != null):
+// ----------------------------- OPSI 1 | A12-13a --------------------------------------- //
+//Form A12
 $mpdf->AddPage();
 $mpdf->WriteHTML('                        
 <table class="header">
@@ -399,16 +500,16 @@ $mpdf->WriteHTML('
 
     <table class="padding_isi">
         <tr>
-            <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
         </tr>
         <tr>
             <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
         </tr>
     </table>
     <br><br>
@@ -434,13 +535,13 @@ $mpdf->WriteHTML('
     <br>
     <table class="padding_isi">
         <tr>
-            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td> <td> '.$dospem1.'</td>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td> <td> '.$surat["dospem1"].'</td>
         </tr>
         <tr>
-            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td> <td> '.$dospem2.'</td>
+            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td> <td> '.$surat["dospem2"].'</td>
         </tr>
         <tr>
-            <td>3. Penguji Utama  </td><td>:</td> <td> '.$penguji_u.'</td>
+            <td>3. Penguji Utama  </td><td>:</td> <td> '.$surat["penguji_u"].'</td>
         </tr>
         
     </table>
@@ -500,7 +601,6 @@ $mpdf->WriteHTML('
     <div style="text-align: center;">Nomor : '.$no_surat.'/UN26.16.06/PP.05.02.00/'.$tahun.'</div><br>
     <br>
 
-
     <table>
         <tr>
             <td>Lampiran </td> <td>: Satu Berkas</td>
@@ -509,9 +609,7 @@ $mpdf->WriteHTML('
             <td>Perihal </td> <td>: Undangan Ujian Skripsi</td>
         </tr>
     </table>
-
-    
-       <br>
+    <br>
     
     Yth. Komisi Penguji Ujian Skripsi <br>
     Jurusan Ilmu Administrasi Bisnis <br>
@@ -520,13 +618,13 @@ $mpdf->WriteHTML('
     Mengharapkan kehadiran Saudara: <br>
     <table class="padding_isi">
         <tr>
-            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td> <td> '.$dospem1.'</td>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td> <td> '.$surat["dospem1"].'</td>
         </tr>
         <tr>
-            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td> <td> '.$dospem2.'</td>
+            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td> <td> '.$surat["dospem2"].'</td>
         </tr>
         <tr>
-            <td>3. Penguji Utama  </td><td>:</td> <td> '.$penguji_u.'</td>
+            <td>3. Penguji Utama  </td><td>:</td> <td> '.$surat["penguji_u"].'</td>
         </tr>
         
     </table>
@@ -551,16 +649,16 @@ $mpdf->WriteHTML('
     <br>
     <table class="padding_isi">
         <tr>
-            <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
         </tr>
         <tr>
             <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
         </tr>
     </table>
 
@@ -626,16 +724,16 @@ $mpdf->WriteHTML('
     <br>
     <table class="padding_isi">
         <tr>
-            <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
         </tr>
         <tr>
             <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
         </tr>
     </table>
 
@@ -658,13 +756,13 @@ $mpdf->WriteHTML('
     <br>
     <table>
         <tr>
-            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td><td> '.$dospem1.'</td><td>(...........................)</td>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td><td> '.$surat["dospem1"].'</td><td>(...........................) </td><br><br>
         </tr>
         <tr>
-            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td><td> '.$dospem2.'</td><td>(...........................)</td>
+            <td>2. Sekretaris (Pembimbing Pembantu) </td><td>:</td><td> '.$surat["dospem2"].'</td><td>(...........................) </td><br><br>
         </tr>
         <tr>
-            <td>3. Penguji Utama  </td><td>:</td><td> '.$penguji_u.'</td><td>(...........................)</td>
+            <td>3. Penguji Utama  </td><td>:</td><td> '.$surat["penguji_u"].'</td><td>(...........................)</td>
         </tr>
         <br><br>
     </table>
@@ -684,9 +782,337 @@ $mpdf->WriteHTML('
 
 </div>
 ');
+else:
+// ----------------------------- OPSI 2 | A12-13a --------------------------------------- //
+//Form A12
+$mpdf->AddPage();
+$mpdf->WriteHTML('                        
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
 
+<div class="teks_isi">
+    <div class="text_kanan">Form A.12</div>
+    <div class="title">FORMULIR PELAKSANAAN UJIAN</div>
+    <div class="title">UJIAN SKRIPSI/UJIAN KOMPREHENSIF</div>
+    <br>
 
-//form A13b
+    Yth. Dekan Fakultas Ilmu Sosial dan Ilmu Politik
+    Universitas Lampung <br><br><br>
+    
+    Telah diperiksa terhadap skripsi mahasiswa:
+    <br>
+
+    
+
+    <table class="padding_isi">
+        <tr>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
+        </tr>
+    </table>
+    <br><br>
+    
+    Telah selesai bimbingan dan siap untuk dilaksanakan Ujian Skripsi/Ujian Komprehensif,
+    oleh karena itu kami mohon ditetapkan Surat Keputusan Ujian Skripsi atas nama
+    mahasiswa tersebut. Adapun pelaksanaan ujian pada:  
+    <br>
+    <table class="padding_isi">
+        <tr>
+            <td>Hari/Tanggal </td><td>:</td> <td> '.$hari.', '.$tanggal.'</td>
+        </tr>
+        <tr>
+            <td>Waktu Ujian </td><td>:</td> <td> '.$jam.' WIB</td>
+        </tr>
+        <tr>
+            <td>Tempat </td><td>:</td> <td> Ruang Ujian Jurusan Administrasi Bisnis FISIP Unila</td>
+        </tr>
+        
+    </table>
+    <br>
+    Dengan Penguji:
+    <br>
+    <table class="padding_isi">
+        <tr>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td> <td> '.$surat["dospem1"].'</td>
+        </tr>
+        <tr>
+            <td>2. Penguji Utama  </td><td>:</td> <td> '.$surat["penguji_u"].'</td>
+        </tr>
+        <tr>
+            <td>3. Penguji Pembantu </td><td>:</td> <td> '.$surat["penguji_p"].'</td>
+        </tr>
+        
+    </table>
+
+    <br>
+    Berkas-berkas yang menjadi persyaratan terlampir. Demikian surat kami, atas perhatian
+    dan kerja samanya kami ucapkan terima kasih.
+
+<br><br>
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%">
+            </td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Ketua Jurusan, <br><br><br><br><br><br>
+                '.$kajur.'<br>
+                NIP. '.$nip_kajur.'
+            </td>
+        </tr>
+    </table>
+</div>
+');
+
+//form A13
+$mpdf->AddPage();
+$mpdf->WriteHTML('
+
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.13</div>
+    <div class="title">SURAT TUGAS</div>
+    <div class="title">UJIAN SKRIPSI/UJIAN KOMPREHENSIF</div>
+    <div style="text-align: center;">Nomor : '.$no_surat.'/UN26.16.06/PP.05.02.00/'.$tahun.'</div><br>
+    <br>
+
+    <table>
+        <tr>
+            <td>Lampiran </td> <td>: Satu Berkas</td>
+        </tr>
+        <tr>
+            <td>Perihal </td> <td>: Undangan Ujian Skripsi</td>
+        </tr>
+    </table>
+    <br>
+    
+    Yth. Komisi Penguji Ujian Skripsi <br>
+    Jurusan Ilmu Administrasi Bisnis <br>
+    FISIP Universitas Lampung
+    <br><br>
+    Mengharapkan kehadiran Saudara: <br>
+    <table class="padding_isi">
+        <tr>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td> <td> '.$surat["dospem1"].'</td>
+        </tr>
+        <tr>
+            <td>2. Penguji Utama  </td><td>:</td> <td> '.$surat["penguji_u"].'</td>
+        </tr>
+        <tr>
+            <td>3. Penguji Pembantu </td><td>:</td> <td> '.$surat["penguji_p"].'</td>
+        </tr>
+        
+    </table>
+    <br>
+    
+    Untuk dapat hadir dan menguji pada:  
+    <br>
+    <table class="padding_isi">
+        <tr>
+            <td>Hari/Tanggal </td><td>: '.$hari.', '.$tanggal.'</td>
+        </tr>
+        <tr>
+            <td>Waktu Ujian </td><td>: '.$jam.' WIB</td>
+        </tr>
+        <tr>
+            <td>Tempat </td><td>: Ruang Ujian Jurusan Administrasi Bisnis FISIP Unila</td>
+        </tr>
+        
+    </table>
+    <br>
+    Terhadap Mahasiswa:
+    <br>
+    <table class="padding_isi">
+        <tr>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
+        </tr>
+    </table>
+
+    <br><br>
+    Kehadiran Saudara tidak dapat diwakilkan, atas perhatian dan kehadiranya kami
+    sampaikan terima kasih.
+
+<br><br>
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%">
+            </td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Ketua Jurusan, <br><br><br><br><br><br>
+                '.$kajur.'<br>
+                NIP. '.$nip_kajur.'
+            </td>
+        </tr>
+    </table>
+</div>
+    
+');
+
+//form A13a
+$mpdf->AddPage();
+$mpdf->WriteHTML('
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.13a</div>
+    <div class="title">BERITA ACARA UJIAN SKRIPSI/UJIAN KOMPREHENSIF</div>
+    <div class="title">UNTUK MENCAPAI GELAR SARJANA ILMU SOSIAL DAN ILMU POLITIK</div>
+    <br>
+    <br>
+
+    BULAN UJIAN: .................... '.$tahun.'
+    <br><br>
+    Pada hari ini, ............./....... .............. '.$tahun.' bertempat di Ruang Ujian Jurusan Ilmu
+    Administrasi Bisnis FISIP Unila, telah dilaksanakan Ujian Skripsi terhadap mahasiswa:
+    <br>
+    <table class="padding_isi">
+        <tr>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
+        </tr>
+    </table>
+
+    <br><br>
+    Hasil Ujian Skripsi dengan nilai: …… huruf mutu: …… Predikat lulus : ...........................
+    <br><br>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 50%;"></td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.'</td>
+        </tr>
+    </table>
+    <br>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 75%;">Komisi Penguji:</td>
+            <td>T.T.D</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>1. Ketua (Pembimbing Utama)  </td><td>:</td><td> '.$surat["dospem1"].'</td><td>(...........................) </td><br><br>
+        </tr>
+        <tr>
+            <td>3. Penguji Utama  </td><td>:</td><td> '.$surat["penguji_u"].'</td><td>(...........................) </td><br><br>
+        </tr>
+        <tr>
+            <td>3. Penguji Pembantu </td><td>:</td><td> '.$surat["penguji_p"].'</td><td>(...........................) </td>
+        </tr>
+        <br><br>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 50%;"></td>
+            <td>Tanggal Lulus: ........ ...……............ '.$tahun.'</td>
+        </tr>
+    </table>
+      <br>
+      <br>
+    Catatan: <br>
+    Perbaikan skripsi yang bersangkutan selama 2 (dua) bulan, terhitung mulai tanggal/bulan
+    ………………………….. s.d. ………….................... Jika dalam waktu tersebut yang
+    bersangkutan tidak dapat menyelesaikan perbaikan, maka hasil ujian skripsi ini dinyatakan
+    batal.
+
+</div>
+');
+endif;
+
+//Form A13b -------------------------------------- Dospem1
 $mpdf->AddPage();
 $mpdf->WriteHTML('
 <table class="header">
@@ -724,16 +1150,16 @@ $mpdf->WriteHTML('
    
     <table >
         <tr>
-            <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
         </tr>
         <tr>
             <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
         </tr>
     </table>
 
@@ -758,25 +1184,23 @@ $mpdf->WriteHTML('
                     2.2 Kegunaan dan kemuktahiran tinjauan pustaka <br><br>
                     2.3 Teknik Penulisan <br><br>
                 </td>
-                <td style="text-align: center">
-                    <br>
-                    '.$pelak11.'<br><br>
-                    '.$pelak12.'<br><br><br>
-                    '.$naskah21.'<br><br>
-                    '.$naskah22.'<br><br>
-                    '.$naskah23.'<br><br>
+                <td style="text-align: center">'.$surat["nilai_d1"].'<br><br>
+                    <br><br><br>
+                    '.$surat["nilai_d1t"].'<br><br>
+                    <br><br>
+                    <br><br>
                     
                 </td>
             </tr>
             <tr>
                 <td>3.</td>
                 <td>JUMLAH</td>
-                <td style="text-align: center">'.$juml.'</td>
+                <td style="text-align: center">'.$jumlah_rincid1.'</td>
             </tr>
             <tr>
                 <td>4.</td>
                 <td>NILAI RATA-RATA (tanpa dibulatkan)</td>
-                <td style="text-align: center">'.$mean.'</td>
+                <td style="text-align: center">'.$mean_rincid1.'</td>
             </tr>
 
         </tbody>
@@ -789,7 +1213,7 @@ $mpdf->WriteHTML('
             <td style="width: 50%;"></td>
             <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
                 Pembimbing Utama<br><br><br><br><br><br>
-                '.$dospem1.' <br>
+                '.$surat["dospem1"].' <br>
                NIP. '.$nip_1.'
             </td>
         </tr>
@@ -798,8 +1222,342 @@ $mpdf->WriteHTML('
 
 </div>
 ');
-
 if($dospem2 != null):
+//Form A13b ------------------------------------- Dospem2
+$mpdf->AddPage();
+$mpdf->WriteHTML('
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.13b</div>
+    <div class="title">NILAI UJIAN SKRIPSI/UJIAN KOMPREHENSIF PROGRAM SARJANA</div>
+    <div class="title">FAKULTAS ILMU SOSIAL DAN ILMU POLITIK</div>
+    <br>
+    <br><br>
+
+   
+    <table >
+        <tr>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
+        </tr>
+    </table>
+
+    <br><br>
+    
+    <table class="tbl_isi" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>ASPEK PENILAIAN</th>
+                <th>NILAI (ANGKA)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbl_top">1. <br><br><br><br><br>2.</td>
+                <td>Pelaksanaan Ujian <br>
+                    1.1 Teknik penyajian <br><br>
+                    1.2 Penguasaan Substansi <br><br>
+                    Naskah Skripsi <br>
+                    2.1 Originalitas <br><br>
+                    2.2 Kegunaan dan kemuktahiran tinjauan pustaka <br><br>
+                    2.3 Teknik Penulisan <br><br>
+                </td>
+                <td style="text-align: center">'.$surat["nilai_d2"].'<br><br>
+                    <br><br><br>
+                    '.$surat["nilai_d2t"].'<br><br>
+                    <br><br>
+                    <br><br>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>JUMLAH</td>
+                <td style="text-align: center">'.$jumlah_rincid2.'</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>NILAI RATA-RATA (tanpa dibulatkan)</td>
+                <td style="text-align: center">'.$mean_rincid2.'</td>
+            </tr>
+
+        </tbody>
+        
+    
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td style="width: 50%;"></td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Pembimbing Pembantu<br><br><br><br><br><br>
+                '.$surat["dospem2"].' <br>
+               NIP. '.$nip_2.'
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+');
+endif;
+//Form A13b ------------------------------------- Penguji1
+$mpdf->AddPage();
+$mpdf->WriteHTML('
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.13b</div>
+    <div class="title">NILAI UJIAN SKRIPSI/UJIAN KOMPREHENSIF PROGRAM SARJANA</div>
+    <div class="title">FAKULTAS ILMU SOSIAL DAN ILMU POLITIK</div>
+    <br>
+    <br><br>
+
+   
+    <table >
+        <tr>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
+        </tr>
+    </table>
+
+    <br><br>
+    
+    <table class="tbl_isi" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>ASPEK PENILAIAN</th>
+                <th>NILAI (ANGKA)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbl_top">1. <br><br><br><br><br>2.</td>
+                <td>Pelaksanaan Ujian <br>
+                    1.1 Teknik penyajian <br><br>
+                    1.2 Penguasaan Substansi <br><br>
+                    Naskah Skripsi <br>
+                    2.1 Originalitas <br><br>
+                    2.2 Kegunaan dan kemuktahiran tinjauan pustaka <br><br>
+                    2.3 Teknik Penulisan <br><br>
+                </td>
+                <td style="text-align: center">'.$surat["nilai_pu"].'<br><br>
+                    <br><br><br>
+                    '.$surat["nilai_put"].'<br><br>
+                    <br><br>
+                    <br><br>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>JUMLAH</td>
+                <td style="text-align: center">'.$jumlah_rincip1.'</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>NILAI RATA-RATA (tanpa dibulatkan)</td>
+                <td style="text-align: center">'.$mean_rincip1.'</td>
+            </tr>
+
+        </tbody>
+        
+    
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td style="width: 50%;"></td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Penguji Utama<br><br><br><br><br><br>
+                '.$surat["penguji_u"].' <br>
+               NIP. '.$nip_p.'
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+');
+if($penguji_p != null):
+//Form A13b ------------------------------------- Penguji2
+$mpdf->AddPage();
+$mpdf->WriteHTML('
+<table class="header">
+    <tr>
+        <td>
+            <img width="100" src="'.$img1["unila"].'">
+        </td>
+        <td>
+            <div style="font-size:120%;font-weight:bold;">
+                KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN <br>
+                UNIVERSITAS LAMPUNG <br>
+                FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                <span style="font-size:75%">
+                Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                <div style="font-size:90%">
+                Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> Email <span style="color:blue"> admunila@gmail.com</span>
+            </div>
+        </td>
+        <td>
+            <img width="50" src="'.$img2["kan"].'">             
+            <img width="47" src="'.$img3["egs"].'">
+        </td>
+    </tr>
+</table>
+<hr style="height: 4px; color:black">
+
+<div class="teks_isi">
+    <div class="text_kanan">Form A.13b</div>
+    <div class="title">NILAI UJIAN SKRIPSI/UJIAN KOMPREHENSIF PROGRAM SARJANA</div>
+    <div class="title">FAKULTAS ILMU SOSIAL DAN ILMU POLITIK</div>
+    <br>
+    <br><br>
+
+   
+    <table >
+        <tr>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
+        </tr>
+        <tr>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
+        </tr>
+        <tr>
+            <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
+        </tr>
+        <tr>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
+        </tr>
+    </table>
+
+    <br><br>
+    
+    <table class="tbl_isi" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>ASPEK PENILAIAN</th>
+                <th>NILAI (ANGKA)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbl_top">1. <br><br><br><br><br>2.</td>
+                <td>Pelaksanaan Ujian <br>
+                    1.1 Teknik penyajian <br><br>
+                    1.2 Penguasaan Substansi <br><br>
+                    Naskah Skripsi <br>
+                    2.1 Originalitas <br><br>
+                    2.2 Kegunaan dan kemuktahiran tinjauan pustaka <br><br>
+                    2.3 Teknik Penulisan <br><br>
+                </td>
+                <td style="text-align: center">'.$surat["nilai_pp"].'<br><br>
+                    <br><br><br>
+                    '.$surat["nilai_ppt"].'<br><br>
+                    <br><br>
+                    <br><br>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>JUMLAH</td>
+                <td style="text-align: center">'.$jumlah_rincip2.'</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>NILAI RATA-RATA (tanpa dibulatkan)</td>
+                <td style="text-align: center">'.$mean_rincip2.'</td>
+            </tr>
+
+        </tbody>
+        
+    
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td style="width: 50%;"></td>
+            <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
+                Penguji Pembantu<br><br><br><br><br><br>
+                '.$surat["penguji_p"].' <br>
+               NIP. '.$nip_pp.'
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+');
+endif;
+
+if($surat["dospem2"] != null):
 //FORM A13c ---------------------------------------------- OPSI 1
 $mpdf->AddPage();
 $mpdf->WriteHTML('
@@ -835,16 +1593,16 @@ $mpdf->WriteHTML('
 
 <table>
     <tr>
-        <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+        <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
     </tr>
     <tr>
-        <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+        <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
     </tr>
     <tr>
         <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
     </tr>
     <tr>
-        <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+        <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
     </tr>
 </table>
 
@@ -869,11 +1627,11 @@ $mpdf->WriteHTML('
         <tr>
             <td class="tbl_top">1.</td>
             <td>Pembimbing Utama <br>
-                '.$dospem1.'<br>
+                '.$surat["dospem1"].'<br>
                 NIP. '.$nip_1.'
             </td>
             <td>Ketua</td>
-            <td style="text-align: center">'.$nilai_d1.'</td>
+            <td style="text-align: center">'.$mean_rincid1.'</td>
             <td class="tbl_center">60%</td>
             <td class="tbl_center">40%</td>
             <td class="tbl_center">'.$xd1.'</td>
@@ -881,11 +1639,11 @@ $mpdf->WriteHTML('
         <tr>
             <td class="tbl_top">2.</td>
             <td>Pembimbing Pembantu <br>
-                '.$dospem2.'<br>
+                '.$surat["dospem2"].'<br>
                 NIP. '.$nip_2.'
             </td>
             <td>Sekretaris</td>
-            <td style="text-align: center">'.$nilai_d2.'</td>
+            <td style="text-align: center">'.$mean_rincid2.'</td>
             <td class="tbl_center">0%</td>
             <td class="tbl_center">20%</td>
             <td class="tbl_center">'.$xd2.'</td>
@@ -893,11 +1651,11 @@ $mpdf->WriteHTML('
         <tr style="text-align: center">
             <td class="tbl_top">3.</td>
             <td>Penguji Utama <br>
-                '.$penguji_u.'<br>
+                '.$surat["penguji_u"].'<br>
                 NIP. '.$nip_p.'
             </td>
             <td>Penguji Utama</td>
-            <td class="tbl_center">'.$nilai_pu.'</td>
+            <td class="tbl_center">'.$mean_rincip1.'</td>
             <td class="tbl_center">40%</td>
             <td class="tbl_center">40%</td>
             <td class="tbl_center">'.$xpu.'</td>
@@ -933,14 +1691,14 @@ $mpdf->WriteHTML('
 <table style="width: 100%;">
     <tr>
         <td style="width: 50%;">
-            1. '.$dospem1.'<br>
-            2. '.$dospem2.'<br>
-            3. '.$penguji_u.' <br>
+            1. '.$surat["dospem1"].'<br>
+            2. '.$surat["dospem2"].'<br>
+            3. '.$surat["penguji_u"].' <br>
         </td>
         <td>
-            (..........................) Ketua <br>
-            (..........................) Sekretaris <br>
-            (..........................) Penguji Utama <br>
+            (..........................) Ketua <br><br>
+            (..........................) Sekretaris <br><br>
+            (..........................) Penguji Utama <br><br>
         </td>
     </tr>
 </table>
@@ -950,7 +1708,7 @@ $mpdf->WriteHTML('
         <td style="width: 50%;"></td>
         <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
             Ketua, <br><br><br><br><br><br>
-            '.$dospem1.' <br>
+            '.$surat["dospem1"].' <br>
            NIP. '.$nip_1.'
         </td>
     </tr>
@@ -995,16 +1753,16 @@ $mpdf->WriteHTML('
 
 <table>
     <tr>
-        <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+        <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
     </tr>
     <tr>
-        <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+        <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
     </tr>
     <tr>
         <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
     </tr>
     <tr>
-        <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+        <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
     </tr>
 </table>
 
@@ -1029,36 +1787,38 @@ $mpdf->WriteHTML('
         <tr>
             <td class="tbl_top">1.</td>
             <td>Pembimbing Utama <br>
-                '.$dospem1.'<br>
+                '.$surat["dospem1"].'<br>
                 NIP. '.$nip_1.'
             </td>
             <td>Ketua</td>
-            <td style="text-align: center">'.$nilai_d1.'</td>
-            <td class="tbl_center">60%</td>
+            <td style="text-align: center">'.$mean_rincid1.'</td>
             <td class="tbl_center">40%</td>
-            <td class="tbl_center">'.$xd1_2.'</td>
-        </tr>
-        <tr>
-            <td class="tbl_top">2.</td>
-            <!-- <td>Pembimbing Pembantu <br> -->
-            <td></td>
-            <td>Sekretaris</td>
-            <td style="text-align: center"></td>
-            <td class="tbl_center">0%</td>
-            <td class="tbl_center">20%</td>
-            <td class="tbl_center"></td>
+            <td class="tbl_center">40%</td>
+            <td class="tbl_center">'.$xd1.'</td>
         </tr>
         <tr style="text-align: center">
-            <td class="tbl_top">3.</td>
+            <td class="tbl_top">2.</td>
             <td>Penguji Utama <br>
-                '.$penguji_u.'<br>
+                '.$surat["penguji_u"].'<br>
                 NIP. '.$nip_p.'
             </td>
             <td>Penguji Utama</td>
-            <td class="tbl_center">'.$nilai_pu.'</td>
+            <td class="tbl_center">'.$mean_rincip1.'</td>
             <td class="tbl_center">40%</td>
             <td class="tbl_center">40%</td>
             <td class="tbl_center">'.$xpu.'</td>
+        </tr>
+        <tr>
+            <td class="tbl_top">3.</td>
+            <td>Pembimbing Pembantu<br>
+                '.$surat["penguji_p"].'<br>
+                NIP. '.$nip_pp.'
+            </td>
+            <td>Pembimbing Pembantu</td>
+            <td style="text-align: center">'.$mean_rincip2.'</td>
+            <td class="tbl_center">20%</td>
+            <td class="tbl_center">20%</td>
+            <td class="tbl_center">'.$xpp.'</td>
         </tr>
         <tr>
             <td></td>
@@ -1091,12 +1851,14 @@ $mpdf->WriteHTML('
 <table style="width: 100%;">
     <tr>
         <td style="width: 50%;">
-            1. '.$dospem1.'<br>
-            3. '.$penguji_u.' <br>
+            1. '.$surat["dospem1"].'<br>
+            2. '.$surat["penguji_u"].' <br>
+            3. '.$surat["penguji_p"].' <br>
         </td>
         <td>
-            (..........................) Ketua <br>
-            (..........................) Penguji Utama <br>
+            (..........................) Ketua <br><br>
+            (..........................) Penguji Utama <br><br>
+            (..........................) Penguji Pembantu <br><br>
         </td>
     </tr>
 </table>
@@ -1107,7 +1869,7 @@ $mpdf->WriteHTML('
         <td style="width: 50%;"></td>
         <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
             Ketua, <br><br><br><br><br><br>
-            '.$dospem1.' <br>
+            '.$surat["dospem1"].' <br>
            NIP. '.$nip_1.'
         </td>
     </tr>
@@ -1154,16 +1916,16 @@ $mpdf->WriteHTML('
    
     <table>
         <tr>
-            <td>Nama  </td><td>:</td> <td> '.$nama.'</td>
+            <td>Nama  </td><td>:</td> <td> '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM  </td><td>:</td> <td> '.$npm.'</td>
+            <td>NPM  </td><td>:</td> <td> '.$surat["npm"].'</td>
         </tr>
         <tr>
             <td>Jurusan/PS  </td><td>:</td> <td> Ilmu Administrasi Bisnis</td>
         </tr>
         <tr>
-            <td>Judul Skripsi  </td><td>:</td> <td> '.$judul.'</td>
+            <td>Judul Skripsi  </td><td>:</td> <td> '.$surat["judul"].'</td>
         </tr>
     </table>
 
@@ -1224,10 +1986,10 @@ $mpdf->WriteHTML('
    
     <table>
         <tr>
-            <td>Nama  </td><td>: '.$nama.'</td>
+            <td>Nama  </td><td>: '.$surat["nama"].'</td>
         </tr>
         <tr>
-            <td>NPM  </td><td>: '.$npm.'</td>
+            <td>NPM  </td><td>: '.$surat["npm"].'</td>
         </tr>
         <tr>
             <td>Jurusan/PS  </td><td>: Ilmu Administrasi Bisnis</td>
@@ -1418,8 +2180,8 @@ $mpdf->WriteHTML('
             <td style="width: 50%;"></td>
             <td>Bandar Lampung, ...... .................. '.$tahun.' <br>
                 Yang membuat pernyataan, <br><br><br>Materai Rp.6000<br><br><br>
-                '.$nama.' <br>
-               NPM. '.$npm.'
+                '.$surat["nama"].' <br>
+               NPM. '.$surat["npm"].'
             </td>
         </tr>
     </table>

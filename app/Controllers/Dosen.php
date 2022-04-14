@@ -36,9 +36,9 @@ class Dosen extends BaseController
     public function index()
     {
         $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
-        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
-        $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
-        $dat_kompre = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
+        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
+        $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
+        $dat_kompre = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
 
         $data = [
             'title' => "Dosen",'skripsi' => $dat_skrip, 
@@ -100,7 +100,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_usul()
     {
-        $data1 = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
+        $data1 = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Usul",
@@ -114,7 +114,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_hasil()
     {
-        $data1 = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
+        $data1 = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Hasil",
@@ -128,7 +128,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_kompre()
     {
-        $data1 =$this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."'")->getResultArray();
+        $data1 =$this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Ujian Skripsi",
@@ -169,21 +169,25 @@ class Dosen extends BaseController
             'dospem2'=> $data["dospem2"],
             'status'=> "Seminar Usul Disetujui"
         ];
+
         if ($this->request->getVar("sebagai") == "Pembimbing 1"){
             $penilaian = ['nilai_d1' => $this->request->getVar("nilai")];
         }else if ($this->request->getVar("sebagai") == "Pembimbing 2"){
             $penilaian = ['nilai_d2' => $this->request->getVar("nilai")];
-        }else if ($this->request->getVar("sebagai") == "Penguji Utama"){
+        }else if ($this->request->getVar("sebagai") == "Penguji 1"){
             $penilaian = ['nilai_pu' => $this->request->getVar("nilai")];
+        }else if ($this->request->getVar("sebagai") == "Penguji 2"){
+            $penilaian = ['nilai_pp' => $this->request->getVar("nilai")];
         }
+
         $this->M_surat_pengajuan_usul->update($npm, $penilaian);
         $this->M_seminar_usul->update($npm, $penilaian);
-        $surat = $this->M_surat_pengajuan_usul->find($npm);
 
+        $surat = $this->M_surat_pengajuan_usul->find($npm);
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_usul->delete($npm);
-        } else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["dospem2"] == null ){
+        } else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["nilai_pp"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_usul->delete($npm);
         }
@@ -227,8 +231,10 @@ class Dosen extends BaseController
             $penilaian = ['nilai_d1' => $this->request->getVar("nilai")];
         }else if ($this->request->getVar("sebagai") == "Pembimbing 2"){
             $penilaian = ['nilai_d2' => $this->request->getVar("nilai")];
-        }else if ($this->request->getVar("sebagai") == "Penguji Utama"){
+        }else if ($this->request->getVar("sebagai") == "Penguji 1"){
             $penilaian = ['nilai_pu' => $this->request->getVar("nilai")];
+        }else if ($this->request->getVar("sebagai") == "Penguji 2"){
+            $penilaian = ['nilai_pp' => $this->request->getVar("nilai")];
         }
         
         $this->M_surat_pengajuan_hasil->update($npm, $penilaian);
@@ -239,7 +245,7 @@ class Dosen extends BaseController
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_hasil->delete($npm);
         }
-        else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["dospem2"] == null ){
+        else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["nilai_pp"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_hasil->delete($npm);
         }
@@ -286,17 +292,24 @@ class Dosen extends BaseController
         
         if ($this->request->getVar("sebagai") == "Pembimbing 1"){
             $penilaian = [
-                'nilai_d1' => $this->request->getVar("nilai"),
-                'pelak11' => $this->request->getVar("pelak11"),
-                'pelak12' => $this->request->getVar("pelak12"),
-                'naskah21' => $this->request->getVar("naskah21"),
-                'naskah22' => $this->request->getVar("naskah22"),
-                'naskah23' => $this->request->getVar("naskah23"),
+                'nilai_d1' => $this->request->getVar("nilai1"),
+                'nilai_d1t' => $this->request->getVar("nilai2"),
             ];
         }else if ($this->request->getVar("sebagai") == "Pembimbing 2"){
-            $penilaian = ['nilai_d2' => $this->request->getVar("nilai")];
-        }else if ($this->request->getVar("sebagai") == "Penguji Utama"){
-            $penilaian = ['nilai_pu' => $this->request->getVar("nilai")];
+            $penilaian = [
+                'nilai_d2' => $this->request->getVar("nilai1"),
+                'nilai_d2t' => $this->request->getVar("nilai2"),
+            ];
+        }else if ($this->request->getVar("sebagai") == "Penguji 1"){
+            $penilaian = [
+                'nilai_pu' => $this->request->getVar("nilai1"),
+                'nilai_put' => $this->request->getVar("nilai2"),
+            ];
+        }else if ($this->request->getVar("sebagai") == "Penguji 2"){
+            $penilaian = [
+                'nilai_pp' => $this->request->getVar("nilai1"),
+                'nilai_ppt' => $this->request->getVar("nilai2"),
+            ];
         }
         
         $this->M_surat_pengajuan_kompre->update($npm, $penilaian);
@@ -306,7 +319,7 @@ class Dosen extends BaseController
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_ujian_kompre->delete($npm);
-        } else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["dospem2"] == null ){
+        } else if($surat["nilai_d1"] != 0 && $surat["nilai_pu"] != 0 && $surat["nilai_pp"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_ujian_kompre->delete($npm);
         }
