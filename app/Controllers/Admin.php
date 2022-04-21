@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\M_register;
+use App\Models\Z_instansi;
 use App\Models\M_data_pengajuan_judul;
 use App\Models\M_data_pengajuan_penguji;
 use App\Models\M_surat_pengajuan_judul;
@@ -15,6 +16,7 @@ use App\Models\M_seminar_hasil;
 use App\Models\M_ujian_kompre;
 use App\Models\M_data_notif;
 use App\Models\M_profil_mahasiswa;
+use App\Models\M_mahasiswa_lulusan;
 use App\Models\M_profil_dosen;
 
 class Admin extends BaseController
@@ -23,6 +25,7 @@ class Admin extends BaseController
 
     public function __construct()
     {
+        $this->Z_instansi = new Z_instansi();
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
         $this->M_surat_pengajuan_usul = new M_surat_pengajuan_usul();
@@ -36,6 +39,7 @@ class Admin extends BaseController
         $this->M_ujian_kompre = new M_ujian_kompre();
         $this->M_data_notif = new M_data_notif();
         $this->M_profil_mahasiswa = new M_profil_mahasiswa();
+        $this->M_mahasiswa_lulusan = new M_mahasiswa_lulusan();
         $this->M_profil_dosen = new M_profil_dosen();
     }
 
@@ -68,18 +72,31 @@ class Admin extends BaseController
         echo view('r_admin/v_admin',$data);
         echo view('layouts/admin_footer');
     } 
+    public function data_jurusan()
+    {
+        $data_jurusan = $this->Z_instansi->findAll();
+        
+        $data = [
+            'title' => "Data Jurusan",
+            'jurusan' => $data_jurusan
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar');
+        echo view('r_admin/v_jurusan');
+        echo view('layouts/admin_footer');
+    }
 
     public function data_lulusan()
     {
-        $data1 = $this->M_data_skripsi->query("SELECT * FROM `data_skripsi` WHERE status = 'LULUS'")->getResultArray();
+        $data1 = $this->M_mahasiswa_lulusan->findAll();
         
         $data = [
-            'title' => "Data Akun",
+            'title' => "Lulusan",
             'data' => $data1
         ];
         echo view('layouts/admin_header', $data);
-        echo view('layouts/admin_navbar', $data);
-        echo view('r_admin/data_lulusan',$data);
+        echo view('layouts/admin_navbar');
+        echo view('r_admin/data_lulusan');
         echo view('layouts/admin_footer');
     }
 
@@ -489,6 +506,13 @@ class Admin extends BaseController
 
         session()->setFlashdata('pesan', "Akun Dosen Berhasil Dihapus");
         return redirect()->to(base_url('Admin/data_dosen'));
+    }
+    public function ubah_data_jurusan()
+    {
+        $this->Z_instansi->update($user);
+
+        session()->setFlashdata('pesan', "Data Jurusan Berhasil Di Ubah");
+        return redirect()->to(base_url('Admin/data_jurusan'));
     }
 
     public function data_surat_judul()

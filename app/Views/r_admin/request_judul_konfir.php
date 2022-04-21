@@ -24,23 +24,23 @@
             <div class="form-group">
             <label>
                 NPM</label>
-            <input type="text" name="npm" class="form-control" value="<?=$data['npm']?>" id="inputUsername" placeholder="NPM Kosong" readonly/>
+            <input type="text" name="npm" class="form-control" value="<?=$data['npm']?>" id="inputUsername" placeholder="NPM Kosong" readonly required/>
             </div>
             <div class="form-group">
                 <label>
                     Nama</label>
-                <input type="text" name="nama" class="form-control" value="<?=$data['nama']?>" id="Nama" placeholder="Nama Kosong" readonly/>
+                <input type="text" name="nama" class="form-control" value="<?=$data['nama']?>" id="Nama" placeholder="Nama Kosong" readonly required/>
                 </div>
                 <div class="form-group">
                 <label for="Nama">
                     Judul</label>
-                <input type="text" name="judul" class="form-control" value="<?=$judul?>" placeholder="Judul Kosong" readonly/>
+                <input type="text" name="judul" class="form-control" value="<?=$judul?>" placeholder="Judul Kosong" readonly required/>
             </div>
             <div class="form-group">
                 <label for="dospem1">
                     Dosen Pembimbing 1</label>
                 <select name="dospem1" class="form-control" id="dospem1" required>
-                    <option value="<?=$data['dospem1']?>"><?=$data['dospem1']?> (Permohonan)</option>
+                    <option value="<?=$data['dospem1']?>"><?= $data['dospem1'] != null?  $data['dospem1']." (Permohonan)" : "Tidak ada permohonan" ?></option>
                     <?php foreach ($dosen as $dsn1) : ?>
                     <option value="<?= $dsn1["nama"]?>"><?= $dsn1["nama"]?></option>
                     <?php endforeach;?>
@@ -50,7 +50,8 @@
                 <label for="dospem2">
                     Dosen Pembimbing 2</label>
                 <select name="dospem2" class="form-control" id="dospem2">
-                    <option value="<?=$data['dospem2']?>"><?=$data['dospem2']?> (Permohonan)</option>
+                    <option value="<?=$data['dospem2']?>"><?= $data['dospem2'] != null?  $data['dospem2']." (Permohonan)" : "Tidak ada permohonan" ?></option>
+                    <option value="">- Kosongkan -</option>
                     <?php foreach ($dosen as $dsn2) : ?>
                     <option value="<?= $dsn2["nama"]?>"><?= $dsn2["nama"]?></option>
                     <?php endforeach;?>

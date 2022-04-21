@@ -14,7 +14,7 @@
                 <tr>
                 <th scope="col">NPM</th>
                 <th scope="col">Nama</th>
-                <th scope="col">Judul Skripsi</th>
+                <th scope="col">Email</th>
                 <th scope="col">Tanggal Lulus</th>
                 <th scope="col">Waktu Tempuh</th>
                 
@@ -24,15 +24,11 @@
             <tbody>
                 <?php foreach ($data as $data) : ?>
                 <tr>
-                
                 <td><?= $data["npm"]; ?></td>
                 <td><?= $data["nama"]; ?></td>
-                <td><?= $data["judul"]; ?></td>
-                <td><?= $data["date_kompre"]; ?></td>
-                <td><?= $data["time_total"]; ?></td>
-                    
-              
-                
+                <td><?= $data["email"]; ?></td>
+                <td><?= $data["tanggal_lulus"]; ?></td>
+                <td><?= $data["waktu_tempuh"]; ?> Tahun</td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

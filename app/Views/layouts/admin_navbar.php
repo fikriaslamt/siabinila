@@ -120,7 +120,7 @@
         <!-- Nav Item - Tables -->
         <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'request_akun' ? 'active'  : '' ?>">
             <a class="nav-link" href="<?= base_url('Admin/request_akun')?>">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-hand-paper"></i>
                 <span>Pengajuan Akun</span></a>
         </li>
 
@@ -173,7 +173,13 @@
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
 
-            
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link" href="<?= base_url('Admin/data_jurusan')?>">
+                    <span class="mr-2 d-none d-lg-inline small <?= \Config\Services::request()->uri->getSegment(2) == 'data_jurusan' ? 'btn btn-primary'  : 'text-gray-600' ?>">Jurusan</span>
+                </a>
+            </li>
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->

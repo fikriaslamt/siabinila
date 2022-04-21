@@ -31,7 +31,8 @@
         <td><?= $data['user']; ?></td>
         <td><?= $data['nama']; ?></td>
     
-        <td class="d-flex justify-content-center"><a href="<?= base_url('Admin/tambah_akun/'.$data["user"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a></td>
+        <td class="d-flex justify-content-center"><a href="<?= base_url('Admin/tambah_akun/'.$data["user"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a>
+        <a href="#"><button class="btn btn-danger btn-sm">TOLAK</button></a></td>
 
         </tr>
         <?php endforeach; ?>
