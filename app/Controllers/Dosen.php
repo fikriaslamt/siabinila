@@ -11,6 +11,8 @@ use App\Models\M_profil_dosen;
 use App\Models\M_surat_pengajuan_usul;
 use App\Models\M_surat_pengajuan_hasil;
 use App\Models\M_surat_pengajuan_kompre;
+use App\Models\M_data_notif;
+
 
 
 class Dosen extends BaseController
@@ -31,17 +33,19 @@ class Dosen extends BaseController
         $this->M_surat_pengajuan_usul = new M_surat_pengajuan_usul();
         $this->M_surat_pengajuan_hasil = new M_surat_pengajuan_hasil();
         $this->M_surat_pengajuan_kompre = new M_surat_pengajuan_kompre();
+        $this->M_data_notif = new M_data_notif();
     }
 
     public function index()
     {
         $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
+        $dat_uji = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
         $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
         $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
         $dat_kompre = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
 
         $data = [
-            'title' => "Dosen",'skripsi' => $dat_skrip, 
+            'title' => "Dosen",'skripsi' => $dat_skrip, 'uji' => $dat_uji, 
             'usul'  => $dat_usul, 'hasil' => $dat_hasil, 'kompre' => $dat_kompre, 
         ];
         echo view('layouts/header', $data);
@@ -192,13 +196,24 @@ class Dosen extends BaseController
             $this->M_seminar_usul->delete($npm);
         }
         
+        session()->setFlashdata('pesan', "Berhasil Memberi Nilai Seminar");
+
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
     public function tolak_usul($npm)
     {      
-        
+        $this->M_data_notif->insert([
+            'untuk' => $npm,
+            'oleh' => "Dosen",
+            'subjek' => "Seminar Usul",
+            'isi_pesan' => "Seminar Usul Anda Telah Ditolak, Silahkan Ajuan Seminar Ulang Jika Telah Melakukan Revisi",
+        ]);
+        $this->M_data_skripsi->update($npm,['status'=>"Judul Disetujui"]);
+        $this->M_surat_pengajuan_usul->delete($npm);
         $this->M_seminar_usul->delete($npm);
+
+        session()->setFlashdata('pesan', "Seminar Usul Tersebut Telah Ditolak");
         return redirect()->to(base_url('Dosen/data_pengajuan_usul'));
     }
 
@@ -249,13 +264,24 @@ class Dosen extends BaseController
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_hasil->delete($npm);
         }
+        session()->setFlashdata('pesan', "Berhasil Memberi Nilai Seminar");
 
         return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
     public function tolak_hasil($npm)
     {      
+        $this->M_data_notif->insert([
+            'untuk' => $npm,
+            'oleh' => "Dosen",
+            'subjek' => "Seminar Hasil",
+            'isi_pesan' => "Seminar Hasil Anda Telah Ditolak, Silahkan Ajuan Seminar Ulang Jika Telah Melakukan Revisi",
+        ]);
+        $this->M_data_skripsi->update($npm,['status'=>"Seminar Usul Disetujui"]);
+        $this->M_surat_pengajuan_hasil->delete($npm);
         $this->M_seminar_hasil->delete($npm);
+        session()->setFlashdata('pesan', "Seminar Hasil Tersebut Telah Ditolak");
+
         return redirect()->to(base_url('Dosen/data_pengajuan_hasil'));
     }
 
@@ -323,16 +349,26 @@ class Dosen extends BaseController
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_ujian_kompre->delete($npm);
         }
+        session()->setFlashdata('pesan', "Berhasil Memberi Nilai Ujian Kompre");
 
         return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
     }
 
     public function tolak_kompre($npm)
     {      
+        $this->M_data_notif->insert([
+            'untuk' => $npm,
+            'oleh' => "Dosen",
+            'subjek' => "Ujian Kompre",
+            'isi_pesan' => "Ujian Kompre Anda Telah Ditolak, Silahkan Ajuan Ujian Ulang Jika Telah Melakukan Revisi",
+        ]);
+        $this->M_data_skripsi->update($npm,['status'=>"Seminar Hasil Disetujui"]);
+        $this->M_surat_pengajuan_kompre->delete($npm);
         $this->M_ujian_kompre->delete($npm);
+        session()->setFlashdata('pesan', "Ujian Kompre Tersebut Telah Ditolak");
+
         return redirect()->to(base_url('Dosen/data_pengajuan_kompre'));
     }
-
 
     public function data_skripsi()
     {

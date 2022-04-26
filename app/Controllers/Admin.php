@@ -269,7 +269,7 @@ class Admin extends BaseController
             'oleh' => "Jurusan",
             'subjek' => "Pengajuan Judul Skripsi",
             'isi_pesan' => $this->request->getVar('isi_pesan'),
-        ]);
+        ]); 
         return redirect()->to(base_url('Admin/data_pengajuan_judul'));
     }
 
@@ -283,6 +283,7 @@ class Admin extends BaseController
         $penguji = new M_data_pengajuan_penguji();
         $pengajuan_p = $penguji->delete($npm);
 
+        session()->setFlashdata('pesan', "Penguji telah dipilih");
         return redirect()->to(base_url('Admin/data_pengajuan_seminar'));
     }
 
@@ -491,7 +492,6 @@ class Admin extends BaseController
         $data = [
             'title' => "Detail",
             'data' => $data1
-
         ];
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar', $data);
@@ -509,7 +509,9 @@ class Admin extends BaseController
     }
     public function ubah_data_jurusan()
     {
-        $this->Z_instansi->update($user);
+        $this->Z_instansi->update("Administrasi Bisnis", [
+            'jurusan' => $this->request->getVar("jurusan"),
+        ]);
 
         session()->setFlashdata('pesan', "Data Jurusan Berhasil Di Ubah");
         return redirect()->to(base_url('Admin/data_jurusan'));

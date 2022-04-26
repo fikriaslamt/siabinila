@@ -10,12 +10,17 @@
             </div>
             <!-- Card Body -->
             <div class="card-body table-responsive">
+                <?php if (session()->getFlashdata('pesan')) { ?>
+                <div class="alert alert-success">
+                <?php echo session()->getFlashdata('pesan') ?>
+                </div>
+                <?php } ?> 
             <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th scope="col">NPM/Nama</th>
                             <th scope="col">Judul Skripsi</th>
-                            <th scope="col">Konsetrasi</th>
+                            <th scope="col">Konsentrasi</th>
                             <th scope="col">Tindakan</th>
                         </tr>
                     </thead>

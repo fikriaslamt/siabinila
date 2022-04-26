@@ -25,17 +25,7 @@
         </div>
         <?php endif ?>
 
-        <?php if (!empty($notif)){ ?>
-        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
-        <?= $notif[0]["subjek"]?><br/>
-        oleh : <?= $notif[0]["oleh"]?><br/><br/><hr/>
-        <br/>
-        <?= $notif[0]["isi_pesan"]?><br/>
-        </div>
-        
-        <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>"><button>Form Pengajuan Judul Skripsi</button></a>
-        
-        <?php } else if (empty($pengajuan) && empty($skripsi)){ ?>
+        <?php if (empty($pengajuan) && empty($skripsi)){ ?>
         <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
         Anda Belum Mengajukan Skripsi
         </div>
@@ -46,13 +36,18 @@
         <a href="<?= base_url('Mahasiswa/form_pengajuan_judul')?>"><button>Form Pengajuan Judul Skripsi</button></a>
 
         <?php } else if (!empty($pengajuan) && empty($skripsi)){ ?>
-        <div class="alert alert-warning">
-        Pengajuan Judul Skripsi Anda Sedang Dalam Peninjauan
+        <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
+            Pengajuan Judul Skripsi Anda Sedang Dalam Peninjauan
         </div>
 
         <?php } else if ($skripsi[0]["status"]=="Judul Disetujui"){ ?>
         <div class="alert alert-warning">
-        <i class="fas fa-envelope" style="display:block; float:right"></i> Pengajuan Judul Skripsi Anda Telah disetujui <br/>
+        <i class="fas fa-envelope" style="display:block; float:right"></i> 
+        <?php if(!empty($notif)):
+            echo $notif[0]["isi_pesan"];
+        else:
+            echo "Pengajuan Judul Skripsi Anda Telah disetujui";
+        endif;?>
         </div>
         
         Langkah Selanjutnya :<br/><br/>
@@ -86,7 +81,11 @@
 
         <?php } else if ($skripsi[0]["status"]=="Seminar Usul Disetujui"){ ?>
         <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
-            Seminar usul anda telah dinilai dan disetujui
+            <?php if(!empty($notif)):
+                echo $notif[0]["isi_pesan"];
+            else:
+                echo "Seminar usul anda telah dinilai dan disetujui";
+            endif;?>
         </div>
         Perhatian :<br/>
         - Silahkan unduh formulir seminar terbaru, cukup cetak (Form A.7b) untuk keperluan nilai.<br/>
@@ -106,7 +105,11 @@
        
         <?php } else if ($skripsi[0]["status"]=="Seminar Hasil Disetujui"){ ?>    
         <div class="alert alert-warning"><i class="fas fa-envelope" style="display:block; float:right"></i>
-            Seminar hasil anda telah dinilai dan disetujui
+        <?php if(!empty($notif)):
+                echo $notif[0]["isi_pesan"];
+            else:
+                echo "Seminar hasil anda telah dinilai dan disetujui";
+            endif;?>
         </div>
         Perhatian :<br/>
         - Silahkan unduh formulir seminar terbaru, cukup cetak (Form A.8b) untuk keperluan nilai.<br/>

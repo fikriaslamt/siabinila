@@ -95,6 +95,11 @@
 
 <H2 style="text-align:center">Data Pengajuan Ujian Komprehensif</H2>
 <div class="container dosen h-scroll-l">
+      <?php if (session()->getFlashdata('pesan')) { ?>
+      <div class="alert alert-success">
+      <?php echo session()->getFlashdata('pesan') ?>
+      </div>
+      <?php } ?>
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
@@ -130,12 +135,11 @@
                 ?>
                 </td>
                 <td>
-                    <!-- <a href="<?= base_url('Dosen/terima_kompre/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a> -->
                     <?php if($nilai != 0){ ?>
                     <i class="fas fa-check" style="color:green; font-size:110%"></i> <?=$nilai?>
                     <?php } else if($nilai == 0){?>  
                     <a href="#nilai<?= $data['npm']; ?>"><button>Beri Nilai</button></a>
-                    <a href="<?= base_url('Dosen/tolak_kompre/'.$data["npm"])?>"><button class="btn-merah">Tolak</button></a>
+                    <a href="<?= base_url('Dosen/tolak_kompre/'.$data["npm"])?>" onclick="javascript:return confirm('Keputusan tidak dapat dikembalikan, anda yakin ingin menolak kompre tersebut?');"><button class="btn-merah">Tolak</button></a>
 
                     <div id="nilai<?= $data['npm']; ?>" class="overlay">
                         <div class="popup">
@@ -158,7 +162,7 @@
                                 </tr>
                               </table><br/>
                               <div id="jumlah" style="text-align:right;">Jumlah Nilai: 0</div>
-                              <div id="mean"   style="text-align:right;">Nilai Rata-rata: 0</div>
+                              <b><div id="mean"   style="text-align:right;">Nilai Rata-rata: 0</div></b>
                             </div>
 
                             <div class="content">

@@ -12,6 +12,7 @@ if ($jam > 3 and $jam <=9){
 
 foreach ($skripsi as $skripsii) :
   $tanggal = $skripsii->date;
+  $status_skripsi = $skripsii->status;
 endforeach;
 foreach ($profil as $profil) :
   $angkatan = $profil->angkatan;
@@ -67,14 +68,20 @@ endforeach;
 
 <div class="container">
 
-  <h2><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
+  <h2 style="margin-left: 21px"><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
   <div style="margin-left: 21px">Semester <?=$semester?>/14</div>
-  <div class="meter">
+  <div class="meter <?php
+      if($semester > 10){
+        echo "red";
+      }else if($semester > 6 && $semester <= 10){ 
+        echo "orange";
+      }
+      ?>">
 	<span style="width: <?= round($smtr_persen)?>%"></span>
   </div>
 
-  <?php 
+  <?php
   if (!empty($skripsi)): 
     $datetime1 = date_create($tanggal);
     $datetime2 = date_create(date('Y-m-d'));
@@ -82,14 +89,24 @@ endforeach;
     //$interval->format('%R%a Hari');
     $int_hari = $interval->format('%a');
   ?>
-  <div style="margin-left: 21px">Skripsi anda telah berjalan  <b><?= $interval->format('%a');?></b> Hari</div>
-    <div class="meter">
+  <div style="margin-left: 21px">
+    <?php if($status_skripsi == "Telah Lulus Skripsi"):
+    echo "<i class=\"far fa-check-circle text-green-300\"></i> Anda Telah Menyelesaikan Skripsi <br/><br/>";
+    else: ?>
+    Skripsi anda telah berjalan  <b><?= $interval->format('%a');?></b> Hari</div>
+    <div class="meter <?php
+      if($int_hari/180*100 > 100){
+        echo "red";
+      }else if($int_hari/180*100 > 80 && $int_hari/180*100 <= 100){ 
+        echo "orange";
+      }
+      ?>">
     <span style="width: <?= round(($int_hari/180)*100)?>%"></span>
     <?php //echo($datetime2->format("N")) 
     // echo strftime("%A %e %B %Y");
     // echo date('%A %e %B $Y', strtotime('1994-02-15'));
     ?>
-    
+    <?php endif ?>
   </div>
   <?php endif ?>
   

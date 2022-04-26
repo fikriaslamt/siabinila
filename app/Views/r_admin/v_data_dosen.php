@@ -14,7 +14,7 @@
         <!-- Card Body -->
         <div class="card-body table-responsive">
         <?php if (session()->getFlashdata('pesan')) { ?>
-        <div class="alert alert-primary">
+        <div class="alert alert-success">
         <?php echo session()->getFlashdata('pesan') ?>
         </div>
         <?php } ?> 

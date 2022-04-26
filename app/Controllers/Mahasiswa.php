@@ -553,6 +553,7 @@ class Mahasiswa extends BaseController
             'judul'    => $this->request->getVar('judul'), 
             'status'   => "Mengajukan Seminar Usul"
         ]); 
+        $this->M_data_notif->delete($npm);
         
         return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
@@ -591,7 +592,8 @@ class Mahasiswa extends BaseController
             'status' => "Mengajukan Seminar Hasil",
             'judul'    => $this->request->getVar('judul'),
         ]); 
-       
+        $this->M_data_notif->delete($npm);
+
         return redirect()->to(base_url('Mahasiswa/skripsi'));
     }
 
@@ -627,6 +629,7 @@ class Mahasiswa extends BaseController
             'judul'    => $this->request->getVar('judul'),
             'status' => "Mengajukan Ujian Skripsi"
         ]); 
+        $this->M_data_notif->delete($npm);
         
         return redirect()->to(base_url('Mahasiswa/skripsi'));
     }

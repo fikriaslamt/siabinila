@@ -1,4 +1,3 @@
-
 <style>
 .container{
   width: 90%;
@@ -72,7 +71,11 @@
 
 <H2 style="text-align:center">Data Pengajuan Seminar Usul</H2>
 <div class="container dosen h-scroll-l">
-    
+      <?php if (session()->getFlashdata('pesan')) { ?>
+      <div class="alert alert-success">
+      <?php echo session()->getFlashdata('pesan') ?>
+      </div>
+      <?php } ?>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -108,12 +111,11 @@
                 ?>
                 </td>
                 <td>
-                    <!-- <a href="<?= base_url('Dosen/terima_usul/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a> -->
                     <?php if($nilai != 0){ ?>
                     <i class="fas fa-check" style="color:green; font-size:110%"></i> <?=$nilai?>
                     <?php } else if($nilai == 0){?>  
                     <a href="#nilai<?= $data['npm']; ?>"><button>Beri Nilai</button></a>
-                    <a href="<?= base_url('Dosen/tolak_usul/'.$data["npm"])?>"><button class="btn-merah">Tolak</button></a>
+                    <a href="<?= base_url('Dosen/tolak_usul/'.$data["npm"])?>" onclick="javascript:return confirm('Keputusan tidak dapat dikembalikan, anda yakin ingin menolak seminar tersebut?');"><button class="btn-merah">Tolak</button></a>
 
                     <div id="nilai<?= $data['npm']; ?>" class="overlay">
                         <div class="popup">
@@ -123,7 +125,7 @@
                             <form action="<?= base_url('Dosen/terima_usul/'.$data["npm"])?>" method="post">
                             <label>"<?= $data['judul']; ?>"</label><br/><br/>
                             <label>Masukkan Nilai Seminar Usul</label>
-                            <input type="number" name="nilai" min="50" max="100" class="form_text" placeholder="Misal: 78" required>
+                            <input type="number" name="nilai" min="50" max="100" class="form_text" placeholder="Nilai..." required>
                             <input type="text" name="sebagai" value="<?=$sebagai?>" hidden required>
                             <input type="submit" class="tombol_submit" value="Konfirmasi Nilai">
                             </form>

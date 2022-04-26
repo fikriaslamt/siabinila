@@ -71,6 +71,11 @@
 
 <H2 style="text-align:center">Data Pengajuan Seminar Hasil</H2>
 <div class="container dosen h-scroll-l">
+      <?php if (session()->getFlashdata('pesan')) { ?>
+      <div class="alert alert-success">
+      <?php echo session()->getFlashdata('pesan') ?>
+      </div>
+      <?php } ?>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -106,12 +111,11 @@
                 ?>
                 </td>
                 <td>
-                    <!-- <a href="<?= base_url('Dosen/terima_hasil/'.$data["npm"])?>"><button class="btn btn-success btn-sm">TERIMA</button></a> -->
                     <?php if($nilai != 0){ ?>
                     <i class="fas fa-check" style="color:green; font-size:110%"></i> <?=$nilai?>
                     <?php } else if($nilai == 0){?>  
                     <a href="#nilai<?= $data['npm']; ?>"><button>Beri Nilai</button></a>
-                    <a href="<?= base_url('Dosen/tolak_hasil/'.$data["npm"])?>"><button class="btn-merah">Tolak</button></a>
+                    <a href="<?= base_url('Dosen/tolak_hasil/'.$data["npm"])?>" onclick="javascript:return confirm('Keputusan tidak dapat dikembalikan, anda yakin ingin menolak seminar tersebut?');"><button class="btn-merah">Tolak</button></a>
 
                     <div id="nilai<?= $data['npm']; ?>" class="overlay">
                         <div class="popup">

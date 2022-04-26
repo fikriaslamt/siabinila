@@ -173,7 +173,7 @@ class Cetakan extends BaseController {
             'surat'     => $kompre,
             'no_surat'  => substr(1000+$kompre["no_surat"],1,3),
             'dospem2'   => $kompre["dospem2"],
-            'penguji_p'   => $kompre["penguji_p"],
+            'penguji_p' => $kompre["penguji_p"],
             'nip_1' => $dosen1[0]["nip"],   'nip_p' => $dosenPenguji[0]["nip"],
             'nip_2' => $dosen2[0]["nip"],   'nip_pp' => $dosenPem[0]["nip"],
             'kajur'     => $this->jrusan[0]["kajur"],

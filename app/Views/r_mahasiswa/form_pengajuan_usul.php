@@ -99,7 +99,7 @@
         <label for="judul2">Pilih Tanggal</label> 
         <input type="date" name="tanggal" class="form_text" placeholder="Tanggal" required>
         <label for="judul2">Pilih Jam</label> 
-        <input type="time" min="07:30" max="17:00" name="jam" class="form_text" placeholder="Contoh: 13:00" required>
+        <input type="time" min="07:30" max="17:00" name="jam" step="1800" class="form_text" placeholder="Contoh: 13:00" required>
         <input type="checkbox" id="check1" required>
         <label class="form-check-label" for="check1">Saya menyatakan sudah siap seminar usul</label>
         <br/><br/>

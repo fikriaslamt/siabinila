@@ -34,7 +34,7 @@
                 <div class="col-sm-9">: <?= $skrip["dospem1"] ?></div>
 
                 <div class="col-sm-3">Dosen Pembimbing 2</div>
-                <div class="col-sm-9">: <?= $skrip["dospem2"] == "" ? " - " :  $skrip["dospem2"] ?></div>
+                <div class="col-sm-9">: <?= $skrip["dospem2"] == null ? " - " :  $skrip["dospem2"] ?></div>
             </div><br/>
             
             <div class="form-group">
@@ -47,22 +47,20 @@
                     <?php endforeach;?>
                 </select>
             </div>
-
-            <div class="form-group">
-                <label for="penguji_p">
-                    Penguji Seminar Kedua 
-                    <small id="passwordHelpBlock" class="form-text text-muted">
-                    *Tidak wajib
-                    </small> 
-                </label> 
-                <select name="penguji_p" class="form-control" id="penguji_p">
-                <option value="">- Pilih -</option>
-                    <?php foreach ($dosen as $dsn2) : ?>
-                    <option value="<?= $dsn2["nama"]?>"><?= $dsn2["nama"]?></option>
-                    <?php endforeach;?>
-                </select>
-                
-            </div>
+            
+            <?php if($skrip["dospem2"] == null): ?>
+                <div class="form-group">
+                    <label for="penguji_p">
+                        Penguji Seminar Kedua
+                    </label> 
+                    <select name="penguji_p" class="form-control" id="penguji_p" required>
+                    <option value="">- Pilih -</option>
+                        <?php foreach ($dosen as $dsn2) : ?>
+                        <option value="<?= $dsn2["nama"]?>"><?= $dsn2["nama"]?></option>
+                        <?php endforeach;?>
+                    </select>
+                </div>
+            <?php endif ?>
 
 
             <!-- <div class="form-group">

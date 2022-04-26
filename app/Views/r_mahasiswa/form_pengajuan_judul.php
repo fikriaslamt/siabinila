@@ -13,7 +13,7 @@
             <div class="col col-per2">
             <label for="sks">
                 SKS yang diselesaikan</label>  
-            <input type="number" min="140" name="sks" id="sks" class="form_text" placeholder="Min. 140">
+            <input type="number" min="110" name="sks" id="sks" class="form_text" placeholder="Min. 110">
             </div>
             <div class="col col-per2">
             <label for="ipk">
