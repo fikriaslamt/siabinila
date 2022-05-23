@@ -93,14 +93,14 @@
         <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_seminar' ? 'active'  : '' ?>">
             <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_seminar')?>">
                 <i class="fas fa-fw fa-chart-bar"></i>
-                <span>Pengajuan Seminar</span></a>
+                <span>Jadwal Seminar</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_pengajuan_kompre' ? 'active'  : '' ?>">
             <a class="nav-link" href="<?= base_url('Admin/data_pengajuan_kompre')?>">
                 <i class="fas fa-fw fa-chart-bar"></i>
-                <span>Pengajuan Ujian Skripsi</span></a>
+                <span>Jadwal Ujian Skripsi</span></a>
         </li>
 
         <!-- Divider -->

@@ -165,7 +165,7 @@ class Admin extends BaseController
         $data2 = $this->M_seminar_hasil->findAll();
 
         $data = [
-            'title' => "Data Pengajuan Seminar",
+            'title' => "Data Seminar",
             'data1' => $data1, 'data2' => $data2, 'pengajuan_p' => $pengajuan_p,
         ];
         echo view('layouts/admin_header', $data);
@@ -193,7 +193,7 @@ class Admin extends BaseController
         $data1 = $this->M_ujian_kompre->findAll();
 
         $data = [
-            'title' => "Data Pengajuan Ujian Skripsi",
+            'title' => "Data Ujian Skripsi",
             'data' => $data1
         ];
         echo view('layouts/admin_header', $data);
