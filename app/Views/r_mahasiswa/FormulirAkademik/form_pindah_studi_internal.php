@@ -50,10 +50,14 @@
         <label for="ortu">Orang Tua/Wali :</label>
         <input type="text" name="ortu" class="form_text" placeholder="Orang Tua/Wali">
 
-        <label for="dospa">Dosen Pembimbing Akademik :</label>
-        <input type="text" name="dospa" class="form_text" placeholder="Dosen Pembimbing Akademik">
-        <label for="nip_dospa">NIP Dosen Pembimbing Akademik :</label>
-        <input type="number" name="nip_dospa" class="form_text" placeholder="NIP Dosen Pembimbing Akademik">
+        <label for="dospa">
+            Dosen Pembimbing Akademik :</label>
+        <select name="dospa" class="form_text" id="dospa" required>
+            <option value="">- Pilih Dosen-</option>
+            <?php foreach ($dosen as $dsn_pa) : ?>
+            <option value="<?= $dsn_pa["nama"]?>"><?= $dsn_pa["nama"]?></option>
+            <?php endforeach;?>
+        </select>
   
         <br>
         <label for="tanggal">Tanggal : (contoh : 1 Januari 2022)</label> 

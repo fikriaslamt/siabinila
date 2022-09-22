@@ -1,0 +1,169 @@
+CRITICAL - 2022-08-08 11:27:33 --> Constant expression contains invalid operations
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-08 11:29:17 --> Undefined variable: kop_surat
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 70, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-08 11:31:31 --> Undefined variable: kop_surat
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 70, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-08 11:44:05 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetak.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 52, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetak->surat_pengajuan_judul('1916051020')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-08 12:14:34 --> Invalid file: mpdf/surat_pengisian_krs_terlambat.php
+#0 /home/u1603686/siabinila_core/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mpdf/surat_peng...')
+#1 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/surat_peng...', Array, true)
+#2 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(455): view('mpdf/surat_peng...', Array)
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengisian_krs_terlambat()
+#4 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-08 13:36:08 --> Invalid file: mpdf/surat_pengisian_krs_terlambat.php
+#0 /home/u1603686/siabinila_core/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mpdf/surat_peng...')
+#1 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/surat_peng...', Array, true)
+#2 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(455): view('mpdf/surat_peng...', Array)
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengisian_krs_terlambat()
+#4 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-08 13:36:13 --> Invalid file: mpdf/surat_pengisian_krs_terlambat.php
+#0 /home/u1603686/siabinila_core/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mpdf/surat_peng...')
+#1 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/surat_peng...', Array, true)
+#2 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(455): view('mpdf/surat_peng...', Array)
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengisian_krs_terlambat()
+#4 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-08-08 14:10:01 --> Column 'grup' cannot be null
+CRITICAL - 2022-08-08 14:10:01 --> Column 'grup' cannot be null
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Admin.php(447): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->add_akun_dosen()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-08-08 15:18:07 --> Undefined variable: tanggal
+#0 /home/u1603686/siabinila_core/app/Views/mpdf/doc_pengajual_judul.php(367): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 367, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(91): view('mpdf/doc_pengaj...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-08 16:14:20 --> Undefined index: nilai_d1
+#0 /home/u1603686/siabinila_core/app/Views/r_dosen/v_dosen.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 134, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_dosen/v_dosen', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(53): view('r_dosen/v_dosen', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-08 16:14:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN surat_pengajuan_usul ON surat_pengajuan_usul.npm = data_seminar_usul.id' at line 1
+CRITICAL - 2022-08-08 16:14:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN surat_pengajuan_usul ON surat_pengajuan_usul.npm = data_seminar_usul.id' at line 1
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM d...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 /home/u1603686/siabinila_core/system/Model.php(721): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...')
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(44): CodeIgniter\Model->__call('query', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-08 16:15:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN surat_pengajuan_usul ON surat_pengajuan_usul.npm = data_seminar_usul.npm' at line 1
+CRITICAL - 2022-08-08 16:15:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN surat_pengajuan_usul ON surat_pengajuan_usul.npm = data_seminar_usul.npm' at line 1
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM d...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 /home/u1603686/siabinila_core/system/Model.php(721): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...')
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(44): CodeIgniter\Model->__call('query', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-08 16:16:31 --> Undefined index: nilai_d1
+#0 /home/u1603686/siabinila_core/app/Views/r_dosen/v_dosen.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 134, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_dosen/v_dosen', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(54): view('r_dosen/v_dosen', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-08 16:42:22 --> Unknown column 'dospem1' in 'where clause'
+CRITICAL - 2022-08-08 16:42:22 --> Unknown column 'dospem1' in 'where clause'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM d...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 /home/u1603686/siabinila_core/system/Model.php(721): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...')
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(108): CodeIgniter\Model->__call('query', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->data_pengajuan_usul()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-08 16:45:41 --> Unknown column 'dospem1' in 'where clause'
+CRITICAL - 2022-08-08 16:45:41 --> Unknown column 'dospem1' in 'where clause'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM d...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 /home/u1603686/siabinila_core/system/Model.php(721): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...')
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(108): CodeIgniter\Model->__call('query', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->data_pengajuan_usul()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-08 16:50:01 --> Undefined index: nama
+#0 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(171): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 171, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->terima_usul('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-08-08 16:52:01 --> Unknown column 'nilai_d1' in 'field list'
+CRITICAL - 2022-08-08 16:52:01 --> Unknown column 'nilai_d1' in 'field list'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `data_se...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_se...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_se...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1901): CodeIgniter\Database\BaseConnection->query('UPDATE `data_se...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(646): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(188): CodeIgniter\Model->update('1917051015', Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->terima_usul('1917051015')
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}

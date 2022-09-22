@@ -15,6 +15,31 @@ use \Mpdf\Mpdf;
 
 
 class Cetakan extends BaseController {
+    public static $kop_surat = '
+    <table class="header">
+        <tr>
+            <td>
+                <img width="100" src="https://siabinila.com/assets/img/logo.png">
+            </td>
+            <td>
+                <div style="font-size:120%;font-weight:bold;">
+                    KEMENTRIAN PENDIDIKAN, KEBUDAYAAN, RISET DAN TEKNOLOGI<br>
+                    UNIVERSITAS LAMPUNG <br>
+                    FAKULTAS ILMU SOSIAL DAN ILMU POLITIK <br>
+                    JURUSAN ILMU ADMINISTRASI BISNIS <br> </div>
+                    <span style="font-size:75%">
+                    Jalan Prof. Dr. Sumantri Brojonegoro  Gedong Meneng Bandar Lampung 35145.Telp./Fax (0721) 704626</span>
+                    <div style="font-size:90%">
+                    Website <span style="color:blue">http://admbisnis.fisip.unila.ac.id/</span> - Email <span style="color:blue"> admunila@gmail.com</span>
+                </div>
+            </td>
+            <td align="right">
+                <img style="margin: auto 0 auto auto !important;" width="50" src="https://siabinila.com/assets/img/sertif_kan.png">
+                <img style="margin: auto 0 auto auto !important;" width="47" src="https://siabinila.com/assets/img/sertif_egs.png">
+            </td>
+        </tr>
+    </table>
+    <hr style="height: 4px; color:black">';    
     
 
     public function __construct()
@@ -30,7 +55,8 @@ class Cetakan extends BaseController {
 
         //$this->response->setHeader('Content-Type', 'application/pdf');
     }
-
+    public function index(){echo "";} //Nothing
+    
     function surat_pengajuan_judul($npm)
 	{       
         $skrip = $this->M_surat_pengajuan_judul->find($npm);
@@ -41,6 +67,7 @@ class Cetakan extends BaseController {
             $dosen2[0]["nip"] = null;
         }
         $data = [
+            'kop_surat' => self::$kop_surat,
             'surat'  => $skrip,
             'nama'   => $skrip["nama"],
             'npm'    => $skrip["npm"],
@@ -52,13 +79,13 @@ class Cetakan extends BaseController {
             'alamat' => $skrip["alamat"],
             'ipk'    => $skrip["ipk"],
             'sks'    => $skrip["sks"],
-            'dospem1' => $skrip["dosp1"],
-            'nip_1' => $dosen1[0]["nip"],
-            'dospem2' => $skrip["dosp2"],
-            'nip_2' => $dosen2[0]["nip"],
+            'dospem1'=> $skrip["dosp1"],
+            'nip_1'  => $dosen1[0]["nip"],
+            'dospem2'=> $skrip["dosp2"],
+            'nip_2'  => $dosen2[0]["nip"],
             'kajur'     => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
-            'tanggal'   => $this->waktuTanggal->format(date_create(date("d-m-Y"))),
+            'tanggal_print' => $this->waktuTanggal->format(date_create(date("d-m-Y"))),
             'tahun'     => date("Y")
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
@@ -75,6 +102,7 @@ class Cetakan extends BaseController {
         } else { $judul = $skrip["judul2"]; $isi = $skrip["judul2_isi"]; $dapus = $skrip["dapus2"]; }
 
         $data = [
+            'kop_surat' => self::$kop_surat,
             'nama'      => $skrip["nama"],
             'npm'       => $skrip["npm"],
             'judul'     => $judul,
@@ -101,6 +129,7 @@ class Cetakan extends BaseController {
         } else { $dosenPem[0]["nip"] = null; }
 
         $data = [
+            'kop_surat' => self::$kop_surat,
             'surat'     => $usul,
             'no_surat'  => substr(1000+$usul["no_surat"],1,3),
             'dospem1'   => $usul["dospem1"],
@@ -113,6 +142,7 @@ class Cetakan extends BaseController {
             'jam'       => $usul["jam"],
             'hari'      => $this->waktuHari->format(date_create(date($usul["tanggal"]))),
             'tanggal'   => $this->waktuTanggal->format(date_create(date($usul["tanggal"]))),
+            'tanggal_print'=> $this->waktuTanggal->format(date_create(date("d-m-Y"))),
             'nilai_d1'  => $usul["nilai_d1"],
             'nilai_d2'  => $usul["nilai_d2"],
             'nilai_pu'  => $usul["nilai_pu"],
@@ -135,6 +165,7 @@ class Cetakan extends BaseController {
         } else { $dosenPem[0]["nip"] = null; }
 
         $data = [
+            'kop_surat' => self::$kop_surat,
             'surat'     => $hasil,
             'no_surat'  => substr(1000+$hasil["no_surat"],1,3),
             'npm'       => $hasil["npm"],
@@ -147,6 +178,7 @@ class Cetakan extends BaseController {
             'jam'       => $hasil["jam"],
             'hari'      => $this->waktuHari->format(date_create(date($hasil["tanggal"]))),
             'tanggal'   => $this->waktuTanggal->format(date_create(date($hasil["tanggal"]))),
+            'tanggal_print'=> $this->waktuTanggal->format(date_create(date("d-m-Y"))),
             'nilai_d1'  => $hasil["nilai_d1"],
             'nilai_d2'  => $hasil["nilai_d2"],
             'nilai_pu'  => $hasil["nilai_pu"],
@@ -170,6 +202,7 @@ class Cetakan extends BaseController {
         } else { $dosenPem[0]["nip"] = null; }
 
         $data = [
+            'kop_surat' => self::$kop_surat,
             'surat'     => $kompre,
             'no_surat'  => substr(1000+$kompre["no_surat"],1,3),
             'dospem2'   => $kompre["dospem2"],
@@ -181,6 +214,7 @@ class Cetakan extends BaseController {
             'jam'       => $kompre["jam"],
             'hari'      => $this->waktuHari->format(date_create(date($kompre["tanggal"]))),
             'tanggal'   => $this->waktuTanggal->format(date_create(date($kompre["tanggal"]))),
+            'tanggal_print'=> $this->waktuTanggal->format(date_create(date("d-m-Y"))),
             'tahun'     => date("Y"),
 
         ];
@@ -193,7 +227,8 @@ class Cetakan extends BaseController {
     function surat_pembayaran_keterlambatan_ukt()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'       => $this->request->getVar('npm'),
             'nama'      => $this->request->getVar('nama'), 
             'semester'  => $this->request->getVar('semester'),
@@ -213,7 +248,8 @@ class Cetakan extends BaseController {
     function surat_kehilangan_ukt()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'       => $this->request->getVar('npm'),
             'nama'      => $this->request->getVar('nama'), 
             'semester'  => $this->request->getVar('semester'),
@@ -232,13 +268,14 @@ class Cetakan extends BaseController {
     function surat_keringanan_ukt()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'       => $this->request->getVar('npm'),
             'nama'      => $this->request->getVar('nama'), 
             'semester'  => $this->request->getVar('semester'),
             'tanggal'   => $this->request->getVar('tanggal'),
             'dospem'    => $this->request->getVar('dospem'),
-            'nip'       => $this->request->getVar('nip'),
+            'nip'       => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getUnbufferedRow(),
             'kajur'     => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun'     => date("Y")
@@ -252,13 +289,14 @@ class Cetakan extends BaseController {
     function surat_pembebasan_ukt()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'semester'         => $this->request->getVar('semester'),
             'tanggal'        => $this->request->getVar('tanggal'),
             'dospem'        => $this->request->getVar('dospem'),
-            'nip'        => $this->request->getVar('nip'),
+            'nip'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getUnbufferedRow(),
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")
@@ -272,7 +310,8 @@ class Cetakan extends BaseController {
     function surat_keringanan_ukt_50()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'semester'         => $this->request->getVar('semester'),
@@ -289,9 +328,9 @@ class Cetakan extends BaseController {
 	}
 
     function surat_masih_aktif_kuliah()
-	{       
-        
-        $data =[
+	{
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'semester'         => $this->request->getVar('semester'),
@@ -304,14 +343,15 @@ class Cetakan extends BaseController {
            
         ];
         $this->response->setHeader('Content-Type', 'application/pdf');
-        echo view('mpdf/surat_masih_aktif_kuliah',$data);
+        return view('mpdf/surat_masih_aktif_kuliah',$data);
 
 	}
 
     function surat_keterangan_beasiswa()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'semester'         => $this->request->getVar('semester'),
@@ -326,9 +366,12 @@ class Cetakan extends BaseController {
 	}
     
     function surat_permohonan_cuti()
-	{       
-        
-        $data =[
+	{   
+  
+        $nip = $this->M_profil_dosen->query("SELECT nip FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getResultArray();
+       
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -341,7 +384,7 @@ class Cetakan extends BaseController {
             'alasan'        => $this->request->getVar('alasan'),
             'dospem'        => $this->request->getVar('dospem'),
             'orangtua'        => $this->request->getVar('orangtua'),
-            'nip_dospem'        => $this->request->getVar('nip_dospem'),
+            'nip_dospem'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getUnbufferedRow(),
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
@@ -354,7 +397,8 @@ class Cetakan extends BaseController {
     function surat_pindah_kuliah()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -366,7 +410,7 @@ class Cetakan extends BaseController {
             'alasan'        => $this->request->getVar('alasan'),
             'dospem'        => $this->request->getVar('dospem'),
             'orangtua'        => $this->request->getVar('orangtua'),
-            'nip_dospem'        => $this->request->getVar('nip_dospem'),
+            'nip_dospem'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getUnbufferedRow(),
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
@@ -379,7 +423,8 @@ class Cetakan extends BaseController {
     function surat_perpanjangan_masa_studi()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -394,10 +439,10 @@ class Cetakan extends BaseController {
             'bln'        => $this->request->getVar('bln'),
             'thn'        => $this->request->getVar('thn'),
             'dospa'        => $this->request->getVar('dospa'),
-            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'nip_dospa'        =>  $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospa')."'")->getUnbufferedRow(),
             'dospem'        => $this->request->getVar('dospem'),
             'orangtua'        => $this->request->getVar('orangtua'),
-            'nip_dospem'        => $this->request->getVar('nip_dospem'),
+            'nip_dospem'        =>  $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getUnbufferedRow(),
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
@@ -411,7 +456,8 @@ class Cetakan extends BaseController {
     function surat_pengisian_krs_terlambat()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -429,12 +475,13 @@ class Cetakan extends BaseController {
     function surat_penghapusan_mk()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'dospa'        => $this->request->getVar('dospa'),
-            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'nip_dospa'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospa')."'")->getUnbufferedRow(),
            
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
@@ -448,15 +495,19 @@ class Cetakan extends BaseController {
     function surat_pembetulan_nilai()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
+            'semester'          => $this->request->getVar('semester'), 
+            'mk'          => $this->request->getVar('mk'), 
+            'ta'          => $this->request->getVar('ta'),
             'dospa'        => $this->request->getVar('dospa'),
-            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'nip_dospa'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospa')."'")->getUnbufferedRow(),
             'dospj'        => $this->request->getVar('dospj'),
-            'nip_dospj'        => $this->request->getVar('nip_dospj'),
-           
+            'nip_dospj'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospj')."'")->getUnbufferedRow(),
+            
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
             'tahun' => date("Y")     
@@ -469,12 +520,13 @@ class Cetakan extends BaseController {
     function surat_mengundurkan_diri()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
             'dospa'        => $this->request->getVar('dospa'),
-            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'nip_dospa'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospa')."'")->getUnbufferedRow(),
             'ortu'        => $this->request->getVar('ortu'),
             'nomor'        => $this->request->getVar('nomor'),
             'strata'        => $this->request->getVar('strata'),
@@ -494,7 +546,8 @@ class Cetakan extends BaseController {
     function surat_studi_lapangan()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm1'           => $this->request->getVar('npm1'),
             'mhs1'          => $this->request->getVar('mhs1'), 
@@ -505,7 +558,7 @@ class Cetakan extends BaseController {
             'npm4'           => $this->request->getVar('npm4'),
             'mhs4'          => $this->request->getVar('mhs4'), 
             'dosen'        => $this->request->getVar('dosen'),
-            'nip_dosen'        => $this->request->getVar('nip_dosen'),
+            'nip_dosen'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dosen')."'")->getUnbufferedRow(),
             'perusahaan'        => $this->request->getVar('perusahaan'),
             'mk'        => $this->request->getVar('mk'),
             'nomor'        => $this->request->getVar('nomor'),
@@ -528,13 +581,13 @@ class Cetakan extends BaseController {
     function surat_riset_data_skripsi()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
-   
             'dosen'        => $this->request->getVar('dosen'),
-            'nip_dosen'        => $this->request->getVar('nip_dosen'),
+            'nip_dosen'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dosen')."'")->getUnbufferedRow(),
             'perusahaan'        => $this->request->getVar('perusahaan'),
             'alamat_perusahaan'        => $this->request->getVar('alamat_perusahaan'),
             'judul'        => $this->request->getVar('judul'),
@@ -558,7 +611,8 @@ class Cetakan extends BaseController {
     function surat_studi_lanjut_sarjana()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -589,7 +643,8 @@ class Cetakan extends BaseController {
     function surat_pindah_studi()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -622,7 +677,8 @@ class Cetakan extends BaseController {
     function surat_pindah_studi_internal()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
@@ -642,7 +698,7 @@ class Cetakan extends BaseController {
             'strata'        => $this->request->getVar('strata'),
             'semester'        => $this->request->getVar('semester'),
             'dospa'        => $this->request->getVar('dospa'),
-            'nip_dospa'        => $this->request->getVar('nip_dospa'),
+            'nip_dospa'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospa')."'")->getUnbufferedRow(),
       
             'kajur' => $this->jrusan[0]["kajur"],
             'nip_kajur' => $this->jrusan[0]["kajur_nip"],
@@ -655,14 +711,38 @@ class Cetakan extends BaseController {
 
 	}
 
-    function surat_tidak_sanksi()
+    function surat_studi_terbimbing()
 	{       
         
-        $data =[
+        $data = [
+            'kop_surat' => self::$kop_surat,
             'tanggal'           => $this->request->getVar('tanggal'),
             'npm'           => $this->request->getVar('npm'),
             'nama'          => $this->request->getVar('nama'), 
    
+            'mk'        => $this->request->getVar('mk'),
+            'semester'        => $this->request->getVar('semester'),
+            'dospem'        => $this->request->getVar('dospem'),
+            'nip_dospem'        => $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".$this->request->getVar('dospem')."'")->getUnbufferedRow(),
+            'kajur' => $this->jrusan[0]["kajur"],
+            'nip_kajur' => $this->jrusan[0]["kajur_nip"],
+            'dekan' => 'Drs. Susetyo, M.Si.',
+            'nip_dekan' => '19581004 198902 1 001',
+            'tahun' => date("Y")     
+        ];
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        echo view('mpdf/surat_studi_terbimbing',$data);
+
+	}
+
+    function surat_tidak_sanksi()
+	{       
+        
+        $data = [
+            'kop_surat' => self::$kop_surat,
+            'tanggal'           => $this->request->getVar('tanggal'),
+            'npm'           => $this->request->getVar('npm'),
+            'nama'          => $this->request->getVar('nama'),
             'ortu'        => $this->request->getVar('ortu'),
             'alasan'        => $this->request->getVar('alasan'),
             'ttl'        => $this->request->getVar('ttl'),

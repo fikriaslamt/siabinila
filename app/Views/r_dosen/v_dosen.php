@@ -85,8 +85,10 @@ $nilai = 80;
   <h2 style="margin-left: 17px"><?php echo "Selamat ".$waktu.", ".session()->get('nama') ?></h2>
   
   <div style="margin-left: 13px" class="content">
-    <div style="display: block; width: 150px; float:left">Bimbingan Skripsi</div>: <b><?=$bimbing?></b> Mahasiswa Bimbingan <?php if($bimbing!=0):?><a href="<?= base_url('Dosen/data_skripsi')?>"><i class="fa fa-eye">Lihat</i></a><?php endif?><br/>
-    <div style="display: block; width: 150px; float:left">Penguji Skripsi</div>: <b><?=count($uji)?></b> Mahasiswa <?php if(count($uji)!=0):?><a href="#list_uji"><i class="fa fa-eye">Lihat</i></a><?php endif?>
+    <div style="display: block; width: 150px; float:left">Bimbingan Skripsi</div>: <?= $bimbing != 0 ? '<a href="Dosen/data_skripsi"><i class="fa fa-eye"></i> <b>'.$bimbing.'</b> Mahasiswa</a>':"0 Mahasiswa" ?>
+    <br/>
+    <div style="display: block; width: 150px; float:left">Penguji Skripsi</div>: <?= count($uji)!=0 ? '<a href="#list_uji"><i class="fa fa-eye"></i> <b>'.count($uji).'</b> Mahasiswa</a>':"0 Mahasiswa" ?>
+    <!--<b><?=count($uji)?></b> Mahasiswa <?php if(count($uji)!=0):?><a href="#list_uji"><i class="fa fa-eye">Lihat</i></a><?php endif?>-->
 
       <div id="list_uji" class="overlay">
           <div class="popup">
@@ -106,7 +108,7 @@ $nilai = 80;
 
 </div>
 <div class="container dosen h-scroll-l">
-  <table class="table table-bordered table-hover">
+  <table>
     <thead>
       <tr>
         <td colspan="6"><b>Jadwal Seminar</b></td>
@@ -197,16 +199,16 @@ $nilai = 80;
         <td>Ujian Kompre</td>
         <td>
         <?php if($kompre['dospem1']== session()->nama){
-          $nilai = $kompre["nilai_d1"];
+          $nilai = ($kompre["nilai_d1"] + $kompre["nilai_d1t"]) / 2;
           echo "Pembimbing 1";
         } else if($kompre['dospem2']== session()->nama){
-          $nilai = $kompre["nilai_d2"];
+          $nilai = ($kompre["nilai_d2"] + $kompre["nilai_d2t"]) / 2;
           echo "Pembimbing 2";
         } else if($kompre['penguji_u']== session()->nama){
-          $nilai = $kompre["nilai_pu"];
+          $nilai = ($kompre["nilai_pu"] + $kompre["nilai_put"]) / 2;
           echo "Penguji 1";
         } else if($kompre['penguji_p']== session()->nama){
-          $nilai = $kompre["nilai_pp"];
+          $nilai = ($kompre["nilai_pp"] + $kompre["nilai_ppt"]) / 2;
           echo "Penguji 2";
         }
         ?>

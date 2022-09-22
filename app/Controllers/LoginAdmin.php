@@ -4,14 +4,8 @@ namespace App\Controllers;
 
 class LoginAdmin extends BaseController
 {   
-   
-   
-        
-    
     public function index()
     {
-
-
         $ModelAkun = new \App\Models\M_akun_admin();
         $login = $this->request->getPost('loginadmin');
         if ($login) {
@@ -27,7 +21,7 @@ class LoginAdmin extends BaseController
                     $err = "Username salah";
                 }
                 else {
-                    if ($dataAdmin['password'] != md5($password)) {
+                    if (!password_verify($password, $dataAdmin['password'])) {
                     $err = "Password salah"; }
                 } 
             }
@@ -56,12 +50,45 @@ class LoginAdmin extends BaseController
         echo view('layouts/footer');
     }
 
+    public function konfirmasi_password()
+    {
+        $data = [
+            'title' => "Konfirmasi Password Baru"
+        ];
+        echo view('layouts/admin_header', $data);
+        echo view('layouts/admin_navbar');
+        echo view('r_admin/adm_ganti_password');
+        echo view('layouts/admin_footer');
+    }
+    
+    public function ubah_password()
+    {   
+        $ModelAkun = new \App\Models\M_akun_admin();
+        $dataAdmin = $ModelAkun->where("admin","admin")->first();
+        if (!password_verify($this->request->getVar('pass_lama'), $dataAdmin['password'])) {
+            $err = "Password salah"; 
+            session()->setFlashdata('notif', $err);
+            return redirect()->to(base_url('LoginAdmin/konfirmasi_password'));
+        }
+        if($this->request->getVar('pass_baru') != $this->request->getVar('pass_konfir')){
+            $err = "Konfirmasi Password Tidak Sama";
+            session()->setFlashdata('notif', $err);
+            return redirect()->to(base_url('LoginAdmin/konfirmasi_password'));
+        }
+        
+        $ModelAkun->save([
+            'admin' => "admin",
+            'password' => password_hash($this->request->getVar('pass_baru'), PASSWORD_DEFAULT),
+        ]); 
+        
+        session()->setFlashdata('notif', "Password Berhasil Diubah");
+        return redirect()->to(base_url('LoginAdmin/konfirmasi_password'));
+    }
+    
     public function logout()
     {   
         session()->destroy();
         return redirect()->to(base_url('LoginAdmin'));
     }
-
-
 
 }

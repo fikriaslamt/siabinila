@@ -7,6 +7,7 @@
 <div class="container">
   <center>
     <br/>
+    
   <?php foreach ($data as $datamhs) : ?>
     <img src="../upload/foto/mhs/<?= $datamhs->foto ?>" width="150">
   <form action="<?=base_url('Mahasiswa/edit_foto/'.$datamhs->npm)?>" method="post" enctype="multipart/form-data">
@@ -54,6 +55,9 @@
   </tr>
   <tr>
     <td colspan="2"><center><a href="<?=base_url("Mahasiswa/form_edit_profil")?>"><i class="fas fa-pen"></i> Edit Profil</a></center></td>
+  </tr>
+  <tr>
+    <td colspan="2"><center><a href="<?=base_url("Login/form_edit_password")?>"><i class="fas fa-key"></i> Edit Password</a></center></td>
   </tr>
   <?php endforeach; ?>
 </table>

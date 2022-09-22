@@ -44,7 +44,7 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
 <div class="row">
 
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
+    <div class="col-md-3 col-sm-6 mb-4">
         <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
@@ -62,7 +62,7 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
     </div>
 
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
+    <div class="col-md-3 col-sm-6 mb-4">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
@@ -80,7 +80,7 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
     </div>
 
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
+    <div class="col-md-3 col-sm-6 mb-4">
         <div class="card border-left-info shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
@@ -110,7 +110,7 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
     </div>
 
     <!-- Pending Requests Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
+    <div class="col-md-3 col-sm-6 mb-4">
         <div class="card border-left-warning shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
@@ -144,28 +144,59 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
         <!-- Card Body -->
         <div class="card-body">
             <h4 class="small font-weight-bold">Progres Usul : <?=$j_usul?>
-                <span class="float-right"><?= round(($j_usul/count($dat_skrip))*100) ?>%</span></h4>
+                <span class="float-right">
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_usul/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: <?= ($j_usul/count($dat_skrip))*100?>%"
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_usul/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%"
                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
 
             <h4 class="small font-weight-bold">Progres Hasil : <?=$j_hasil?>
-                <span class="float-right"><?= round(($j_hasil/count($dat_skrip))*100) ?>%</span></h4>
+                <span class="float-right">
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_hasil/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: <?= ($j_hasil/count($dat_skrip))*100?>%"
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_hasil/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%"
                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">Progres Kompre : <?=$j_kompre?>
-                <span class="float-right"><?= round(($j_kompre/count($dat_skrip))*100) ?>%</span></h4>
+                <span class="float-right">
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_kompre/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-info" role="progressbar" style="width: <?= ($j_kompre/count($dat_skrip))*100?>%"
+                <div class="progress-bar bg-info" role="progressbar" style="width: 
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_kompre/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%"
                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">Selesai Skripsi (Belum Wisuda) : <?=$j_lulus?>
-                <span class="float-right"><?= round(($j_lulus/count($dat_skrip))*100) ?>%</span></h4>
+            <h4 class="small font-weight-bold">Lulus Ujian Skripsi : <?=$j_lulus?>
+                <span class="float-right">
+                <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_lulus/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-success" role="progressbar" style="width: <?= ($j_lulus/count($dat_skrip))*100?>%"
+                <div class="progress-bar bg-success" role="progressbar" style="width: <?php if(count($dat_skrip)!=0){ 
+                    echo round(($j_lulus/count($dat_skrip))*100);
+                } else{echo 0;}
+                ?>%"
                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
@@ -177,13 +208,12 @@ if (!empty(array_count_values($col_stats)['Telah Lulus Skripsi'])){
                 <div class="col-sm-6">: <?=count($dat_pejudul)?> Mahasiswa Mengajukan</div>
             </div>
             <div class="row">
-                <div class="col-sm-6">Pengajuan Penguji Seminar</div>
+                <div class="col-sm-6">Pengajuan Penguji Skripsi</div>
                 <div class="col-sm-6">: <?=count($dat_penguji)?> Mahasiswa Mengajukan</div>
             </div>
         </div>
     </div>
 </div>
-
 
 <!-- Pie Chart -->
 <div class="col-xl-4 col-lg-5">

@@ -36,10 +36,14 @@
         <input type="text" name="tgl_akhir" class="form_text" placeholder="Tanggal">
 
         <br>
-        <label for="dosen">Dosen Pengampu Mata Kuliah :</label>
-        <input type="text" name="dosen" class="form_text" placeholder="Dosen Pengampu Mata Kuliah">
-        <label for="nip_dosen">NIP Dosen Pengampu Mata Kuliah :</label>
-        <input type="number" name="nip_dosen" class="form_text" placeholder="NIP Dosen Pengampu Mata Kuliah">
+        <label for="dosen">
+        Dosen Pengampu Mata Kuliah :</label>
+        <select name="dosen" class="form_text" id="dosen" required>
+            <option value="">- Pilih Dosen-</option>
+            <?php foreach ($dosen as $dsn_pa) : ?>
+            <option value="<?= $dsn_pa["nama"]?>"><?= $dsn_pa["nama"]?></option>
+            <?php endforeach;?>
+        </select>
         <br>
         <label for="tanggal">Tanggal : (contoh : 1 Januari 2022)</label> 
         <input type="text" name="tanggal" class="form_text" placeholder="tanggal">

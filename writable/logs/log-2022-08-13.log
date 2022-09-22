@@ -1,0 +1,25 @@
+CRITICAL - 2022-08-13 13:19:20 --> Undefined offset: 1
+#0 /home/u1603686/siabinila_core/vendor/mpdf/mpdf/src/Tag/Table.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 54, Array)
+#1 /home/u1603686/siabinila_core/vendor/mpdf/mpdf/src/Tag.php(240): Mpdf\Tag\Table->open(Array, Array, 1)
+#2 /home/u1603686/siabinila_core/vendor/mpdf/mpdf/src/Mpdf.php(13812): Mpdf\Tag->OpenTag('TABLE', Array, Array, 1)
+#3 /home/u1603686/siabinila_core/app/Views/mpdf/doc_pengajual_kompre.php(198): Mpdf\Mpdf->WriteHTML(' <table class="...')
+#4 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#5 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(223): view('mpdf/doc_pengaj...', Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-08-13 15:34:13 --> Undefined variable: img1
+#0 /home/u1603686/siabinila_core/app/Views/mpdf/surat_keringanan_ukt_50.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 146, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/surat_keri...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(325): view('mpdf/surat_keri...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_keringanan_ukt_50()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

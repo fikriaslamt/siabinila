@@ -7,6 +7,6 @@ use CodeIgniter\Model;
 class Z_instansi extends Model
 {
     protected $table = 'z_instansi';
-    protected $primaryKey     = 'jurusan';
-    protected $allowedFields  =  ['jurusan','kajur','kajur_nip','kajur_ttd'];
+    protected $primaryKey     = 'id';
+    protected $allowedFields  =  ['id','jurusan','kajur','kajur_nip','kajur_ttd'];
 }

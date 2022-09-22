@@ -40,9 +40,10 @@ class Dosen extends BaseController
     {
         $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."'")->getResultArray();
         $dat_uji = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
-        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
-        $dat_hasil = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
-        $dat_kompre = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
+        
+        $dat_usul = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul JOIN surat_pengajuan_usul ON surat_pengajuan_usul.npm = data_seminar_usul.npm WHERE surat_pengajuan_usul.dospem1='".session()->nama."' OR surat_pengajuan_usul.dospem2='".session()->nama."' OR surat_pengajuan_usul.penguji_u='".session()->nama."' OR surat_pengajuan_usul.penguji_p='".session()->nama."'")->getResultArray();
+        $dat_hasil = $this->M_seminar_usul->query("SELECT * FROM data_seminar_hasil JOIN surat_pengajuan_hasil ON surat_pengajuan_hasil.npm = data_seminar_hasil.npm WHERE surat_pengajuan_hasil.dospem1='".session()->nama."' OR surat_pengajuan_hasil.dospem2='".session()->nama."' OR surat_pengajuan_hasil.penguji_u='".session()->nama."' OR surat_pengajuan_hasil.penguji_p='".session()->nama."'")->getResultArray();
+        $dat_kompre = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre JOIN surat_pengajuan_kompre ON surat_pengajuan_kompre.npm = data_ujian_kompre.npm WHERE surat_pengajuan_kompre.dospem1='".session()->nama."' OR surat_pengajuan_kompre.dospem2='".session()->nama."' OR surat_pengajuan_kompre.penguji_u='".session()->nama."' OR surat_pengajuan_kompre.penguji_p='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Dosen",'skripsi' => $dat_skrip, 'uji' => $dat_uji, 
@@ -70,14 +71,14 @@ class Dosen extends BaseController
     }
     public function form_edit_profil()
     {
-        $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nip='".session()->user."'")->getResult();
+        $data1 = $this->M_profil_dosen->query("SELECT * FROM profil_dosen where nama='".session()->nama."'")->getResult();
         $data = [
             'title' => "Profile - Edit",
             'data' => $data1
         ];
         echo view('layouts/header', $data);
-        echo view('layouts/navbar_dosen', $data);
-        echo view('r_dosen/edit_profil_dosen',$data);
+        echo view('layouts/navbar_dosen');
+        echo view('r_dosen/edit_profil_dosen');
         echo view('layouts/footer');
     }
     public function edit_foto($npm){
@@ -98,14 +99,25 @@ class Dosen extends BaseController
     }
     public function edit_profil($nip)
     {   
+        $dat_skrip = $this->M_data_skripsi->query("SELECT * FROM data_skripsi where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
+        if(!empty($dat_skrip)){
+            session()->setFlashdata('notif', "Profil tidak dapat diubah saat anda menjadi pembimbing/penguji, karena dapat menyebabkan error");
+            return redirect()->to(base_url('Dosen/profil'));
+        }
         $this->M_profil_dosen->update($nip,$this->request->getPost());
+        $ModelAkun = new \App\Models\M_akun();
+        $ModelAkun->save(array(
+            'user' => session()->user,
+            'nama' => $this->request->getVar('nama')
+        )); 
+        $_SESSION['nama'] = $this->request->getVar('nama');
         return redirect()->to(base_url('Dosen/profil'));
     }
 
     public function data_pengajuan_usul()
     {
-        $data1 = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
-
+        $data1 = $this->M_seminar_usul->query("SELECT * FROM data_seminar_usul JOIN surat_pengajuan_usul ON surat_pengajuan_usul.npm = data_seminar_usul.npm WHERE surat_pengajuan_usul.dospem1='".session()->nama."' OR surat_pengajuan_usul.dospem2='".session()->nama."' OR surat_pengajuan_usul.penguji_u='".session()->nama."' OR surat_pengajuan_usul.penguji_p='".session()->nama."'")->getResultArray();
+        
         $data = [
             'title' => "Data Pengajuan Seminar Usul",
             'data' => $data1
@@ -118,7 +130,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_hasil()
     {
-        $data1 = $this->M_seminar_hasil->query("SELECT * FROM data_seminar_hasil where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."' ")->getResultArray();
+        $data1 = $this->M_seminar_usul->query("SELECT * FROM data_seminar_hasil JOIN surat_pengajuan_hasil ON surat_pengajuan_hasil.npm = data_seminar_hasil.npm WHERE surat_pengajuan_hasil.dospem1='".session()->nama."' OR surat_pengajuan_hasil.dospem2='".session()->nama."' OR surat_pengajuan_hasil.penguji_u='".session()->nama."' OR surat_pengajuan_hasil.penguji_p='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Seminar Hasil",
@@ -132,7 +144,7 @@ class Dosen extends BaseController
 
     public function data_pengajuan_kompre()
     {
-        $data1 =$this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre where dospem1='".session()->nama."' OR dospem2='".session()->nama."' OR penguji_u='".session()->nama."' OR penguji_p='".session()->nama."'")->getResultArray();
+        $data1 = $this->M_ujian_kompre->query("SELECT * FROM data_ujian_kompre JOIN surat_pengajuan_kompre ON surat_pengajuan_kompre.npm = data_ujian_kompre.npm WHERE surat_pengajuan_kompre.dospem1='".session()->nama."' OR surat_pengajuan_kompre.dospem2='".session()->nama."' OR surat_pengajuan_kompre.penguji_u='".session()->nama."' OR surat_pengajuan_kompre.penguji_p='".session()->nama."'")->getResultArray();
 
         $data = [
             'title' => "Data Pengajuan Ujian Skripsi",
@@ -149,7 +161,6 @@ class Dosen extends BaseController
     public function terima_usul($npm)
     {   
         $skripsi = $this->M_data_skripsi->find($npm);
-        $data = $this->M_seminar_usul->find($npm);
         
         var_dump($npm);
         $date1 = $skripsi["date_judul"];
@@ -157,9 +168,9 @@ class Dosen extends BaseController
         $datetime1 = date_create($date1);
         $datetime2 = date_create($date2);
         $interval = date_diff($datetime1, $datetime2);
-        $interval = $interval->format('%a Hari');
+        $interval = $interval->format('%a');
 
-        $data = $this->M_seminar_usul->find($npm);
+        $data = $this->M_surat_pengajuan_usul->find($npm);
         
         $pengajuan = [
             'time' => $interval,
@@ -185,7 +196,6 @@ class Dosen extends BaseController
         }
 
         $this->M_surat_pengajuan_usul->update($npm, $penilaian);
-        $this->M_seminar_usul->update($npm, $penilaian);
 
         $surat = $this->M_surat_pengajuan_usul->find($npm);
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
@@ -207,7 +217,7 @@ class Dosen extends BaseController
             'untuk' => $npm,
             'oleh' => "Dosen",
             'subjek' => "Seminar Usul",
-            'isi_pesan' => "Seminar Usul Anda Telah Ditolak, Silahkan Ajuan Seminar Ulang Jika Telah Melakukan Revisi",
+            'isi_pesan' => "Seminar Usul Anda Telah Ditolak, Silahkan Ajukan Seminar Ulang Jika Telah Melakukan Revisi",
         ]);
         $this->M_data_skripsi->update($npm,['status'=>"Judul Disetujui"]);
         $this->M_surat_pengajuan_usul->delete($npm);
@@ -226,9 +236,9 @@ class Dosen extends BaseController
         $datetime1 = date_create($date1);
         $datetime2 = date_create($date2);
         $interval = date_diff($datetime1, $datetime2);
-        $interval = $interval->format('%a Hari');
+        $interval = $interval->format('%a');
 
-        $data = $this->M_seminar_hasil->find($npm);
+        $data = $this->M_surat_pengajuan_hasil->find($npm);
         
         $pengajuan = [
             'time' => $interval,
@@ -253,9 +263,8 @@ class Dosen extends BaseController
         }
         
         $this->M_surat_pengajuan_hasil->update($npm, $penilaian);
-        $this->M_seminar_hasil->update($npm, $penilaian);
+        
         $surat = $this->M_surat_pengajuan_hasil->find($npm);
-
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_seminar_hasil->delete($npm);
@@ -275,7 +284,7 @@ class Dosen extends BaseController
             'untuk' => $npm,
             'oleh' => "Dosen",
             'subjek' => "Seminar Hasil",
-            'isi_pesan' => "Seminar Hasil Anda Telah Ditolak, Silahkan Ajuan Seminar Ulang Jika Telah Melakukan Revisi",
+            'isi_pesan' => "Seminar Hasil Anda Telah Ditolak, Silahkan Ajukan Seminar Ulang Jika Telah Melakukan Revisi",
         ]);
         $this->M_data_skripsi->update($npm,['status'=>"Seminar Usul Disetujui"]);
         $this->M_surat_pengajuan_hasil->delete($npm);
@@ -288,6 +297,7 @@ class Dosen extends BaseController
     public function terima_kompre($npm)
     {   
         $skripsi = $this->M_data_skripsi->find($npm);
+        
         $date = $skripsi["date_judul"];
         $date1 = $skripsi["date_hasil"];
         $date2 = date('Y-m-d');
@@ -295,11 +305,11 @@ class Dosen extends BaseController
         $datetime1 = date_create($date1);
         $datetime2 = date_create($date2);
         $interval = date_diff($datetime1, $datetime2);
-        $interval = $interval->format('%a Hari');
+        $interval = $interval->format('%a');
         $interval_total = date_diff($datetime, $datetime2);
-        $interval_total = $interval_total->format('%a Hari');
+        $interval_total = $interval_total->format('%a');
 
-        $data = $this->M_ujian_kompre->find($npm);
+        $data = $this->M_surat_pengajuan_kompre->find($npm);
         
         $pengajuan = [
             'time' => $interval,
@@ -339,9 +349,8 @@ class Dosen extends BaseController
         }
         
         $this->M_surat_pengajuan_kompre->update($npm, $penilaian);
-        $this->M_ujian_kompre->update($npm, $penilaian);
+        
         $surat = $this->M_surat_pengajuan_kompre->find($npm);
-
         if($surat["nilai_d1"] != 0 && $surat["nilai_d2"] != 0 && $surat["nilai_pu"] != 0 ){
             $this->M_data_skripsi->update($npm, $pengajuan);
             $this->M_ujian_kompre->delete($npm);
@@ -388,7 +397,7 @@ class Dosen extends BaseController
     {
         $data1 = $this->M_data_skripsi->find($npm);
         $data = [
-            'title' => "Detail Skripsi",
+            'title' => "Detail Skripsi: ".$data1["nama"],
             'data' => $data1
 
         ];
@@ -398,7 +407,4 @@ class Dosen extends BaseController
         echo view('layouts/footer'); 
     }
 
-
-
-    
 }

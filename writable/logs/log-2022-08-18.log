@@ -1,0 +1,224 @@
+CRITICAL - 2022-08-18 13:10:16 --> Invalid file: r_ahasiswa/gate_lulus.php
+#0 /home/u1603686/siabinila_core/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('r_ahasiswa/gate...')
+#1 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_ahasiswa/gate...', Array, true)
+#2 /home/u1603686/siabinila_core/app/Controllers/Login.php(122): view('r_ahasiswa/gate...')
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Login->lulus()
+#4 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-18 13:22:18 --> Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP)
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/gate_lulus.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', '/home/u1603686/...', 27, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/gat...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Login.php(122): view('r_mahasiswa/gat...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Login->lulus()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 13:57:48 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 142, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 13:58:47 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 142, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 13:58:51 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 142, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 13:59:36 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 142, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-18 14:07:07 --> Duplicate entry '' for key 'PRIMARY'
+CRITICAL - 2022-08-18 14:07:07 --> Duplicate entry '' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ak...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ak...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ak...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ak...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(646): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-08-18 14:09:21 --> Duplicate entry '' for key 'PRIMARY'
+CRITICAL - 2022-08-18 14:09:21 --> Duplicate entry '' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ak...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ak...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ak...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ak...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(646): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-08-18 14:12:54 --> A non well formed numeric value encountered
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/data_lulusan.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well form...', '/home/u1603686/...', 50, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/data_lu...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(99): view('r_admin/data_lu...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_lulusan()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-18 14:58:56 --> Table 'u1603686_siabinila.id' doesn't exist
+CRITICAL - 2022-08-18 14:58:56 --> Table 'u1603686_siabinila.id' doesn't exist
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/u1603686/siabinila_core/app/Controllers/Admin.php(77): CodeIgniter\BaseModel->findAll()
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_jurusan()
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-08-18 14:59:29 --> Table 'u1603686_siabinila.id' doesn't exist
+CRITICAL - 2022-08-18 14:59:29 --> Table 'u1603686_siabinila.id' doesn't exist
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/u1603686/siabinila_core/app/Controllers/Admin.php(77): CodeIgniter\BaseModel->findAll()
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_jurusan()
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-08-18 15:01:48 --> Column 'grup' cannot be null
+CRITICAL - 2022-08-18 15:01:48 --> Column 'grup' cannot be null
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Admin.php(447): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->add_akun_dosen()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-08-18 15:23:35 --> Undefined variable: jurusan
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_jurusan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 24, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_jurus...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(110): view('r_admin/v_jurus...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->konfirmasi_password()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 16:04:47 --> Undefined variable: username
+#0 /home/u1603686/siabinila_core/app/Controllers/LoginAdmin.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 67, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\LoginAdmin->ubah_password()
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-18 16:09:10 --> Call to a member function save() on array
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\LoginAdmin->ubah_password()
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-08-18 17:08:23 --> Duplicate entry '1917051015' for key 'PRIMARY'
+CRITICAL - 2022-08-18 17:08:23 --> Duplicate entry '1917051015' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ma...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(646): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-08-18 23:26:46 --> syntax error, unexpected '==' (T_IS_EQUAL)
+#0 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/edi...', Array, true)
+#2 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(94): view('r_mahasiswa/edi...', Array)
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->form_edit_profil()
+#4 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-18 23:46:25 --> Undefined variable: data
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/edit_pass_mahasiswa.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 9, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/edi...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(110): view('r_mahasiswa/edi...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->form_edit_password()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 23:46:41 --> Undefined variable: data
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/edit_pass_mahasiswa.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 9, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/edi...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(110): view('r_mahasiswa/edi...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->form_edit_password()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-18 23:57:33 --> Too few arguments to function App\Controllers\Mahasiswa::edit_password(), 0 passed in /home/u1603686/siabinila_core/system/CodeIgniter.php on line 826 and exactly 1 expected
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->edit_password()
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

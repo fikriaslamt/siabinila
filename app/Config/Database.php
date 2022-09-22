@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'siakad',
+        'hostname' => '194.163.41.92',
+        'username' => 'u1603686_admin',
+        'password' => 'bisnisunggul-2022',
+        'database' => 'u1603686_siabinila',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -48,6 +48,25 @@ class Database extends Config
         'strictOn' => false,
         'failover' => [],
         'port'     => 3306,
+    ];
+
+    public $db_online = [
+        'DSN'      => '',
+        'hostname' => '103.147.154.53',
+        'username' => 'simbisni_user',
+        'password' => 'Takuma125',
+        'database' => 'simbisni_satu',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => false,
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
     ];
 
     /**

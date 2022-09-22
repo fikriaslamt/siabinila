@@ -32,11 +32,14 @@
         <label for="orangtua">Orang Tua/Wali :</label>
         <input type="text" name="orangtua" class="form_text" placeholder="Orang Tua/Wali">
 
-        <label for="dospem">Dosen Pembimbing Akademik :</label>
-        <input type="text" name="dospem" class="form_text" placeholder="Dosen Pembimbing Akademik">
-
-        <label for="nip_dospem"> NIP Dosen Pembimbing Akademik :</label>
-        <input type="number" name="nip_dospem" class="form_text" placeholder=" NIP Dosen Pembimbing Akademik">
+        <label for="dospem">
+            Dosen Pembimbing Akademik :</label>
+        <select name="dospem" class="form_text" id="dospem" required>
+            <option value="">- Pilih Dosen-</option>
+            <?php foreach ($dosen as $dsn_pa) : ?>
+            <option value="<?= $dsn_pa["nama"]?>"><?= $dsn_pa["nama"]?></option>
+            <?php endforeach;?>
+        </select>
         
         <div class="row">
         <a href="<?=base_url()?>"class="back"><i class="fa fa-arrow-left"></i> Kembali</a>

@@ -1,0 +1,11 @@
+CRITICAL - 2022-08-11 21:08:22 --> Undefined variable: dospem1
+#0 /home/u1603686/siabinila_core/app/Views/mpdf/doc_pengajual_kompre.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 259, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/doc_pengaj...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(223): view('mpdf/doc_pengaj...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

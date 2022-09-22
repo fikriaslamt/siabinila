@@ -1,3 +1,9 @@
+<div class="container-top">
+    <div class="row">
+        <a href="<?=base_url('Dosen/data_skripsi')?>" class="back" style="float:right!important"><i
+                class="fa fa-arrow-left"></i> Kembali</a>
+    </div>
+</div>
 
 <div class="container">
 <center>
@@ -13,6 +19,11 @@
   <?php endforeach; ?>
   </center>
 
+<?php if (session()->getFlashdata('notif')) { ?>
+    <div class="pesan_error">
+    <?php echo session()->getFlashdata('notif') ?>
+    </div>
+<?php } ?>
 
 <div class="profil">    
 <table>
@@ -28,6 +39,9 @@
 
   <tr>
     <td colspan="2"><center><a href="<?=base_url("Dosen/form_edit_profil")?>"><i class="fas fa-pen"></i> Edit Profil</a></center></td>
+  </tr>
+  <tr>
+    <td colspan="2"><center><a href="<?=base_url("Login/form_edit_password")?>"><i class="fas fa-key"></i> Edit Password</a></center></td>
   </tr>
  
   <?php endforeach; ?>

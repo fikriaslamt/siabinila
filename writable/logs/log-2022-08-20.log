@@ -1,0 +1,95 @@
+CRITICAL - 2022-08-20 14:52:29 --> Undefined index: penguji_1
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/data_skripsi_detail.php(137): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 137, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/data_sk...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(521): view('r_admin/data_sk...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->detail_skripsi('1917051015')
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 20:07:17 --> Undefined index: dospem2
+#0 /home/u1603686/siabinila_core/app/Views/r_dosen/data_skripsi.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 17, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_dosen/data_sk...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(392): view('r_dosen/data_sk...', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->data_skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 22:10:30 --> Undefined variable: data
+#0 /home/u1603686/siabinila_core/app/Controllers/Dosen.php(400): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 400, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Dosen->detail_skripsi('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dosen))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-20 22:33:53 --> Undefined variable: data
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(119): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 119, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 22:34:28 --> Undefined index: date_judul
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(119): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 119, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 22:35:17 --> Array to string conversion
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(119): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', '/home/u1603686/...', 119, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 23:05:00 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 115, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 23:05:24 --> Undefined variable: angkatan
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_mahasiswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 35, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(50): view('r_mahasiswa/v_m...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-20 23:13:04 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_skripsi.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 115, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_s...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(67): view('r_mahasiswa/v_s...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->skripsi()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

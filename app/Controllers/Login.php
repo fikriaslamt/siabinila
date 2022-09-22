@@ -53,7 +53,7 @@ class Login extends BaseController
         }
         
         $data = [
-            'title' => 'Login'
+            'title' => 'Login - Siabinila'
         ];
         echo view('layouts/header', $data);
         echo view('v_login');
@@ -69,7 +69,7 @@ class Login extends BaseController
     public function register()
     {
         $data = [
-            'title' => 'register'
+            'title' => 'Register - Siabinila'
         ];
         echo view('layouts/header', $data);
         echo view('v_register');
@@ -112,6 +112,49 @@ class Login extends BaseController
         session()->setFlashdata('error', "Akun berhasil disimpan, tunggu konfirmasi admin");
         return redirect()->to(base_url('login'));
     }
+    
+    public function lulus()
+    {
+        $data = [
+            'title' => 'Dokumen Kompre'
+        ];
+        echo view('layouts/header', $data);
+        echo view('r_mahasiswa/gate_lulus');
+        echo view('layouts/footer');
+    }
 
+    public function form_edit_password()
+    {
+        $data = [
+            'title' => "Konfirmasi Password Baru",
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar');
+        echo view('r_mahasiswa/edit_pass_view');
+        echo view('layouts/footer');
+    }
+    public function edit_password()
+    {   
+        $ModelAkun = new \App\Models\M_akun();
+        $dataAdmin = $ModelAkun->where("user", session()->user)->first();
+        if (!password_verify($this->request->getVar('pass_lama'), $dataAdmin['password'])) {
+            $err = "Password salah"; 
+            session()->setFlashdata('notif', $err);
+            return redirect()->to(base_url('Login/form_edit_password'));
+        }
+        if($this->request->getVar('pass_baru') != $this->request->getVar('pass_konfir')){
+            $err = "Konfirmasi Password Tidak Sama";
+            session()->setFlashdata('notif', $err);
+            return redirect()->to(base_url('Login/form_edit_password'));
+        }
+        
+        $ModelAkun->save([
+            'user' => session()->user,
+            'password' => password_hash($this->request->getVar('pass_baru'), PASSWORD_DEFAULT),
+        ]);
+        session()->setFlashdata('sukses', "sukses");
+        session()->setFlashdata('notif', "Password berhasil diubah, halaman akan ditutup dalam 4 detik...");
+        return redirect()->to(base_url('Login/form_edit_password'));
+    }
 
 }

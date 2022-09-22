@@ -1,0 +1,65 @@
+CRITICAL - 2022-08-07 16:07:27 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 83, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_jview('1916051020')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-07 16:08:20 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_jurusan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 24, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_jurus...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(85): view('r_admin/v_jurus...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_jurusan()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-07 16:24:09 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_jurusan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 24, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_jurus...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(85): view('r_admin/v_jurus...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_jurusan()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-07 16:24:53 --> Undefined index: jurusan
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_jurusan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 24, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_jurus...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(85): view('r_admin/v_jurus...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_jurusan()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-07 16:27:27 --> Undefined index: jurusan
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_jurusan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 24, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_jurus...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(85): view('r_admin/v_jurus...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->data_jurusan()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-07 16:45:35 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 56, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-07 16:46:40 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 56, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_judul('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

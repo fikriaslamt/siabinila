@@ -1,0 +1,22 @@
+CRITICAL - 2022-06-10 18:27:51 --> Invalid file: dokumenCetak/menu/menubar.php
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dokumenCetak/me...')
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\Common.php(1097): CodeIgniter\View\View->render('dokumenCetak/me...', Array, true)
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\app\Views\dokumenCetak\skrip_pengajuan_judul.php(213): view('dokumenCetak/me...')
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\View\View.php(214): include('C:\\Users\\ACER\\O...')
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\Common.php(1097): CodeIgniter\View\View->render('dokumenCetak/sk...', Array, true)
+#6 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\app\Controllers\Cetak.php(35): view('dokumenCetak/sk...', Array)
+#7 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(824): App\Controllers\Cetak->surat()
+#8 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#9 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#12 {main}
+CRITICAL - 2022-06-10 18:35:34 --> Undefined offset: 0
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\app\Controllers\Cetakan.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\Users\\ACER\\O...', 56, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(824): App\Controllers\Cetakan->surat_pengajuan_judul('123')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}

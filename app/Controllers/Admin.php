@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\M_akun;
+use App\Models\M_akun_admin;
 use App\Models\M_register;
 use App\Models\Z_instansi;
 use App\Models\M_data_pengajuan_judul;
@@ -9,7 +11,6 @@ use App\Models\M_surat_pengajuan_judul;
 use App\Models\M_surat_pengajuan_usul;
 use App\Models\M_surat_pengajuan_hasil;
 use App\Models\M_surat_pengajuan_kompre;
-use App\Models\M_akun;
 use App\Models\M_data_skripsi;
 use App\Models\M_seminar_usul;
 use App\Models\M_seminar_hasil;
@@ -26,13 +27,14 @@ class Admin extends BaseController
     public function __construct()
     {
         $this->Z_instansi = new Z_instansi();
+        $this->M_akun = new M_akun();
+        $this->M_akun_admin = new M_akun_admin();
         $this->M_data_pengajuan_judul = new M_data_pengajuan_judul();
         $this->M_surat_pengajuan_judul = new M_surat_pengajuan_judul();
         $this->M_surat_pengajuan_usul = new M_surat_pengajuan_usul();
         $this->M_surat_pengajuan_hasil = new M_surat_pengajuan_hasil();
         $this->M_surat_pengajuan_kompre = new M_surat_pengajuan_kompre();
         $this->M_register = new M_register();
-        $this->M_akun = new M_akun();
         $this->M_data_skripsi = new M_data_skripsi();
         $this->M_seminar_usul = new M_seminar_usul();
         $this->M_seminar_hasil = new M_seminar_hasil();
@@ -85,14 +87,27 @@ class Admin extends BaseController
         echo view('r_admin/v_jurusan');
         echo view('layouts/admin_footer');
     }
-
+    
+    public function edit_jurusan()
+    {   
+        $this->Z_instansi->save([
+            'id' => 1,
+            'jurusan' => $this->request->getVar('jurusan'),
+            'kajur' => $this->request->getVar('kajur'),
+            'kajur_nip' => $this->request->getVar('nip'),
+        ]); 
+        
+        session()->setFlashdata('notif', "Data Jurusan Berhasil Diubah");
+        return redirect()->to(base_url('Admin/data_jurusan'));
+    }
+    
     public function data_lulusan()
     {
         $data1 = $this->M_mahasiswa_lulusan->findAll();
         
         $data = [
             'title' => "Lulusan",
-            'data' => $data1
+            'data' => $data1, 'tabel' => "aktif"
         ];
         echo view('layouts/admin_header', $data);
         echo view('layouts/admin_navbar');
@@ -476,6 +491,14 @@ class Admin extends BaseController
         session()->setFlashdata('pesan', "Akun Mahasiswa Telah Diterima dan Dibuat");
         return redirect()->to(base_url('Admin/request_akun'));
     }
+    public function tolak_akun($user)
+    {      
+        $this->M_register->delete($user);
+        
+        session()->setFlashdata('pesan', "Akun Mahasiswa Telah Ditolak");
+        return redirect()->to(base_url('Admin/request_akun'));
+    }
+    
 
     public function delete_akun_M($user)
     {
@@ -490,7 +513,7 @@ class Admin extends BaseController
     {
         $data1 = $this->M_data_skripsi->find($npm);
         $data = [
-            'title' => "Detail",
+            'title' => "Detail Skripsi: ".$data1["nama"],
             'data' => $data1
         ];
         echo view('layouts/admin_header', $data);
@@ -573,6 +596,4 @@ class Admin extends BaseController
         echo view('layouts/admin_footer');
     }
     
-
-
 }

@@ -5,12 +5,16 @@
     <form action="<?= base_url('Cetakan/surat_kehilangan_ukt')?>" method="post">
         <label for="npm">NPM :</label>        
         <input type="number" name="npm" class="form_text" placeholder="Masukan npm">
+
         <label for="nama">Nama :</label>
         <input type="text" name="nama" class="form_text" placeholder="Masukan Nama">
+
         <label for="semester">Semester :</label>
         <input type="number" name="semester" class="form_text" placeholder="Semester Saat ini">
+
         <label for="tanggal">Tanggal : (contoh : 1 Januari 2022)</label> 
         <input type="text" name="tanggal" class="form_text" placeholder="tanggal">
+        
         <label for="orangtua">Orang Tua / Wali :</label>
         <input type="text" name="orangtua" class="form_text" placeholder="Orang Tua / Wali">
    

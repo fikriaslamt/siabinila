@@ -1,0 +1,9 @@
+CRITICAL - 2022-08-10 09:08:51 --> Invalid file: mpdf/surat_pengisian_krs_terlambat.php
+#0 /home/u1603686/siabinila_core/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mpdf/surat_peng...')
+#1 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('mpdf/surat_peng...', Array, true)
+#2 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(457): view('mpdf/surat_peng...', Array)
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengisian_krs_terlambat()
+#4 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

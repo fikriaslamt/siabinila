@@ -40,10 +40,10 @@
                 Peer Grup</label>
             <select name="grup" class="form-control" id="grup" required>
                 <option value="">- Pilih -</option>
-                <option value="grup 1">grup 1</option>
-                <option value="grup 2">grup 2</option>
-                <option value="grup 3">grup 3</option>
-                <option value="grup 4">grup 4</option>
+                <option value="Pemasaran dan Perilaku Konsumen">Pemasaran dan Perilaku Konsumen</option>
+                <option value="Keuangan Bisnis dan Pasar Modal">Keuangan Bisnis dan Pasar Modal</option>
+                <option value="SDM dan Organisasi">SDM dan Organisasi</option>
+                <option value="Stratejik, Etika, dan Kewirausahaan">Stratejik, Etika, dan Kewirausahaan</option>
             </select>
             </div>
 
@@ -68,13 +68,13 @@
 
 <script>
     const togglePassword = document.querySelector('#togglePassword');
-  const password = document.querySelector('#inputPassword');
+    const password = document.querySelector('#inputPassword');
  
-  togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
-});
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
 </script>

@@ -12,7 +12,7 @@
             <div class="sidebar-brand-icon">
                 <img src="<?= base_url('assets/logo_unila.png')?>" width="40"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">SIMBISNIS</div>
+            <div class="sidebar-brand-text mx-3">SIABINILA</div>
         </a>
         
         <!-- Divider -->
@@ -48,38 +48,36 @@
             </div>
         </li>
 
-        
-
         <!-- Divider -->
         <hr class="sidebar-divider">
         <!-- Heading -->
         <div class="sidebar-heading">
             Skripsi
         </div>
+        
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_judul' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_usul' ? 'active'  : ''?>">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri"
+                aria-expanded="true" aria-controls="collapseTri">
+                <i class="fas fa-fw fa-scroll"></i>
+                <span>Surat Skripsi</span>
+            </a>
+            <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_judul')?>">Surat Pengajuan Judul</a>
+                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_usul')?>">Surat Pengajuan Usul</a>
+                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_hasil')?>">Surat Pengajuan Hasil</a>
+                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_kompre')?>">Surat Pengajuan Kompre</a>
+                    
+                </div>
+            </div>
+        </li>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_skripsi' ? 'active'  : '' ?>">
             <a class="nav-link" href="<?= base_url('Admin/data_skripsi')?>">
                 <i class="fas fa-fw fa-book"></i>
                 <span>Data Skripsi</span></a>
-        </li>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item <?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_judul' ? 'active'  : ''?><?= \Config\Services::request()->uri->getSegment(2) == 'data_surat_usul' ? 'active'  : ''?>">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri"
-                aria-expanded="true" aria-controls="collapseTri">
-                <i class="fas fa-fw fa-scroll"></i>
-                <span>Data Surat</span>
-            </a>
-            <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_judul')?>">Surat Pengajuan judul</a>
-                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_usul')?>">Surat Pengajuan usul</a>
-                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_hasil')?>">Surat Pengajuan hasil</a>
-                    <a class="collapse-item" href="<?= base_url('Admin/data_surat_kompre')?>">Surat Pengajuan kompre</a>
-                    
-                </div>
-            </div>
         </li>
 
         <!-- Nav Item - Tables -->
@@ -102,7 +100,6 @@
                 <i class="fas fa-fw fa-chart-bar"></i>
                 <span>Jadwal Ujian Skripsi</span></a>
         </li>
-
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
         <!-- Heading -->
@@ -194,7 +191,11 @@
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
                     
-                    <!-- <div class="dropdown-divider"></div> -->
+                    <a class="dropdown-item" href="<?= base_url('LoginAdmin/konfirmasi_password')?>">
+                        <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Ubah Password
+                    </a>
+                     <div class="dropdown-divider"></div> 
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout

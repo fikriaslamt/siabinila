@@ -77,3 +77,10 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+
+$server_name = !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8080';
+
+$base_url = (!empty($_SERVER['HTTPS']) ? 'https' : 'https') . '://' . $server_name . '/'; //Sedang dipaksa HTTPS
+
+defined('BASE_URL') || define('BASE_URL', $base_url);

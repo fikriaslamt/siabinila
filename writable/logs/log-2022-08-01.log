@@ -1,0 +1,7 @@
+CRITICAL - 2022-08-01 06:08:53 --> Undefined offset: 0
+#0 /home/u1603686/siabinila_core/app/Controllers/Cetakan.php(203): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', '/home/u1603686/...', 203, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pembayaran_keterlambatan_ukt()
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

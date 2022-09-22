@@ -1,0 +1,274 @@
+CRITICAL - 2022-06-22 01:42:46 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:43:26 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:43:27 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:43:27 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:43:28 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:43:28 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:43:40 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:45:22 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:45:34 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:45:35 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:45:35 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:45:35 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:45:36 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:46:41 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:46:42 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:46:43 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:50:01 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:50:02 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:50:02 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:50:02 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:50:02 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:51:12 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:51:13 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:51:14 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:51:14 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:51:14 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:51:14 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:52:17 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:53:20 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:54:07 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:56:17 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 01:58:41 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1603686/siabinila_core/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1603686/public_html/index.php(28): require('/home/u1603686/...')
+#2 {main}
+CRITICAL - 2022-06-22 08:59:38 --> Class 'IntlDateFormatter' not found
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(804): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-06-22 09:03:02 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+CRITICAL - 2022-06-22 09:03:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+#0 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /home/u1603686/siabinila_core/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 /home/u1603686/siabinila_core/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 /home/u1603686/siabinila_core/app/Controllers/Login.php(29): CodeIgniter\BaseModel->first()
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Login->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-06-22 09:06:18 --> Table 'u1603686_siabinila.akun' doesn't exist
+CRITICAL - 2022-06-22 09:06:18 --> Table 'u1603686_siabinila.akun' doesn't exist
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 /home/u1603686/siabinila_core/app/Controllers/Login.php(29): CodeIgniter\BaseModel->first()
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Login->index()
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-22 11:26:28 --> Division by zero
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', '/home/u1603686/...', 147, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_admin', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(72): view('r_admin/v_admin', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-22 11:27:35 --> Division by zero
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', '/home/u1603686/...', 147, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_admin', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(72): view('r_admin/v_admin', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-22 11:30:43 --> Division by zero
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_admin.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', '/home/u1603686/...', 153, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_admin', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(72): view('r_admin/v_admin', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-22 11:34:26 --> Division by zero
+#0 /home/u1603686/siabinila_core/app/Views/r_admin/v_admin.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', '/home/u1603686/...', 190, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_admin/v_admin', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Admin.php(72): view('r_admin/v_admin', Array)
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-06-22 13:02:09 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+CRITICAL - 2022-06-22 13:02:09 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Admin.php(447): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->add_akun_dosen()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-06-22 13:02:41 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+CRITICAL - 2022-06-22 13:02:41 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Admin.php(447): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->add_akun_dosen()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-06-22 13:02:59 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+CRITICAL - 2022-06-22 13:02:59 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Admin.php(447): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->add_akun_dosen()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-06-22 13:03:23 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+CRITICAL - 2022-06-22 13:03:23 --> Duplicate entry '195711281986031003' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Admin.php(447): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Admin->add_akun_dosen()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-22 17:06:32 --> Undefined variable: totalTime
+#0 /home/u1603686/siabinila_core/system/Debug/Toolbar/Views/toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 40, Array)
+#1 /home/u1603686/siabinila_core/system/Debug/Toolbar.php(497): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/Debug/Toolbar.php(460): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 /home/u1603686/siabinila_core/app/Config/Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 /home/u1603686/siabinila_core/system/Events/Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(302): CodeIgniter\Events\Events::trigger('pre_system')
+#6 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

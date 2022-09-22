@@ -36,17 +36,25 @@
         <label for="orangtua">Orang Tua/Wali :</label>
         <input type="text" name="orangtua" class="form_text" placeholder="Orang Tua/Wali">
 
-        <label for="dospa">Dosen Pembimbing Akademik :</label>
-        <input type="text" name="dospa" class="form_text" placeholder="Dosen Pembimbing Akademik">
+        <label for="dospa">
+            Dosen Pembimbing Akademik :</label>
+        <select name="dospa" class="form_text" id="dospa" required>
+            <option value="">- Pilih Dosen-</option>
+            <?php foreach ($dosen as $dsn_pa) : ?>
+            <option value="<?= $dsn_pa["nama"]?>"><?= $dsn_pa["nama"]?></option>
+            <?php endforeach;?>
+        </select>
 
-        <label for="nip_dospa"> NIP Dosen Pembimbing Akademik :</label>
-        <input type="number" name="nip_dospa" class="form_text" placeholder=" NIP Dosen Pembimbing Akademik">
+        <label for="dospem">
+        Dosen Pembimbing (tugas akhir/skripsi/tesis) :</label>
+        <select name="dospem" class="form_text" id="dospem" required>
+            <option value="">- Pilih Dosen-</option>
+            <?php foreach ($dosen as $dsn_pa) : ?>
+            <option value="<?= $dsn_pa["nama"]?>"><?= $dsn_pa["nama"]?></option>
+            <?php endforeach;?>
+        </select>
 
-        <label for="dospem">Dosen Pembimbing (tugas akhir/skripsi/tesis) :</label>
-        <input type="text" name="dospem" class="form_text" placeholder="Dosen Pembimbing (tugas akhir/skripsi/tesis)">
-
-        <label for="nip_dospem"> NIP Dosen Pembimbing (tugas akhir/skripsi/tesis) :</label>
-        <input type="number" name="nip_dospem" class="form_text" placeholder=" NIP Dosen Pembimbing (tugas akhir/skripsi/tesis)">
+    
 
         <br><br><br><br>
         Dengan ini menyatakan bahwa saya akan menyelesaikan skripsi paling lambat <br><br>

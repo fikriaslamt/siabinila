@@ -10,11 +10,10 @@ Need to add the following to do this, but also prevent margins in nested lists a
 	margin-top: 0.75cm; margin-bottom: 1cm;
     margin-left: 1cm; margin-right: 1cm;
 } */
-
 ul, ol { margin-top: 0.83em; margin-bottom: 0.83em;}
 
 a {color: red !important;}
-p {text-align: justify; line-height: 1.2;}
+p {text-align: justify !important; line-height: 1.2;}
 .paragf {line-height: 1.4; text-indent: 50px;}
 
 ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }
@@ -22,7 +21,8 @@ ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }
 table {
 	border-collapse: collapse;
 	vertical-align: top;
-}
+	font-size: 10.5pt; font-family: "Times New Roman", Times, serif;
+} 
 .tbl_isi{ vertical-align: middle; }
 .tbl_isi td, .tbl_isi th {
 	border: 1px solid black;
@@ -30,31 +30,36 @@ table {
 .tbl_kosong td, .tbl_kosong th {
 	border: 1px solid black; width:100%;
 }
-.tbl_kosong td { height: 420px;}
-.header td { text-align: center; }
-.tbl_center { text-align: center;}
-.tbl_top { vertical-align: top;}
+.tbl_margin{
+    margin: 0 1cm 0 1cm;
+}
+.tbl_kosong td, .tbl_spasi {height: 400px;}
+.header {width:100%; vertical-align: middle; margin:0 0 0 0; padding:0 0 0 0;}
+.header td {text-align: center; }
+.tbl_center {text-align: center;} .tbl_top {vertical-align: top;}
 
-.text_kanan{ text-align: right; }
-.text_kiri{ text-align: left; }
-.text_tengah{ text-align: center;}
-.title { text-align: center; font-weight:bold; text-decoration: underline; text-transform: uppercase;
-	margin: 0 20px 20px;
+.text_kanan{ text-align: right; } .text_kiri{ text-align: left; } .text_tengah{ text-align: center;}
+.title { 
+    text-align: center; font-weight:bold; text-decoration: underline; text-transform: uppercase;
+	margin: 0.5pt 0px 2pt 0px !important;
 }
 .teks_isi{
-	margin: 20px 50px;
+	margin: 10pt 2cm 20pt 2cm;
+	text-align: justify;
+	font-size: 10.5pt;
+	font-family: "Times New Roman", Times, serif;
 }
 .padding_isi{
 	margin: 2px 23px;
 }
 
 .txfooter {
-	text-align:center; font-size:16px; font-style: normal; font-weight: normal; ;
+	text-align:center; font-size:16px; font-style: normal; font-weight: normal;
 }
 
 /* INDEXES */
 div.mpdf_index_main {
-	font-family: sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	line-height: normal;
 }
 
@@ -64,7 +69,7 @@ div.mpdf_index_entry {
 }
 
 div.mpdf_index_letter {
-	font-family: sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 1.8em;
 	font-weight: bold;
 	line-height: normal;
@@ -81,7 +86,7 @@ a.mpdf_index_link {
 
 /* TABLE OF CONTENTS */
 div.mpdf_toc {
-	font-family: sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	line-height: normal;
 }
 

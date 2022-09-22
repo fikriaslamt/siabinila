@@ -1,0 +1,8 @@
+CRITICAL - 2022-06-13 20:02:07 --> Trying to access array offset on value of type null
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\app\Controllers\Cetak.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\ACER\\O...', 33, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('19170510')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}

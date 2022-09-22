@@ -1,0 +1,8 @@
+CRITICAL - 2022-06-21 08:57:50 --> Undefined offset: 0
+#0 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\app\Controllers\Cetak.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\Users\\ACER\\O...', 52, Array)
+#1 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(824): App\Controllers\Cetak->surat_pengajuan_judul('1917051015')
+#2 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetak))
+#3 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ACER\OneDrive\Dokumen\PKL\SIMBISNIS_DebugPDF\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ACER\\O...')
+#6 {main}

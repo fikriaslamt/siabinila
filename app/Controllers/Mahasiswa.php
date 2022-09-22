@@ -97,6 +97,12 @@ class Mahasiswa extends BaseController
     public function edit_profil($npm)
     {   
         $this->M_profil_mahasiswa->update($npm,$this->request->getPost());
+        $ModelAkun = new \App\Models\M_akun();
+        $ModelAkun->save(array(
+            'user' => session()->user,
+            'nama' => $this->request->getVar('nama')
+        )); 
+        $_SESSION['nama'] = $this->request->getVar('nama');
         return redirect()->to(base_url('Mahasiswa/profil'));
     }
 
@@ -244,8 +250,10 @@ class Mahasiswa extends BaseController
 
     public function form_keringanan_ukt()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Keringanan UKT"
+            'title' => "Formulir Keringanan UKT",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -255,8 +263,10 @@ class Mahasiswa extends BaseController
 
     public function form_pembebasan_ukt()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir pembebasan UKT"
+            'title' => "Formulir pembebasan UKT",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -298,9 +308,11 @@ class Mahasiswa extends BaseController
     }
 
     public function form_permohonan_cuti_kuliah()
-    {
+    {   
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Cuti Kuliah"
+            'title' => "Formulir Permohonan Cuti Kuliah",
+            'dosen' => $Dosen,
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -310,8 +322,10 @@ class Mahasiswa extends BaseController
 
     public function form_studi_terbimbing()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Studi Terbimbing"
+            'title' => "Formulir Permohonan Studi Terbimbing",
+            'dosen' => $Dosen,
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -321,8 +335,10 @@ class Mahasiswa extends BaseController
 
     public function form_pindah_kuliah()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Pindah Kuliah"
+            'title' => "Formulir Permohonan Pindah Kuliah",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -332,8 +348,10 @@ class Mahasiswa extends BaseController
 
     public function form_perpanjangan_masa_studi()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Perpanjangan Masa Studi"
+            'title' => "Formulir Permohonan Perpanjangan Masa Studi",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -353,9 +371,11 @@ class Mahasiswa extends BaseController
     }
 
     public function form_penghapusan_mk()
-    {
+    {   
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Penghapusan Mata Kuliah"
+            'title' => "Formulir Permohonan Penghapusan Mata Kuliah",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -365,8 +385,10 @@ class Mahasiswa extends BaseController
 
     public function form_pembetulan_nilai()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Pembetulan Nilai"
+            'title' => "Formulir Permohonan Pembetulan Nilai",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -376,8 +398,10 @@ class Mahasiswa extends BaseController
 
     public function form_mengundurkan_diri()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Mengundurkan Diri"
+            'title' => "Formulir Permohonan Mengundurkan Diri",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -387,8 +411,10 @@ class Mahasiswa extends BaseController
 
     public function form_studi_lapangan()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Izin Studi Lapangan"
+            'title' => "Formulir Permohonan Izin Studi Lapangan",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -398,8 +424,10 @@ class Mahasiswa extends BaseController
 
     public function form_riset_data_skripsi()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Izin Riset & Pengambilan Data Skripsi"
+            'title' => "Formulir Permohonan Izin Riset & Pengambilan Data Skripsi",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -431,8 +459,10 @@ class Mahasiswa extends BaseController
 
     public function form_pindah_studi_internal()
     {
+        $Dosen = $this->M_profil_dosen->findAll();
         $data = [
-            'title' => "Formulir Permohonan Pindah Program Studi Internal Unila"
+            'title' => "Formulir Permohonan Pindah Program Studi Internal Unila",
+            'dosen' => $Dosen
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar', $data);
@@ -453,6 +483,7 @@ class Mahasiswa extends BaseController
 
     public function tambah_pengajuan_judul()
     {   
+        $data_dosen = $this->M_profil_dosen->query("SELECT nip FROM profil_dosen where nama='".$this->request->getVar('dosen_pa')."'")->getResultArray();
         $skrip1 = ""; $skrip2 = ""; $dapus1 = ""; $dapus2 = "";
         $isi1 = explode(PHP_EOL, $this->request->getVar('judul1_isi'));
         $isi2 = explode(PHP_EOL, $this->request->getVar('judul2_isi'));
@@ -499,6 +530,8 @@ class Mahasiswa extends BaseController
             'prodi'      => $this->request->getVar('prodi'),
             'alamat'     => $this->request->getVar('alamat'),
             'telepon' => $this->request->getVar('telepon'),
+            'dosen_pa'   => $this->request->getVar('dosen_pa'),
+            'nip_pa'   => $data_dosen[0]["nip"],
             'sks'   => $this->request->getVar('sks'),
             'ipk'   => $this->request->getVar('ipk'),
         ]);
@@ -523,14 +556,6 @@ class Mahasiswa extends BaseController
     {
         $this->M_seminar_usul->insert([
             'npm'      => $this->request->getVar('npm'),
-            'nama'     => $this->request->getVar('nama'), 
-            'judul'    => $this->request->getVar('judul'), 
-            'dospem1'  => $this->request->getVar('dospem1'),
-            'dospem2'  => $this->request->getVar('dospem2'),
-            'penguji_u'=> $this->request->getVar('penguji'),
-            'penguji_p'=> $this->request->getVar('penguji_p'),
-            'jam'      => $this->request->getVar('jam'),
-            'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_surat_pengajuan_usul->insert([
             'npm'      => $this->request->getVar('npm'),
@@ -562,14 +587,6 @@ class Mahasiswa extends BaseController
     {
         $this->M_seminar_hasil->insert([
             'npm'      => $this->request->getVar('npm'),
-            'nama'     => $this->request->getVar('nama'), 
-            'judul'    => $this->request->getVar('judul'), 
-            'dospem1'  => $this->request->getVar('dospem1'),
-            'dospem2'  => $this->request->getVar('dospem2'),
-            'penguji_u'=> $this->request->getVar('penguji'),
-            'penguji_p'=> $this->request->getVar('penguji_p'),
-            'jam'      => $this->request->getVar('jam'),
-            'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_surat_pengajuan_hasil->insert([
             'npm'      => $this->request->getVar('npm'),
@@ -601,14 +618,6 @@ class Mahasiswa extends BaseController
     {
         $this->M_ujian_kompre->insert([
             'npm'      => $this->request->getVar('npm'),
-            'nama'     => $this->request->getVar('nama'), 
-            'judul'    => $this->request->getVar('judul'), 
-            'dospem1'  => $this->request->getVar('dospem1'),
-            'dospem2'  => $this->request->getVar('dospem2'),
-            'penguji_u'=> $this->request->getVar('penguji'),
-            'penguji_p'=> $this->request->getVar('penguji_p'),
-            'jam'      => $this->request->getVar('jam'),
-            'tanggal'  => $this->request->getVar('tanggal'),
         ]);
         $this->M_surat_pengajuan_kompre->insert([
             'npm'      => $this->request->getVar('npm'),
@@ -632,6 +641,52 @@ class Mahasiswa extends BaseController
         $this->M_data_notif->delete($npm);
         
         return redirect()->to(base_url('Mahasiswa/skripsi'));
+    }
+    
+    public function hapus_akun($npm)
+    {
+        $ModelAkun = new \App\Models\M_akun();
+        $ModelLulusan = new \App\Models\M_mahasiswa_lulusan();
+        $skripsi = $this->M_data_skripsi->find($npm);
+        $mahasiswa = $this->M_profil_mahasiswa->find($npm);
+        
+        $MulaiKuliah = date_create($mahasiswa["angkatan"]."-09-01");
+        $TanggalLulus = date_create($skripsi["date_kompre"]);
+        $diff = date_diff($MulaiKuliah,$TanggalLulus);
+        $waktu_tempuh = $diff->format("%a");
+        $waktu_tempuh = round(($waktu_tempuh/360), 2);
+
+
+        $SubjekPeriode = "2022-".date_format($TanggalLulus,"m-d");
+        $BatasPeriode = "2022-09-01";
+        $HasilPeriode = date_format($TanggalLulus,"Y");
+        if ($SubjekPeriode > $BatasPeriode){$HasilPeriode;}
+        else{--$HasilPeriode;}
+
+        $data_mhs = [
+            'npm'=> $mahasiswa["npm"],
+            'nama'=> $mahasiswa["nama"],
+            'jenis_kelamin'=> $mahasiswa["jenis_kelamin"],
+            'angkatan'=> $mahasiswa["angkatan"],
+            'periode_lulus'=> $HasilPeriode,
+            'tanggal_lulus'=> $skripsi["date_kompre"],
+            'waktu_tempuh'=> $waktu_tempuh,
+            'judul_skripsi'=> $skripsi["judul"],
+            'no_hp'=> $mahasiswa["no_hp"],
+            'email'=> $mahasiswa["email"],
+        ];
+
+        var_dump($ModelLulusan->insert($data_mhs));
+        $this->M_data_skripsi->delete($npm);
+        $this->M_profil_mahasiswa->delete($npm);
+        $ModelAkun->delete($npm);
+        
+        unset(
+            $_SESSION['user'], $_SESSION['role']
+        );
+        
+        session()->setTempdata('kelulusan', $npm, 600);
+        return redirect()->to(base_url('Login/lulus'));
     }
 
 }

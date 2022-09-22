@@ -1,0 +1,132 @@
+CRITICAL - 2022-08-17 10:44:35 --> Undefined variable: date2
+#0 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(629): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 629, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-17 10:52:45 --> Undefined index: judul
+#0 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(640): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/u1603686/...', 640, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-17 10:53:24 --> Use of undefined constant skripsi - assumed 'skripsi' (this will throw an Error in a future version of PHP)
+#0 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(640): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', '/home/u1603686/...', 640, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-17 10:53:35 --> Undefined property: App\Controllers\Mahasiswa::$ModelAkun
+#0 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(647): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/home/u1603686/...', 647, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-17 10:54:27 --> Trying to access array offset on value of type null
+#0 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(619): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1603686/...', 619, Array)
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->hapus_akun('1917051015')
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-17 10:57:02 --> Undefined variable: angkatan
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_mahasiswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 35, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(50): view('r_mahasiswa/v_m...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-08-17 10:59:20 --> Undefined variable: angkatan
+#0 /home/u1603686/siabinila_core/app/Views/r_mahasiswa/v_mahasiswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/u1603686/...', 35, Array)
+#1 /home/u1603686/siabinila_core/system/View/View.php(214): include('/home/u1603686/...')
+#2 /home/u1603686/siabinila_core/system/View/View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/u1603686/siabinila_core/system/Common.php(1097): CodeIgniter\View\View->render('r_mahasiswa/v_m...', Array, true)
+#4 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(50): view('r_mahasiswa/v_m...')
+#5 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->index()
+#6 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-17 11:48:00 --> Duplicate entry '1917051015' for key 'PRIMARY'
+CRITICAL - 2022-08-17 11:48:00 --> Duplicate entry '1917051015' for key 'PRIMARY'
+#0 /home/u1603686/siabinila_core/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `su...', 0)
+#1 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 /home/u1603686/siabinila_core/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 /home/u1603686/siabinila_core/system/Database/BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', Array, false)
+#4 /home/u1603686/siabinila_core/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u1603686/siabinila_core/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /home/u1603686/siabinila_core/system/Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/u1603686/siabinila_core/app/Controllers/Mahasiswa.php(503): CodeIgniter\Model->insert(Array)
+#8 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Mahasiswa->tambah_pengajuan_judul()
+#9 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-08-17 13:04:43 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 13:04:50 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 13:05:02 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 13:05:47 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 13:05:54 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 13:06:06 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre('1917051015')
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 14:36:53 --> Too few arguments to function App\Controllers\Cetakan::surat_pengajuan_kompre(), 0 passed in /home/u1603686/siabinila_core/system/CodeIgniter.php on line 826 and exactly 1 expected
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre()
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 14:36:56 --> Too few arguments to function App\Controllers\Cetakan::surat_pengajuan_kompre(), 0 passed in /home/u1603686/siabinila_core/system/CodeIgniter.php on line 826 and exactly 1 expected
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre()
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 14:37:27 --> Too few arguments to function App\Controllers\Cetakan::surat_pengajuan_kompre(), 0 passed in /home/u1603686/siabinila_core/system/CodeIgniter.php on line 826 and exactly 1 expected
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre()
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-17 14:38:10 --> Too few arguments to function App\Controllers\Cetakan::surat_pengajuan_kompre(), 0 passed in /home/u1603686/siabinila_core/system/CodeIgniter.php on line 826 and exactly 1 expected
+#0 /home/u1603686/siabinila_core/system/CodeIgniter.php(826): App\Controllers\Cetakan->surat_pengajuan_kompre()
+#1 /home/u1603686/siabinila_core/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cetakan))
+#2 /home/u1603686/siabinila_core/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /home/u1603686/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

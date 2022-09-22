@@ -8,5 +8,5 @@ class M_surat_pengajuan_judul extends Model
 {
     protected $table = "surat_pengajuan_judul";
     protected $primaryKey           = 'npm';
-    protected $allowedFields        = ['npm','no_surat','nama','prodi','judul','judul_isi','dapus','alamat', 'ipk', 'sks', 'telepon','dospem1', 'dospem2', 'moderator','npm_moderator','koor_seminar','nip_koor_seminar'];
+    protected $allowedFields        = ['npm','no_surat','nama','prodi','judul','judul_isi','dapus','alamat', 'ipk', 'sks', 'telepon','dosp1', 'dosp2', 'dosen_pa', 'nip_pa', 'moderator','npm_moderator','koor_seminar','nip_koor_seminar'];
 }
